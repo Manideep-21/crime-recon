@@ -91,18 +91,42 @@
       "entity": "person_3",
       "entity_type": "person",
       "role": "bystander",
+      "attribute": "action"
+    },
+    {
+      "entity": "person_3",
+      "entity_type": "person",
+      "role": "bystander",
       "attribute": "position"
     },
     {
-      "entity": "vehicle_1",
-      "entity_type": "vehicle",
-      "role": "none",
-      "attribute": "vehicle_type"
+      "entity": "person_4",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "lower_clothing"
     },
     {
-      "entity": "vehicle_1",
-      "entity_type": "vehicle",
-      "role": "none",
+      "entity": "person_4",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "height"
+    },
+    {
+      "entity": "person_4",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "build"
+    },
+    {
+      "entity": "person_4",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "action"
+    },
+    {
+      "entity": "person_4",
+      "entity_type": "person",
+      "role": "bystander",
       "attribute": "position"
     }
   ],
@@ -407,32 +431,6 @@
       "passed": true
     },
     {
-      "witness": "witness_C",
-      "entity": "vehicle_1",
-      "entity_type": "vehicle",
-      "role": "none",
-      "attribute": "vehicle_type",
-      "text": "What kind of vehicle was the vehicle you described (\"a white van\")?",
-      "kind": "gap",
-      "viewpoint": "brief glimpse while passing by",
-      "id": "q024",
-      "reasons": [],
-      "passed": true
-    },
-    {
-      "witness": "witness_C",
-      "entity": "vehicle_1",
-      "entity_type": "vehicle",
-      "role": "none",
-      "attribute": "position",
-      "text": "Where exactly was the vehicle you described (\"a white van\") when you saw them?",
-      "kind": "gap",
-      "viewpoint": "brief glimpse while passing by",
-      "id": "q025",
-      "reasons": [],
-      "passed": true
-    },
-    {
       "witness": "witness_B",
       "entity": "object_1",
       "entity_type": "object",
@@ -441,7 +439,7 @@
       "text": "Did you also see the watch?",
       "kind": "baseline",
       "viewpoint": "far away, looking in from outside",
-      "id": "q026",
+      "id": "q024",
       "reasons": [
         "closed / suggestive phrasing pushes a particular answer"
       ],
@@ -456,87 +454,8 @@
       "text": "Did you also see the on the table?",
       "kind": "baseline",
       "viewpoint": "far away, looking in from outside",
-      "id": "q027",
+      "id": "q025",
       "reasons": [
-        "closed / suggestive phrasing pushes a particular answer"
-      ],
-      "passed": false
-    },
-    {
-      "witness": "witness_C",
-      "entity": "object_1",
-      "entity_type": "object",
-      "role": "none",
-      "attribute": "position",
-      "text": "Did you also see the on the table?",
-      "kind": "baseline",
-      "viewpoint": "brief glimpse while passing by",
-      "id": "q028",
-      "reasons": [
-        "closed / suggestive phrasing pushes a particular answer"
-      ],
-      "passed": false
-    },
-    {
-      "witness": "witness_A",
-      "entity": "vehicle_1",
-      "entity_type": "vehicle",
-      "role": "none",
-      "attribute": "color",
-      "text": "Did you also see the white?",
-      "kind": "baseline",
-      "viewpoint": "close by, inside, a few metres away",
-      "id": "q029",
-      "reasons": [
-        "introduces detail(s) the witness never mentioned: white",
-        "closed / suggestive phrasing pushes a particular answer"
-      ],
-      "passed": false
-    },
-    {
-      "witness": "witness_B",
-      "entity": "vehicle_1",
-      "entity_type": "vehicle",
-      "role": "none",
-      "attribute": "color",
-      "text": "Did you also see the white?",
-      "kind": "baseline",
-      "viewpoint": "far away, looking in from outside",
-      "id": "q030",
-      "reasons": [
-        "introduces detail(s) the witness never mentioned: white",
-        "closed / suggestive phrasing pushes a particular answer"
-      ],
-      "passed": false
-    },
-    {
-      "witness": "witness_A",
-      "entity": "vehicle_1",
-      "entity_type": "vehicle",
-      "role": "none",
-      "attribute": "action",
-      "text": "Did you also see the was nearby?",
-      "kind": "baseline",
-      "viewpoint": "close by, inside, a few metres away",
-      "id": "q031",
-      "reasons": [
-        "introduces detail(s) the witness never mentioned: nearby",
-        "closed / suggestive phrasing pushes a particular answer"
-      ],
-      "passed": false
-    },
-    {
-      "witness": "witness_B",
-      "entity": "vehicle_1",
-      "entity_type": "vehicle",
-      "role": "none",
-      "attribute": "action",
-      "text": "Did you also see the was nearby?",
-      "kind": "baseline",
-      "viewpoint": "far away, looking in from outside",
-      "id": "q032",
-      "reasons": [
-        "introduces detail(s) the witness never mentioned: nearby",
         "closed / suggestive phrasing pushes a particular answer"
       ],
       "passed": false

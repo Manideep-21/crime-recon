@@ -450,7 +450,7 @@
       "entity_type": "person",
       "role": "bystander",
       "attribute": "position",
-      "value": "just nearby",
+      "value": "nearby",
       "source": "witness_C",
       "source_type": "witness",
       "viewpoint": "brief glimpse while passing by",

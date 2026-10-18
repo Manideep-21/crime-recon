@@ -32,9 +32,10 @@
       "quote": "I'm not sure if he turned around and put things into the cabinet or if he stood up and walked out",
       "hedged": true,
       "base_confidence": 0.45,
-      "confidence": 0.45,
+      "confidence": 0.65,
       "support": [
-        "witness_A"
+        "witness_A",
+        "witness_C"
       ]
     },
     {
@@ -50,9 +51,11 @@
       "quote": "I also saw a woman who stole something pick up the white paper on the table",
       "hedged": false,
       "base_confidence": 0.7,
-      "confidence": 0.7,
+      "confidence": 0.99,
       "support": [
-        "witness_A"
+        "witness_A",
+        "witness_B",
+        "witness_C"
       ]
     },
     {
@@ -68,9 +71,11 @@
       "quote": "I also saw a woman who stole something pick up the white paper on the table and fan herself",
       "hedged": false,
       "base_confidence": 0.7,
-      "confidence": 0.7,
+      "confidence": 0.99,
       "support": [
-        "witness_A"
+        "witness_A",
+        "witness_B",
+        "witness_C"
       ]
     },
     {
@@ -86,9 +91,11 @@
       "quote": "I think she stood up and looked back in the direction where the man left",
       "hedged": true,
       "base_confidence": 0.45,
-      "confidence": 0.45,
+      "confidence": 0.85,
       "support": [
-        "witness_A"
+        "witness_A",
+        "witness_B",
+        "witness_C"
       ]
     },
     {
@@ -104,16 +111,17 @@
       "quote": "and maybe she took something from the table and put it into her clothes",
       "hedged": true,
       "base_confidence": 0.45,
-      "confidence": 0.45,
+      "confidence": 0.65,
       "support": [
-        "witness_A"
+        "witness_A",
+        "witness_B"
       ]
     },
     {
       "fact_id": "f007",
-      "entity": "person_3",
+      "entity": "person_2",
       "entity_type": "person",
-      "role": "victim",
+      "role": "suspect",
       "attribute": "action",
       "value": "picked up the white paper on the table",
       "source": "witness_B",
@@ -122,16 +130,18 @@
       "quote": "pick up the white paper on the table",
       "hedged": false,
       "base_confidence": 0.7,
-      "confidence": 0.7,
+      "confidence": 0.99,
       "support": [
-        "witness_B"
+        "witness_A",
+        "witness_B",
+        "witness_C"
       ]
     },
     {
       "fact_id": "f008",
-      "entity": "person_3",
+      "entity": "person_2",
       "entity_type": "person",
-      "role": "victim",
+      "role": "suspect",
       "attribute": "action",
       "value": "fan herself",
       "source": "witness_B",
@@ -140,16 +150,18 @@
       "quote": "fan herself",
       "hedged": false,
       "base_confidence": 0.7,
-      "confidence": 0.7,
+      "confidence": 0.99,
       "support": [
-        "witness_B"
+        "witness_A",
+        "witness_B",
+        "witness_C"
       ]
     },
     {
       "fact_id": "f009",
-      "entity": "person_3",
+      "entity": "person_2",
       "entity_type": "person",
-      "role": "victim",
+      "role": "suspect",
       "attribute": "action",
       "value": "opened the book and looked at it",
       "source": "witness_B",
@@ -165,9 +177,9 @@
     },
     {
       "fact_id": "f010",
-      "entity": "person_3",
+      "entity": "person_2",
       "entity_type": "person",
-      "role": "victim",
+      "role": "suspect",
       "attribute": "action",
       "value": "took something from the table",
       "source": "witness_B",
@@ -176,16 +188,17 @@
       "quote": "took something from the table",
       "hedged": true,
       "base_confidence": 0.575,
-      "confidence": 0.575,
+      "confidence": 0.775,
       "support": [
+        "witness_A",
         "witness_B"
       ]
     },
     {
       "fact_id": "f011",
-      "entity": "person_3",
+      "entity": "person_2",
       "entity_type": "person",
-      "role": "victim",
+      "role": "suspect",
       "attribute": "action",
       "value": "put it into her clothes",
       "source": "witness_B",
@@ -194,34 +207,36 @@
       "quote": "put it into her clothes",
       "hedged": true,
       "base_confidence": 0.575,
-      "confidence": 0.575,
+      "confidence": 0.775,
       "support": [
+        "witness_A",
         "witness_B"
       ]
     },
     {
       "fact_id": "f012",
-      "entity": "person_3",
+      "entity": "person_2",
       "entity_type": "person",
-      "role": "victim",
+      "role": "suspect",
       "attribute": "action",
       "value": "stood up",
       "source": "witness_B",
       "source_type": "witness",
       "viewpoint": "far away, looking in from outside",
-      "quote": "I think she stood up",
+      "quote": "stood up",
       "hedged": true,
       "base_confidence": 0.45,
-      "confidence": 0.45,
+      "confidence": 0.65,
       "support": [
+        "witness_A",
         "witness_B"
       ]
     },
     {
       "fact_id": "f013",
-      "entity": "person_3",
+      "entity": "person_2",
       "entity_type": "person",
-      "role": "victim",
+      "role": "suspect",
       "attribute": "action",
       "value": "looked back in the direction where the man left",
       "source": "witness_B",
@@ -230,9 +245,11 @@
       "quote": "looked back in the direction where the man left",
       "hedged": true,
       "base_confidence": 0.45,
-      "confidence": 0.45,
+      "confidence": 0.85,
       "support": [
-        "witness_B"
+        "witness_A",
+        "witness_B",
+        "witness_C"
       ]
     },
     {
@@ -259,7 +276,66 @@
       "entity_type": "person",
       "role": "suspect",
       "attribute": "action",
-      "value": "came back",
+      "value": "stood up and walked out",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "I'm not sure if he stood up and walked out",
+      "hedged": true,
+      "base_confidence": 0.45,
+      "confidence": 0.65,
+      "support": [
+        "witness_A",
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f016",
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "picked up the white paper on the table and fan herself",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "I also saw a woman behind the counter pick up the white paper on the table and fan herself",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.99,
+      "support": [
+        "witness_A",
+        "witness_B",
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f017",
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "looked back in the direction where the man left",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "I'm not sure if she stood up and looked back in the direction where the man left",
+      "hedged": true,
+      "base_confidence": 0.45,
+      "confidence": 0.85,
+      "support": [
+        "witness_A",
+        "witness_B",
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f018",
+      "entity": "scene",
+      "entity_type": "location",
+      "role": "none",
+      "attribute": "place_type",
+      "value": "shop",
       "source": "witness_C",
       "source_type": "witness",
       "viewpoint": "brief glimpse while passing by",
@@ -272,71 +348,16 @@
       ]
     },
     {
-      "fact_id": "f016",
-      "entity": "person_1",
-      "entity_type": "person",
-      "role": "suspect",
-      "attribute": "position",
-      "value": "behind the counter",
-      "source": "witness_C",
-      "source_type": "witness",
-      "viewpoint": "brief glimpse while passing by",
-      "quote": "behind the counter",
-      "hedged": false,
-      "base_confidence": 0.7,
-      "confidence": 0.9,
-      "support": [
-        "cctv",
-        "witness_C"
-      ]
-    },
-    {
-      "fact_id": "f017",
-      "entity": "person_4",
-      "entity_type": "person",
-      "role": "bystander",
-      "attribute": "action",
-      "value": "picked up the white paper on the table",
-      "source": "witness_C",
-      "source_type": "witness",
-      "viewpoint": "brief glimpse while passing by",
-      "quote": "picked up the white paper on the table",
-      "hedged": false,
-      "base_confidence": 0.7,
-      "confidence": 0.7,
-      "support": [
-        "witness_C"
-      ]
-    },
-    {
-      "fact_id": "f018",
-      "entity": "person_4",
-      "entity_type": "person",
-      "role": "bystander",
-      "attribute": "action",
-      "value": "fan herself",
-      "source": "witness_C",
-      "source_type": "witness",
-      "viewpoint": "brief glimpse while passing by",
-      "quote": "fan herself",
-      "hedged": false,
-      "base_confidence": 0.7,
-      "confidence": 0.7,
-      "support": [
-        "witness_C"
-      ]
-    },
-    {
       "fact_id": "f019",
-      "entity": "person_4",
-      "entity_type": "person",
-      "role": "bystander",
-      "attribute": "position",
-      "value": "behind the counter",
+      "entity": "scene",
+      "entity_type": "location",
+      "role": "none",
+      "attribute": "notable_features",
+      "value": "counter",
       "source": "witness_C",
       "source_type": "witness",
       "viewpoint": "brief glimpse while passing by",
-      "quote": "behind the counter",
+      "quote": "I also saw a woman behind the counter",
       "hedged": false,
       "base_confidence": 0.7,
       "confidence": 0.7,
@@ -346,7 +367,61 @@
     },
     {
       "fact_id": "f020",
-      "entity": "person_5",
+      "entity": "scene",
+      "entity_type": "location",
+      "role": "none",
+      "attribute": "notable_features",
+      "value": "table",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "I also saw a woman behind the counter pick up the white paper on the table and fan herself",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f021",
+      "entity": "scene",
+      "entity_type": "location",
+      "role": "none",
+      "attribute": "notable_features",
+      "value": "direction where the man left",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "I'm not sure if she stood up and looked back in the direction where the man left",
+      "hedged": true,
+      "base_confidence": 0.45,
+      "confidence": 0.45,
+      "support": [
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f022",
+      "entity": "scene",
+      "entity_type": "location",
+      "role": "none",
+      "attribute": "notable_features",
+      "value": "white van",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "I think there was a white van",
+      "hedged": true,
+      "base_confidence": 0.45,
+      "confidence": 0.45,
+      "support": [
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f023",
+      "entity": "person_3",
       "entity_type": "person",
       "role": "suspect",
       "attribute": "upper_clothing",
@@ -363,8 +438,8 @@
       ]
     },
     {
-      "fact_id": "f021",
-      "entity": "person_5",
+      "fact_id": "f024",
+      "entity": "person_3",
       "entity_type": "person",
       "role": "suspect",
       "attribute": "upper_clothing",
@@ -381,8 +456,8 @@
       ]
     },
     {
-      "fact_id": "f022",
-      "entity": "person_5",
+      "fact_id": "f025",
+      "entity": "person_3",
       "entity_type": "person",
       "role": "suspect",
       "attribute": "action",
@@ -399,26 +474,8 @@
       ]
     },
     {
-      "fact_id": "f023",
-      "entity": "person_5",
-      "entity_type": "person",
-      "role": "suspect",
-      "attribute": "position",
-      "value": "sitting",
-      "source": "cctv_frame_02",
-      "source_type": "cctv",
-      "viewpoint": "CCTV camera",
-      "quote": "",
-      "hedged": false,
-      "base_confidence": 0.85,
-      "confidence": 0.85,
-      "support": [
-        "cctv"
-      ]
-    },
-    {
-      "fact_id": "f024",
-      "entity": "person_5",
+      "fact_id": "f026",
+      "entity": "person_3",
       "entity_type": "person",
       "role": "suspect",
       "attribute": "upper_clothing",
@@ -435,8 +492,26 @@
       ]
     },
     {
-      "fact_id": "f025",
-      "entity": "person_5",
+      "fact_id": "f027",
+      "entity": "person_3",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "headwear",
+      "value": "cap",
+      "source": "cctv_frame_03",
+      "source_type": "cctv",
+      "viewpoint": "CCTV camera",
+      "quote": "",
+      "hedged": false,
+      "base_confidence": 0.85,
+      "confidence": 0.85,
+      "support": [
+        "cctv"
+      ]
+    },
+    {
+      "fact_id": "f028",
+      "entity": "person_3",
       "entity_type": "person",
       "role": "suspect",
       "attribute": "upper_clothing",
@@ -453,12 +528,12 @@
       ]
     },
     {
-      "fact_id": "f026",
-      "entity": "person_6",
+      "fact_id": "f029",
+      "entity": "person_4",
       "entity_type": "person",
       "role": "bystander",
       "attribute": "upper_clothing",
-      "value": "patterned jacket",
+      "value": "patterned shirt",
       "source": "cctv_frame_05",
       "source_type": "cctv",
       "viewpoint": "CCTV camera",
@@ -471,10 +546,82 @@
       ]
     },
     {
-      "fact_id": "f027",
-      "entity": "person_1",
+      "fact_id": "f030",
+      "entity": "person_4",
       "entity_type": "person",
-      "role": "suspect",
+      "role": "bystander",
+      "attribute": "lower_clothing",
+      "value": "jeans",
+      "source": "cctv_frame_05",
+      "source_type": "cctv",
+      "viewpoint": "CCTV camera",
+      "quote": "",
+      "hedged": false,
+      "base_confidence": 0.85,
+      "confidence": 0.85,
+      "support": [
+        "cctv"
+      ]
+    },
+    {
+      "fact_id": "f031",
+      "entity": "person_4",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "hair",
+      "value": "dark",
+      "source": "cctv_frame_05",
+      "source_type": "cctv",
+      "viewpoint": "CCTV camera",
+      "quote": "",
+      "hedged": false,
+      "base_confidence": 0.85,
+      "confidence": 0.85,
+      "support": [
+        "cctv"
+      ]
+    },
+    {
+      "fact_id": "f032",
+      "entity": "person_4",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "action",
+      "value": "sitting",
+      "source": "cctv_frame_05",
+      "source_type": "cctv",
+      "viewpoint": "CCTV camera",
+      "quote": "",
+      "hedged": false,
+      "base_confidence": 0.85,
+      "confidence": 0.85,
+      "support": [
+        "cctv"
+      ]
+    },
+    {
+      "fact_id": "f033",
+      "entity": "person_4",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "position",
+      "value": "at a table",
+      "source": "cctv_frame_05",
+      "source_type": "cctv",
+      "viewpoint": "CCTV camera",
+      "quote": "",
+      "hedged": false,
+      "base_confidence": 0.85,
+      "confidence": 0.85,
+      "support": [
+        "cctv"
+      ]
+    },
+    {
+      "fact_id": "f034",
+      "entity": "person_4",
+      "entity_type": "person",
+      "role": "bystander",
       "attribute": "upper_clothing",
       "value": "checkered shirt",
       "source": "cctv_frame_06",
@@ -489,10 +636,10 @@
       ]
     },
     {
-      "fact_id": "f028",
-      "entity": "person_1",
+      "fact_id": "f035",
+      "entity": "person_4",
       "entity_type": "person",
-      "role": "suspect",
+      "role": "bystander",
       "attribute": "lower_clothing",
       "value": "jeans",
       "source": "cctv_frame_06",
@@ -507,10 +654,10 @@
       ]
     },
     {
-      "fact_id": "f029",
-      "entity": "person_1",
+      "fact_id": "f036",
+      "entity": "person_4",
       "entity_type": "person",
-      "role": "suspect",
+      "role": "bystander",
       "attribute": "hair",
       "value": "dark",
       "source": "cctv_frame_06",
@@ -525,10 +672,10 @@
       ]
     },
     {
-      "fact_id": "f030",
-      "entity": "person_1",
+      "fact_id": "f037",
+      "entity": "person_4",
       "entity_type": "person",
-      "role": "suspect",
+      "role": "bystander",
       "attribute": "action",
       "value": "writing",
       "source": "cctv_frame_06",
@@ -543,10 +690,10 @@
       ]
     },
     {
-      "fact_id": "f031",
-      "entity": "person_1",
+      "fact_id": "f038",
+      "entity": "person_4",
       "entity_type": "person",
-      "role": "suspect",
+      "role": "bystander",
       "attribute": "position",
       "value": "behind the counter",
       "source": "cctv_frame_06",
@@ -555,17 +702,16 @@
       "quote": "",
       "hedged": false,
       "base_confidence": 0.85,
-      "confidence": 0.99,
+      "confidence": 0.85,
       "support": [
-        "cctv",
-        "witness_C"
+        "cctv"
       ]
     },
     {
-      "fact_id": "f032",
-      "entity": "person_1",
+      "fact_id": "f039",
+      "entity": "person_4",
       "entity_type": "person",
-      "role": "suspect",
+      "role": "bystander",
       "attribute": "carrying",
       "value": "black backpack",
       "source": "cctv_frame_06",
@@ -579,5 +725,12 @@
         "cctv"
       ]
     }
-  ]
+  ],
+  "role_votes": {
+    "person_2": {
+      "witness_A": "suspect",
+      "witness_B": "victim",
+      "witness_C": "suspect"
+    }
+  }
 }

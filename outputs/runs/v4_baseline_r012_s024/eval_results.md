@@ -1,0 +1,5 @@
+| scene | facts_in_graph | recovery | drawn_precision | drawn_precision_witness | drawn_precision_cctv | false_withheld | conflicts_found | questions_safe | questions_blocked | baseline_blocked | leading_leaked | halluc_first | halluc_final | object_faithfulness | attribute_accuracy |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| robbery012 | 30 | 0.056 | 0.067 | 0.083 | 0.0 | 1/1 | 0/1 | 30 | 7 | 7/7 | 0 | 1 | 1 | 0.5 | 0.7 |
+| shoplifting024 | 39 | 0.5 | 0.227 | 0.5 | 0.0 | 1/1 |  | 36 | 0 | 0/0 | 0 | 1 | 1 | 0.75 | 0.833 |
+| average (2 scenes) | 34.5 | 0.278 | 0.147 | 0.291 | 0.0 | 2/2 | 0/1 | 33.0 | 3.5 | 7/7 | 0.0 | 1.0 | 1.0 | 0.625 | 0.766 |

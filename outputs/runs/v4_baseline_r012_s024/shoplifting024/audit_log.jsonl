@@ -1,0 +1,39 @@
+{"time": "15:39:53", "step": "extract", "detail": "witness_A: 6 facts"}
+{"time": "15:40:04", "step": "extract", "detail": "witness_B: 8 facts"}
+{"time": "15:40:16", "step": "extract", "detail": "witness_C: 8 facts"}
+{"time": "15:40:25", "step": "extract", "detail": "cctv_frame_01 (/tmp/claude-1000/-home-marams-crime-recon/5fb4e0dd-693f-4488-9e3b-c8e60f1989e4/scratchpad/v4wt/data/scenes/shoplifting024/frames/frame_01.jpg): 1 facts"}
+{"time": "15:40:35", "step": "extract", "detail": "cctv_frame_02 (/tmp/claude-1000/-home-marams-crime-recon/5fb4e0dd-693f-4488-9e3b-c8e60f1989e4/scratchpad/v4wt/data/scenes/shoplifting024/frames/frame_02.jpg): 2 facts"}
+{"time": "15:40:44", "step": "extract", "detail": "cctv_frame_03 (/tmp/claude-1000/-home-marams-crime-recon/5fb4e0dd-693f-4488-9e3b-c8e60f1989e4/scratchpad/v4wt/data/scenes/shoplifting024/frames/frame_03.jpg): 2 facts"}
+{"time": "15:40:54", "step": "extract", "detail": "cctv_frame_04 (/tmp/claude-1000/-home-marams-crime-recon/5fb4e0dd-693f-4488-9e3b-c8e60f1989e4/scratchpad/v4wt/data/scenes/shoplifting024/frames/frame_04.jpg): 1 facts"}
+{"time": "15:41:04", "step": "extract", "detail": "cctv_frame_05 (/tmp/claude-1000/-home-marams-crime-recon/5fb4e0dd-693f-4488-9e3b-c8e60f1989e4/scratchpad/v4wt/data/scenes/shoplifting024/frames/frame_05.jpg): 5 facts"}
+{"time": "15:41:14", "step": "extract", "detail": "cctv_frame_06 (/tmp/claude-1000/-home-marams-crime-recon/5fb4e0dd-693f-4488-9e3b-c8e60f1989e4/scratchpad/v4wt/data/scenes/shoplifting024/frames/frame_06.jpg): 6 facts"}
+{"time": "15:41:22", "step": "merge", "detail": "joined ['witness_B:e1'] into ['witness_A:e2'] (no witness describes two women)"}
+{"time": "15:41:22", "step": "merge", "detail": "joined ['witness_B:e2'] into ['witness_A:e1'] (no witness describes two men)"}
+{"time": "15:41:22", "step": "merge", "detail": "joined ['witness_C:e1'] into ['witness_A:e1', 'witness_B:e2'] (no witness describes two men)"}
+{"time": "15:41:22", "step": "merge", "detail": "joined ['witness_C:e2'] into ['witness_A:e2', 'witness_B:e1'] (no witness describes two women)"}
+{"time": "15:41:22", "step": "merge", "detail": "CCTV: 6 person mentions -> 2 people across frames"}
+{"time": "15:41:22", "step": "merge", "detail": "person_2: role by vote = suspect; sources disagree {'witness_A': 'suspect', 'witness_B': 'victim', 'witness_C': 'suspect'}"}
+{"time": "15:41:22", "step": "merge", "detail": "13 mentions -> 5 entities"}
+{"time": "15:41:22", "step": "extract", "detail": "39 facts from 3 witnesses + 6 CCTV frames"}
+{"time": "15:41:22", "step": "analyze", "detail": "0 conflicts (+1 role disagreements), 1 hypotheses, 18 gaps, 36 candidate questions (0 blocked as leading)"}
+{"time": "15:41:23", "step": "generate", "detail": "H1: 15 facts drawn, 4 withheld, 7 not drawn (prompt)"}
+{"time": "15:41:23", "step": "not drawn", "detail": "H1: person_1.action = 'stood up and walked out' (witness_A): movement/direction"}
+{"time": "15:41:23", "step": "not drawn", "detail": "H1: person_2.action = 'picked up the white paper on the table' (witness_A): one short action per person"}
+{"time": "15:41:23", "step": "not drawn", "detail": "H1: person_2.action = 'stood up and looked back in the direction where the man left' (witness_A): movement/direction"}
+{"time": "15:41:23", "step": "not drawn", "detail": "H1: person_2.action = 'opened the book and looked at it' (witness_B): one short action per person"}
+{"time": "15:41:23", "step": "not drawn", "detail": "H1: person_2.action = 'took something from the table' (witness_B): one short action per person"}
+{"time": "15:41:23", "step": "not drawn", "detail": "H1: person_2.action = 'put it into her clothes' (witness_B): one short action per person"}
+{"time": "15:41:23", "step": "not drawn", "detail": "H1: person_4.action = 'writing' (cctv_frame_06): one short action per person"}
+{"time": "15:41:23", "step": "prompt", "detail": "H1: CCTV photo, wide angle, realistic, exactly 4 people. a shop, with counter, table; a person; a person, fan herself; a person wearing dark jacket and cap, holding a red object; a person with dark hair wearing patterned shirt and jeans, carrying black backpack, sitting, at a table [64 tokens]"}
+{"time": "15:41:48", "step": "verify", "detail": "H1 seed 42: objects found 3/4, hallucinated 1, people 3 in image / 4 drawn"}
+{"time": "15:41:48", "step": "verify", "detail": "H1: bag, missing person_4 -> regenerate"}
+{"time": "15:41:53", "step": "verify", "detail": "H1 seed 43: objects found 3/4, hallucinated 1, people 3 in image / 4 drawn"}
+{"time": "15:41:53", "step": "verify", "detail": "H1: bag, missing person_4 -> regenerate"}
+{"time": "15:41:57", "step": "verify", "detail": "H1 seed 44: objects found 3/4, hallucinated 2, people 4 in image / 4 drawn"}
+{"time": "15:41:57", "step": "verify", "detail": "H1: person, bag, missing person_4 -> regenerate"}
+{"time": "15:42:01", "step": "verify", "detail": "H1 seed 45: objects found 2/4, hallucinated 4, people 4 in image / 4 drawn"}
+{"time": "15:42:01", "step": "verify", "detail": "H1: person, person, bag, bag, missing person_2, missing person_4 -> regenerate"}
+{"time": "15:42:06", "step": "verify", "detail": "H1 seed 46: objects found 3/4, hallucinated 8, people 7 in image / 4 drawn"}
+{"time": "15:42:58", "step": "verify", "detail": "H1 seed 42 attribute check: objects found 3/4, hallucinated 1, people 3 in image / 4 drawn, attribute accuracy 83%"}
+{"time": "15:43:52", "step": "verify", "detail": "H1 seed 43 attribute check: objects found 3/4, hallucinated 1, people 3 in image / 4 drawn, attribute accuracy 83%"}
+{"time": "15:43:52", "step": "verify", "detail": "H1: keeping seed 42 (5 attempts)"}

@@ -1,31 +1,29 @@
 {
   "conflicts": [
     {
-      "id": "c1",
-      "entity": "weapon_1",
-      "entity_type": "weapon",
-      "role": "none",
-      "attribute": "held_by",
+      "id": "r1",
+      "kind": "role",
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "role",
       "options": [
         {
-          "value": "man who was being robbed",
-          "fact_ids": [
-            "f009"
+          "value": "victim",
+          "fact_ids": [],
+          "sources": [
+            "witness_B",
+            "witness_C"
           ],
+          "confidence": 0.667
+        },
+        {
+          "value": "suspect",
+          "fact_ids": [],
           "sources": [
             "witness_A"
           ],
-          "confidence": 0.45
-        },
-        {
-          "value": "man in blue shirt",
-          "fact_ids": [
-            "f017"
-          ],
-          "sources": [
-            "witness_B"
-          ],
-          "confidence": 0.45
+          "confidence": 0.333
         }
       ]
     }
@@ -33,19 +31,9 @@
   "hypotheses": [
     {
       "id": "H1",
-      "name": "Most supported version",
-      "choices": {
-        "c1": 0
-      },
-      "description": "weapon_1.held_by = 'man who was being robbed' (witness_A)"
-    },
-    {
-      "id": "H2",
-      "name": "Alternative version 1",
-      "choices": {
-        "c1": 1
-      },
-      "description": "weapon_1.held_by = 'man in blue shirt' (witness_B)"
+      "name": "Main reconstruction",
+      "choices": {},
+      "description": "No conflicting evidence."
     }
   ],
   "gaps": [
@@ -68,61 +56,61 @@
       "attribute": "build"
     },
     {
-      "entity": "person_5",
+      "entity": "person_6",
       "entity_type": "person",
       "role": "suspect",
       "attribute": "lower_clothing"
     },
     {
-      "entity": "person_5",
+      "entity": "person_6",
       "entity_type": "person",
       "role": "suspect",
       "attribute": "height"
     },
     {
-      "entity": "person_5",
+      "entity": "person_6",
       "entity_type": "person",
       "role": "suspect",
       "attribute": "build"
     },
     {
-      "entity": "person_5",
+      "entity": "person_6",
       "entity_type": "person",
       "role": "suspect",
       "attribute": "action"
     },
     {
-      "entity": "person_5",
+      "entity": "person_6",
       "entity_type": "person",
       "role": "suspect",
       "attribute": "position"
     },
     {
-      "entity": "person_3",
+      "entity": "person_2",
       "entity_type": "person",
       "role": "victim",
       "attribute": "upper_clothing"
     },
     {
-      "entity": "person_3",
+      "entity": "person_2",
       "entity_type": "person",
       "role": "victim",
       "attribute": "lower_clothing"
     },
     {
-      "entity": "person_3",
+      "entity": "person_2",
       "entity_type": "person",
       "role": "victim",
       "attribute": "height"
     },
     {
-      "entity": "person_3",
+      "entity": "person_2",
       "entity_type": "person",
       "role": "victim",
       "attribute": "build"
     },
     {
-      "entity": "person_3",
+      "entity": "person_2",
       "entity_type": "person",
       "role": "victim",
       "attribute": "action"
@@ -176,31 +164,31 @@
       "attribute": "position"
     },
     {
-      "entity": "person_6",
+      "entity": "person_5",
       "entity_type": "person",
       "role": "bystander",
       "attribute": "lower_clothing"
     },
     {
-      "entity": "person_6",
+      "entity": "person_5",
       "entity_type": "person",
       "role": "bystander",
       "attribute": "height"
     },
     {
-      "entity": "person_6",
+      "entity": "person_5",
       "entity_type": "person",
       "role": "bystander",
       "attribute": "build"
     },
     {
-      "entity": "person_6",
+      "entity": "person_5",
       "entity_type": "person",
       "role": "bystander",
       "attribute": "action"
     },
     {
-      "entity": "person_6",
+      "entity": "person_5",
       "entity_type": "person",
       "role": "bystander",
       "attribute": "position"
@@ -326,7 +314,7 @@
     },
     {
       "witness": "witness_C",
-      "entity": "person_3",
+      "entity": "person_2",
       "entity_type": "person",
       "role": "victim",
       "attribute": "upper_clothing",
@@ -339,7 +327,7 @@
     },
     {
       "witness": "witness_C",
-      "entity": "person_3",
+      "entity": "person_2",
       "entity_type": "person",
       "role": "victim",
       "attribute": "lower_clothing",
@@ -352,7 +340,7 @@
     },
     {
       "witness": "witness_C",
-      "entity": "person_3",
+      "entity": "person_2",
       "entity_type": "person",
       "role": "victim",
       "attribute": "height",
@@ -365,7 +353,7 @@
     },
     {
       "witness": "witness_C",
-      "entity": "person_3",
+      "entity": "person_2",
       "entity_type": "person",
       "role": "victim",
       "attribute": "build",
@@ -378,7 +366,7 @@
     },
     {
       "witness": "witness_C",
-      "entity": "person_3",
+      "entity": "person_2",
       "entity_type": "person",
       "role": "victim",
       "attribute": "action",
@@ -572,73 +560,30 @@
       "passed": true
     },
     {
-      "witness": "witness_A",
-      "entity": "weapon_1",
+      "witness": "witness_B",
+      "entity": "weapon_2",
       "entity_type": "weapon",
       "role": "none",
-      "attribute": "held_by",
-      "text": "In your own words, please describe the held by of the item again.",
-      "kind": "conflict_recheck",
-      "viewpoint": "close by, inside, a few metres away",
+      "attribute": "weapon_type",
+      "text": "Did you also see the gun?",
+      "kind": "baseline",
+      "viewpoint": "far away, looking in from outside",
       "id": "q029",
-      "reasons": [],
-      "passed": true
-    },
-    {
-      "witness": "witness_A",
-      "entity": "weapon_1",
-      "entity_type": "weapon",
-      "role": "none",
-      "attribute": "held_by",
-      "text": "Are you sure it wasn't man in blue shirt?",
-      "kind": "baseline",
-      "viewpoint": "close by, inside, a few metres away",
-      "id": "q030",
       "reasons": [
-        "introduces detail(s) the witness never mentioned: blue, shirt",
-        "closed / suggestive phrasing pushes a particular answer"
-      ],
-      "passed": false
-    },
-    {
-      "witness": "witness_B",
-      "entity": "weapon_1",
-      "entity_type": "weapon",
-      "role": "none",
-      "attribute": "held_by",
-      "text": "In your own words, please describe the held by of the item again.",
-      "kind": "conflict_recheck",
-      "viewpoint": "far away, looking in from outside",
-      "id": "q031",
-      "reasons": [],
-      "passed": true
-    },
-    {
-      "witness": "witness_B",
-      "entity": "weapon_1",
-      "entity_type": "weapon",
-      "role": "none",
-      "attribute": "held_by",
-      "text": "Are you sure it wasn't man who was being robbed?",
-      "kind": "baseline",
-      "viewpoint": "far away, looking in from outside",
-      "id": "q032",
-      "reasons": [
-        "introduces detail(s) the witness never mentioned: being",
         "closed / suggestive phrasing pushes a particular answer"
       ],
       "passed": false
     },
     {
       "witness": "witness_C",
-      "entity": "weapon_1",
+      "entity": "weapon_2",
       "entity_type": "weapon",
       "role": "none",
       "attribute": "weapon_type",
       "text": "Did you also see the gun?",
       "kind": "baseline",
       "viewpoint": "brief glimpse while passing by",
-      "id": "q033",
+      "id": "q030",
       "reasons": [
         "introduces detail(s) the witness never mentioned: gun",
         "closed / suggestive phrasing pushes a particular answer"
@@ -647,14 +592,14 @@
     },
     {
       "witness": "witness_B",
-      "entity": "weapon_1",
+      "entity": "weapon_2",
       "entity_type": "weapon",
       "role": "none",
       "attribute": "held_by",
       "text": "Did you also see the man who was being robbed?",
       "kind": "baseline",
       "viewpoint": "far away, looking in from outside",
-      "id": "q034",
+      "id": "q031",
       "reasons": [
         "introduces detail(s) the witness never mentioned: being",
         "closed / suggestive phrasing pushes a particular answer"
@@ -663,14 +608,14 @@
     },
     {
       "witness": "witness_C",
-      "entity": "weapon_1",
+      "entity": "weapon_2",
       "entity_type": "weapon",
       "role": "none",
       "attribute": "held_by",
       "text": "Did you also see the man who was being robbed?",
       "kind": "baseline",
       "viewpoint": "brief glimpse while passing by",
-      "id": "q035",
+      "id": "q032",
       "reasons": [
         "introduces detail(s) the witness never mentioned: being, robbed",
         "closed / suggestive phrasing pushes a particular answer"
@@ -682,11 +627,26 @@
       "entity": "weapon_1",
       "entity_type": "weapon",
       "role": "none",
+      "attribute": "weapon_type",
+      "text": "Did you also see the gun?",
+      "kind": "baseline",
+      "viewpoint": "close by, inside, a few metres away",
+      "id": "q033",
+      "reasons": [
+        "closed / suggestive phrasing pushes a particular answer"
+      ],
+      "passed": false
+    },
+    {
+      "witness": "witness_A",
+      "entity": "weapon_1",
+      "entity_type": "weapon",
+      "role": "none",
       "attribute": "held_by",
       "text": "Did you also see the man in blue shirt?",
       "kind": "baseline",
       "viewpoint": "close by, inside, a few metres away",
-      "id": "q036",
+      "id": "q034",
       "reasons": [
         "introduces detail(s) the witness never mentioned: blue, shirt",
         "closed / suggestive phrasing pushes a particular answer"
@@ -702,7 +662,7 @@
       "text": "Did you also see the man in blue shirt?",
       "kind": "baseline",
       "viewpoint": "brief glimpse while passing by",
-      "id": "q037",
+      "id": "q035",
       "reasons": [
         "introduces detail(s) the witness never mentioned: blue, shirt",
         "closed / suggestive phrasing pushes a particular answer"

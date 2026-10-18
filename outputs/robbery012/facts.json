@@ -31,7 +31,7 @@
       "source": "witness_A",
       "source_type": "witness",
       "viewpoint": "close by, inside, a few metres away",
-      "quote": "walked to the cash register",
+      "quote": "then walked to the cash register",
       "hedged": false,
       "base_confidence": 0.7,
       "confidence": 0.9,
@@ -107,7 +107,7 @@
       "source": "witness_A",
       "source_type": "witness",
       "viewpoint": "close by, inside, a few metres away",
-      "quote": "tried to run into the house",
+      "quote": "and tried to run into the house",
       "hedged": false,
       "base_confidence": 0.7,
       "confidence": 0.9,
@@ -136,7 +136,7 @@
     },
     {
       "fact_id": "f008",
-      "entity": "weapon_1",
+      "entity": "weapon_2",
       "entity_type": "weapon",
       "role": "none",
       "attribute": "weapon_type",
@@ -147,15 +147,14 @@
       "quote": "I think there was a gun involved",
       "hedged": true,
       "base_confidence": 0.45,
-      "confidence": 0.65,
+      "confidence": 0.45,
       "support": [
-        "witness_A",
-        "witness_B"
+        "witness_A"
       ]
     },
     {
       "fact_id": "f009",
-      "entity": "weapon_1",
+      "entity": "weapon_2",
       "entity_type": "weapon",
       "role": "none",
       "attribute": "held_by",
@@ -195,6 +194,24 @@
       "entity_type": "person",
       "role": "suspect",
       "attribute": "action",
+      "value": "sat next to the cash register",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "far away, looking in from outside",
+      "quote": "sitting next to the cash register",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_B"
+      ]
+    },
+    {
+      "fact_id": "f012",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
       "value": "opened the cash register",
       "source": "witness_B",
       "source_type": "witness",
@@ -209,7 +226,7 @@
       ]
     },
     {
-      "fact_id": "f012",
+      "fact_id": "f013",
       "entity": "person_1",
       "entity_type": "person",
       "role": "suspect",
@@ -229,7 +246,7 @@
       ]
     },
     {
-      "fact_id": "f013",
+      "fact_id": "f014",
       "entity": "person_1",
       "entity_type": "person",
       "role": "suspect",
@@ -247,7 +264,7 @@
       ]
     },
     {
-      "fact_id": "f014",
+      "fact_id": "f015",
       "entity": "person_1",
       "entity_type": "person",
       "role": "suspect",
@@ -266,7 +283,7 @@
       ]
     },
     {
-      "fact_id": "f015",
+      "fact_id": "f016",
       "entity": "person_1",
       "entity_type": "person",
       "role": "suspect",
@@ -286,7 +303,7 @@
       ]
     },
     {
-      "fact_id": "f016",
+      "fact_id": "f017",
       "entity": "weapon_1",
       "entity_type": "weapon",
       "role": "none",
@@ -298,14 +315,13 @@
       "quote": "I think there was a gun involved",
       "hedged": true,
       "base_confidence": 0.45,
-      "confidence": 0.65,
+      "confidence": 0.45,
       "support": [
-        "witness_A",
         "witness_B"
       ]
     },
     {
-      "fact_id": "f017",
+      "fact_id": "f018",
       "entity": "weapon_1",
       "entity_type": "weapon",
       "role": "none",
@@ -323,7 +339,7 @@
       ]
     },
     {
-      "fact_id": "f018",
+      "fact_id": "f019",
       "entity": "person_1",
       "entity_type": "person",
       "role": "suspect",
@@ -341,7 +357,7 @@
       ]
     },
     {
-      "fact_id": "f019",
+      "fact_id": "f020",
       "entity": "person_1",
       "entity_type": "person",
       "role": "suspect",
@@ -361,7 +377,7 @@
       ]
     },
     {
-      "fact_id": "f020",
+      "fact_id": "f021",
       "entity": "person_1",
       "entity_type": "person",
       "role": "suspect",
@@ -380,7 +396,7 @@
       ]
     },
     {
-      "fact_id": "f021",
+      "fact_id": "f022",
       "entity": "person_1",
       "entity_type": "person",
       "role": "suspect",
@@ -400,8 +416,8 @@
       ]
     },
     {
-      "fact_id": "f022",
-      "entity": "person_3",
+      "fact_id": "f023",
+      "entity": "person_2",
       "entity_type": "person",
       "role": "victim",
       "attribute": "position",
@@ -418,7 +434,7 @@
       ]
     },
     {
-      "fact_id": "f023",
+      "fact_id": "f024",
       "entity": "person_4",
       "entity_type": "person",
       "role": "bystander",
@@ -436,8 +452,8 @@
       ]
     },
     {
-      "fact_id": "f024",
-      "entity": "person_6",
+      "fact_id": "f025",
+      "entity": "person_5",
       "entity_type": "person",
       "role": "bystander",
       "attribute": "upper_clothing",
@@ -454,8 +470,8 @@
       ]
     },
     {
-      "fact_id": "f025",
-      "entity": "person_6",
+      "fact_id": "f026",
+      "entity": "person_5",
       "entity_type": "person",
       "role": "bystander",
       "attribute": "upper_clothing",
@@ -472,8 +488,8 @@
       ]
     },
     {
-      "fact_id": "f026",
-      "entity": "person_6",
+      "fact_id": "f027",
+      "entity": "person_5",
       "entity_type": "person",
       "role": "bystander",
       "attribute": "upper_clothing",
@@ -490,8 +506,8 @@
       ]
     },
     {
-      "fact_id": "f027",
-      "entity": "person_6",
+      "fact_id": "f028",
+      "entity": "person_5",
       "entity_type": "person",
       "role": "bystander",
       "attribute": "upper_clothing",
@@ -508,8 +524,8 @@
       ]
     },
     {
-      "fact_id": "f028",
-      "entity": "person_5",
+      "fact_id": "f029",
+      "entity": "person_6",
       "entity_type": "person",
       "role": "suspect",
       "attribute": "upper_clothing",
@@ -526,8 +542,8 @@
       ]
     },
     {
-      "fact_id": "f029",
-      "entity": "person_5",
+      "fact_id": "f030",
+      "entity": "person_6",
       "entity_type": "person",
       "role": "suspect",
       "attribute": "headwear",
@@ -544,8 +560,8 @@
       ]
     },
     {
-      "fact_id": "f030",
-      "entity": "person_5",
+      "fact_id": "f031",
+      "entity": "person_6",
       "entity_type": "person",
       "role": "suspect",
       "attribute": "upper_clothing",
@@ -561,5 +577,12 @@
         "cctv"
       ]
     }
-  ]
+  ],
+  "role_votes": {
+    "person_2": {
+      "witness_A": "suspect",
+      "witness_B": "victim",
+      "witness_C": "victim"
+    }
+  }
 }

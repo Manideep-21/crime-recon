@@ -101,7 +101,7 @@
         "fact_id": "f025",
         "entity": "person_4",
         "attribute": "position",
-        "value": "just nearby",
+        "value": "nearby",
         "source": "witness_C",
         "confidence": 0.45
       }
@@ -436,7 +436,7 @@
         "fact_id": "f025",
         "entity": "person_4",
         "attribute": "position",
-        "value": "just nearby",
+        "value": "nearby",
         "source": "witness_C",
         "confidence": 0.45
       }

@@ -146,9 +146,10 @@
       "quote": "on the table",
       "hedged": false,
       "base_confidence": 0.7,
-      "confidence": 0.7,
+      "confidence": 0.9,
       "support": [
-        "witness_A"
+        "witness_A",
+        "witness_C"
       ]
     },
     {
@@ -325,42 +326,6 @@
     },
     {
       "fact_id": "f018",
-      "entity": "vehicle_1",
-      "entity_type": "vehicle",
-      "role": "none",
-      "attribute": "color",
-      "value": "white",
-      "source": "witness_C",
-      "source_type": "witness",
-      "viewpoint": "brief glimpse while passing by",
-      "quote": "a white van",
-      "hedged": true,
-      "base_confidence": 0.45,
-      "confidence": 0.45,
-      "support": [
-        "witness_C"
-      ]
-    },
-    {
-      "fact_id": "f019",
-      "entity": "vehicle_1",
-      "entity_type": "vehicle",
-      "role": "none",
-      "attribute": "action",
-      "value": "was nearby",
-      "source": "witness_C",
-      "source_type": "witness",
-      "viewpoint": "brief glimpse while passing by",
-      "quote": "I'm pretty sure there was a white van nearby",
-      "hedged": true,
-      "base_confidence": 0.45,
-      "confidence": 0.45,
-      "support": [
-        "witness_C"
-      ]
-    },
-    {
-      "fact_id": "f020",
       "entity": "object_1",
       "entity_type": "object",
       "role": "none",
@@ -369,7 +334,7 @@
       "source": "witness_C",
       "source_type": "witness",
       "viewpoint": "brief glimpse while passing by",
-      "quote": "touched the watch on the table",
+      "quote": "the watch",
       "hedged": false,
       "base_confidence": 0.7,
       "confidence": 0.9,
@@ -379,7 +344,26 @@
       ]
     },
     {
-      "fact_id": "f021",
+      "fact_id": "f019",
+      "entity": "object_1",
+      "entity_type": "object",
+      "role": "none",
+      "attribute": "position",
+      "value": "on the table",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "on the table",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.9,
+      "support": [
+        "witness_A",
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f020",
       "entity": "person_3",
       "entity_type": "person",
       "role": "bystander",
@@ -397,7 +381,7 @@
       ]
     },
     {
-      "fact_id": "f022",
+      "fact_id": "f021",
       "entity": "person_3",
       "entity_type": "person",
       "role": "bystander",
@@ -415,12 +399,30 @@
       ]
     },
     {
-      "fact_id": "f023",
-      "entity": "person_3",
+      "fact_id": "f022",
+      "entity": "person_4",
       "entity_type": "person",
       "role": "bystander",
-      "attribute": "action",
-      "value": "standing at counter",
+      "attribute": "upper_clothing",
+      "value": "black top",
+      "source": "cctv_frame_01",
+      "source_type": "cctv",
+      "viewpoint": "CCTV camera",
+      "quote": "",
+      "hedged": false,
+      "base_confidence": 0.85,
+      "confidence": 0.85,
+      "support": [
+        "cctv"
+      ]
+    },
+    {
+      "fact_id": "f023",
+      "entity": "person_4",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "headwear",
+      "value": "white beanie",
       "source": "cctv_frame_01",
       "source_type": "cctv",
       "viewpoint": "CCTV camera",

@@ -537,3 +537,75 @@ shirt colour sits on a different entity than the true one, so nothing conflicts.
   ("turned around", "walked away") low. Then 4 shared actions outrank 1.
 - Extract clothing given as a noun phrase ("the man in black" → upper_clothing "black clothes"), a
   long-standing miss.
+
+## v5: merge fix (18 Oct 2026). All 8 scenes are now the development set
+A general design change, made after the held-out round-2 diagnosis. From here on, robbery012,
+shoplifting024, robbery003 and shoplifting001 are **development** scenes; their earlier held-out numbers
+above stay as they were.
+
+**What changed** (`extraction.py`)
+1. **Partial LLM merge answers are repaired, not rejected** (`_repair_groups`): invented keys are
+   dropped, a key given twice stays in its first group, groups mixing a person with an object are split
+   by type, and left-out mentions become groups of their own. Every repair is logged ("LLM grouping
+   repaired: …").
+2. **LLM joins are checked** (`_check_llm_joins`). A witness mention whose details agree clearly more
+   with another group (link score ≥ 1 and higher than with its own group) moves there. Logged as "LLM
+   join overruled". CCTV people are taken out of the LLM's groups first; only the CCTV linker places
+   them.
+3. **Actions and positions count by matching value** (`_multi_agreement`): 1 per specific match
+   ("took out a black pistol"), 0.25 per generic one ("walked away", "turned around", "left", "stood
+   up", …). Matching is one-to-one. Before, an attribute counted 1 however many actions matched.
+- Tests: 48 (was 44).
+
+**How often each repair was needed** (v5 run, 8 scenes). **Every** LLM answer needed at least one
+repair, so in v4 all 8 scenes had silently fallen back to the rule-based merge.
+
+| Scene | Missing mention added | Mixed-type group split | Duplicate key dropped | Invented key dropped | LLM join overruled |
+|---|---|---|---|---|---|
+| robbery044 | 1 | 1 | – | – | – |
+| robbery058 | 4 | 1 | – | – | – |
+| sample_robbery | 1 | – | – | – | – |
+| shoplifting033 | 2 | – | – | – | – |
+| robbery012 | – | 2 | 1 | – | 3 |
+| shoplifting024 | – | 1 | – | – | – |
+| robbery003 | 1 | – | – | – | 1 |
+| shoplifting001 | 4 | – | – | – | – |
+| **Total** | **13** | **5** | **1** | **0** | **4** |
+
+(In the trace runs Qwen also invented keys: shoplifting001 had 4. LLM output varies between runs.)
+
+**Before (v4) → after (v5)**, `evaluate.py --generate --force-extract`, SDXL, all 8 scenes, 2 actual people
+each. v4 = the last v4 run of each scene: the v4 commit for the 4 old dev scenes,
+`outputs/runs/v4_baseline_r012_s024/` (run today for this table), and `outputs/runs/heldout2_v4/`. v5 =
+`outputs/runs/v5_8scenes/`.
+
+| Scene | People entities | Drawn (H1) / in image | Conflicts found | Recovery | Drawn precision | Object faithf. | Attribute acc. | Role disagreements |
+|---|---|---|---|---|---|---|---|---|
+| robbery044 | 3 → 3 | 3/3 → 3/3 | 1/1 → 1/1 | 1.000 → 1.000 | 0.467 → 0.467 | 0.834 → 0.834 | 0.700 → 0.700 | 0 → 0 |
+| robbery058 | 4 → 4 | 2/2 → 2/2 | 0/1 → 0/1 | 0.733 → 0.733 | 0.583 → 0.583 | 1.000 → 1.000 | 0.667 → 0.667 | 0 → 0 |
+| sample_robbery | 2 → 2 | 2/2 → 2/2 | 1/1 → 1/1 | 0.857 → 0.857 | 0.667 → 0.667 | 0.750 → 0.750 | 0.916 → 0.916 | 0 → 0 |
+| shoplifting033 | 3 → 4 | 3/2 → 4/2 | – | 0.909 → 0.909 | 0.571 → 0.533 | 0.750 → 0.600 | 0.667 → 0.600 | 0 → 0 |
+| robbery012 | 5 → 5 | 4/2 → 4/3 | 0/1 → 0/1 | 0.056 → 0.056 | 0.067 → 0.000 | 0.500 → 0.750 | 0.700 → 1.000 | 1 → 1 |
+| shoplifting024 | 4 → 4 | 4/3 → 4/3 | – | 0.500 → 0.500 | 0.227 → 0.227 | 0.750 → 0.750 | 0.833 → 0.833 | 1 → 1 |
+| robbery003 | 6 → **4** | 6/6 → **4/5** | 0/1 → 0/1 | 0.875 → 0.875 | 0.739 → 0.722 | 0.643 → 0.833 | 0.750 → 1.000 | 0 → 0 |
+| shoplifting001 | 8 → **5** | 8/2 → **5/4** | 0/1 → 0/1 | 0.864 → 0.818 | 0.794 → 0.731 | 0.222 → 0.600 | 0.667 → 0.800 | 0 → 0 |
+| **Average** | 4.4 → 3.9 | drawn 4.0 → 3.5 | 2/6 → 2/6 | 0.724 → 0.718 | 0.514 → 0.491 | 0.681 → 0.765 | 0.738 → 0.815 | |
+
+What it shows:
+- **Fewer duplicate people where the duplication was a merge failure.** robbery003: all three witnesses'
+  robber is now one person; one of two LLM joins was overruled. shoplifting001 dropped from 8 to 5 people.
+  Object faithfulness and attribute accuracy rise with the shorter prompts.
+- **Still not 2 people anywhere except sample_robbery and robbery058.** What remains is mostly
+  CCTV people that don't link, plus witness-invented extras:
+  - robbery003: the clerk's camera "dark jacket" has nothing to agree with;
+  - shoplifting001: the camera's orange shirt vs witness B's planted "brown shirt" (a colour clash),
+    with A's true "orange shirt" not extracted;
+  - shoplifting033: one extra camera person this run, from vision variation, not the merge.
+- **Conflicts found don't move (2/6), and the reason is extraction, not merging.** In every missed case
+  the *true* value was never extracted, so the planted wrong colour has nothing to conflict with. The
+  common thread is a **hedged clothing sentence**: "I'm pretty sure he was wearing a black and white plaid
+  shirt and a hat" → only "hat" (robbery003); "I think he was wearing an orange shirt" → nothing
+  (shoplifting001); "I think he was wearing a blue shirt" → nothing (shoplifting033, see the role-fix
+  section). **This is the next fix:** hedged clothing must be extracted, with its hedge.
+- robbery012 is unchanged by v5: its witness-side roles disagree (1 role conflict recorded) and its people
+  still don't link to the camera.

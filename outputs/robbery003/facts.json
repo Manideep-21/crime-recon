@@ -3,7 +3,7 @@
   "facts": [
     {
       "fact_id": "f001",
-      "entity": "person_1",
+      "entity": "person_2",
       "entity_type": "person",
       "role": "suspect",
       "attribute": "action",
@@ -14,14 +14,16 @@
       "quote": "took away a bottle of Coke",
       "hedged": false,
       "base_confidence": 0.7,
-      "confidence": 0.7,
+      "confidence": 0.99,
       "support": [
-        "witness_A"
+        "witness_A",
+        "witness_B",
+        "witness_C"
       ]
     },
     {
       "fact_id": "f002",
-      "entity": "person_1",
+      "entity": "person_2",
       "entity_type": "person",
       "role": "suspect",
       "attribute": "action",
@@ -39,7 +41,7 @@
     },
     {
       "fact_id": "f003",
-      "entity": "person_1",
+      "entity": "person_2",
       "entity_type": "person",
       "role": "suspect",
       "attribute": "headwear",
@@ -57,7 +59,7 @@
     },
     {
       "fact_id": "f004",
-      "entity": "person_1",
+      "entity": "person_2",
       "entity_type": "person",
       "role": "suspect",
       "attribute": "action",
@@ -68,14 +70,16 @@
       "quote": "took out a black pistol",
       "hedged": false,
       "base_confidence": 0.7,
-      "confidence": 0.7,
+      "confidence": 0.99,
       "support": [
-        "witness_A"
+        "witness_A",
+        "witness_B",
+        "witness_C"
       ]
     },
     {
       "fact_id": "f005",
-      "entity": "person_1",
+      "entity": "person_2",
       "entity_type": "person",
       "role": "suspect",
       "attribute": "action",
@@ -86,14 +90,15 @@
       "quote": "pointed it at the man in black clothes",
       "hedged": false,
       "base_confidence": 0.7,
-      "confidence": 0.7,
+      "confidence": 0.9,
       "support": [
-        "witness_A"
+        "witness_A",
+        "witness_B"
       ]
     },
     {
       "fact_id": "f006",
-      "entity": "person_2",
+      "entity": "person_1",
       "entity_type": "person",
       "role": "victim",
       "attribute": "action",
@@ -111,7 +116,7 @@
     },
     {
       "fact_id": "f007",
-      "entity": "weapon_1",
+      "entity": "weapon_2",
       "entity_type": "weapon",
       "role": "none",
       "attribute": "weapon_type",
@@ -122,16 +127,14 @@
       "quote": "a black pistol",
       "hedged": false,
       "base_confidence": 0.7,
-      "confidence": 0.99,
+      "confidence": 0.7,
       "support": [
-        "witness_A",
-        "witness_B",
-        "witness_C"
+        "witness_A"
       ]
     },
     {
       "fact_id": "f008",
-      "entity": "weapon_1",
+      "entity": "weapon_2",
       "entity_type": "weapon",
       "role": "none",
       "attribute": "held_by",
@@ -149,7 +152,7 @@
     },
     {
       "fact_id": "f009",
-      "entity": "person_3",
+      "entity": "person_2",
       "entity_type": "person",
       "role": "suspect",
       "attribute": "upper_clothing",
@@ -167,7 +170,7 @@
     },
     {
       "fact_id": "f010",
-      "entity": "person_3",
+      "entity": "person_2",
       "entity_type": "person",
       "role": "suspect",
       "attribute": "action",
@@ -178,14 +181,15 @@
       "quote": "robbed the place",
       "hedged": false,
       "base_confidence": 0.7,
-      "confidence": 0.7,
+      "confidence": 0.9,
       "support": [
-        "witness_B"
+        "witness_B",
+        "witness_C"
       ]
     },
     {
       "fact_id": "f011",
-      "entity": "person_3",
+      "entity": "person_2",
       "entity_type": "person",
       "role": "suspect",
       "attribute": "action",
@@ -196,14 +200,16 @@
       "quote": "took out a black pistol",
       "hedged": false,
       "base_confidence": 0.7,
-      "confidence": 0.7,
+      "confidence": 0.99,
       "support": [
-        "witness_B"
+        "witness_A",
+        "witness_B",
+        "witness_C"
       ]
     },
     {
       "fact_id": "f012",
-      "entity": "person_3",
+      "entity": "person_2",
       "entity_type": "person",
       "role": "suspect",
       "attribute": "action",
@@ -214,14 +220,15 @@
       "quote": "pointed it at the man in black",
       "hedged": false,
       "base_confidence": 0.7,
-      "confidence": 0.7,
+      "confidence": 0.9,
       "support": [
+        "witness_A",
         "witness_B"
       ]
     },
     {
       "fact_id": "f013",
-      "entity": "person_3",
+      "entity": "person_2",
       "entity_type": "person",
       "role": "suspect",
       "attribute": "action",
@@ -232,14 +239,15 @@
       "quote": "took the gun back",
       "hedged": false,
       "base_confidence": 0.7,
-      "confidence": 0.7,
+      "confidence": 0.9,
       "support": [
-        "witness_B"
+        "witness_B",
+        "witness_C"
       ]
     },
     {
       "fact_id": "f014",
-      "entity": "person_3",
+      "entity": "person_2",
       "entity_type": "person",
       "role": "suspect",
       "attribute": "action",
@@ -250,14 +258,16 @@
       "quote": "took away a bottle of Coke",
       "hedged": false,
       "base_confidence": 0.7,
-      "confidence": 0.7,
+      "confidence": 0.99,
       "support": [
-        "witness_B"
+        "witness_A",
+        "witness_B",
+        "witness_C"
       ]
     },
     {
       "fact_id": "f015",
-      "entity": "person_3",
+      "entity": "person_2",
       "entity_type": "person",
       "role": "suspect",
       "attribute": "action",
@@ -275,7 +285,7 @@
     },
     {
       "fact_id": "f016",
-      "entity": "person_3",
+      "entity": "person_2",
       "entity_type": "person",
       "role": "suspect",
       "attribute": "action",
@@ -286,9 +296,10 @@
       "quote": "took what the man at the counter handed him",
       "hedged": true,
       "base_confidence": 0.575,
-      "confidence": 0.575,
+      "confidence": 0.775,
       "support": [
-        "witness_B"
+        "witness_B",
+        "witness_C"
       ]
     },
     {
@@ -304,9 +315,8 @@
       "quote": "a black pistol",
       "hedged": false,
       "base_confidence": 0.7,
-      "confidence": 0.99,
+      "confidence": 0.9,
       "support": [
-        "witness_A",
         "witness_B",
         "witness_C"
       ]
@@ -331,7 +341,7 @@
     },
     {
       "fact_id": "f019",
-      "entity": "person_5",
+      "entity": "person_2",
       "entity_type": "person",
       "role": "suspect",
       "attribute": "action",
@@ -342,14 +352,15 @@
       "quote": "I saw a man who robbed the place",
       "hedged": false,
       "base_confidence": 0.7,
-      "confidence": 0.7,
+      "confidence": 0.9,
       "support": [
+        "witness_B",
         "witness_C"
       ]
     },
     {
       "fact_id": "f020",
-      "entity": "person_5",
+      "entity": "person_2",
       "entity_type": "person",
       "role": "suspect",
       "attribute": "action",
@@ -367,7 +378,7 @@
     },
     {
       "fact_id": "f021",
-      "entity": "person_5",
+      "entity": "person_2",
       "entity_type": "person",
       "role": "suspect",
       "attribute": "action",
@@ -378,14 +389,16 @@
       "quote": "took out a black pistol",
       "hedged": false,
       "base_confidence": 0.7,
-      "confidence": 0.7,
+      "confidence": 0.99,
       "support": [
+        "witness_A",
+        "witness_B",
         "witness_C"
       ]
     },
     {
       "fact_id": "f022",
-      "entity": "person_5",
+      "entity": "person_2",
       "entity_type": "person",
       "role": "suspect",
       "attribute": "action",
@@ -396,14 +409,15 @@
       "quote": "took the gun back",
       "hedged": false,
       "base_confidence": 0.7,
-      "confidence": 0.7,
+      "confidence": 0.9,
       "support": [
+        "witness_B",
         "witness_C"
       ]
     },
     {
       "fact_id": "f023",
-      "entity": "person_5",
+      "entity": "person_2",
       "entity_type": "person",
       "role": "suspect",
       "attribute": "action",
@@ -414,14 +428,16 @@
       "quote": "took away a bottle of Coke",
       "hedged": false,
       "base_confidence": 0.7,
-      "confidence": 0.7,
+      "confidence": 0.99,
       "support": [
+        "witness_A",
+        "witness_B",
         "witness_C"
       ]
     },
     {
       "fact_id": "f024",
-      "entity": "person_5",
+      "entity": "person_2",
       "entity_type": "person",
       "role": "suspect",
       "attribute": "action",
@@ -432,36 +448,19 @@
       "quote": "took what the man at the counter handed him",
       "hedged": false,
       "base_confidence": 0.7,
-      "confidence": 0.7,
+      "confidence": 0.9,
       "support": [
+        "witness_B",
         "witness_C"
       ]
     },
     {
       "fact_id": "f025",
-      "entity": "person_6",
+      "entity": "person_3",
       "entity_type": "person",
       "role": "victim",
       "attribute": "action",
-      "value": "being robbed",
-      "source": "witness_C",
-      "source_type": "witness",
-      "viewpoint": "brief glimpse while passing by",
-      "quote": "Another man, wearing black clothes, was being robbed",
-      "hedged": false,
-      "base_confidence": 0.7,
-      "confidence": 0.7,
-      "support": [
-        "witness_C"
-      ]
-    },
-    {
-      "fact_id": "f026",
-      "entity": "person_6",
-      "entity_type": "person",
-      "role": "victim",
-      "attribute": "action",
-      "value": "turned around",
+      "value": "being robbed and turned around",
       "source": "witness_C",
       "source_type": "witness",
       "viewpoint": "brief glimpse while passing by",
@@ -474,7 +473,7 @@
       ]
     },
     {
-      "fact_id": "f027",
+      "fact_id": "f026",
       "entity": "weapon_1",
       "entity_type": "weapon",
       "role": "none",
@@ -486,15 +485,14 @@
       "quote": "I think there was a weapon, maybe a pistol",
       "hedged": true,
       "base_confidence": 0.45,
-      "confidence": 0.85,
+      "confidence": 0.65,
       "support": [
-        "witness_A",
         "witness_B",
         "witness_C"
       ]
     },
     {
-      "fact_id": "f028",
+      "fact_id": "f027",
       "entity": "object_1",
       "entity_type": "object",
       "role": "none",
@@ -512,8 +510,8 @@
       ]
     },
     {
-      "fact_id": "f029",
-      "entity": "person_7",
+      "fact_id": "f028",
+      "entity": "person_4",
       "entity_type": "person",
       "role": "bystander",
       "attribute": "upper_clothing",
@@ -530,8 +528,8 @@
       ]
     },
     {
-      "fact_id": "f030",
-      "entity": "person_7",
+      "fact_id": "f029",
+      "entity": "person_4",
       "entity_type": "person",
       "role": "bystander",
       "attribute": "upper_clothing",
@@ -548,8 +546,8 @@
       ]
     },
     {
-      "fact_id": "f031",
-      "entity": "person_7",
+      "fact_id": "f030",
+      "entity": "person_4",
       "entity_type": "person",
       "role": "bystander",
       "attribute": "upper_clothing",
@@ -566,8 +564,8 @@
       ]
     },
     {
-      "fact_id": "f032",
-      "entity": "person_7",
+      "fact_id": "f031",
+      "entity": "person_4",
       "entity_type": "person",
       "role": "bystander",
       "attribute": "headwear",
@@ -584,8 +582,8 @@
       ]
     },
     {
-      "fact_id": "f033",
-      "entity": "person_7",
+      "fact_id": "f032",
+      "entity": "person_4",
       "entity_type": "person",
       "role": "bystander",
       "attribute": "upper_clothing",
@@ -602,8 +600,8 @@
       ]
     },
     {
-      "fact_id": "f034",
-      "entity": "person_7",
+      "fact_id": "f033",
+      "entity": "person_4",
       "entity_type": "person",
       "role": "bystander",
       "attribute": "upper_clothing",
@@ -620,12 +618,12 @@
       ]
     },
     {
-      "fact_id": "f035",
-      "entity": "person_7",
+      "fact_id": "f034",
+      "entity": "person_4",
       "entity_type": "person",
       "role": "bystander",
       "attribute": "upper_clothing",
-      "value": "dark jacket",
+      "value": "dark shirt",
       "source": "cctv_frame_06",
       "source_type": "cctv",
       "viewpoint": "CCTV camera",

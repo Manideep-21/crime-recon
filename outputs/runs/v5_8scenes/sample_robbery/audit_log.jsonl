@@ -1,0 +1,45 @@
+{"time": "15:52:52", "step": "post-check", "detail": "witness_A: 'snacks aisle' location.place_type -> location.notable_features"}
+{"time": "15:52:52", "step": "post-check", "detail": "witness_A: dropped placeholder location.lighting = 'not specified'"}
+{"time": "15:52:52", "step": "post-check", "detail": "witness_A: dropped placeholder location.time_of_day = 'not specified'"}
+{"time": "15:52:52", "step": "extract", "detail": "witness_A: 9 facts"}
+{"time": "15:53:03", "step": "post-check", "detail": "witness_B: dropped vehicle e3 ('the parking lot'), no vehicle described"}
+{"time": "15:53:03", "step": "extract", "detail": "witness_B: 6 facts"}
+{"time": "15:53:17", "step": "post-check", "detail": "witness_C: 'slim' person.height -> person.build"}
+{"time": "15:53:17", "step": "extract", "detail": "witness_C: 6 facts"}
+{"time": "15:53:24", "step": "merge", "detail": "LLM grouping repaired: 1 missing mention added alone"}
+{"time": "15:53:24", "step": "merge", "detail": "joined ['witness_B:e2'] into ['witness_A:e1', 'witness_C:e1'] (no witness describes two men)"}
+{"time": "15:53:24", "step": "merge", "detail": "7 mentions -> 4 entities"}
+{"time": "15:53:24", "step": "extract", "detail": "21 facts from 3 witnesses + 0 CCTV frames"}
+{"time": "15:53:24", "step": "analyze", "detail": "1 conflicts (+0 role disagreements), 2 hypotheses, 5 gaps, 15 candidate questions (6 blocked as leading)"}
+{"time": "15:53:25", "step": "generate", "detail": "H1: 12 facts drawn, 2 withheld, 6 not drawn (prompt)"}
+{"time": "15:53:25", "step": "not drawn", "detail": "H1: person_1.action = 'walked straight to the counter' (witness_A): movement/direction"}
+{"time": "15:53:25", "step": "not drawn", "detail": "H1: person_1.action = 'grabbed cash from the register' (witness_A): one short action per person"}
+{"time": "15:53:25", "step": "not drawn", "detail": "H1: person_1.action = 'ran out the door' (witness_B): movement/direction"}
+{"time": "15:53:25", "step": "not drawn", "detail": "H1: person_1.position = 'towards the parking lot' (witness_B): movement/direction"}
+{"time": "15:53:25", "step": "not drawn", "detail": "H1: person_1.action = 'came running out of the store' (witness_C): movement/direction"}
+{"time": "15:53:25", "step": "not drawn", "detail": "H1: person_1.action = 'ran past my car' (witness_C): movement/direction"}
+{"time": "15:53:25", "step": "prompt", "detail": "H1: CCTV photo, wide angle, realistic, exactly 2 people. a store, brightly lit, with snacks aisle; a slim tall person wearing red hoodie and black jeans and black cap, carrying black backpack, leaned over; a person wearing green uniform shirt, put her hands up [57 tokens]"}
+{"time": "15:53:37", "step": "verify", "detail": "H1 seed 42: objects found 1/2, hallucinated 1, people 2 in image / 2 drawn"}
+{"time": "15:53:37", "step": "verify", "detail": "H1: person, missing person_2 -> regenerate"}
+{"time": "15:53:41", "step": "verify", "detail": "H1 seed 43: objects found 1/2, hallucinated 1, people 2 in image / 2 drawn"}
+{"time": "15:53:41", "step": "verify", "detail": "H1: person, missing person_2 -> regenerate"}
+{"time": "15:53:48", "step": "verify", "detail": "H1 seed 44: objects found 1/2, hallucinated 3, people 3 in image / 2 drawn"}
+{"time": "15:53:48", "step": "verify", "detail": "H1: person, person, bag, missing person_2 -> regenerate"}
+{"time": "15:53:54", "step": "verify", "detail": "H1 seed 45: objects found 1/2, hallucinated 2, people 2 in image / 2 drawn"}
+{"time": "15:53:54", "step": "verify", "detail": "H1: person, bag, missing person_2 -> regenerate"}
+{"time": "15:53:59", "step": "verify", "detail": "H1 seed 46: objects found 1/2, hallucinated 1, people 2 in image / 2 drawn"}
+{"time": "15:54:47", "step": "verify", "detail": "H1 seed 42 attribute check: objects found 1/2, hallucinated 1, people 2 in image / 2 drawn, attribute accuracy 83%"}
+{"time": "15:55:37", "step": "verify", "detail": "H1 seed 43 attribute check: objects found 1/2, hallucinated 1, people 2 in image / 2 drawn, attribute accuracy 50%"}
+{"time": "15:56:26", "step": "verify", "detail": "H1 seed 46 attribute check: objects found 1/2, hallucinated 1, people 2 in image / 2 drawn, attribute accuracy 67%"}
+{"time": "15:56:26", "step": "verify", "detail": "H1: keeping seed 42 (5 attempts)"}
+{"time": "15:56:27", "step": "generate", "detail": "H2: 12 facts drawn, 2 withheld, 6 not drawn (prompt)"}
+{"time": "15:56:27", "step": "not drawn", "detail": "H2: person_1.action = 'walked straight to the counter' (witness_A): movement/direction"}
+{"time": "15:56:27", "step": "not drawn", "detail": "H2: person_1.action = 'grabbed cash from the register' (witness_A): one short action per person"}
+{"time": "15:56:27", "step": "not drawn", "detail": "H2: person_1.action = 'ran out the door' (witness_B): movement/direction"}
+{"time": "15:56:27", "step": "not drawn", "detail": "H2: person_1.position = 'towards the parking lot' (witness_B): movement/direction"}
+{"time": "15:56:27", "step": "not drawn", "detail": "H2: person_1.action = 'came running out of the store' (witness_C): movement/direction"}
+{"time": "15:56:27", "step": "not drawn", "detail": "H2: person_1.action = 'ran past my car' (witness_C): movement/direction"}
+{"time": "15:56:27", "step": "prompt", "detail": "H2: CCTV photo, wide angle, realistic, exactly 2 people. a store, brightly lit, with snacks aisle; a slim tall person wearing blue jacket and black jeans and black cap, carrying black backpack, leaned over; a person wearing green uniform shirt, put her hands up [57 tokens]"}
+{"time": "15:56:32", "step": "verify", "detail": "H2 seed 142: objects found 2/2, hallucinated 0, people 2 in image / 2 drawn"}
+{"time": "15:57:24", "step": "verify", "detail": "H2 seed 142 attribute check: objects found 2/2, hallucinated 0, people 2 in image / 2 drawn, attribute accuracy 100%"}
+{"time": "15:57:24", "step": "verify", "detail": "H2: keeping seed 142 (1 attempts)"}
