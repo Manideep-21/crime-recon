@@ -54,7 +54,7 @@
       "entity_type": "person",
       "role": "victim",
       "attribute": "upper_clothing",
-      "value": "red"
+      "value": "red clothes"
     },
     {
       "entity": "person_2",
@@ -114,5 +114,8 @@
       "value": "knife",
       "witness": "witness_C"
     }
+  ],
+  "hand_edits": [
+    "person_2 upper_clothing 'red' -> 'red clothes'"
   ]
 }

@@ -35,25 +35,18 @@
       "value": "walked inside"
     },
     {
-      "entity": "person_2",
+      "entity": "person_1",
       "entity_type": "person",
-      "role": "victim",
-      "attribute": "action",
-      "value": "stood up"
+      "role": "suspect",
+      "attribute": "hair",
+      "value": "bald"
     },
     {
       "entity": "person_2",
       "entity_type": "person",
       "role": "victim",
       "attribute": "action",
-      "value": "looked"
-    },
-    {
-      "entity": "person_2",
-      "entity_type": "person",
-      "role": "victim",
-      "attribute": "action",
-      "value": "stood and looked"
+      "value": "stood up and looked"
     },
     {
       "entity": "person_2",
@@ -78,5 +71,9 @@
       "value": "grey coat",
       "witness": "witness_C"
     }
+  ],
+  "hand_edits": [
+    "person_1 hair 'bald' added (caption describes a bald man; sunglasses not added)",
+    "person_2 actions 'stood up', 'looked', 'stood and looked' merged into 'stood up and looked'"
   ]
 }

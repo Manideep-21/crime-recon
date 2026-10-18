@@ -11,12 +11,19 @@
       "entity_type": "person",
       "role": "suspect",
       "attribute": "headwear",
-      "value": "black hat and blue clothes"
+      "value": "black hat"
     },
     {
       "entity": "person_1",
       "entity_type": "person",
       "role": "suspect",
+      "attribute": "upper_clothing",
+      "value": "blue clothes"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "victim",
       "attribute": "headwear",
       "value": "black hat"
     },
@@ -24,8 +31,8 @@
       "entity": "person_2",
       "entity_type": "person",
       "role": "victim",
-      "attribute": "headwear",
-      "value": "white apron and black hat"
+      "attribute": "upper_clothing",
+      "value": "white apron"
     },
     {
       "entity": "person_2",
@@ -39,7 +46,7 @@
       "entity_type": "person",
       "role": "victim",
       "attribute": "action",
-      "value": "talks to a man wearing a black hat and blue clothes"
+      "value": "talked to the robber"
     },
     {
       "entity": "person_2",
@@ -74,8 +81,13 @@
       "entity_type": "weapon",
       "role": "none",
       "attribute": "held_by",
-      "value": "man wearing a black hat and blue clothes"
+      "value": "man in blue clothes"
     }
   ],
-  "note": "answer key only (unedited); witness statements not generated yet"
+  "hand_edits": [
+    "person_1 headwear 'black hat and blue clothes' + duplicate 'black hat' -> headwear 'black hat' and upper_clothing 'blue clothes'",
+    "person_2 headwear 'white apron and black hat' -> upper_clothing 'white apron' and headwear 'black hat' (caption: 'a clerk wearing a white apron and black hat')",
+    "person_2 action 'talks to a man wearing a black hat and blue clothes' -> 'talked to the robber'",
+    "weapon_1 held_by 'man wearing a black hat and blue clothes' -> 'man in blue clothes' (same format as other scenes; both people wear a black hat)"
+  ]
 }
