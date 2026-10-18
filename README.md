@@ -119,12 +119,12 @@ python -m pytest -q tests/                         # 52 logic tests, no GPU need
 python pipeline.py --scene sample_robbery          # CLI: prints conflicts, questions, image paths
 python pipeline.py --scene sample_robbery --force-extract   # ignore cached facts, extract again
 python app.py                                      # web demo at http://localhost:7860
-python app.py --share                              # same, plus a public https://*.gradio.live link (72 h)
+python app.py --share                              # same, plus a public https://*.gradio.live link (expires after a week)
 ```
 
 To keep the demo running after you log out:
 ```bash
-OLLAMA_KEEP_ALIVE=0 nohup python app.py --share > ~/crime-recon-app.log 2>&1 &
+PYTHONUNBUFFERED=1 OLLAMA_KEEP_ALIVE=0 nohup python app.py --share > ~/crime-recon-app.log 2>&1 &
 grep -o 'https://[a-z0-9.-]*gradio.live' ~/crime-recon-app.log     # the public link
 ```
 

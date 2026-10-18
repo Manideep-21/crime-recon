@@ -178,7 +178,7 @@ def build_ui() -> gr.Blocks:
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    ap.add_argument("--share", action="store_true", help="also serve a public *.gradio.live link (72 h)")
+    ap.add_argument("--share", action="store_true", help="also serve a public *.gradio.live link (expires after a week)")
     ap.add_argument("--port", type=int, default=7860)
     args = ap.parse_args()
     build_ui().launch(server_name="0.0.0.0", server_port=args.port, share=args.share)
