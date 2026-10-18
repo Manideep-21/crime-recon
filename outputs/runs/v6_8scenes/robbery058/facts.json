@@ -1,0 +1,710 @@
+{
+  "scene_id": "robbery058",
+  "facts": [
+    {
+      "fact_id": "f001",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "position",
+      "value": "behind the counter",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "close by, inside, a few metres away",
+      "quote": "A woman behind the counter",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.99,
+      "support": [
+        "witness_A",
+        "witness_B",
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f002",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "action",
+      "value": "put money in a bag",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "close by, inside, a few metres away",
+      "quote": "put money in a bag",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.9,
+      "support": [
+        "witness_A",
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f003",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "action",
+      "value": "squatted with her hands above her head",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "close by, inside, a few metres away",
+      "quote": "squatted with her hands above her head",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.9,
+      "support": [
+        "witness_A",
+        "witness_B"
+      ]
+    },
+    {
+      "fact_id": "f004",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "action",
+      "value": "left the scene",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "close by, inside, a few metres away",
+      "quote": "left the scene",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f005",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "upper_clothing",
+      "value": "red clothes",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "close by, inside, a few metres away",
+      "quote": "I think she was wearing red clothes",
+      "hedged": true,
+      "base_confidence": 0.45,
+      "confidence": 0.65,
+      "support": [
+        "cctv",
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f006",
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "left",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "close by, inside, a few metres away",
+      "quote": "The robber left",
+      "hedged": true,
+      "base_confidence": 0.45,
+      "confidence": 0.45,
+      "support": [
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f007",
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "maybe wearing a mask",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "close by, inside, a few metres away",
+      "quote": "maybe wearing a mask",
+      "hedged": true,
+      "base_confidence": 0.45,
+      "confidence": 0.45,
+      "support": [
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f008",
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "carrying",
+      "value": "bag",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "close by, inside, a few metres away",
+      "quote": "put the bag on the table",
+      "hedged": true,
+      "base_confidence": 0.45,
+      "confidence": 0.65,
+      "support": [
+        "witness_A",
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f009",
+      "entity": "weapon_2",
+      "entity_type": "weapon",
+      "role": "none",
+      "attribute": "weapon_type",
+      "value": "weapon",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "close by, inside, a few metres away",
+      "quote": "The robber held a weapon",
+      "hedged": true,
+      "base_confidence": 0.45,
+      "confidence": 0.45,
+      "support": [
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f010",
+      "entity": "weapon_2",
+      "entity_type": "weapon",
+      "role": "none",
+      "attribute": "held_by",
+      "value": "robber",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "close by, inside, a few metres away",
+      "quote": "The robber held a weapon",
+      "hedged": true,
+      "base_confidence": 0.45,
+      "confidence": 0.45,
+      "support": [
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f011",
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "headwear",
+      "value": "mask",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "close by, inside, a few metres away",
+      "quote": "maybe wearing a mask",
+      "hedged": true,
+      "base_confidence": 0.45,
+      "confidence": 0.45,
+      "support": [
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f012",
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "held a weapon",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "close by, inside, a few metres away",
+      "quote": "The robber held a weapon",
+      "hedged": true,
+      "base_confidence": 0.45,
+      "confidence": 0.45,
+      "support": [
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f013",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "position",
+      "value": "behind the counter",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "far away, looking in from outside",
+      "quote": "behind the counter",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.99,
+      "support": [
+        "witness_A",
+        "witness_B",
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f014",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "action",
+      "value": "opened the checkout counter",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "far away, looking in from outside",
+      "quote": "opened the checkout counter",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_B"
+      ]
+    },
+    {
+      "fact_id": "f015",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "action",
+      "value": "squatted with her hands above her head",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "far away, looking in from outside",
+      "quote": "squatted with her hands above her head",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.9,
+      "support": [
+        "witness_A",
+        "witness_B"
+      ]
+    },
+    {
+      "fact_id": "f016",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "action",
+      "value": "playing with her mobile phone",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "far away, looking in from outside",
+      "quote": "I think she was playing with her mobile phone",
+      "hedged": true,
+      "base_confidence": 0.45,
+      "confidence": 0.45,
+      "support": [
+        "witness_B"
+      ]
+    },
+    {
+      "fact_id": "f017",
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "upper_clothing",
+      "value": "white clothes",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "far away, looking in from outside",
+      "quote": "wearing white clothes",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_B"
+      ]
+    },
+    {
+      "fact_id": "f018",
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "approached",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "far away, looking in from outside",
+      "quote": "approached",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_B"
+      ]
+    },
+    {
+      "fact_id": "f019",
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "held a gun",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "far away, looking in from outside",
+      "quote": "held a gun",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_B"
+      ]
+    },
+    {
+      "fact_id": "f020",
+      "entity": "scene",
+      "entity_type": "location",
+      "role": "none",
+      "attribute": "notable_features",
+      "value": "checkout counter",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "far away, looking in from outside",
+      "quote": "checkout counter",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.9,
+      "support": [
+        "witness_B",
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f021",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "action",
+      "value": "being robbed",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "I saw a woman behind the counter who was being robbed",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f022",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "position",
+      "value": "behind the counter",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "behind the counter",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.99,
+      "support": [
+        "witness_A",
+        "witness_B",
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f023",
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "robbed her",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "A man in black robbed her",
+      "hedged": true,
+      "base_confidence": 0.575,
+      "confidence": 0.575,
+      "support": [
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f024",
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "carrying",
+      "value": "bag",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "I'm pretty sure he put a bag on the table",
+      "hedged": true,
+      "base_confidence": 0.575,
+      "confidence": 0.775,
+      "support": [
+        "witness_A",
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f025",
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "threatened her with a gun",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "I'm pretty sure he put a bag on the table and threatened her with a gun",
+      "hedged": true,
+      "base_confidence": 0.575,
+      "confidence": 0.575,
+      "support": [
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f026",
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "upper_clothing",
+      "value": "black",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "A man in black",
+      "hedged": true,
+      "base_confidence": 0.575,
+      "confidence": 0.575,
+      "support": [
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f027",
+      "entity": "person_3",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "upper_clothing",
+      "value": "grey coat",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "Another man in a grey coat",
+      "hedged": true,
+      "base_confidence": 0.45,
+      "confidence": 0.45,
+      "support": [
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f028",
+      "entity": "scene",
+      "entity_type": "location",
+      "role": "none",
+      "attribute": "notable_features",
+      "value": "place with a checkout counter",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "The place had a checkout counter",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.9,
+      "support": [
+        "witness_B",
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f029",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "action",
+      "value": "put a bag on the table",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "I'm pretty sure he put a bag on the table",
+      "hedged": true,
+      "base_confidence": 0.575,
+      "confidence": 0.775,
+      "support": [
+        "witness_A",
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f030",
+      "entity": "weapon_1",
+      "entity_type": "weapon",
+      "role": "none",
+      "attribute": "weapon_type",
+      "value": "gun",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "threatened her with a gun",
+      "hedged": true,
+      "base_confidence": 0.575,
+      "confidence": 0.575,
+      "support": [
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f031",
+      "entity": "person_3",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "action",
+      "value": "just nearby",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "Another man in a grey coat was just nearby",
+      "hedged": true,
+      "base_confidence": 0.45,
+      "confidence": 0.45,
+      "support": [
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f032",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "upper_clothing",
+      "value": "red hoodie",
+      "source": "cctv_frame_01",
+      "source_type": "cctv",
+      "viewpoint": "CCTV camera",
+      "quote": "",
+      "hedged": false,
+      "base_confidence": 0.85,
+      "confidence": 0.99,
+      "support": [
+        "cctv",
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f033",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "upper_clothing",
+      "value": "red hoodie",
+      "source": "cctv_frame_02",
+      "source_type": "cctv",
+      "viewpoint": "CCTV camera",
+      "quote": "",
+      "hedged": false,
+      "base_confidence": 0.85,
+      "confidence": 0.99,
+      "support": [
+        "cctv",
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f034",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "upper_clothing",
+      "value": "red hoodie",
+      "source": "cctv_frame_03",
+      "source_type": "cctv",
+      "viewpoint": "CCTV camera",
+      "quote": "",
+      "hedged": false,
+      "base_confidence": 0.85,
+      "confidence": 0.99,
+      "support": [
+        "cctv",
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f035",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "upper_clothing",
+      "value": "pink shirt",
+      "source": "cctv_frame_04",
+      "source_type": "cctv",
+      "viewpoint": "CCTV camera",
+      "quote": "",
+      "hedged": false,
+      "base_confidence": 0.85,
+      "confidence": 0.85,
+      "support": [
+        "cctv"
+      ]
+    },
+    {
+      "fact_id": "f036",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "lower_clothing",
+      "value": "dark pants",
+      "source": "cctv_frame_04",
+      "source_type": "cctv",
+      "viewpoint": "CCTV camera",
+      "quote": "",
+      "hedged": false,
+      "base_confidence": 0.85,
+      "confidence": 0.85,
+      "support": [
+        "cctv"
+      ]
+    },
+    {
+      "fact_id": "f037",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "upper_clothing",
+      "value": "red shirt",
+      "source": "cctv_frame_05",
+      "source_type": "cctv",
+      "viewpoint": "CCTV camera",
+      "quote": "",
+      "hedged": false,
+      "base_confidence": 0.85,
+      "confidence": 0.99,
+      "support": [
+        "cctv",
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f038",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "upper_clothing",
+      "value": "red hoodie",
+      "source": "cctv_frame_06",
+      "source_type": "cctv",
+      "viewpoint": "CCTV camera",
+      "quote": "",
+      "hedged": false,
+      "base_confidence": 0.85,
+      "confidence": 0.99,
+      "support": [
+        "cctv",
+        "witness_A"
+      ]
+    }
+  ],
+  "role_votes": {}
+}

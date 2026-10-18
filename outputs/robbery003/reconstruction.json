@@ -8,8 +8,8 @@
       },
       "description": "weapon_1.held_by = 'man in the plaid shirt' (witness_B)"
     },
-    "prompt": "CCTV photo, wide angle, realistic, exactly 4 people. a person wearing blue and white plaid shirt, took out a black pistol; a person; a person; a person wearing dark jacket and cap; a pistol, held by man in the plaid shirt; a pistol",
-    "seed": 44,
+    "prompt": "CCTV photo, wide angle, realistic, exactly 3 people. a person wearing blue and white plaid shirt, took out a black pistol; a person; a person wearing dark jacket and cap; a pistol, held by man in the plaid shirt; a pistol",
+    "seed": 43,
     "included": [
       "f001",
       "f005",
@@ -24,10 +24,9 @@
       "f008",
       "f017",
       "f018",
-      "f026",
-      "f031",
-      "f037",
-      "f034"
+      "f030",
+      "f036",
+      "f033"
     ],
     "withheld": [
       {
@@ -53,14 +52,6 @@
         "value": "bottle of Coke",
         "source": "witness_C",
         "confidence": 0.575
-      },
-      {
-        "fact_id": "f030",
-        "entity": "weapon_3",
-        "attribute": "weapon_type",
-        "value": "pistol",
-        "source": "witness_C",
-        "confidence": 0.45
       }
     ],
     "not_drawn": [
@@ -97,7 +88,7 @@
         "attribute": "action",
         "value": "turned around",
         "source": "witness_A",
-        "confidence": 0.9,
+        "confidence": 0.99,
         "reason": "movement/direction"
       },
       {
@@ -135,15 +126,6 @@
         "source": "witness_C",
         "confidence": 0.9,
         "reason": "one short action per person"
-      },
-      {
-        "fact_id": "f026",
-        "entity": "person_3",
-        "attribute": "action",
-        "value": "being robbed and turned around",
-        "source": "witness_C",
-        "confidence": 0.7,
-        "reason": "movement/direction"
       }
     ],
     "contested": [
@@ -154,8 +136,7 @@
       "person_2": "confirmed",
       "weapon_2": "single",
       "weapon_1": "contested",
-      "person_3": "single",
-      "person_4": "confirmed"
+      "person_3": "confirmed"
     },
     "report": {
       "expected": [
@@ -169,10 +150,6 @@
         },
         {
           "entity": "person_3",
-          "label": "person"
-        },
-        {
-          "entity": "person_4",
           "label": "person wearing dark jacket"
         },
         {
@@ -187,154 +164,218 @@
       "matched": {
         "person_1": {
           "label": "person",
-          "score": 0.483,
+          "score": 0.453,
           "box": [
-            151.44571685791016,
-            134.63209533691406,
-            474.53135681152344,
-            844.8716278076172
+            482.6178283691406,
+            305.94891357421875,
+            898.5237274169922,
+            977.093017578125
           ],
           "scores": {
-            "bag": 0.015,
-            "car": 0.012,
-            "dog": 0.012,
-            "gun": 0.013,
-            "knife": 0.008,
-            "motorcycle": 0.005,
-            "person": 0.372,
-            "person wearing blue and white plaid shirt": 0.483,
-            "person wearing dark jacket": 0.172,
+            "bag": 0.018,
+            "car": 0.006,
+            "dog": 0.008,
+            "gun": 0.018,
+            "knife": 0.003,
+            "motorcycle": 0.003,
+            "person": 0.397,
+            "person wearing blue and white plaid shirt": 0.453,
+            "person wearing dark jacket": 0.176,
             "pistol": 0.01
           },
           "query": "person wearing blue and white plaid shirt",
-          "entity_score": 0.483
+          "entity_score": 0.453
         },
         "person_2": {
           "label": "person",
-          "score": 0.363,
+          "score": 0.405,
           "box": [
-            553.2003021240234,
-            196.90841674804688,
-            989.3750915527344,
-            987.9303970336914
+            60.67865753173828,
+            224.6613540649414,
+            153.24725341796875,
+            369.4548568725586
           ],
           "scores": {
-            "bag": 0.032,
-            "car": 0.016,
-            "dog": 0.073,
-            "gun": 0.043,
+            "bag": 0.051,
+            "car": 0.019,
+            "dog": 0.011,
+            "gun": 0.081,
             "knife": 0.007,
-            "motorcycle": 0.047,
-            "person": 0.363,
-            "person wearing blue and white plaid shirt": 0.178,
-            "person wearing dark jacket": 0.346,
-            "pistol": 0.019
+            "motorcycle": 0.021,
+            "person": 0.405,
+            "person wearing blue and white plaid shirt": 0.194,
+            "person wearing dark jacket": 0.303,
+            "pistol": 0.027
           },
           "query": "person",
-          "entity_score": 0.363
+          "entity_score": 0.405
         },
-        "person_4": {
+        "person_3": {
           "label": "person",
-          "score": 0.413,
+          "score": 0.369,
           "box": [
-            440.98839950561523,
-            231.80887603759766,
-            590.1307144165039,
-            471.47901916503906
+            208.1312255859375,
+            210.14056396484375,
+            535.9364624023438,
+            789.694091796875
           ],
           "scores": {
-            "bag": 0.074,
-            "car": 0.019,
-            "dog": 0.063,
-            "gun": 0.044,
-            "knife": 0.017,
-            "motorcycle": 0.029,
-            "person": 0.349,
-            "person wearing blue and white plaid shirt": 0.109,
-            "person wearing dark jacket": 0.413,
-            "pistol": 0.017
+            "bag": 0.052,
+            "car": 0.017,
+            "dog": 0.019,
+            "gun": 0.035,
+            "knife": 0.006,
+            "motorcycle": 0.019,
+            "person": 0.305,
+            "person wearing blue and white plaid shirt": 0.289,
+            "person wearing dark jacket": 0.369,
+            "pistol": 0.011
           },
           "query": "person wearing dark jacket",
-          "entity_score": 0.413
+          "entity_score": 0.369
         },
         "weapon_1": {
           "label": "pistol",
-          "score": 0.519,
+          "score": 0.568,
           "box": [
-            577.6574602127075,
-            384.9604797363281,
-            592.3020124435425,
-            415.8860778808594
+            531.7904739379883,
+            609.39133644104,
+            593.8630905151367,
+            648.105001449585
           ],
           "scores": {
-            "bag": 0.019,
-            "car": 0.021,
-            "dog": 0.007,
-            "gun": 0.372,
-            "knife": 0.075,
-            "motorcycle": 0.014,
-            "person": 0.01,
-            "person wearing blue and white plaid shirt": 0.012,
-            "person wearing dark jacket": 0.033,
-            "pistol": 0.519
+            "bag": 0.009,
+            "car": 0.009,
+            "dog": 0.006,
+            "gun": 0.456,
+            "knife": 0.026,
+            "motorcycle": 0.008,
+            "person": 0.008,
+            "person wearing blue and white plaid shirt": 0.007,
+            "person wearing dark jacket": 0.015,
+            "pistol": 0.568
           }
         },
         "weapon_2": {
           "label": "pistol",
-          "score": 0.315,
+          "score": 0.541,
           "box": [
-            651.6090908050537,
-            577.3444442749023,
-            709.7139072418213,
-            658.8973770141602
+            927.6605892181396,
+            592.773868560791,
+            965.6102848052979,
+            606.1549644470215
           ],
           "scores": {
-            "bag": 0.095,
-            "car": 0.015,
-            "dog": 0.006,
-            "gun": 0.256,
-            "knife": 0.019,
-            "motorcycle": 0.013,
-            "person": 0.011,
-            "person wearing blue and white plaid shirt": 0.013,
-            "person wearing dark jacket": 0.032,
-            "pistol": 0.315
+            "bag": 0.013,
+            "car": 0.018,
+            "dog": 0.008,
+            "gun": 0.469,
+            "knife": 0.106,
+            "motorcycle": 0.014,
+            "person": 0.015,
+            "person wearing blue and white plaid shirt": 0.012,
+            "person wearing dark jacket": 0.026,
+            "pistol": 0.541
           }
         }
       },
-      "missing": [
-        "person_3"
-      ],
+      "missing": [],
       "hallucinated": [
         {
           "label": "gun",
-          "score": 0.458,
+          "score": 0.595,
           "box": [
-            443.14292335510254,
-            302.00613498687744,
-            494.08315086364746,
-            325.5262746810913
+            602.2803077697754,
+            535.4078044891357,
+            685.7770652770996,
+            584.5664386749268
           ],
           "scores": {
-            "bag": 0.031,
-            "car": 0.027,
-            "dog": 0.009,
-            "gun": 0.458,
-            "knife": 0.081,
-            "motorcycle": 0.014,
-            "person": 0.012,
-            "person wearing blue and white plaid shirt": 0.028,
+            "bag": 0.009,
+            "car": 0.011,
+            "dog": 0.008,
+            "gun": 0.595,
+            "knife": 0.015,
+            "motorcycle": 0.009,
+            "person": 0.006,
+            "person wearing blue and white plaid shirt": 0.007,
             "person wearing dark jacket": 0.016,
-            "pistol": 0.383
+            "pistol": 0.554
+          }
+        },
+        {
+          "label": "pistol",
+          "score": 0.402,
+          "box": [
+            923.6561365127563,
+            598.5811238288879,
+            950.3231115341187,
+            613.7543253898621
+          ],
+          "scores": {
+            "bag": 0.007,
+            "car": 0.014,
+            "dog": 0.008,
+            "gun": 0.363,
+            "knife": 0.11,
+            "motorcycle": 0.012,
+            "person": 0.02,
+            "person wearing blue and white plaid shirt": 0.009,
+            "person wearing dark jacket": 0.029,
+            "pistol": 0.402
+          }
+        },
+        {
+          "label": "pistol",
+          "score": 0.356,
+          "box": [
+            519.5112228393555,
+            609.3983745574951,
+            574.482795715332,
+            632.1962299346924
+          ],
+          "scores": {
+            "bag": 0.009,
+            "car": 0.01,
+            "dog": 0.004,
+            "gun": 0.296,
+            "knife": 0.037,
+            "motorcycle": 0.004,
+            "person": 0.006,
+            "person wearing blue and white plaid shirt": 0.011,
+            "person wearing dark jacket": 0.022,
+            "pistol": 0.356
+          }
+        },
+        {
+          "label": "pistol",
+          "score": 0.333,
+          "box": [
+            885.3561401367188,
+            586.5097208023071,
+            923.8340454101562,
+            611.3270711898804
+          ],
+          "scores": {
+            "bag": 0.06,
+            "car": 0.028,
+            "dog": 0.005,
+            "gun": 0.21,
+            "knife": 0.013,
+            "motorcycle": 0.008,
+            "person": 0.013,
+            "person wearing blue and white plaid shirt": 0.02,
+            "person wearing dark jacket": 0.023,
+            "pistol": 0.333
           }
         }
       ],
       "carried": [],
       "person_count": {
-        "drawn": 4,
+        "drawn": 3,
         "in_image": 3
       },
-      "object_faithfulness": 0.833,
+      "object_faithfulness": 1.0,
       "vqa": [
         {
           "entity": "person_1",
@@ -343,13 +384,13 @@
           "answer": true
         },
         {
-          "entity": "person_4",
+          "entity": "person_3",
           "attribute": "upper_clothing",
           "question": "Is there a person wearing dark jacket?",
-          "answer": true
+          "answer": false
         },
         {
-          "entity": "person_4",
+          "entity": "person_3",
           "attribute": "headwear",
           "question": "Is there a person wearing cap?",
           "answer": true
@@ -367,10 +408,10 @@
           "answer": true
         }
       ],
-      "attribute_accuracy": 1.0
+      "attribute_accuracy": 0.8
     },
-    "first_attempt_hallucinations": 8,
-    "final_hallucinations": 1,
+    "first_attempt_hallucinations": 4,
+    "final_hallucinations": 4,
     "attempts": 5,
     "raw_path": "/home/marams/crime-recon/outputs/robbery003/H1_raw.png",
     "overlay_path": "/home/marams/crime-recon/outputs/robbery003/H1_overlay.png",
@@ -379,157 +420,135 @@
         "seed": 42,
         "kept": false,
         "hallucinated": [
-          "extra person (5 in image, 4 drawn)",
-          "extra person (5 in image, 4 drawn)",
+          "extra person (4 in image, 3 drawn)",
+          "extra person (4 in image, 3 drawn)",
           "gun",
-          "gun",
-          "pistol",
-          "pistol",
-          "pistol",
-          "pistol"
-        ],
-        "missing": [
-          "person_4"
-        ],
-        "person_count": {
-          "drawn": 4,
-          "in_image": 5
-        },
-        "attribute_accuracy": null,
-        "matched": {
-          "person_1": [
-            224,
-            225,
-            458,
-            743
-          ],
-          "person_2": [
-            629,
-            211,
-            818,
-            538
-          ],
-          "person_3": [
-            469,
-            229,
-            661,
-            561
-          ],
-          "weapon_1": [
-            677,
-            385,
-            760,
-            478
-          ],
-          "weapon_2": [
-            734,
-            418,
-            815,
-            511
-          ]
-        }
-      },
-      {
-        "seed": 43,
-        "kept": false,
-        "hallucinated": [
-          "extra person (4 in image, 4 drawn)",
-          "gun",
-          "gun",
-          "gun",
-          "gun",
-          "pistol",
-          "pistol",
-          "pistol",
-          "pistol",
-          "pistol",
-          "pistol"
-        ],
-        "missing": [
-          "person_4"
-        ],
-        "person_count": {
-          "drawn": 4,
-          "in_image": 4
-        },
-        "attribute_accuracy": null,
-        "matched": {
-          "person_1": [
-            473,
-            287,
-            898,
-            855
-          ],
-          "person_2": [
-            108,
-            305,
-            318,
-            546
-          ],
-          "person_3": [
-            62,
-            224,
-            152,
-            391
-          ],
-          "weapon_1": [
-            521,
-            609,
-            574,
-            645
-          ],
-          "weapon_2": [
-            167,
-            538,
-            222,
-            566
-          ]
-        }
-      },
-      {
-        "seed": 44,
-        "kept": true,
-        "hallucinated": [
           "gun"
         ],
         "missing": [
           "person_3"
         ],
         "person_count": {
-          "drawn": 4,
-          "in_image": 3
+          "drawn": 3,
+          "in_image": 4
         },
-        "attribute_accuracy": 1.0,
+        "attribute_accuracy": null,
         "matched": {
           "person_1": [
-            151,
-            135,
-            475,
-            845
+            64,
+            246,
+            337,
+            756
           ],
           "person_2": [
-            553,
-            197,
-            989,
-            988
-          ],
-          "person_4": [
-            441,
-            232,
-            590,
-            471
+            520,
+            170,
+            815,
+            556
           ],
           "weapon_1": [
-            578,
-            385,
-            592,
-            416
+            525,
+            476,
+            550,
+            522
           ],
           "weapon_2": [
-            652,
-            577,
-            710,
-            659
+            442,
+            513,
+            475,
+            550
+          ]
+        }
+      },
+      {
+        "seed": 43,
+        "kept": true,
+        "hallucinated": [
+          "gun",
+          "pistol",
+          "pistol",
+          "pistol"
+        ],
+        "missing": [],
+        "person_count": {
+          "drawn": 3,
+          "in_image": 3
+        },
+        "attribute_accuracy": 0.8,
+        "matched": {
+          "person_1": [
+            483,
+            306,
+            899,
+            977
+          ],
+          "person_2": [
+            61,
+            225,
+            153,
+            369
+          ],
+          "person_3": [
+            208,
+            210,
+            536,
+            790
+          ],
+          "weapon_1": [
+            532,
+            609,
+            594,
+            648
+          ],
+          "weapon_2": [
+            928,
+            593,
+            966,
+            606
+          ]
+        }
+      },
+      {
+        "seed": 44,
+        "kept": false,
+        "hallucinated": [
+          "extra person (2 in image, 3 drawn)",
+          "gun",
+          "pistol",
+          "pistol",
+          "gun",
+          "gun",
+          "pistol",
+          "pistol",
+          "pistol"
+        ],
+        "missing": [
+          "person_2",
+          "person_3"
+        ],
+        "person_count": {
+          "drawn": 3,
+          "in_image": 2
+        },
+        "attribute_accuracy": null,
+        "matched": {
+          "person_1": [
+            144,
+            112,
+            473,
+            827
+          ],
+          "weapon_1": [
+            864,
+            559,
+            943,
+            615
+          ],
+          "weapon_2": [
+            914,
+            754,
+            1007,
+            808
           ]
         }
       },
@@ -541,48 +560,45 @@
           "gun",
           "gun",
           "gun",
+          "pistol",
+          "gun",
           "gun",
           "pistol",
-          "pistol"
+          "pistol",
+          "gun"
         ],
         "missing": [
-          "person_4"
+          "person_2"
         ],
         "person_count": {
-          "drawn": 4,
-          "in_image": 3
+          "drawn": 3,
+          "in_image": 2
         },
         "attribute_accuracy": null,
         "matched": {
           "person_1": [
-            50,
-            138,
-            529,
-            953
-          ],
-          "person_2": [
-            733,
-            140,
-            1004,
-            817
+            48,
+            162,
+            563,
+            1024
           ],
           "person_3": [
-            546,
-            126,
-            827,
-            555
+            551,
+            133,
+            998,
+            867
           ],
           "weapon_1": [
-            390,
-            539,
-            484,
-            595
+            685,
+            419,
+            778,
+            513
           ],
           "weapon_2": [
-            426,
-            614,
-            529,
-            687
+            319,
+            566,
+            382,
+            613
           ]
         }
       },
@@ -590,56 +606,49 @@
         "seed": 46,
         "kept": false,
         "hallucinated": [
-          "extra person (5 in image, 4 drawn)",
-          "gun",
-          "gun",
+          "extra person (5 in image, 3 drawn)",
+          "extra person (5 in image, 3 drawn)",
           "gun",
           "gun",
           "pistol",
-          "gun"
+          "pistol"
         ],
         "missing": [],
         "person_count": {
-          "drawn": 4,
+          "drawn": 3,
           "in_image": 5
         },
         "attribute_accuracy": null,
         "matched": {
           "person_1": [
-            785,
-            226,
+            742,
+            217,
             992,
-            815
+            721
           ],
           "person_2": [
-            67,
-            277,
-            308,
-            824
+            392,
+            304,
+            502,
+            587
           ],
           "person_3": [
-            379,
-            307,
-            528,
-            750
-          ],
-          "person_4": [
-            460,
-            351,
-            588,
-            539
+            458,
+            357,
+            566,
+            543
           ],
           "weapon_1": [
-            561,
-            285,
-            586,
-            360
+            530,
+            306,
+            591,
+            346
           ],
           "weapon_2": [
-            379,
-            557,
-            401,
-            617
+            544,
+            637,
+            615,
+            655
           ]
         }
       }
@@ -654,8 +663,8 @@
       },
       "description": "weapon_1.held_by = 'man who robbed the place' (witness_C)"
     },
-    "prompt": "CCTV photo, wide angle, realistic, exactly 4 people. a person wearing blue and white plaid shirt, took out a black pistol; a person; a person; a person wearing dark jacket and cap; a pistol, held by man who robbed the place; a pistol",
-    "seed": 145,
+    "prompt": "CCTV photo, wide angle, realistic, exactly 3 people. a person wearing blue and white plaid shirt, took out a black pistol; a person; a person wearing dark jacket and cap; a pistol, held by man who robbed the place; a pistol",
+    "seed": 146,
     "included": [
       "f001",
       "f005",
@@ -670,10 +679,9 @@
       "f008",
       "f017",
       "f028",
-      "f026",
-      "f031",
-      "f037",
-      "f034"
+      "f030",
+      "f036",
+      "f033"
     ],
     "withheld": [
       {
@@ -699,14 +707,6 @@
         "value": "bottle of Coke",
         "source": "witness_C",
         "confidence": 0.575
-      },
-      {
-        "fact_id": "f030",
-        "entity": "weapon_3",
-        "attribute": "weapon_type",
-        "value": "pistol",
-        "source": "witness_C",
-        "confidence": 0.45
       }
     ],
     "not_drawn": [
@@ -743,7 +743,7 @@
         "attribute": "action",
         "value": "turned around",
         "source": "witness_A",
-        "confidence": 0.9,
+        "confidence": 0.99,
         "reason": "movement/direction"
       },
       {
@@ -781,15 +781,6 @@
         "source": "witness_C",
         "confidence": 0.9,
         "reason": "one short action per person"
-      },
-      {
-        "fact_id": "f026",
-        "entity": "person_3",
-        "attribute": "action",
-        "value": "being robbed and turned around",
-        "source": "witness_C",
-        "confidence": 0.7,
-        "reason": "movement/direction"
       }
     ],
     "contested": [
@@ -800,8 +791,7 @@
       "person_2": "confirmed",
       "weapon_2": "single",
       "weapon_1": "contested",
-      "person_3": "single",
-      "person_4": "confirmed"
+      "person_3": "confirmed"
     },
     "report": {
       "expected": [
@@ -815,10 +805,6 @@
         },
         {
           "entity": "person_3",
-          "label": "person"
-        },
-        {
-          "entity": "person_4",
           "label": "person wearing dark jacket"
         },
         {
@@ -831,193 +817,149 @@
         }
       ],
       "matched": {
-        "person_1": {
-          "label": "person",
-          "score": 0.52,
-          "box": [
-            105.70680236816406,
-            452.52940368652344,
-            433.45298767089844,
-            1024
-          ],
-          "scores": {
-            "bag": 0.009,
-            "car": 0.007,
-            "dog": 0.005,
-            "gun": 0.006,
-            "knife": 0.006,
-            "motorcycle": 0.004,
-            "person": 0.256,
-            "person wearing blue and white plaid shirt": 0.52,
-            "person wearing dark jacket": 0.147,
-            "pistol": 0.004
-          },
-          "query": "person wearing blue and white plaid shirt",
-          "entity_score": 0.52
-        },
         "person_2": {
           "label": "person",
-          "score": 0.361,
+          "score": 0.337,
           "box": [
-            511.14061737060547,
-            137.56326293945312,
-            897.8926086425781,
-            927.5056610107422
+            575.3519897460938,
+            140.09649658203125,
+            977.8705444335938,
+            756.98828125
           ],
           "scores": {
-            "bag": 0.018,
+            "bag": 0.008,
             "car": 0.006,
-            "dog": 0.013,
-            "gun": 0.041,
-            "knife": 0.006,
-            "motorcycle": 0.013,
-            "person": 0.361,
-            "person wearing blue and white plaid shirt": 0.109,
-            "person wearing dark jacket": 0.324,
-            "pistol": 0.016
+            "dog": 0.011,
+            "gun": 0.031,
+            "knife": 0.007,
+            "motorcycle": 0.007,
+            "person": 0.337,
+            "person wearing blue and white plaid shirt": 0.081,
+            "person wearing dark jacket": 0.258,
+            "pistol": 0.012
           },
           "query": "person",
-          "entity_score": 0.361
+          "entity_score": 0.337
         },
-        "person_4": {
+        "person_3": {
           "label": "person",
-          "score": 0.285,
+          "score": 0.274,
           "box": [
-            315.90816497802734,
-            322.61278533935547,
-            550.3056564331055,
-            944.2589111328125
+            87.30416870117188,
+            131.30270385742188,
+            456.6053161621094,
+            741.5371398925781
           ],
           "scores": {
-            "bag": 0.009,
-            "car": 0.006,
+            "bag": 0.007,
+            "car": 0.009,
             "dog": 0.009,
-            "gun": 0.031,
-            "knife": 0.008,
-            "motorcycle": 0.005,
-            "person": 0.232,
-            "person wearing blue and white plaid shirt": 0.153,
-            "person wearing dark jacket": 0.285,
-            "pistol": 0.016
+            "gun": 0.022,
+            "knife": 0.007,
+            "motorcycle": 0.007,
+            "person": 0.214,
+            "person wearing blue and white plaid shirt": 0.166,
+            "person wearing dark jacket": 0.274,
+            "pistol": 0.011
           },
           "query": "person wearing dark jacket",
-          "entity_score": 0.285
+          "entity_score": 0.274
         },
         "weapon_1": {
           "label": "pistol",
-          "score": 0.418,
+          "score": 0.583,
           "box": [
-            867.8732223510742,
-            453.21409034729004,
-            895.6865921020508,
-            503.3334560394287
+            408.1373062133789,
+            331.04003143310547,
+            479.98384857177734,
+            400.29895782470703
           ],
           "scores": {
-            "bag": 0.05,
-            "car": 0.002,
-            "dog": 0.0,
-            "gun": 0.152,
-            "knife": 0.017,
-            "motorcycle": 0.001,
-            "person": 0.001,
-            "person wearing blue and white plaid shirt": 0.002,
-            "person wearing dark jacket": 0.004,
-            "pistol": 0.418
-          }
-        },
-        "weapon_2": {
-          "label": "pistol",
-          "score": 0.274,
-          "box": [
-            606.404296875,
-            379.8080139160156,
-            712.957763671875,
-            435.3937072753906
-          ],
-          "scores": {
-            "bag": 0.009,
-            "car": 0.007,
-            "dog": 0.005,
-            "gun": 0.237,
-            "knife": 0.012,
-            "motorcycle": 0.003,
-            "person": 0.005,
-            "person wearing blue and white plaid shirt": 0.007,
-            "person wearing dark jacket": 0.017,
-            "pistol": 0.274
+            "bag": 0.011,
+            "car": 0.016,
+            "dog": 0.01,
+            "gun": 0.552,
+            "knife": 0.022,
+            "motorcycle": 0.028,
+            "person": 0.007,
+            "person wearing blue and white plaid shirt": 0.008,
+            "person wearing dark jacket": 0.016,
+            "pistol": 0.583
           }
         }
       },
       "missing": [
-        "person_3"
+        "person_1",
+        "weapon_2"
       ],
       "hallucinated": [
         {
-          "label": "gun",
-          "score": 0.65,
+          "label": "person",
+          "score": 0.259,
           "box": [
-            570.5139846801758,
-            243.56629180908203,
-            652.5159225463867,
-            306.2921676635742
+            386.4728012084961,
+            338.48095703125,
+            559.5635757446289,
+            529.1101684570312
           ],
           "scores": {
-            "bag": 0.003,
-            "car": 0.007,
-            "dog": 0.005,
-            "gun": 0.65,
-            "knife": 0.009,
-            "motorcycle": 0.004,
-            "person": 0.003,
-            "person wearing blue and white plaid shirt": 0.002,
-            "person wearing dark jacket": 0.007,
-            "pistol": 0.61
-          }
+            "bag": 0.174,
+            "car": 0.019,
+            "dog": 0.063,
+            "gun": 0.164,
+            "knife": 0.01,
+            "motorcycle": 0.053,
+            "person": 0.074,
+            "person wearing blue and white plaid shirt": 0.051,
+            "person wearing dark jacket": 0.259,
+            "pistol": 0.121
+          },
+          "reason": "extra person (3 in image, 3 drawn)"
         },
         {
           "label": "gun",
-          "score": 0.609,
+          "score": 0.445,
           "box": [
-            605.4044990539551,
-            381.0174369812012,
-            718.0992851257324,
-            485.1153755187988
+            539.3665657043457,
+            291.66605377197266,
+            666.6800651550293,
+            378.5783920288086
           ],
           "scores": {
             "bag": 0.005,
-            "car": 0.006,
-            "dog": 0.007,
-            "gun": 0.609,
-            "knife": 0.004,
-            "motorcycle": 0.015,
+            "car": 0.009,
+            "dog": 0.009,
+            "gun": 0.445,
+            "knife": 0.013,
+            "motorcycle": 0.007,
             "person": 0.008,
-            "person wearing blue and white plaid shirt": 0.008,
-            "person wearing dark jacket": 0.015,
-            "pistol": 0.427
+            "person wearing blue and white plaid shirt": 0.005,
+            "person wearing dark jacket": 0.013,
+            "pistol": 0.414
           }
         }
       ],
       "carried": [],
       "person_count": {
-        "drawn": 4,
+        "drawn": 3,
         "in_image": 3
       },
-      "object_faithfulness": 0.833,
+      "object_faithfulness": 0.6,
       "vqa": [
         {
           "entity": "person_1",
           "attribute": "upper_clothing",
           "question": "Is there a person wearing blue and white plaid shirt?",
-          "answer": true
+          "answer": false
         },
         {
-          "entity": "person_4",
+          "entity": "person_3",
           "attribute": "upper_clothing",
           "question": "Is there a person wearing dark jacket?",
           "answer": true
         },
         {
-          "entity": "person_4",
+          "entity": "person_3",
           "attribute": "headwear",
           "question": "Is there a person wearing cap?",
           "answer": true
@@ -1035,9 +977,9 @@
           "answer": true
         }
       ],
-      "attribute_accuracy": 1.0
+      "attribute_accuracy": 0.8
     },
-    "first_attempt_hallucinations": 3,
+    "first_attempt_hallucinations": 6,
     "final_hallucinations": 2,
     "attempts": 5,
     "raw_path": "/home/marams/crime-recon/outputs/robbery003/H2_raw.png",
@@ -1047,48 +989,45 @@
         "seed": 142,
         "kept": false,
         "hallucinated": [
+          "extra person (3 in image, 3 drawn)",
           "gun",
           "gun",
-          "gun"
+          "bag",
+          "bag",
+          "pistol"
         ],
         "missing": [
-          "person_4"
+          "person_3"
         ],
         "person_count": {
-          "drawn": 4,
+          "drawn": 3,
           "in_image": 3
         },
         "attribute_accuracy": null,
         "matched": {
           "person_1": [
-            118,
-            214,
-            577,
-            945
+            164,
+            275,
+            543,
+            1021
           ],
           "person_2": [
-            518,
-            239,
-            660,
+            520,
+            240,
+            668,
             563
           ],
-          "person_3": [
-            669,
-            186,
-            925,
-            683
-          ],
           "weapon_1": [
-            729,
-            368,
-            802,
-            443
+            332,
+            208,
+            431,
+            281
           ],
           "weapon_2": [
-            627,
-            451,
-            667,
-            522
+            622,
+            457,
+            673,
+            545
           ]
         }
       },
@@ -1096,56 +1035,46 @@
         "seed": 143,
         "kept": false,
         "hallucinated": [
+          "extra person (3 in image, 3 drawn)",
+          "car",
+          "car",
+          "car",
           "gun",
-          "gun",
-          "pistol",
-          "gun",
-          "pistol",
-          "pistol",
-          "pistol",
-          "gun",
-          "gun",
-          "gun",
-          "pistol",
-          "gun",
-          "gun",
-          "pistol",
-          "gun",
-          "pistol",
-          "pistol",
-          "gun",
-          "gun",
-          "knife",
-          "pistol"
+          "bag",
+          "gun"
         ],
         "missing": [
-          "person_1",
-          "person_3",
-          "person_4"
+          "person_3"
         ],
         "person_count": {
-          "drawn": 4,
-          "in_image": 1
+          "drawn": 3,
+          "in_image": 3
         },
         "attribute_accuracy": null,
         "matched": {
+          "person_1": [
+            423,
+            276,
+            728,
+            991
+          ],
           "person_2": [
-            266,
-            292,
-            723,
-            1011
+            235,
+            366,
+            327,
+            538
           ],
           "weapon_1": [
-            742,
+            310,
             539,
-            813,
-            583
+            377,
+            601
           ],
           "weapon_2": [
-            861,
-            627,
-            991,
-            711
+            480,
+            603,
+            527,
+            638
           ]
         }
       },
@@ -1153,146 +1082,128 @@
         "seed": 144,
         "kept": false,
         "hallucinated": [
-          "extra person (4 in image, 4 drawn)",
-          "gun"
+          "extra person (3 in image, 3 drawn)",
+          "gun",
+          "pistol",
+          "pistol",
+          "pistol"
         ],
         "missing": [
-          "person_4"
+          "person_3"
         ],
         "person_count": {
-          "drawn": 4,
-          "in_image": 4
+          "drawn": 3,
+          "in_image": 3
         },
-        "attribute_accuracy": 0.8,
+        "attribute_accuracy": null,
         "matched": {
           "person_1": [
-            662,
-            59,
-            1000,
-            698
+            137,
+            152,
+            411,
+            897
           ],
           "person_2": [
-            6,
-            394,
-            140,
-            501
-          ],
-          "person_3": [
-            281,
-            265,
-            758,
-            924
+            493,
+            113,
+            694,
+            914
           ],
           "weapon_1": [
-            901,
-            465,
-            968,
-            533
+            681,
+            433,
+            754,
+            480
           ],
           "weapon_2": [
-            900,
-            472,
-            925,
-            513
+            747,
+            440,
+            764,
+            485
           ]
         }
       },
       {
         "seed": 145,
-        "kept": true,
+        "kept": false,
         "hallucinated": [
+          "extra person (3 in image, 3 drawn)",
           "gun",
+          "pistol",
+          "pistol",
+          "gun",
+          "pistol",
           "gun"
         ],
         "missing": [
           "person_3"
         ],
         "person_count": {
-          "drawn": 4,
+          "drawn": 3,
           "in_image": 3
         },
-        "attribute_accuracy": 1.0,
+        "attribute_accuracy": null,
         "matched": {
           "person_1": [
-            106,
-            453,
-            433,
-            1024
+            122,
+            312,
+            442,
+            834
           ],
           "person_2": [
-            511,
-            138,
+            576,
+            132,
             898,
-            928
-          ],
-          "person_4": [
-            316,
-            323,
-            550,
-            944
+            826
           ],
           "weapon_1": [
-            868,
-            453,
-            896,
-            503
+            375,
+            415,
+            446,
+            458
           ],
           "weapon_2": [
-            606,
-            380,
-            713,
-            435
+            714,
+            451,
+            747,
+            512
           ]
         }
       },
       {
         "seed": 146,
-        "kept": false,
+        "kept": true,
         "hallucinated": [
-          "extra person (4 in image, 4 drawn)",
-          "gun",
-          "gun",
-          "pistol",
-          "pistol"
+          "extra person (3 in image, 3 drawn)",
+          "gun"
         ],
         "missing": [
-          "person_1"
+          "person_1",
+          "weapon_2"
         ],
         "person_count": {
-          "drawn": 4,
-          "in_image": 4
+          "drawn": 3,
+          "in_image": 3
         },
-        "attribute_accuracy": null,
+        "attribute_accuracy": 0.8,
         "matched": {
           "person_2": [
-            369,
-            216,
-            532,
-            729
+            575,
+            140,
+            978,
+            757
           ],
           "person_3": [
-            86,
-            145,
-            452,
-            776
-          ],
-          "person_4": [
-            586,
-            136,
-            1000,
-            735
+            87,
+            131,
+            457,
+            742
           ],
           "weapon_1": [
-            418,
-            333,
-            483,
-            375
-          ],
-          "weapon_2": [
-            401,
             408,
-            418,
-            454
+            331,
+            480,
+            400
           ]
         }
       }

@@ -609,3 +609,58 @@ What it shows:
   section). **This is the next fix:** hedged clothing must be extracted, with its hedge.
 - robbery012 is unchanged by v5: its witness-side roles disagree (1 role conflict recorded) and its people
   still don't link to the camera.
+
+## v6: hedged facts are never dropped
+
+**Where they were lost.** Not in the grounding check and not in the post-check: both keep
+"black and white plaid shirt", "hat" and "orange shirt" when the LLM returns them (now a test). The loss
+was in the **model's first pass over the whole statement**. On the sentence alone it always extracts the
+hedged clothing; inside a full statement it sometimes skips it. For robbery003 witness A, 4/4 repeated
+temperature-0 calls left the plaid shirt out. For shoplifting001 witness A, the v5 run dropped
+"orange shirt" with no grounding or post-check log line.
+
+**Fix (general, `extraction.py`):**
+1. Prompt rule: "Hedged details are still details: extract them with hedged true. Never leave a detail
+   out because the witness sounded unsure."
+2. **Second pass over every hedged sentence** (`_recover_hedged`). The sentence is sent on its own, with the
+   entities already found, so "he" can be resolved. Facts that are missing are added with hedged=true.
+   Confidence comes from the hedge as before: "pretty sure" gives 0.575, "I think" gives 0.45, a plain
+   statement 0.70.
+   - Each added fact must be grounded in that sentence, not merely somewhere in the statement.
+   - A value the statement already has is skipped, whichever entity it was on. The first trial run
+     showed why: witness C's "grey coat" in robbery012 became a second grey-coat person. That run is
+     kept in `outputs/runs/v6_trial1_8scenes/`.
+   - Every addition is logged as "hedge pass".
+3. Tests: 4 new, using the two exact sentences (52 in total, all pass).
+
+The final run's hedge pass added 12 facts across the 8 scenes, 3 of them clothing.
+
+**v5 → v6, the 8 dev scenes** (`outputs/runs/v6_8scenes/`, 2 actual people per scene):
+
+| Scene | People entities | Drawn (H1) / in image | Conflicts found | False fact withheld | Recovery | Drawn precision | Object faithf. | Attribute acc. |
+|---|---|---|---|---|---|---|---|---|
+| robbery044 | 3 → 3 | 3/3 → 3/3 | 1/1 → 1/1 | 1/1 → 1/1 | 1.000 → 1.000 | 0.467 → 0.467 | 0.834 → 0.834 | 0.700 → 0.700 |
+| robbery058 | 4 → 3 | 2/2 → 2/2 | 0/1 → **1/1** | 1/1 → 1/1 | 0.733 → 0.867 | 0.583 → 0.538 | 1.000 → 1.000 | 0.667 → 0.750 |
+| sample_robbery | 2 → 2 | 2/2 → 2/2 | 1/1 → 1/1 | 1/1 → 1/1 | 0.857 → 0.857 | 0.667 → 0.667 | 0.750 → 0.750 | 0.916 → 0.916 |
+| shoplifting033 | 4 → 3 | 4/2 → 3/3 | – | 1/1 → 1/1 | 0.909 → 0.818 | 0.533 → 0.389 | 0.600 → 0.500 | 0.600 → 0.300 |
+| robbery012 | 5 → 5 | 4/3 → 4/3 | 0/1 → 0/1 | 1/1 → 1/1 | 0.056 → 0.111 | 0.000 → 0.000 | 0.750 → 0.750 | 1.000 → 0.600 |
+| shoplifting024 | 4 → 4 | 4/3 → 4/4 | – | 1/1 → 1/1 | 0.500 → 0.500 | 0.227 → 0.238 | 0.750 → 0.750 | 0.833 → 1.000 |
+| robbery003 | 4 → 3 | 4/5 → 3/3 | 0/1 → 0/1 | 1/1 → 1/1 | 0.875 → 0.875 | 0.722 → 0.750 | 0.833 → 0.800 | 1.000 → 0.800 |
+| shoplifting001 | 5 → 4 | 5/4 → 4/3 | 0/1 → **1/1** | 1/1 → **0/1** | 0.818 → 0.864 | 0.731 → 0.741 | 0.600 → 0.400 | 0.800 → 0.500 |
+| **Average** | 3.9 → 3.4 | drawn 3.5 → 3.1 | **2/6 → 4/6** | 8/8 → 7/8 | 0.718 → 0.737 | 0.491 → 0.474 | 0.765 → 0.723 | 0.815 → 0.696 |
+
+What it shows:
+- **Conflicts found 2/6 → 4/6.** shoplifting001: A's hedged "orange shirt" now conflicts with B's planted
+  "brown shirt". robbery058 is also found now.
+- **robbery003 is still missed, though the true value is now extracted.** The conflict is "black and white
+  plaid shirt" (A, hedged) against the planted "blue and white plaid shirt" (B). `values_agree` treats the
+  two as agreeing because they share "white plaid shirt". That is conflict matching, not extraction, and is
+  not changed here.
+- **robbery012 is still missed.** A's "black coat" and B's "blue shirt" are on different people (a merge
+  split), so they are never compared.
+- **shoplifting001's false fact is now drawn.** It is not a hedged fact: "I saw a white van parked nearby" is
+  plain. v5 "withheld" it only because the v5 run never extracted it. This run did, and nothing in the frames
+  contradicts a van outside the shot.
+- Fewer person entities on average (3.9 → 3.4). Hedged clothing gives the merge more details to match on.
+- Attribute accuracy fell (0.815 → 0.696). This is the image check: more and harder clothing is now drawn
+  (plaid shirts, hedged colours), and SDXL misses it more often. One run per scene, so treat ±0.1 as noise.

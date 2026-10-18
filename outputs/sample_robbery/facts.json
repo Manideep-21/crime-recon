@@ -398,24 +398,6 @@
       "support": [
         "witness_C"
       ]
-    },
-    {
-      "fact_id": "f023",
-      "entity": "weapon_1",
-      "entity_type": "weapon",
-      "role": "none",
-      "attribute": "weapon_type",
-      "value": "knife",
-      "source": "witness_C",
-      "source_type": "witness",
-      "viewpoint": "in the parking lot, sitting in a car",
-      "quote": "a knife",
-      "hedged": true,
-      "base_confidence": 0.575,
-      "confidence": 0.575,
-      "support": [
-        "witness_C"
-      ]
     }
   ],
   "role_votes": {}

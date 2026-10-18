@@ -1,0 +1,684 @@
+{
+  "scene_id": "robbery003",
+  "facts": [
+    {
+      "fact_id": "f001",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "took away a bottle of Coke",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "close by, inside, a few metres away",
+      "quote": "took away a bottle of Coke",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.99,
+      "support": [
+        "witness_A",
+        "witness_B",
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f002",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "turned around to leave",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "close by, inside, a few metres away",
+      "quote": "and then turned around to leave",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f003",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "upper_clothing",
+      "value": "black and white plaid shirt",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "close by, inside, a few metres away",
+      "quote": "I'm pretty sure he was wearing a black and white plaid shirt",
+      "hedged": true,
+      "base_confidence": 0.575,
+      "confidence": 0.775,
+      "support": [
+        "witness_A",
+        "witness_B"
+      ]
+    },
+    {
+      "fact_id": "f004",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "headwear",
+      "value": "hat",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "close by, inside, a few metres away",
+      "quote": "I'm pretty sure he was wearing a black and white plaid shirt and a hat",
+      "hedged": true,
+      "base_confidence": 0.575,
+      "confidence": 0.575,
+      "support": [
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f005",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "took out a black pistol",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "close by, inside, a few metres away",
+      "quote": "He took out a black pistol",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.99,
+      "support": [
+        "witness_A",
+        "witness_B",
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f006",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "pointed it at the man in black clothes",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "close by, inside, a few metres away",
+      "quote": "pointed it at the man in black clothes",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.9,
+      "support": [
+        "witness_A",
+        "witness_B"
+      ]
+    },
+    {
+      "fact_id": "f007",
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "action",
+      "value": "turned around",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "close by, inside, a few metres away",
+      "quote": "The man in black clothes turned around",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.99,
+      "support": [
+        "witness_A",
+        "witness_B",
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f008",
+      "entity": "weapon_2",
+      "entity_type": "weapon",
+      "role": "none",
+      "attribute": "weapon_type",
+      "value": "pistol",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "close by, inside, a few metres away",
+      "quote": "a black pistol",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f009",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "upper_clothing",
+      "value": "blue and white plaid shirt",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "far away, looking in from outside",
+      "quote": "a man in a blue and white plaid shirt",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.9,
+      "support": [
+        "witness_A",
+        "witness_B"
+      ]
+    },
+    {
+      "fact_id": "f010",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "robbed the place",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "far away, looking in from outside",
+      "quote": "robbed the place",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.9,
+      "support": [
+        "witness_B",
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f011",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "took out a black pistol",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "far away, looking in from outside",
+      "quote": "took out a black pistol",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.99,
+      "support": [
+        "witness_A",
+        "witness_B",
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f012",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "pointed it at the man in black",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "far away, looking in from outside",
+      "quote": "pointed it at the man in black",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.9,
+      "support": [
+        "witness_A",
+        "witness_B"
+      ]
+    },
+    {
+      "fact_id": "f013",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "took the gun back",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "far away, looking in from outside",
+      "quote": "took the gun back",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.9,
+      "support": [
+        "witness_B",
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f014",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "took away a bottle of Coke",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "far away, looking in from outside",
+      "quote": "took away a bottle of Coke",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.99,
+      "support": [
+        "witness_A",
+        "witness_B",
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f015",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "leaned over the counter",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "far away, looking in from outside",
+      "quote": "leaned over the counter",
+      "hedged": true,
+      "base_confidence": 0.575,
+      "confidence": 0.575,
+      "support": [
+        "witness_B"
+      ]
+    },
+    {
+      "fact_id": "f016",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "took what the man at the counter handed him",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "far away, looking in from outside",
+      "quote": "took what the man at the counter handed him",
+      "hedged": true,
+      "base_confidence": 0.575,
+      "confidence": 0.775,
+      "support": [
+        "witness_B",
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f017",
+      "entity": "weapon_1",
+      "entity_type": "weapon",
+      "role": "none",
+      "attribute": "weapon_type",
+      "value": "pistol",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "far away, looking in from outside",
+      "quote": "a black pistol",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.9,
+      "support": [
+        "witness_B",
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f018",
+      "entity": "weapon_1",
+      "entity_type": "weapon",
+      "role": "none",
+      "attribute": "held_by",
+      "value": "man in the plaid shirt",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "far away, looking in from outside",
+      "quote": "held by the man in the plaid shirt",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_B"
+      ]
+    },
+    {
+      "fact_id": "f019",
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "action",
+      "value": "turned around",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "far away, looking in from outside",
+      "quote": "if the man being robbed turned around",
+      "hedged": true,
+      "base_confidence": 0.45,
+      "confidence": 0.85,
+      "support": [
+        "witness_A",
+        "witness_B",
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f020",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "robbed the place",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "I saw a man who robbed the place",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.9,
+      "support": [
+        "witness_B",
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f021",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "groping for something",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "He was groping for something",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f022",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "took out a black pistol",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "took out a black pistol",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.99,
+      "support": [
+        "witness_A",
+        "witness_B",
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f023",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "took the gun back",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "took the gun back",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.9,
+      "support": [
+        "witness_B",
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f024",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "took away a bottle of Coke",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "took away a bottle of Coke",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.99,
+      "support": [
+        "witness_A",
+        "witness_B",
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f025",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "took what the man at the counter handed him",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "took what the man at the counter handed him",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.9,
+      "support": [
+        "witness_B",
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f026",
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "action",
+      "value": "being robbed and turned around",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "Another man, wearing black clothes, was being robbed and turned around",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.99,
+      "support": [
+        "witness_A",
+        "witness_B",
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f027",
+      "entity": "weapon_1",
+      "entity_type": "weapon",
+      "role": "none",
+      "attribute": "weapon_type",
+      "value": "pistol",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "I think there was a weapon, maybe a pistol",
+      "hedged": true,
+      "base_confidence": 0.45,
+      "confidence": 0.65,
+      "support": [
+        "witness_B",
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f028",
+      "entity": "weapon_1",
+      "entity_type": "weapon",
+      "role": "none",
+      "attribute": "held_by",
+      "value": "man who robbed the place",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "I think there was a weapon, maybe a pistol",
+      "hedged": true,
+      "base_confidence": 0.45,
+      "confidence": 0.45,
+      "support": [
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f029",
+      "entity": "object_1",
+      "entity_type": "object",
+      "role": "none",
+      "attribute": "object_type",
+      "value": "bottle of Coke",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "I'm pretty sure there was a bottle of Coke",
+      "hedged": true,
+      "base_confidence": 0.575,
+      "confidence": 0.575,
+      "support": [
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f030",
+      "entity": "person_3",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "upper_clothing",
+      "value": "dark jacket",
+      "source": "cctv_frame_01",
+      "source_type": "cctv",
+      "viewpoint": "CCTV camera",
+      "quote": "",
+      "hedged": false,
+      "base_confidence": 0.85,
+      "confidence": 0.85,
+      "support": [
+        "cctv"
+      ]
+    },
+    {
+      "fact_id": "f031",
+      "entity": "person_3",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "upper_clothing",
+      "value": "dark jacket",
+      "source": "cctv_frame_02",
+      "source_type": "cctv",
+      "viewpoint": "CCTV camera",
+      "quote": "",
+      "hedged": false,
+      "base_confidence": 0.85,
+      "confidence": 0.85,
+      "support": [
+        "cctv"
+      ]
+    },
+    {
+      "fact_id": "f032",
+      "entity": "person_3",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "upper_clothing",
+      "value": "dark jacket",
+      "source": "cctv_frame_03",
+      "source_type": "cctv",
+      "viewpoint": "CCTV camera",
+      "quote": "",
+      "hedged": false,
+      "base_confidence": 0.85,
+      "confidence": 0.85,
+      "support": [
+        "cctv"
+      ]
+    },
+    {
+      "fact_id": "f033",
+      "entity": "person_3",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "headwear",
+      "value": "cap",
+      "source": "cctv_frame_03",
+      "source_type": "cctv",
+      "viewpoint": "CCTV camera",
+      "quote": "",
+      "hedged": false,
+      "base_confidence": 0.85,
+      "confidence": 0.85,
+      "support": [
+        "cctv"
+      ]
+    },
+    {
+      "fact_id": "f034",
+      "entity": "person_3",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "upper_clothing",
+      "value": "dark jacket",
+      "source": "cctv_frame_04",
+      "source_type": "cctv",
+      "viewpoint": "CCTV camera",
+      "quote": "",
+      "hedged": false,
+      "base_confidence": 0.85,
+      "confidence": 0.85,
+      "support": [
+        "cctv"
+      ]
+    },
+    {
+      "fact_id": "f035",
+      "entity": "person_3",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "upper_clothing",
+      "value": "dark jacket",
+      "source": "cctv_frame_05",
+      "source_type": "cctv",
+      "viewpoint": "CCTV camera",
+      "quote": "",
+      "hedged": false,
+      "base_confidence": 0.85,
+      "confidence": 0.85,
+      "support": [
+        "cctv"
+      ]
+    },
+    {
+      "fact_id": "f036",
+      "entity": "person_3",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "upper_clothing",
+      "value": "dark shirt",
+      "source": "cctv_frame_06",
+      "source_type": "cctv",
+      "viewpoint": "CCTV camera",
+      "quote": "",
+      "hedged": false,
+      "base_confidence": 0.85,
+      "confidence": 0.85,
+      "support": [
+        "cctv"
+      ]
+    }
+  ],
+  "role_votes": {}
+}

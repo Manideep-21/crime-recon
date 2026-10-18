@@ -1,0 +1,404 @@
+{
+  "scene_id": "sample_robbery",
+  "facts": [
+    {
+      "fact_id": "f001",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "height",
+      "value": "tall",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "inside the store, near the snacks aisle, about 5 metres away",
+      "quote": "a tall man",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f002",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "upper_clothing",
+      "value": "red hoodie",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "inside the store, near the snacks aisle, about 5 metres away",
+      "quote": "in a red hoodie",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f003",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "headwear",
+      "value": "black cap",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "inside the store, near the snacks aisle, about 5 metres away",
+      "quote": "He had a black cap on",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f004",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "walked straight to the counter",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "inside the store, near the snacks aisle, about 5 metres away",
+      "quote": "walked straight to the counter",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f005",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "leaned over",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "inside the store, near the snacks aisle, about 5 metres away",
+      "quote": "leaned over",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f006",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "grabbed cash from the register",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "inside the store, near the snacks aisle, about 5 metres away",
+      "quote": "grabbed cash from the register",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f007",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "ran out",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "inside the store, near the snacks aisle, about 5 metres away",
+      "quote": "ran out",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.9,
+      "support": [
+        "witness_A",
+        "witness_B"
+      ]
+    },
+    {
+      "fact_id": "f008",
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "upper_clothing",
+      "value": "green uniform shirt",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "inside the store, near the snacks aisle, about 5 metres away",
+      "quote": "a young woman in a green uniform shirt",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f009",
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "action",
+      "value": "put her hands up",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "inside the store, near the snacks aisle, about 5 metres away",
+      "quote": "put her hands up",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f010",
+      "entity": "scene",
+      "entity_type": "location",
+      "role": "none",
+      "attribute": "notable_features",
+      "value": "snacks aisle",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "inside the store, near the snacks aisle, about 5 metres away",
+      "quote": "I was in the snacks aisle",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f011",
+      "entity": "scene",
+      "entity_type": "location",
+      "role": "none",
+      "attribute": "place_type",
+      "value": "store",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "outside on the pavement, looking in through the front window",
+      "quote": "the store",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_B"
+      ]
+    },
+    {
+      "fact_id": "f012",
+      "entity": "scene",
+      "entity_type": "location",
+      "role": "none",
+      "attribute": "lighting",
+      "value": "brightly lit",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "outside on the pavement, looking in through the front window",
+      "quote": "the store was brightly lit",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_B"
+      ]
+    },
+    {
+      "fact_id": "f013",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "upper_clothing",
+      "value": "blue jacket",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "outside on the pavement, looking in through the front window",
+      "quote": "I think he wore a blue jacket",
+      "hedged": true,
+      "base_confidence": 0.45,
+      "confidence": 0.45,
+      "support": [
+        "witness_B"
+      ]
+    },
+    {
+      "fact_id": "f014",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "carrying",
+      "value": "black backpack",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "outside on the pavement, looking in through the front window",
+      "quote": "he had a black backpack on his shoulder",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_B"
+      ]
+    },
+    {
+      "fact_id": "f015",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "ran out the door",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "outside on the pavement, looking in through the front window",
+      "quote": "ran out the door",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.9,
+      "support": [
+        "witness_A",
+        "witness_B"
+      ]
+    },
+    {
+      "fact_id": "f016",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "towards the parking lot",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "outside on the pavement, looking in through the front window",
+      "quote": "towards the parking lot",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_B"
+      ]
+    },
+    {
+      "fact_id": "f017",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "build",
+      "value": "slim",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "in the parking lot, sitting in a car",
+      "quote": "a slim guy",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f018",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "lower_clothing",
+      "value": "black jeans",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "in the parking lot, sitting in a car",
+      "quote": "black jeans",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f019",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "came running out of the store",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "in the parking lot, sitting in a car",
+      "quote": "came running out of the store",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f020",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "ran past my car",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "in the parking lot, sitting in a car",
+      "quote": "ran past my car",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f021",
+      "entity": "weapon_1",
+      "entity_type": "weapon",
+      "role": "none",
+      "attribute": "weapon_type",
+      "value": "knife",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "in the parking lot, sitting in a car",
+      "quote": "I'm pretty sure he had a knife in his hand",
+      "hedged": true,
+      "base_confidence": 0.575,
+      "confidence": 0.575,
+      "support": [
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f022",
+      "entity": "weapon_1",
+      "entity_type": "weapon",
+      "role": "none",
+      "attribute": "held_by",
+      "value": "slim guy",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "in the parking lot, sitting in a car",
+      "quote": "I'm pretty sure he had a knife in his hand",
+      "hedged": true,
+      "base_confidence": 0.575,
+      "confidence": 0.575,
+      "support": [
+        "witness_C"
+      ]
+    }
+  ],
+  "role_votes": {}
+}

@@ -10,10 +10,10 @@
         {
           "value": "red hoodie",
           "fact_ids": [
+            "f032",
+            "f033",
             "f034",
-            "f035",
-            "f036",
-            "f040",
+            "f038",
             "f005"
           ],
           "sources": [
@@ -28,7 +28,7 @@
         {
           "value": "red shirt",
           "fact_ids": [
-            "f039"
+            "f037"
           ],
           "sources": [
             "cctv_frame_05"
@@ -38,7 +38,7 @@
         {
           "value": "pink shirt",
           "fact_ids": [
-            "f037"
+            "f035"
           ],
           "sources": [
             "cctv_frame_04"
@@ -177,13 +177,7 @@
       "attribute": "position"
     },
     {
-      "entity": "weapon_2",
-      "entity_type": "weapon",
-      "role": "none",
-      "attribute": "held_by"
-    },
-    {
-      "entity": "weapon_3",
+      "entity": "weapon_1",
       "entity_type": "weapon",
       "role": "none",
       "attribute": "held_by"
@@ -595,7 +589,7 @@
     },
     {
       "witness": "witness_C",
-      "entity": "weapon_2",
+      "entity": "weapon_1",
       "entity_type": "weapon",
       "role": "none",
       "attribute": "held_by",
@@ -603,19 +597,6 @@
       "kind": "gap",
       "viewpoint": "brief glimpse while passing by",
       "id": "q032",
-      "reasons": [],
-      "passed": true
-    },
-    {
-      "witness": "witness_C",
-      "entity": "weapon_3",
-      "entity_type": "weapon",
-      "role": "none",
-      "attribute": "held_by",
-      "text": "Who, if anyone, was holding the item you described (\"I'm not sure if it was a gun\")?",
-      "kind": "gap",
-      "viewpoint": "brief glimpse while passing by",
-      "id": "q033",
       "reasons": [],
       "passed": true
     },
@@ -628,7 +609,7 @@
       "text": "In your own words, please describe the upper-body clothing of the person you described (\"A woman behind the counter\") again.",
       "kind": "conflict_recheck",
       "viewpoint": "close by, inside, a few metres away",
-      "id": "q034",
+      "id": "q033",
       "reasons": [],
       "passed": true
     },
@@ -641,7 +622,7 @@
       "text": "Are you sure it wasn't red shirt?",
       "kind": "baseline",
       "viewpoint": "close by, inside, a few metres away",
-      "id": "q035",
+      "id": "q034",
       "reasons": [
         "introduces detail(s) the witness never mentioned: shirt",
         "closed / suggestive phrasing pushes a particular answer"
@@ -657,7 +638,7 @@
       "text": "Are you sure it wasn't pink shirt?",
       "kind": "baseline",
       "viewpoint": "close by, inside, a few metres away",
-      "id": "q036",
+      "id": "q035",
       "reasons": [
         "introduces detail(s) the witness never mentioned: pink, shirt",
         "closed / suggestive phrasing pushes a particular answer"
@@ -673,7 +654,7 @@
       "text": "In your own words, please describe the upper-body clothing of the person you described (\"approached\") again.",
       "kind": "conflict_recheck",
       "viewpoint": "far away, looking in from outside",
-      "id": "q037",
+      "id": "q036",
       "reasons": [],
       "passed": true
     },
@@ -686,7 +667,7 @@
       "text": "Are you sure it wasn't black?",
       "kind": "baseline",
       "viewpoint": "far away, looking in from outside",
-      "id": "q038",
+      "id": "q037",
       "reasons": [
         "introduces detail(s) the witness never mentioned: black",
         "closed / suggestive phrasing pushes a particular answer"
@@ -702,7 +683,7 @@
       "text": "In your own words, please describe the upper-body clothing of the person you described (\"A man in black robbed her\") again.",
       "kind": "conflict_recheck",
       "viewpoint": "brief glimpse while passing by",
-      "id": "q039",
+      "id": "q038",
       "reasons": [],
       "passed": true
     },
@@ -715,7 +696,7 @@
       "text": "Are you sure it wasn't white clothes?",
       "kind": "baseline",
       "viewpoint": "brief glimpse while passing by",
-      "id": "q040",
+      "id": "q039",
       "reasons": [
         "introduces detail(s) the witness never mentioned: clothes, white",
         "closed / suggestive phrasing pushes a particular answer"
@@ -724,14 +705,14 @@
     },
     {
       "witness": "witness_B",
-      "entity": "weapon_1",
+      "entity": "weapon_2",
       "entity_type": "weapon",
       "role": "none",
       "attribute": "weapon_type",
       "text": "Did you also see the weapon?",
       "kind": "baseline",
       "viewpoint": "far away, looking in from outside",
-      "id": "q041",
+      "id": "q040",
       "reasons": [
         "introduces detail(s) the witness never mentioned: weapon",
         "closed / suggestive phrasing pushes a particular answer"
@@ -740,14 +721,14 @@
     },
     {
       "witness": "witness_C",
-      "entity": "weapon_1",
+      "entity": "weapon_2",
       "entity_type": "weapon",
       "role": "none",
       "attribute": "weapon_type",
       "text": "Did you also see the weapon?",
       "kind": "baseline",
       "viewpoint": "brief glimpse while passing by",
-      "id": "q042",
+      "id": "q041",
       "reasons": [
         "closed / suggestive phrasing pushes a particular answer"
       ],
@@ -755,14 +736,14 @@
     },
     {
       "witness": "witness_B",
-      "entity": "weapon_1",
+      "entity": "weapon_2",
       "entity_type": "weapon",
       "role": "none",
       "attribute": "held_by",
       "text": "Did you also see the robber?",
       "kind": "baseline",
       "viewpoint": "far away, looking in from outside",
-      "id": "q043",
+      "id": "q042",
       "reasons": [
         "closed / suggestive phrasing pushes a particular answer"
       ],
@@ -770,14 +751,14 @@
     },
     {
       "witness": "witness_C",
-      "entity": "weapon_1",
+      "entity": "weapon_2",
       "entity_type": "weapon",
       "role": "none",
       "attribute": "held_by",
       "text": "Did you also see the robber?",
       "kind": "baseline",
       "viewpoint": "brief glimpse while passing by",
-      "id": "q044",
+      "id": "q043",
       "reasons": [
         "closed / suggestive phrasing pushes a particular answer"
       ],
@@ -785,14 +766,14 @@
     },
     {
       "witness": "witness_A",
-      "entity": "weapon_2",
+      "entity": "weapon_1",
       "entity_type": "weapon",
       "role": "none",
       "attribute": "weapon_type",
       "text": "Did you also see the gun?",
       "kind": "baseline",
       "viewpoint": "close by, inside, a few metres away",
-      "id": "q045",
+      "id": "q044",
       "reasons": [
         "introduces detail(s) the witness never mentioned: gun",
         "closed / suggestive phrasing pushes a particular answer"
@@ -801,14 +782,14 @@
     },
     {
       "witness": "witness_B",
-      "entity": "weapon_2",
+      "entity": "weapon_1",
       "entity_type": "weapon",
       "role": "none",
       "attribute": "weapon_type",
       "text": "Did you also see the gun?",
       "kind": "baseline",
       "viewpoint": "far away, looking in from outside",
-      "id": "q046",
+      "id": "q045",
       "reasons": [
         "closed / suggestive phrasing pushes a particular answer"
       ],

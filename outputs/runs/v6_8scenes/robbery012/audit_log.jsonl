@@ -1,0 +1,54 @@
+{"time": "19:11:33", "step": "grounding", "detail": "witness_A: dropped person.upper_clothing = 'black coat' (none of ['black', 'coat'] appear in the statement)"}
+{"time": "19:11:33", "step": "post-check", "detail": "witness_A: n1 weapon had no weapon_type -> added 'gun'"}
+{"time": "19:11:33", "step": "extract", "detail": "witness_A: 10 facts"}
+{"time": "19:11:47", "step": "post-check", "detail": "witness_B: dropped place_type 'place' (not a kind of place)"}
+{"time": "19:11:47", "step": "post-check", "detail": "witness_B: dropped placeholder location.lighting = 'not specified'"}
+{"time": "19:11:47", "step": "post-check", "detail": "witness_B: dropped placeholder location.time_of_day = 'not specified'"}
+{"time": "19:12:02", "step": "grounding", "detail": "witness_B: dropped person.upper_clothing = 'blue shirt' (none of ['blue', 'shirt'] appear in the statement)"}
+{"time": "19:12:10", "step": "grounding", "detail": "witness_B: dropped person.action = 'tried to run into the house' (none of ['house', 'into', 'run', 'tried'] appear in the statement)"}
+{"time": "19:12:10", "step": "grounding", "detail": "witness_B: dropped person.action = 'robbed the place' (none of ['place', 'robbed'] appear in the statement)"}
+{"time": "19:12:10", "step": "post-check", "detail": "witness_B: n1 weapon had no weapon_type -> added 'gun'"}
+{"time": "19:12:10", "step": "hedge pass", "detail": "witness_B: added hedged weapon.weapon_type = 'gun' from \"I think there was a gun involved.\""}
+{"time": "19:12:10", "step": "extract", "detail": "witness_B: 15 facts"}
+{"time": "19:12:21", "step": "post-check", "detail": "witness_C: dropped place_type 'place of work' (not a kind of place)"}
+{"time": "19:12:21", "step": "post-check", "detail": "witness_C: dropped placeholder location.lighting = 'not specified'"}
+{"time": "19:12:21", "step": "post-check", "detail": "witness_C: dropped placeholder location.time_of_day = 'not specified'"}
+{"time": "19:12:29", "step": "hedge pass", "detail": "witness_C: added hedged person.action = 'opened the cash register' from \"I'm not sure if he opened the cash register first.\""}
+{"time": "19:12:36", "step": "extract", "detail": "witness_C: 7 facts"}
+{"time": "19:12:44", "step": "extract", "detail": "cctv_frame_01 (/home/marams/crime-recon/data/scenes/robbery012/frames/frame_01.jpg): 1 facts"}
+{"time": "19:12:53", "step": "extract", "detail": "cctv_frame_02 (/home/marams/crime-recon/data/scenes/robbery012/frames/frame_02.jpg): 1 facts"}
+{"time": "19:13:01", "step": "extract", "detail": "cctv_frame_03 (/home/marams/crime-recon/data/scenes/robbery012/frames/frame_03.jpg): 1 facts"}
+{"time": "19:13:11", "step": "extract", "detail": "cctv_frame_04 (/home/marams/crime-recon/data/scenes/robbery012/frames/frame_04.jpg): 1 facts"}
+{"time": "19:13:20", "step": "extract", "detail": "cctv_frame_05 (/home/marams/crime-recon/data/scenes/robbery012/frames/frame_05.jpg): 2 facts"}
+{"time": "19:13:28", "step": "extract", "detail": "cctv_frame_06 (/home/marams/crime-recon/data/scenes/robbery012/frames/frame_06.jpg): 1 facts"}
+{"time": "19:13:37", "step": "merge", "detail": "LLM grouping repaired: 2 duplicate key dropped, 1 missing mention added alone, 2 mixed-type group split"}
+{"time": "19:13:37", "step": "merge", "detail": "LLM join overruled: witness_B:e2 moved to ['witness_A:e2', 'witness_C:e2'] (details agree 1 vs 0)"}
+{"time": "19:13:37", "step": "merge", "detail": "LLM grouping repaired: 1 LLM join overruled by details"}
+{"time": "19:13:37", "step": "merge", "detail": "joined ['witness_B:e1'] into ['witness_A:e1', 'witness_C:e1'] (details agree, score 4.0)"}
+{"time": "19:13:37", "step": "merge", "detail": "CCTV: 6 person mentions -> 2 people across frames"}
+{"time": "19:13:37", "step": "merge", "detail": "person_2: role by vote = victim; sources disagree {'witness_A': 'suspect', 'witness_C': 'victim', 'witness_B': 'victim'}"}
+{"time": "19:13:37", "step": "merge", "detail": "person_3: role by vote = suspect; sources disagree {'witness_B': 'suspect', 'witness_C': 'bystander'}"}
+{"time": "19:13:37", "step": "merge", "detail": "18 mentions -> 8 entities"}
+{"time": "19:13:37", "step": "extract", "detail": "39 facts from 3 witnesses + 6 CCTV frames"}
+{"time": "19:13:37", "step": "analyze", "detail": "0 conflicts (+2 role disagreements), 1 hypotheses, 25 gaps, 40 candidate questions (5 blocked as leading)"}
+{"time": "19:13:38", "step": "generate", "detail": "H1: 9 facts drawn, 10 withheld, 8 not drawn (prompt)"}
+{"time": "19:13:38", "step": "not drawn", "detail": "H1: person_1.action = 'walked to the cash register' (witness_A): movement/direction"}
+{"time": "19:13:38", "step": "not drawn", "detail": "H1: person_1.action = 'put the money in the cash register' (witness_A): one short action per person"}
+{"time": "19:13:38", "step": "not drawn", "detail": "H1: person_1.action = 'handed it to the man in black' (witness_A): one short action per person"}
+{"time": "19:13:38", "step": "not drawn", "detail": "H1: person_1.action = 'closed the cashier drawer' (witness_A): one short action per person"}
+{"time": "19:13:38", "step": "not drawn", "detail": "H1: person_1.action = 'tried to run into the house' (witness_A): movement/direction"}
+{"time": "19:13:38", "step": "not drawn", "detail": "H1: person_1.action = 'sat next to the cash register' (witness_B): one short action per person"}
+{"time": "19:13:38", "step": "not drawn", "detail": "H1: person_1.action = 'walked out of the cashier' (witness_B): movement/direction"}
+{"time": "19:13:38", "step": "not drawn", "detail": "H1: person_2.position = 'walked out of the cashier' (witness_C): movement/direction"}
+{"time": "19:13:38", "step": "prompt", "detail": "H1: CCTV photo, wide angle, realistic, exactly 4 people. a scene, with cashier, house; a person wearing blue shirt, looked up into the distance, sitting next to the cash register; a person wearing dark jacket and helmet; a person wearing black coat; a person wearing red t-shirt [62 tokens]"}
+{"time": "19:13:49", "step": "verify", "detail": "H1 seed 42: objects found 3/4, hallucinated 1, people 4 in image / 4 drawn"}
+{"time": "19:13:49", "step": "verify", "detail": "H1: person, missing person_4 -> regenerate"}
+{"time": "19:13:54", "step": "verify", "detail": "H1 seed 43: objects found 2/4, hallucinated 1, people 3 in image / 4 drawn"}
+{"time": "19:13:54", "step": "verify", "detail": "H1: person, missing person_1, missing person_2 -> regenerate"}
+{"time": "19:13:58", "step": "verify", "detail": "H1 seed 44: objects found 3/4, hallucinated 0, people 3 in image / 4 drawn"}
+{"time": "19:13:58", "step": "verify", "detail": "H1: missing person_2 -> regenerate"}
+{"time": "19:14:02", "step": "verify", "detail": "H1 seed 45: objects found 2/4, hallucinated 2, people 4 in image / 4 drawn"}
+{"time": "19:14:02", "step": "verify", "detail": "H1: person, person, missing person_1, missing person_2 -> regenerate"}
+{"time": "19:14:07", "step": "verify", "detail": "H1 seed 46: objects found 2/4, hallucinated 3, people 5 in image / 4 drawn"}
+{"time": "19:14:46", "step": "verify", "detail": "H1 seed 44 attribute check: objects found 3/4, hallucinated 0, people 3 in image / 4 drawn, attribute accuracy 60%"}
+{"time": "19:14:46", "step": "verify", "detail": "H1: keeping seed 44 (5 attempts)"}

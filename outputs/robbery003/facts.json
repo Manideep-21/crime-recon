@@ -128,10 +128,11 @@
       "quote": "The man in black clothes turned around",
       "hedged": false,
       "base_confidence": 0.7,
-      "confidence": 0.9,
+      "confidence": 0.99,
       "support": [
         "witness_A",
-        "witness_B"
+        "witness_B",
+        "witness_C"
       ]
     },
     {
@@ -355,10 +356,11 @@
       "quote": "if the man being robbed turned around",
       "hedged": true,
       "base_confidence": 0.45,
-      "confidence": 0.65,
+      "confidence": 0.85,
       "support": [
         "witness_A",
-        "witness_B"
+        "witness_B",
+        "witness_C"
       ]
     },
     {
@@ -478,7 +480,7 @@
     },
     {
       "fact_id": "f026",
-      "entity": "person_3",
+      "entity": "person_2",
       "entity_type": "person",
       "role": "victim",
       "attribute": "action",
@@ -489,8 +491,10 @@
       "quote": "Another man, wearing black clothes, was being robbed and turned around",
       "hedged": false,
       "base_confidence": 0.7,
-      "confidence": 0.7,
+      "confidence": 0.99,
       "support": [
+        "witness_A",
+        "witness_B",
         "witness_C"
       ]
     },
@@ -551,25 +555,7 @@
     },
     {
       "fact_id": "f030",
-      "entity": "weapon_3",
-      "entity_type": "weapon",
-      "role": "none",
-      "attribute": "weapon_type",
-      "value": "pistol",
-      "source": "witness_C",
-      "source_type": "witness",
-      "viewpoint": "brief glimpse while passing by",
-      "quote": "a pistol",
-      "hedged": true,
-      "base_confidence": 0.45,
-      "confidence": 0.45,
-      "support": [
-        "witness_C"
-      ]
-    },
-    {
-      "fact_id": "f031",
-      "entity": "person_4",
+      "entity": "person_3",
       "entity_type": "person",
       "role": "bystander",
       "attribute": "upper_clothing",
@@ -586,8 +572,8 @@
       ]
     },
     {
-      "fact_id": "f032",
-      "entity": "person_4",
+      "fact_id": "f031",
+      "entity": "person_3",
       "entity_type": "person",
       "role": "bystander",
       "attribute": "upper_clothing",
@@ -604,8 +590,8 @@
       ]
     },
     {
-      "fact_id": "f033",
-      "entity": "person_4",
+      "fact_id": "f032",
+      "entity": "person_3",
       "entity_type": "person",
       "role": "bystander",
       "attribute": "upper_clothing",
@@ -622,8 +608,8 @@
       ]
     },
     {
-      "fact_id": "f034",
-      "entity": "person_4",
+      "fact_id": "f033",
+      "entity": "person_3",
       "entity_type": "person",
       "role": "bystander",
       "attribute": "headwear",
@@ -640,8 +626,8 @@
       ]
     },
     {
-      "fact_id": "f035",
-      "entity": "person_4",
+      "fact_id": "f034",
+      "entity": "person_3",
       "entity_type": "person",
       "role": "bystander",
       "attribute": "upper_clothing",
@@ -658,8 +644,8 @@
       ]
     },
     {
-      "fact_id": "f036",
-      "entity": "person_4",
+      "fact_id": "f035",
+      "entity": "person_3",
       "entity_type": "person",
       "role": "bystander",
       "attribute": "upper_clothing",
@@ -676,8 +662,8 @@
       ]
     },
     {
-      "fact_id": "f037",
-      "entity": "person_4",
+      "fact_id": "f036",
+      "entity": "person_3",
       "entity_type": "person",
       "role": "bystander",
       "attribute": "upper_clothing",
