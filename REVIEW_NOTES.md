@@ -491,3 +491,47 @@ Reading the table:
   this sample size.
 - Cost of the design: without roles, two mentions that share no detail and no description only join
   through the lone-man / lone-woman rule. The old same-role rule joined them, rightly or wrongly.
+
+## Held-out round 2: robbery003, shoplifting001 (code frozen at tag v4)
+Two new UCA train-split clips, never used before: **Robbery003** (a robber in a plaid shirt with a
+black pistol, and the clerk in black) and **Shoplifting001** (two men, both shoplifters, the first 6 of 8
+sentences). The ground truth was hand-edited as recorded in each `ground_truth.json` → `hand_edits`.
+Planted: one shirt-colour corruption on a suspect (plaid black→blue; orange→brown) and a
+confabulated white van. Evaluated with `evaluate.py --generate --force-extract`, SDXL, and no code changes
+after v4. Saved in `outputs/runs/heldout2_v4/`.
+
+| Scene | Recovery | Drawn precision (witness / CCTV) | False withheld | Conflicts found | Leaked | Halluc. first→final | Object faithf. | Attribute acc. | People drawn / in image / actual |
+|---|---|---|---|---|---|---|---|---|---|
+| robbery003 | 0.875 | 0.739 (0.81 / 0.0) | 1/1 | **0/1** | 0 | 6→5 | 0.643 | 0.750 | **6** / 6 / 2 |
+| shoplifting001 | 0.864 | 0.794 (0.931 / 0.0) | 1/1 | **0/1** | 0 | 1→1 | 0.222 | 0.667 | **8** / 2 / 2 |
+
+The role-agnostic diagnostic hardly differs: robbery003 0.875 / 0.739 (same as official);
+shoplifting001 recovery 0.909, precision 0.824. **Roles were right here; the merge was not.**
+Recovery and precision count facts, so duplicated people barely show in them. They show in the
+person count (6 and 8 for 2), in object faithfulness, and in the planted conflicts: the corrupted
+shirt colour sits on a different entity than the true one, so nothing conflicts.
+
+#### Diagnosis (no code changes)
+1. **The LLM merge answer is rejected, in every scene checked, dev included.** `_llm_groups` accepts
+   only a clean partition. Qwen leaves out a key (robbery003, robbery044: `witness_B:e1`), invents keys
+   (shoplifting001: `witness_A:e4`–`e7`), or groups a person with an object. The pipeline then always
+   runs the rule-based merge. So on dev, the rules did all of the merging too.
+2. **The rule-based merge can't separate two men who do different things.** Each witness describes two
+   men, so the lone-man rule is off. The details rule counts an *attribute* as agreeing once, however
+   many actions match. So the robber–robber pairs, which share 4–5 actions, score 1, the same as
+   robber–clerk pairs that share one generic action ("turned around" in "turned around to leave";
+   "stopped in front of the shelf", "walked away", "talked"). With these ties no pair is a unique best,
+   and the clique exception doesn't apply. Result: every witness mention stays its own person.
+3. **CCTV:**
+   - robbery003: the clerk's "dark jacket"/"cap" has nothing to agree with on the witness side ("black
+     clothes" wasn't extracted from the statements), so no link.
+   - shoplifting001: the camera splits into an orange-shirt man (linked to witness A's man) and a
+     "dark jacket" person; the white shirt is never seen on camera.
+
+#### Suggested fixes (not made; for the next development round, to be checked on the dev scenes)
+- **Repair the LLM merge answer instead of rejecting it:** add missing keys as their own groups, drop
+  invented keys, split mixed-type groups. Then run the role-free checks on the result.
+- **Count agreeing values for multi-valued attributes** (actions, positions), weighting generic actions
+  ("turned around", "walked away") low. Then 4 shared actions outrank 1.
+- Extract clothing given as a noun phrase ("the man in black" → upper_clothing "black clothes"), a
+  long-standing miss.

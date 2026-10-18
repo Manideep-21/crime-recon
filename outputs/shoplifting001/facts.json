@@ -1,0 +1,783 @@
+{
+  "scene_id": "shoplifting001",
+  "facts": [
+    {
+      "fact_id": "f001",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "looked around",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "close by, inside, a few metres away",
+      "quote": "looked around",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f002",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "stopped in front of the shelf",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "close by, inside, a few metres away",
+      "quote": "stopped in front of the shelf",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f003",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "talked at the end",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "close by, inside, a few metres away",
+      "quote": "talked at the end",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f004",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "walked to the middle of the shelf",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "close by, inside, a few metres away",
+      "quote": "walked to the middle of the shelf",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f005",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "hid something in his clothes",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "close by, inside, a few metres away",
+      "quote": "hid something in his clothes",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f006",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "walked away",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "close by, inside, a few metres away",
+      "quote": "walked away",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f007",
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "stopped in front of the shelf",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "close by, inside, a few metres away",
+      "quote": "stopped in front of the shelf",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f008",
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "touched the laptop",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "close by, inside, a few metres away",
+      "quote": "touched the laptop",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f009",
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "picked it up",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "close by, inside, a few metres away",
+      "quote": "picked it up",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f010",
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "put it under the laptop",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "close by, inside, a few metres away",
+      "quote": "put it under the laptop",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f011",
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "closed the other computer",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "close by, inside, a few metres away",
+      "quote": "closed the other computer",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f012",
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "talked at the end",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "close by, inside, a few metres away",
+      "quote": "talked at the end",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f013",
+      "entity": "object_2",
+      "entity_type": "object",
+      "role": "none",
+      "attribute": "object_type",
+      "value": "laptop",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "close by, inside, a few metres away",
+      "quote": "the laptop",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f014",
+      "entity": "person_3",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "upper_clothing",
+      "value": "brown shirt",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "far away, looking in from outside",
+      "quote": "a man wearing a brown shirt",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_B"
+      ]
+    },
+    {
+      "fact_id": "f015",
+      "entity": "person_3",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "walked to the middle of the shelf",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "far away, looking in from outside",
+      "quote": "walked to the middle of the shelf",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_B"
+      ]
+    },
+    {
+      "fact_id": "f016",
+      "entity": "person_3",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "looked around",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "far away, looking in from outside",
+      "quote": "looked around",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_B"
+      ]
+    },
+    {
+      "fact_id": "f017",
+      "entity": "person_3",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "walked away",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "far away, looking in from outside",
+      "quote": "walked away",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_B"
+      ]
+    },
+    {
+      "fact_id": "f018",
+      "entity": "person_4",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "stopped in front of the shelf",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "far away, looking in from outside",
+      "quote": "stopped in front of the shelf",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_B"
+      ]
+    },
+    {
+      "fact_id": "f019",
+      "entity": "person_4",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "took out something from a notebook",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "far away, looking in from outside",
+      "quote": "took out something from a notebook",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_B"
+      ]
+    },
+    {
+      "fact_id": "f020",
+      "entity": "person_4",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "closed it",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "far away, looking in from outside",
+      "quote": "closed it",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_B"
+      ]
+    },
+    {
+      "fact_id": "f021",
+      "entity": "person_4",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "hid it in his clothes",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "far away, looking in from outside",
+      "quote": "hid it in his clothes",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_B"
+      ]
+    },
+    {
+      "fact_id": "f022",
+      "entity": "person_4",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "walked away",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "far away, looking in from outside",
+      "quote": "walked away",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_B"
+      ]
+    },
+    {
+      "fact_id": "f023",
+      "entity": "person_4",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "talked",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "far away, looking in from outside",
+      "quote": "talked",
+      "hedged": true,
+      "base_confidence": 0.45,
+      "confidence": 0.45,
+      "support": [
+        "witness_B"
+      ]
+    },
+    {
+      "fact_id": "f024",
+      "entity": "scene",
+      "entity_type": "location",
+      "role": "none",
+      "attribute": "notable_features",
+      "value": "shelf",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "far away, looking in from outside",
+      "quote": "the shelf",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.9,
+      "support": [
+        "witness_B",
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f025",
+      "entity": "scene",
+      "entity_type": "location",
+      "role": "none",
+      "attribute": "notable_features",
+      "value": "computer",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "far away, looking in from outside",
+      "quote": "picked up another computer",
+      "hedged": true,
+      "base_confidence": 0.45,
+      "confidence": 0.45,
+      "support": [
+        "witness_B"
+      ]
+    },
+    {
+      "fact_id": "f026",
+      "entity": "scene",
+      "entity_type": "location",
+      "role": "none",
+      "attribute": "notable_features",
+      "value": "laptop",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "far away, looking in from outside",
+      "quote": "a laptop was involved",
+      "hedged": true,
+      "base_confidence": 0.45,
+      "confidence": 0.45,
+      "support": [
+        "witness_B"
+      ]
+    },
+    {
+      "fact_id": "f027",
+      "entity": "person_5",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "walked to the middle of the shelf",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "walked to the middle of the shelf",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f028",
+      "entity": "person_5",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "looked around",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "looked around",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f029",
+      "entity": "person_5",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "walked away",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "and then walked away",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f030",
+      "entity": "person_5",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "stopped in front of the shelf",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "I'm pretty sure he stopped in front of the shelf",
+      "hedged": true,
+      "base_confidence": 0.575,
+      "confidence": 0.575,
+      "support": [
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f031",
+      "entity": "person_5",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "talked",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "talked at the end",
+      "hedged": true,
+      "base_confidence": 0.575,
+      "confidence": 0.575,
+      "support": [
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f032",
+      "entity": "person_6",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "upper_clothing",
+      "value": "white shirt",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "wearing a white shirt",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f033",
+      "entity": "person_6",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "closed a notebook",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "closed a notebook",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f034",
+      "entity": "person_6",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "closed another computer",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "closed another computer",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f035",
+      "entity": "scene",
+      "entity_type": "location",
+      "role": "none",
+      "attribute": "notable_features",
+      "value": "shelf",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "in front of the shelf",
+      "hedged": true,
+      "base_confidence": 0.575,
+      "confidence": 0.775,
+      "support": [
+        "witness_B",
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f036",
+      "entity": "scene",
+      "entity_type": "location",
+      "role": "none",
+      "attribute": "notable_features",
+      "value": "shelf",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "in front of the shelf",
+      "hedged": true,
+      "base_confidence": 0.575,
+      "confidence": 0.775,
+      "support": [
+        "witness_B",
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f037",
+      "entity": "person_7",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "upper_clothing",
+      "value": "dark jacket",
+      "source": "cctv_frame_01",
+      "source_type": "cctv",
+      "viewpoint": "CCTV camera",
+      "quote": "",
+      "hedged": false,
+      "base_confidence": 0.85,
+      "confidence": 0.85,
+      "support": [
+        "cctv"
+      ]
+    },
+    {
+      "fact_id": "f038",
+      "entity": "person_8",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "upper_clothing",
+      "value": "orange shirt",
+      "source": "cctv_frame_02",
+      "source_type": "cctv",
+      "viewpoint": "CCTV camera",
+      "quote": "",
+      "hedged": false,
+      "base_confidence": 0.85,
+      "confidence": 0.85,
+      "support": [
+        "cctv"
+      ]
+    },
+    {
+      "fact_id": "f039",
+      "entity": "person_8",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "upper_clothing",
+      "value": "orange jacket",
+      "source": "cctv_frame_03",
+      "source_type": "cctv",
+      "viewpoint": "CCTV camera",
+      "quote": "",
+      "hedged": false,
+      "base_confidence": 0.85,
+      "confidence": 0.85,
+      "support": [
+        "cctv"
+      ]
+    },
+    {
+      "fact_id": "f040",
+      "entity": "person_8",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "lower_clothing",
+      "value": "dark pants",
+      "source": "cctv_frame_03",
+      "source_type": "cctv",
+      "viewpoint": "CCTV camera",
+      "quote": "",
+      "hedged": false,
+      "base_confidence": 0.85,
+      "confidence": 0.85,
+      "support": [
+        "cctv"
+      ]
+    },
+    {
+      "fact_id": "f041",
+      "entity": "person_8",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "upper_clothing",
+      "value": "orange t-shirt",
+      "source": "cctv_frame_04",
+      "source_type": "cctv",
+      "viewpoint": "CCTV camera",
+      "quote": "",
+      "hedged": false,
+      "base_confidence": 0.85,
+      "confidence": 0.85,
+      "support": [
+        "cctv"
+      ]
+    },
+    {
+      "fact_id": "f042",
+      "entity": "person_7",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "upper_clothing",
+      "value": "dark jacket",
+      "source": "cctv_frame_05",
+      "source_type": "cctv",
+      "viewpoint": "CCTV camera",
+      "quote": "",
+      "hedged": false,
+      "base_confidence": 0.85,
+      "confidence": 0.85,
+      "support": [
+        "cctv"
+      ]
+    },
+    {
+      "fact_id": "f043",
+      "entity": "person_7",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "upper_clothing",
+      "value": "dark jacket",
+      "source": "cctv_frame_06",
+      "source_type": "cctv",
+      "viewpoint": "CCTV camera",
+      "quote": "",
+      "hedged": false,
+      "base_confidence": 0.85,
+      "confidence": 0.85,
+      "support": [
+        "cctv"
+      ]
+    }
+  ],
+  "role_votes": {}
+}
