@@ -56,19 +56,13 @@
       "value": "at the counter"
     }
   ],
-  "planted_conflicts": [
-    {
-      "entity_type": "person",
-      "role": "suspect",
-      "attribute": "upper_clothing"
-    }
-  ],
+  "planted_conflicts": [],
   "planted_false_facts": [
     {
-      "entity_type": "person",
-      "role": "bystander",
-      "attribute": "upper_clothing",
-      "value": "grey coat",
+      "entity_type": "weapon",
+      "role": "none",
+      "attribute": "weapon_type",
+      "value": "knife",
       "witness": "witness_C"
     }
   ],

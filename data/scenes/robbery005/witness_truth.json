@@ -89,7 +89,7 @@
         "entity_type": "person",
         "role": "victim",
         "attribute": "upper_clothing",
-        "value": "red"
+        "value": "red clothes"
       },
       {
         "type": "omission",
@@ -148,7 +148,7 @@
         "entity_type": "person",
         "role": "victim",
         "attribute": "upper_clothing",
-        "value": "white",
+        "value": "white clothes",
         "hedged": false
       },
       {
@@ -223,8 +223,8 @@
         "entity_type": "person",
         "role": "victim",
         "attribute": "upper_clothing",
-        "true_value": "red",
-        "witness_value": "white"
+        "true_value": "red clothes",
+        "witness_value": "white clothes"
       }
     ]
   },
@@ -251,7 +251,7 @@
         "entity_type": "person",
         "role": "victim",
         "attribute": "upper_clothing",
-        "value": "red",
+        "value": "red clothes",
         "hedged": false
       },
       {

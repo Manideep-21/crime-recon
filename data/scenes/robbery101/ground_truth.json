@@ -89,5 +89,21 @@
     "person_2 headwear 'white apron and black hat' -> upper_clothing 'white apron' and headwear 'black hat' (caption: 'a clerk wearing a white apron and black hat')",
     "person_2 action 'talks to a man wearing a black hat and blue clothes' -> 'talked to the robber'",
     "weapon_1 held_by 'man wearing a black hat and blue clothes' -> 'man in blue clothes' (same format as other scenes; both people wear a black hat)"
+  ],
+  "planted_conflicts": [
+    {
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "upper_clothing"
+    }
+  ],
+  "planted_false_facts": [
+    {
+      "entity_type": "vehicle",
+      "role": "none",
+      "attribute": "vehicle_type",
+      "value": "white van",
+      "witness": "witness_C"
+    }
   ]
 }

@@ -27,15 +27,15 @@
   "witnesses": {
     "witness_A": {
       "viewpoint": "close by, inside, a few metres away",
-      "statement": "I saw a man who stole something turn around and hide something. I think he was wearing white short sleeves. A woman at the counter stood up and looked around."
+      "statement": "I saw a man who stole something turn around and hide something. I'm pretty sure he was wearing white short sleeves, but I'm not sure about the upper clothing. The man had a bald head. A person who works in the shop stood up and looked, but I'm not sure about their actions or appearance."
     },
     "witness_B": {
       "viewpoint": "far away, looking in from outside",
-      "statement": "I saw a man who stole something. He was wearing a black short-sleeved shirt and hid something in his pocket before turning around. A person who works in the shop looked at him, then stood and looked at him. I think this person might have stood up and was at the counter."
+      "statement": "I saw a man who hid something and then turned around. I think a person who works in the shop stood up and looked, but I'm not sure about that."
     },
     "witness_C": {
       "viewpoint": "brief glimpse while passing by",
-      "statement": "I saw a man who stole something; his upper clothing was white short sleeves and he hid something before turning around. A person who works in the shop stood up, but I'm not sure if they were at the counter. Another man who was just nearby had a grey coat, but I'm not sure about his position."
+      "statement": "I saw a man who stole something. He turned around and walked inside. I think he was wearing white short sleeves. A person who works in the shop stood up and looked. I'm pretty sure there was a knife as a weapon."
     }
   }
 }

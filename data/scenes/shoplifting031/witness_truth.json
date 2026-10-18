@@ -26,11 +26,11 @@
         "hedged": false
       },
       {
-        "entity": "person_2",
+        "entity": "person_1",
         "entity_type": "person",
-        "role": "victim",
-        "attribute": "action",
-        "value": "stood up",
+        "role": "suspect",
+        "attribute": "hair",
+        "value": "bald",
         "hedged": true
       },
       {
@@ -38,16 +38,8 @@
         "entity_type": "person",
         "role": "victim",
         "attribute": "action",
-        "value": "looked",
+        "value": "stood up and looked",
         "hedged": true
-      },
-      {
-        "entity": "person_2",
-        "entity_type": "person",
-        "role": "victim",
-        "attribute": "position",
-        "value": "at the counter",
-        "hedged": false
       }
     ],
     "degradations": [
@@ -64,8 +56,8 @@
         "entity": "person_2",
         "entity_type": "person",
         "role": "victim",
-        "attribute": "action",
-        "value": "stood and looked"
+        "attribute": "position",
+        "value": "at the counter"
       }
     ]
   },
@@ -75,17 +67,9 @@
         "entity": "person_1",
         "entity_type": "person",
         "role": "suspect",
-        "attribute": "upper_clothing",
-        "value": "black short sleeves",
-        "hedged": true
-      },
-      {
-        "entity": "person_1",
-        "entity_type": "person",
-        "role": "suspect",
         "attribute": "action",
         "value": "hid something",
-        "hedged": true
+        "hedged": false
       },
       {
         "entity": "person_1",
@@ -93,22 +77,6 @@
         "role": "suspect",
         "attribute": "action",
         "value": "turned around",
-        "hedged": true
-      },
-      {
-        "entity": "person_2",
-        "entity_type": "person",
-        "role": "victim",
-        "attribute": "action",
-        "value": "stood up",
-        "hedged": true
-      },
-      {
-        "entity": "person_2",
-        "entity_type": "person",
-        "role": "victim",
-        "attribute": "action",
-        "value": "looked",
         "hedged": false
       },
       {
@@ -116,15 +84,7 @@
         "entity_type": "person",
         "role": "victim",
         "attribute": "action",
-        "value": "stood and looked",
-        "hedged": false
-      },
-      {
-        "entity": "person_2",
-        "entity_type": "person",
-        "role": "victim",
-        "attribute": "position",
-        "value": "at the counter",
+        "value": "stood up and looked",
         "hedged": true
       }
     ],
@@ -134,17 +94,32 @@
         "entity": "person_1",
         "entity_type": "person",
         "role": "suspect",
+        "attribute": "upper_clothing",
+        "value": "white short sleeves"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
         "attribute": "action",
         "value": "walked inside"
       },
       {
-        "type": "corruption",
+        "type": "vantage_loss",
         "entity": "person_1",
         "entity_type": "person",
         "role": "suspect",
-        "attribute": "upper_clothing",
-        "true_value": "white short sleeves",
-        "witness_value": "black short sleeves"
+        "attribute": "hair",
+        "value": "bald"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "position",
+        "value": "at the counter"
       }
     ]
   },
@@ -156,15 +131,7 @@
         "role": "suspect",
         "attribute": "upper_clothing",
         "value": "white short sleeves",
-        "hedged": false
-      },
-      {
-        "entity": "person_1",
-        "entity_type": "person",
-        "role": "suspect",
-        "attribute": "action",
-        "value": "hid something",
-        "hedged": false
+        "hedged": true
       },
       {
         "entity": "person_1",
@@ -175,28 +142,28 @@
         "hedged": false
       },
       {
-        "entity": "person_2",
+        "entity": "person_1",
         "entity_type": "person",
-        "role": "victim",
+        "role": "suspect",
         "attribute": "action",
-        "value": "stood up",
+        "value": "walked inside",
         "hedged": false
       },
       {
         "entity": "person_2",
         "entity_type": "person",
         "role": "victim",
-        "attribute": "position",
-        "value": "at the counter",
+        "attribute": "action",
+        "value": "stood up and looked",
         "hedged": true
       },
       {
-        "entity": "person_9",
-        "entity_type": "person",
-        "role": "bystander",
-        "attribute": "upper_clothing",
-        "value": "grey coat",
-        "hedged": true
+        "entity": "weapon_9",
+        "entity_type": "weapon",
+        "role": "none",
+        "attribute": "weapon_type",
+        "value": "knife",
+        "hedged": false
       }
     ],
     "degradations": [
@@ -206,31 +173,31 @@
         "entity_type": "person",
         "role": "suspect",
         "attribute": "action",
-        "value": "walked inside"
+        "value": "hid something"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "hair",
+        "value": "bald"
       },
       {
         "type": "omission",
         "entity": "person_2",
         "entity_type": "person",
         "role": "victim",
-        "attribute": "action",
-        "value": "looked"
-      },
-      {
-        "type": "omission",
-        "entity": "person_2",
-        "entity_type": "person",
-        "role": "victim",
-        "attribute": "action",
-        "value": "stood and looked"
+        "attribute": "position",
+        "value": "at the counter"
       },
       {
         "type": "confabulation",
-        "entity": "person_9",
-        "entity_type": "person",
-        "role": "bystander",
-        "attribute": "upper_clothing",
-        "value": "grey coat"
+        "entity": "weapon_9",
+        "entity_type": "weapon",
+        "role": "none",
+        "attribute": "weapon_type",
+        "value": "knife"
       }
     ]
   }

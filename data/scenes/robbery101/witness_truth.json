@@ -1,0 +1,309 @@
+{
+  "witness_A": {
+    "facts_given": [
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "headwear",
+        "value": "black hat",
+        "hedged": true
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "upper_clothing",
+        "value": "blue clothes",
+        "hedged": true
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "headwear",
+        "value": "black hat",
+        "hedged": false
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "clicks on the checkout display",
+        "hedged": true
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "talked to the robber",
+        "hedged": true
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "handed the money to the man",
+        "hedged": false
+      },
+      {
+        "entity": "weapon_1",
+        "entity_type": "weapon",
+        "role": "none",
+        "attribute": "weapon_type",
+        "value": "pistol",
+        "hedged": false
+      },
+      {
+        "entity": "weapon_1",
+        "entity_type": "weapon",
+        "role": "none",
+        "attribute": "held_by",
+        "value": "man in blue clothes",
+        "hedged": false
+      }
+    ],
+    "degradations": [
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "upper_clothing",
+        "value": "white apron"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "opened the cashier drawer"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "put the drawer back"
+      }
+    ]
+  },
+  "witness_B": {
+    "facts_given": [
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "upper_clothing",
+        "value": "blue clothes",
+        "hedged": true
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "upper_clothing",
+        "value": "black apron",
+        "hedged": true
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "clicks on the checkout display",
+        "hedged": false
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "talked to the robber",
+        "hedged": true
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "opened the cashier drawer",
+        "hedged": true
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "put the drawer back",
+        "hedged": false
+      },
+      {
+        "entity": "weapon_1",
+        "entity_type": "weapon",
+        "role": "none",
+        "attribute": "weapon_type",
+        "value": "pistol",
+        "hedged": false
+      },
+      {
+        "entity": "weapon_1",
+        "entity_type": "weapon",
+        "role": "none",
+        "attribute": "held_by",
+        "value": "man in blue clothes",
+        "hedged": false
+      }
+    ],
+    "degradations": [
+      {
+        "type": "vantage_loss",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "headwear",
+        "value": "black hat"
+      },
+      {
+        "type": "vantage_loss",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "headwear",
+        "value": "black hat"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "handed the money to the man"
+      },
+      {
+        "type": "corruption",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "upper_clothing",
+        "true_value": "white apron",
+        "witness_value": "black apron"
+      }
+    ]
+  },
+  "witness_C": {
+    "facts_given": [
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "upper_clothing",
+        "value": "blue clothes",
+        "hedged": true
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "opened the cashier drawer",
+        "hedged": true
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "handed the money to the man",
+        "hedged": true
+      },
+      {
+        "entity": "weapon_1",
+        "entity_type": "weapon",
+        "role": "none",
+        "attribute": "weapon_type",
+        "value": "pistol",
+        "hedged": false
+      },
+      {
+        "entity": "weapon_1",
+        "entity_type": "weapon",
+        "role": "none",
+        "attribute": "held_by",
+        "value": "man in blue clothes",
+        "hedged": true
+      },
+      {
+        "entity": "vehicle_9",
+        "entity_type": "vehicle",
+        "role": "none",
+        "attribute": "vehicle_type",
+        "value": "white van",
+        "hedged": true
+      }
+    ],
+    "degradations": [
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "headwear",
+        "value": "black hat"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "headwear",
+        "value": "black hat"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "upper_clothing",
+        "value": "white apron"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "clicks on the checkout display"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "talked to the robber"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "put the drawer back"
+      },
+      {
+        "type": "confabulation",
+        "entity": "vehicle_9",
+        "entity_type": "vehicle",
+        "role": "none",
+        "attribute": "vehicle_type",
+        "value": "white van"
+      }
+    ]
+  }
+}

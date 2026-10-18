@@ -1,0 +1,276 @@
+{
+  "witness_A": {
+    "facts_given": [
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "action",
+        "value": "came in and locked the door",
+        "hedged": true
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "action",
+        "value": "looked around",
+        "hedged": true
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "action",
+        "value": "took the things on the shelf",
+        "hedged": false
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "action",
+        "value": "squatted and stood up",
+        "hedged": true
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "action",
+        "value": "placed the goods on the table",
+        "hedged": true
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "action",
+        "value": "put the things in her hands on the table",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "action",
+        "value": "put the things on the table into the bag",
+        "hedged": false
+      }
+    ],
+    "degradations": [
+      {
+        "type": "omission",
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "action",
+        "value": "looked at the wall moving back and forth"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "action",
+        "value": "made a few gestures"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "action",
+        "value": "put the bag on the table"
+      }
+    ]
+  },
+  "witness_B": {
+    "facts_given": [
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "action",
+        "value": "came in and locked the door",
+        "hedged": false
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "action",
+        "value": "looked around",
+        "hedged": false
+      },
+      {
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "action",
+        "value": "looked at the wall moving back and forth",
+        "hedged": false
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "action",
+        "value": "put the things in her hands on the table",
+        "hedged": true
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "action",
+        "value": "put the bag on the table",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "action",
+        "value": "put the things on the table into the bag",
+        "hedged": false
+      }
+    ],
+    "degradations": [
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "action",
+        "value": "took the things on the shelf"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "action",
+        "value": "squatted and stood up"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "action",
+        "value": "placed the goods on the table"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "action",
+        "value": "made a few gestures"
+      }
+    ]
+  },
+  "witness_C": {
+    "facts_given": [
+      {
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "action",
+        "value": "looked at the wall moving back and forth",
+        "hedged": false
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "action",
+        "value": "placed the goods on the table",
+        "hedged": false
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "action",
+        "value": "put the things in her hands on the table",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "action",
+        "value": "put the things on the table into the bag",
+        "hedged": false
+      },
+      {
+        "entity": "vehicle_9",
+        "entity_type": "vehicle",
+        "role": "none",
+        "attribute": "vehicle_type",
+        "value": "white van",
+        "hedged": false
+      }
+    ],
+    "degradations": [
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "action",
+        "value": "came in and locked the door"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "action",
+        "value": "looked around"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "action",
+        "value": "took the things on the shelf"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "action",
+        "value": "squatted and stood up"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "action",
+        "value": "made a few gestures"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "action",
+        "value": "put the bag on the table"
+      },
+      {
+        "type": "confabulation",
+        "entity": "vehicle_9",
+        "entity_type": "vehicle",
+        "role": "none",
+        "attribute": "vehicle_type",
+        "value": "white van"
+      }
+    ]
+  }
+}

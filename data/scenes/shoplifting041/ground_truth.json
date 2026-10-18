@@ -1,0 +1,91 @@
+{
+  "scene_id": "shoplifting041",
+  "caption": "The woman in the red dress came in and locked the door. The woman in the red skirt looked around and then took the things on the shelf, the woman in the scarf looked at the wall moving back and forth. The woman in the red skirt squatted and stood up, then placed the goods on the table of the woman in the scarf. The woman in the red skirt made a few gestures to the woman in the black scarf, and then put the things in her hands on the table. The woman in the red dress put the bag on the table, and then put the things on the table into the bag.",
+  "nouns": {
+    "person_1": "woman",
+    "person_2": "woman",
+    "person_3": "woman"
+  },
+  "facts": [
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "action",
+      "value": "came in and locked the door"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "action",
+      "value": "looked around"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "action",
+      "value": "took the things on the shelf"
+    },
+    {
+      "entity": "person_3",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "action",
+      "value": "looked at the wall moving back and forth"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "action",
+      "value": "squatted and stood up"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "action",
+      "value": "placed the goods on the table"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "action",
+      "value": "made a few gestures"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "action",
+      "value": "put the things in her hands on the table"
+    },
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "action",
+      "value": "put the bag on the table"
+    },
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "action",
+      "value": "put the things on the table into the bag"
+    }
+  ],
+  "planted_conflicts": [],
+  "planted_false_facts": [
+    {
+      "entity_type": "vehicle",
+      "role": "none",
+      "attribute": "vehicle_type",
+      "value": "white van",
+      "witness": "witness_C"
+    }
+  ]
+}

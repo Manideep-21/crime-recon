@@ -38,5 +38,19 @@
         241.2
       ]
     ]
+  },
+  "witnesses": {
+    "witness_A": {
+      "viewpoint": "close by, inside, a few metres away",
+      "statement": "A woman behind the counter put the things on the table into the bag. I think she came in and locked the door. Another woman nearby took the things on the shelf, put them in her hands on the table, and I'm pretty sure she looked around. Maybe she squatted and stood up, and I'm sure she placed the goods on the table."
+    },
+    "witness_B": {
+      "viewpoint": "far away, looking in from outside",
+      "statement": "A woman behind the counter came in and locked the door. She put her bag on the table and then put the things from the table into the bag. Another woman nearby looked around and I think she put the things in her hands on the table. A third woman was just nearby and was looking at the wall moving back and forth."
+    },
+    "witness_C": {
+      "viewpoint": "brief glimpse while passing by",
+      "statement": "I saw a woman behind the counter who was looking at the wall, moving back and forth. Another woman was placing goods on the table and putting the things in her hands on the table. A third woman was putting the things on the table into a bag. A white van was parked nearby, but I'm not sure about the driver or the time of day."
+    }
   }
 }

@@ -38,15 +38,15 @@
   "witnesses": {
     "witness_A": {
       "viewpoint": "close by, inside, a few metres away",
-      "statement": "I watched a man in a red shirt point a gun at a man in a blue hoodie. The man in red ran into the counter, collected the money, and ran away. The cashier walked to the counter and kept handing money to the man in blue. A person nearby operated the cash register and collected the money."
+      "statement": "I saw a man in a red shirt pointing a gun at a man in a blue hoodie. The man in the hoodie ran into the counter and collected the money. He then ran away. The man in the red shirt walked to the cashier and kept handing money to the man in the blue hoodie. A person who was just nearby operated the cash register and collected the money."
     },
     "witness_B": {
       "viewpoint": "far away, looking in from outside",
-      "statement": "I saw a man who robbed the place. He ran into the counter and pointed a gun at the man in red. I'm pretty sure he raised a gun from time to time to threaten the man in red and collected the money. Another man, wearing a white shirt, walked to the cashier and operated the cash register. He kept handing money to the man in blue. I'm not sure if the person nearby operated the cash register or ran away."
+      "statement": "I saw a man who robbed the place run into the counter and point a gun at the man in red. I'm pretty sure the robber raised the gun from time to time to threaten the man in red. The man in white clothes walked to the cashier and operated the cash register, keeping handing money to the man in blue. I'm not sure if the person nearby operated the cash register or ran away."
     },
     "witness_C": {
       "viewpoint": "brief glimpse while passing by",
-      "statement": "I saw a man who ran into the counter and raised a gun from time to time to threaten the man in red. The man in red walked to the cashier and kept handing money to the man in blue. A person nearby operated and collected the money. I'm not sure if there was a knife involved."
+      "statement": "I saw a man who ran into the counter and raised a gun from time to time to threaten the man in red. The man in red walked to the cashier and kept handing money to the man in blue. I think a person nearby operated and collected the money. I'm pretty sure the weapon was a knife."
     }
   }
 }
