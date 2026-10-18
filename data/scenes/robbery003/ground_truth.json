@@ -3,8 +3,7 @@
   "caption": "A man wearing a hat and a black and white plaid shirt was leaning over the counter and groping for something. The man took out a black pistol and pointed it at the man in black at the opposite counter. The man at the counter turned around. The man with the gun took the gun back. The man in plaid shirt took away a bottle of Coke on the counter. The man in plaid shirt took what the man at the counter handed him and turned around to leave.",
   "nouns": {
     "person_1": "man",
-    "person_2": "man",
-    "person_3": "man"
+    "person_2": "man"
   },
   "facts": [
     {
@@ -85,11 +84,39 @@
       "value": "turned around"
     },
     {
-      "entity": "person_3",
+      "entity": "person_2",
       "entity_type": "person",
-      "role": "bystander",
-      "attribute": "action",
-      "value": "turned around"
+      "role": "victim",
+      "attribute": "upper_clothing",
+      "value": "black clothes"
+    },
+    {
+      "entity": "weapon_1",
+      "entity_type": "weapon",
+      "role": "none",
+      "attribute": "weapon_type",
+      "value": "pistol"
+    },
+    {
+      "entity": "weapon_1",
+      "entity_type": "weapon",
+      "role": "none",
+      "attribute": "color",
+      "value": "black"
+    },
+    {
+      "entity": "weapon_1",
+      "entity_type": "weapon",
+      "role": "none",
+      "attribute": "held_by",
+      "value": "man in plaid shirt"
+    },
+    {
+      "entity": "object_1",
+      "entity_type": "object",
+      "role": "none",
+      "attribute": "object_type",
+      "value": "bottle of Coke"
     }
   ],
   "planted_conflicts": [
@@ -107,5 +134,11 @@
       "value": "knife",
       "witness": "witness_C"
     }
+  ],
+  "hand_edits": [
+    "merged person_3 (bystander 'the man at the counter', action 'turned around') into person_2: same clerk; the action was already on person_2",
+    "person_2 upper_clothing 'black clothes' added (caption: 'the man in black'; frames show a dark shirt)",
+    "weapon_1 added: weapon_type 'pistol', color 'black', held_by 'man in plaid shirt' (caption: 'took out a black pistol')",
+    "object_1 added: object_type 'bottle of Coke'"
   ]
 }

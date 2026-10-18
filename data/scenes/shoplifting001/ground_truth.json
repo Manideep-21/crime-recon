@@ -131,6 +131,34 @@
       "role": "suspect",
       "attribute": "action",
       "value": "went out"
+    },
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "stopped in front of the shelf"
+    },
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "talked at the end"
+    },
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "went out"
+    },
+    {
+      "entity": "object_1",
+      "entity_type": "object",
+      "role": "none",
+      "attribute": "object_type",
+      "value": "laptop"
     }
   ],
   "planted_conflicts": [
@@ -148,5 +176,10 @@
       "value": "white van",
       "witness": "witness_C"
     }
+  ],
+  "hand_edits": [
+    "person_1 actions added: 'stopped in front of the shelf', 'talked at the end', 'went out' (caption: 'They both stopped', 'the man in white clothes and the man in orange shirt talked at the end, and then went out')",
+    "object_1 added: object_type 'laptop'",
+    "window: first 6 of 8 UCA sentences (the boy and the waitress later are a separate event)"
   ]
 }
