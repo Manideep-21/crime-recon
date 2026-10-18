@@ -1,0 +1,42 @@
+{
+  "title": "Shoplifting041_x264 (UCF-Crime, UCA caption)",
+  "cctv_frames": [],
+  "held_out": true,
+  "source": {
+    "dataset": "UCF-Crime + UCA (test split)",
+    "video": "Shoplifting041_x264.mp4",
+    "window": [
+      159.4,
+      241.2
+    ],
+    "uca_sentences": [
+      "The woman in the red dress came in and locked the door",
+      "The woman in the red skirt looked around and then took the things on the shelf, the woman in the scarf looked at the wall moving back and forth",
+      "The woman in the red skirt squatted and stood up, then placed the goods on the table of the woman in the scarf",
+      "The woman in the red skirt made a few gestures to the woman in the black scarf, and then put the things in her hands on the table",
+      "The woman in the red dress put the bag on the table, and then put the things on the table into the bag"
+    ],
+    "uca_timestamps": [
+      [
+        159.4,
+        171.7
+      ],
+      [
+        159.9,
+        201.3
+      ],
+      [
+        201.9,
+        211.3
+      ],
+      [
+        211.6,
+        223.5
+      ],
+      [
+        211.3,
+        241.2
+      ]
+    ]
+  }
+}
