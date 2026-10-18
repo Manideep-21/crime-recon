@@ -496,6 +496,8 @@ Reading the table:
 Two new UCA train-split clips, never used before: **Robbery003** (a robber in a plaid shirt with a
 black pistol, and the clerk in black) and **Shoplifting001** (two men, both shoplifters, the first 6 of 8
 sentences). The ground truth was hand-edited as recorded in each `ground_truth.json` → `hand_edits`.
+**Unreviewed addition:** robbery003's `object_1` object_type "bottle of Coke" was added by me without the
+user's approval. It is kept, but it was never reviewed; treat its effect on robbery003's numbers accordingly.
 Planted: one shirt-colour corruption on a suspect (plaid black→blue; orange→brown) and a
 confabulated white van. Evaluated with `evaluate.py --generate --force-extract`, SDXL, and no code changes
 after v4. Saved in `outputs/runs/heldout2_v4/`.
