@@ -986,3 +986,79 @@ def test_llm_join_is_overruled_when_details_point_elsewhere():
     # The LLM put A's robber with B's clerk (who has no details at all).
     groups = _check_llm_joins([["witness_A:e1", "witness_B:e2"], ["witness_B:e1"]], per_source, lookup, lambda s, d: None)
     assert sorted(map(sorted, groups)) == [["witness_A:e1", "witness_B:e1"], ["witness_B:e2"]]
+
+
+PLAID = "I'm pretty sure he was wearing a black and white plaid shirt and a hat."
+ORANGE = "I think he was wearing an orange shirt."
+HEDGE_CFG = {"confidence": {"cctv": 0.85, "witness": 0.7, "followup": 0.65, "hedge_penalty": 0.25}}
+
+
+def _fake_llm(replies):
+    """Stand-in for llm.chat_json: first pass, then one reply per hedged sentence."""
+    import extraction
+    real, it = extraction.llm.chat_json, iter(replies)
+    extraction.llm.chat_json = lambda *a, **k: next(it)
+    return lambda: setattr(extraction.llm, "chat_json", real)
+
+
+def test_hedged_clothing_survives_grounding_and_post_check():
+    for sentence, values in ((PLAID, ["black and white plaid shirt", "hat"]), (ORANGE, ["orange shirt"])):
+        raw = {"entities": [{"id": "e1", "entity_type": "person", "role": "suspect", "description": "he"}],
+               "facts": [{"entity": "e1", "attribute": a, "value": v, "quote": sentence, "hedged": True}
+                         for a, v in zip(["upper_clothing", "headwear"], values)]}
+        logged = []
+        out = _add_sentences(_clean_raw(raw, "witness_A", lambda s, d: logged.append(d), text=sentence), sentence)
+        assert [f["value"] for f in out["facts"]] == values and not logged, (out, logged)
+        assert all(f["hedged"] for f in out["facts"])
+
+
+def test_hedged_details_the_model_skipped_are_recovered_with_lower_confidence():
+    from extraction import extract_statement
+    statement = ("I saw a man leaning over the counter, took away a bottle of Coke, and then turned around to leave. "
+                 + PLAID + " He took out a black pistol. " + ORANGE)
+    man = {"id": "e1", "entity_type": "person", "role": "suspect", "description": "a man"}
+    first = {"entities": [man],   # the full-statement pass kept only the hat and dropped both shirts
+             "facts": [{"entity": "e1", "attribute": "action", "value": "leaning over the counter", "quote": "leaning over the counter", "hedged": False},
+                       {"entity": "e1", "attribute": "headwear", "value": "hat", "quote": "a hat", "hedged": False}]}
+    plaid = {"entities": [], "facts": [
+        {"entity": "e1", "attribute": "upper_clothing", "value": "black and white plaid shirt", "quote": "wearing a black and white plaid shirt", "hedged": True},
+        {"entity": "e1", "attribute": "headwear", "value": "hat", "quote": "a hat", "hedged": True}]}
+    orange = {"entities": [], "facts": [
+        {"entity": "e1", "attribute": "upper_clothing", "value": "orange shirt", "quote": "", "hedged": True},
+        {"entity": "e1", "attribute": "upper_clothing", "value": "blue jeans", "quote": "", "hedged": True}]}  # not in this sentence
+    restore = _fake_llm([first, plaid, orange])
+    logged = []
+    try:
+        out = extract_statement(statement, "witness_A", lambda s, d: logged.append((s, d)))
+    finally:
+        restore()
+    values = [(f["attribute"], f["value"]) for f in out["facts"]]
+    assert values.count(("headwear", "hat")) == 1, values                       # no duplicate
+    assert ("upper_clothing", "black and white plaid shirt") in values, values
+    assert ("upper_clothing", "orange shirt") in values, values
+    assert ("upper_clothing", "blue jeans") not in values, values               # grounded in its own sentence
+    assert sum(s == "hedge pass" for s, _ in logged) == 2, logged
+    mapping = {"witness_A:e1": {"entity": "person_1", "entity_type": "person", "role": "suspect"}}
+    facts = {f.value: f for f in build_facts({"witness_A": out}, mapping, {}, HEDGE_CFG)}
+    assert facts["black and white plaid shirt"].hedged and facts["black and white plaid shirt"].base_confidence == 0.575
+    assert facts["orange shirt"].hedged and facts["orange shirt"].base_confidence == 0.45
+    assert not facts["leaning over the counter"].hedged and facts["leaning over the counter"].base_confidence == 0.7
+
+
+def test_hedge_pass_adds_new_entities_and_only_runs_on_hedged_sentences():
+    from extraction import extract_statement
+    statement = "A tall man walked in. I think he had a knife."
+    first = {"entities": [{"id": "e1", "entity_type": "person", "role": "suspect", "description": "a tall man"}],
+             "facts": [{"entity": "e1", "attribute": "height", "value": "tall", "quote": "A tall man", "hedged": False}]}
+    knife = {"entities": [{"id": "n1", "entity_type": "weapon", "role": "none", "description": "a knife"}],
+             "facts": [{"entity": "n1", "attribute": "weapon_type", "value": "knife", "quote": "a knife", "hedged": True},
+                       {"entity": "n1", "attribute": "held_by", "value": "he", "quote": "he had", "hedged": True}]}
+    restore = _fake_llm([first, knife])   # a third call would raise StopIteration
+    try:
+        out = extract_statement(statement, "witness_B")
+    finally:
+        restore()
+    weapons = [eid for eid, e in out["entities"].items() if e["entity_type"] == "weapon"]
+    assert len(weapons) == 1 and weapons[0] != "e1", out["entities"]
+    assert [(f["attribute"], f["value"], f["hedged"]) for f in out["facts"] if f["entity"] == weapons[0]] == [
+        ("weapon_type", "knife", True)], out["facts"]   # "he" has no content word: dropped by grounding

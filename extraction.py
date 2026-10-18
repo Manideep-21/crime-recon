@@ -97,6 +97,8 @@ Rules:
 - "value" is a short phrase (1-6 words) using the witness's own words.
 - "quote" is copied exactly from the statement, including any hedge words ("I'm pretty sure he had ...").
 - "hedged" is true if the witness sounded unsure about that detail ("I think", "maybe", "pretty sure").
+- Hedged details are still details: extract them with "hedged": true. Never leave a detail out
+  because the witness sounded unsure ("I think he wore an orange shirt" -> upper_clothing "orange shirt").
 - Every weapon entity must have a weapon_type fact.
 - action can have several values: extract every distinct action as its own fact
   ("walked to the counter" and "grabbed cash from the register" are two facts).
@@ -133,6 +135,36 @@ JSON:
 
 Witness statement:
 \"\"\"{text}\"\"\"
+"""
+
+HEDGED_SENTENCE_PROMPT = """A witness statement was already read once. The witness sounded unsure in ONE sentence,
+and unsure details are easy to miss. Extract every concrete detail from that sentence only.
+
+Allowed entity types and their attributes (attribute = what belongs there):
+{schema}
+
+Entities already found in the statement (use these ids; "he"/"she" refers to one of them):
+{entities}
+
+If the sentence describes something not in that list, add it with id "n1", "n2", ...
+Every detail is hedged: set "hedged": true. "value" is a short phrase (1-6 words) in the witness's own words.
+Never write placeholders such as "not specified" or "unknown".
+
+Return JSON exactly in this shape:
+{{
+  "entities": [
+    {{"id": "n1", "entity_type": "weapon", "role": "none", "description": "the witness's own short words"}}
+  ],
+  "facts": [
+    {{"entity": "e1", "attribute": "upper_clothing", "value": "orange shirt", "quote": "exact words from the sentence", "hedged": true}}
+  ]
+}}
+
+Whole statement (for context only):
+\"\"\"{text}\"\"\"
+
+The sentence to extract from:
+\"\"\"{sentence}\"\"\"
 """
 
 FRAME_PROMPT = """This is a single frame from a low-resolution CCTV camera at a crime scene.
@@ -363,10 +395,62 @@ def _add_sentences(raw: dict, text: str) -> dict:
     return raw
 
 
+def _already_known(fact: dict, facts: List[dict]) -> bool:
+    return any(f["entity"] == fact["entity"] and f["attribute"] == fact["attribute"]
+               and values_agree(f["value"], fact["value"]) for f in facts)
+
+
+def _recover_hedged(clean: dict, text: str, source: str, log) -> dict:
+    """Second look at each hedged sentence: the model often skips unsure details in a full statement
+    ("I'm pretty sure he was wearing a plaid shirt and a hat" -> only the hat), though it extracts
+    them from the sentence alone. Missing facts are added; they stay hedged (lower confidence)."""
+    entities = "\n".join(f'- {eid} | {e["entity_type"]} | {e["role"]} | {e["description"]}'
+                         for eid, e in clean["entities"].items()) or "(none)"
+    for sentence in _sentences(text):
+        if hedge_level(sentence) == 0:
+            continue
+        try:
+            raw = llm.chat_json(HEDGED_SENTENCE_PROMPT.format(
+                schema=schema_guide(), entities=entities, text=text, sentence=sentence),
+                system=SYSTEM, temperature=0.0)
+        except Exception as exc:  # the first pass still stands
+            log("hedge pass", f"{source}: sentence skipped ({exc})")
+            continue
+        if not isinstance(raw, dict):
+            continue
+        used = {str(f.get("entity")) for f in raw.get("facts", []) or [] if isinstance(f, dict)}
+        known = [{"id": eid, **e} for eid, e in clean["entities"].items() if eid in used]
+        extra = [e for e in raw.get("entities", []) or []
+                 if isinstance(e, dict) and str(e.get("id")) not in clean["entities"]]
+        # Grounded in this sentence, not just anywhere in the statement.
+        got = _clean_raw({"entities": known + extra, "facts": raw.get("facts", [])},
+                         source, log, text=sentence)
+        for f in got["facts"]:
+            if grounding_problem(f["value"], sentence) or _already_known(f, clean["facts"]):
+                continue  # (weapon_type filled in from a description is not from this sentence)
+            eid = f["entity"]
+            if eid not in clean["entities"]:
+                fresh = f"h{len(clean['entities']) + 1}"
+                while fresh in clean["entities"]:
+                    fresh += "x"
+                clean["entities"][fresh] = got["entities"][eid]
+                for g in got["facts"]:
+                    if g["entity"] == eid:
+                        g["entity"] = fresh
+                eid = fresh
+            f["quote"] = f["quote"] or sentence
+            f["hedged"] = True
+            clean["facts"].append(f)
+            log("hedge pass", f"{source}: added hedged {clean['entities'][eid]['entity_type']}."
+                              f"{f['attribute']} = '{f['value']}' from \"{sentence}\"")
+    return clean
+
+
 def extract_statement(text: str, source: str = "statement", log=lambda step, detail: None) -> dict:
     raw = llm.chat_json(STATEMENT_PROMPT.format(schema=schema_guide(), text=text),
                         system=SYSTEM, temperature=0.0)
-    return _add_sentences(_clean_raw(raw, source, log, text=text), text)
+    clean = _recover_hedged(_clean_raw(raw, source, log, text=text), text, source, log)
+    return _add_sentences(clean, text)
 
 
 def extract_frame(image_path: str, source: str = "frame", log=lambda step, detail: None) -> dict:
