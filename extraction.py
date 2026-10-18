@@ -396,8 +396,10 @@ def _add_sentences(raw: dict, text: str) -> dict:
 
 
 def _already_known(fact: dict, facts: List[dict]) -> bool:
-    return any(f["entity"] == fact["entity"] and f["attribute"] == fact["attribute"]
-               and values_agree(f["value"], fact["value"]) for f in facts)
+    """Already extracted from this statement, on any entity: the first pass decided whose it is
+    ("another man had a grey coat" must not become a second grey-coat person)."""
+    return any(f["attribute"] == fact["attribute"] and values_agree(f["value"], fact["value"])
+               for f in facts)
 
 
 def _recover_hedged(clean: dict, text: str, source: str, log) -> dict:

@@ -1,49 +1,50 @@
-{"time": "15:44:11", "step": "extract", "detail": "witness_A: 7 facts"}
-{"time": "15:44:20", "step": "extract", "detail": "witness_B: 3 facts"}
-{"time": "15:44:32", "step": "extract", "detail": "witness_C: 6 facts"}
-{"time": "15:44:42", "step": "extract", "detail": "cctv_frame_01 (/home/marams/crime-recon/data/scenes/robbery044/frames/frame_01.jpg): 2 facts"}
-{"time": "15:44:51", "step": "extract", "detail": "cctv_frame_02 (/home/marams/crime-recon/data/scenes/robbery044/frames/frame_02.jpg): 2 facts"}
-{"time": "15:44:59", "step": "extract", "detail": "cctv_frame_03 (/home/marams/crime-recon/data/scenes/robbery044/frames/frame_03.jpg): 1 facts"}
-{"time": "15:45:09", "step": "extract", "detail": "cctv_frame_04 (/home/marams/crime-recon/data/scenes/robbery044/frames/frame_04.jpg): 2 facts"}
-{"time": "15:45:20", "step": "extract", "detail": "cctv_frame_05 (/home/marams/crime-recon/data/scenes/robbery044/frames/frame_05.jpg): 2 facts"}
-{"time": "15:45:30", "step": "extract", "detail": "cctv_frame_06 (/home/marams/crime-recon/data/scenes/robbery044/frames/frame_06.jpg): 4 facts"}
-{"time": "15:45:37", "step": "merge", "detail": "LLM grouping repaired: 1 missing mention added alone, 1 mixed-type group split"}
-{"time": "15:45:37", "step": "merge", "detail": "joined ['witness_B:e1'] into ['witness_A:e1', 'witness_C:e1'] (details agree, score 2.0)"}
-{"time": "15:45:37", "step": "merge", "detail": "joined ['witness_C:e3'] into ['witness_A:e2', 'witness_B:e2'] (details agree, score 1.0)"}
-{"time": "15:45:37", "step": "merge", "detail": "CCTV: 6 person mentions -> 1 people across frames"}
-{"time": "15:45:37", "step": "merge", "detail": "CCTV person (behind the counter, gray shirt, grey jacket, grey uniform, light grey jacket, light-colored cap, standing with hands raised, white cap) -> witness-side person ['witness_A:e2', 'witness_B:e2', 'witness_C:e3'] (agreement 1, 0 clash)"}
-{"time": "15:45:37", "step": "merge", "detail": "16 mentions -> 5 entities"}
-{"time": "15:45:37", "step": "extract", "detail": "29 facts from 3 witnesses + 6 CCTV frames"}
-{"time": "15:45:37", "step": "analyze", "detail": "2 conflicts (+0 role disagreements), 2 hypotheses, 13 gaps, 37 candidate questions (5 blocked as leading)"}
-{"time": "15:45:40", "step": "generate", "detail": "H1: 12 facts drawn, 0 withheld, 3 not drawn (prompt)"}
-{"time": "15:45:40", "step": "not drawn", "detail": "H1: person_1.action = 'took some money from the counter' (witness_A): one short action per person"}
-{"time": "15:45:40", "step": "not drawn", "detail": "H1: person_1.action = 'left' (witness_C): movement/direction"}
-{"time": "15:45:40", "step": "not drawn", "detail": "H1: person_2.action = 'standing with hands raised' (cctv_frame_06): one short action per person"}
-{"time": "15:45:40", "step": "prompt", "detail": "H1: CCTV photo, wide angle, realistic, exactly 3 people. a store; a person wearing black vest and black hat, threatening the man behind the counter; a person wearing grey coat, just nearby; a person wearing grey jacket and white cap, being robbed, behind the counter [57 tokens]"}
-{"time": "15:46:03", "step": "verify", "detail": "H1 seed 42: objects found 2/3, hallucinated 1, people 3 in image / 3 drawn"}
-{"time": "15:46:03", "step": "verify", "detail": "H1: person, missing person_3 -> regenerate"}
-{"time": "15:46:08", "step": "verify", "detail": "H1 seed 43: objects found 1/3, hallucinated 3, people 4 in image / 3 drawn"}
-{"time": "15:46:08", "step": "verify", "detail": "H1: person, person, person, missing person_1, missing person_3 -> regenerate"}
-{"time": "15:46:12", "step": "verify", "detail": "H1 seed 44: objects found 1/3, hallucinated 1, people 2 in image / 3 drawn"}
-{"time": "15:46:12", "step": "verify", "detail": "H1: person, missing person_1, missing person_3 -> regenerate"}
-{"time": "15:46:17", "step": "verify", "detail": "H1 seed 45: objects found 2/3, hallucinated 2, people 4 in image / 3 drawn"}
-{"time": "15:46:17", "step": "verify", "detail": "H1: person, person, missing person_1 -> regenerate"}
-{"time": "15:46:21", "step": "verify", "detail": "H1 seed 46: objects found 2/3, hallucinated 3, people 4 in image / 3 drawn"}
-{"time": "15:47:43", "step": "verify", "detail": "H1 seed 42 attribute check: objects found 2/3, hallucinated 1, people 3 in image / 3 drawn, attribute accuracy 80%"}
-{"time": "15:47:43", "step": "verify", "detail": "H1: keeping seed 42 (5 attempts)"}
-{"time": "15:47:44", "step": "generate", "detail": "H2: 12 facts drawn, 0 withheld, 3 not drawn (prompt)"}
-{"time": "15:47:44", "step": "not drawn", "detail": "H2: person_1.action = 'took some money from the counter' (witness_A): one short action per person"}
-{"time": "15:47:44", "step": "not drawn", "detail": "H2: person_1.action = 'left' (witness_C): movement/direction"}
-{"time": "15:47:44", "step": "not drawn", "detail": "H2: person_2.action = 'standing with hands raised' (cctv_frame_06): one short action per person"}
-{"time": "15:47:44", "step": "prompt", "detail": "H2: CCTV photo, wide angle, realistic, exactly 3 people. a store; a person wearing red vest and black hat, threatening the man behind the counter; a person wearing grey coat, just nearby; a person wearing grey jacket and light-colored cap, being robbed, behind the counter [59 tokens]"}
-{"time": "15:47:49", "step": "verify", "detail": "H2 seed 142: objects found 2/3, hallucinated 2, people 4 in image / 3 drawn"}
-{"time": "15:47:49", "step": "verify", "detail": "H2: person, person, missing person_2 -> regenerate"}
-{"time": "15:47:53", "step": "verify", "detail": "H2 seed 143: objects found 2/3, hallucinated 2, people 3 in image / 3 drawn"}
-{"time": "15:47:53", "step": "verify", "detail": "H2: person, gun, missing person_1 -> regenerate"}
-{"time": "15:47:57", "step": "verify", "detail": "H2 seed 144: objects found 2/3, hallucinated 1, people 3 in image / 3 drawn"}
-{"time": "15:47:57", "step": "verify", "detail": "H2: person, missing person_1 -> regenerate"}
-{"time": "15:48:02", "step": "verify", "detail": "H2 seed 145: objects found 1/3, hallucinated 3, people 4 in image / 3 drawn"}
-{"time": "15:48:02", "step": "verify", "detail": "H2: person, person, person, missing person_1, missing person_2 -> regenerate"}
-{"time": "15:48:06", "step": "verify", "detail": "H2 seed 146: objects found 3/3, hallucinated 1, people 4 in image / 3 drawn"}
-{"time": "15:49:19", "step": "verify", "detail": "H2 seed 146 attribute check: objects found 3/3, hallucinated 1, people 4 in image / 3 drawn, attribute accuracy 60%"}
-{"time": "15:49:19", "step": "verify", "detail": "H2: keeping seed 146 (5 attempts)"}
+{"time": "18:02:46", "step": "extract", "detail": "witness_A: 7 facts"}
+{"time": "18:03:03", "step": "grounding", "detail": "witness_B: dropped person.upper_clothing = 'red vest' (none of ['red', 'vest'] appear in the statement)"}
+{"time": "18:03:03", "step": "extract", "detail": "witness_B: 3 facts"}
+{"time": "18:03:22", "step": "extract", "detail": "witness_C: 6 facts"}
+{"time": "18:03:31", "step": "extract", "detail": "cctv_frame_01 (/home/marams/crime-recon/data/scenes/robbery044/frames/frame_01.jpg): 2 facts"}
+{"time": "18:03:40", "step": "extract", "detail": "cctv_frame_02 (/home/marams/crime-recon/data/scenes/robbery044/frames/frame_02.jpg): 2 facts"}
+{"time": "18:03:49", "step": "extract", "detail": "cctv_frame_03 (/home/marams/crime-recon/data/scenes/robbery044/frames/frame_03.jpg): 1 facts"}
+{"time": "18:03:58", "step": "extract", "detail": "cctv_frame_04 (/home/marams/crime-recon/data/scenes/robbery044/frames/frame_04.jpg): 2 facts"}
+{"time": "18:04:08", "step": "extract", "detail": "cctv_frame_05 (/home/marams/crime-recon/data/scenes/robbery044/frames/frame_05.jpg): 2 facts"}
+{"time": "18:04:16", "step": "extract", "detail": "cctv_frame_06 (/home/marams/crime-recon/data/scenes/robbery044/frames/frame_06.jpg): 4 facts"}
+{"time": "18:04:24", "step": "merge", "detail": "LLM grouping repaired: 2 duplicate key dropped, 8 missing mention added alone"}
+{"time": "18:04:24", "step": "merge", "detail": "joined ['witness_B:e1'] into ['witness_A:e1', 'witness_C:e1'] (details agree, score 2.0)"}
+{"time": "18:04:24", "step": "merge", "detail": "joined ['witness_B:e2'] into ['witness_A:e2'] (details agree, score 1.0)"}
+{"time": "18:04:24", "step": "merge", "detail": "CCTV: 6 person mentions -> 1 people across frames"}
+{"time": "18:04:24", "step": "merge", "detail": "CCTV person (behind the counter, gray shirt, grey jacket, grey uniform, light grey jacket, light-colored cap, standing with hands raised, white cap) -> witness-side person ['witness_A:e2', 'witness_B:e2'] (agreement 1, 0 clash)"}
+{"time": "18:04:24", "step": "merge", "detail": "15 mentions -> 4 entities"}
+{"time": "18:04:24", "step": "extract", "detail": "29 facts from 3 witnesses + 6 CCTV frames"}
+{"time": "18:04:24", "step": "analyze", "detail": "2 conflicts (+0 role disagreements), 2 hypotheses, 13 gaps, 37 candidate questions (5 blocked as leading)"}
+{"time": "18:04:33", "step": "generate", "detail": "H1: 12 facts drawn, 0 withheld, 3 not drawn (prompt)"}
+{"time": "18:04:33", "step": "not drawn", "detail": "H1: person_1.action = 'took some money from the counter' (witness_A): one short action per person"}
+{"time": "18:04:33", "step": "not drawn", "detail": "H1: person_1.action = 'left' (witness_C): movement/direction"}
+{"time": "18:04:33", "step": "not drawn", "detail": "H1: person_2.action = 'standing with hands raised' (cctv_frame_06): one short action per person"}
+{"time": "18:04:33", "step": "prompt", "detail": "H1: CCTV photo, wide angle, realistic, exactly 3 people. a store; a person wearing black vest and black hat, threatening the man behind the counter; a person wearing grey coat, was just nearby; a person wearing grey jacket and white cap, being robbed, behind the counter [58 tokens]"}
+{"time": "18:05:02", "step": "verify", "detail": "H1 seed 42: objects found 1/3, hallucinated 2, people 3 in image / 3 drawn"}
+{"time": "18:05:02", "step": "verify", "detail": "H1: person, person, missing person_1, missing person_3 -> regenerate"}
+{"time": "18:05:06", "step": "verify", "detail": "H1 seed 43: objects found 1/3, hallucinated 1, people 2 in image / 3 drawn"}
+{"time": "18:05:06", "step": "verify", "detail": "H1: person, missing person_1, missing person_3 -> regenerate"}
+{"time": "18:05:11", "step": "verify", "detail": "H1 seed 44: objects found 1/3, hallucinated 1, people 2 in image / 3 drawn"}
+{"time": "18:05:11", "step": "verify", "detail": "H1: person, missing person_1, missing person_3 -> regenerate"}
+{"time": "18:05:15", "step": "verify", "detail": "H1 seed 45: objects found 2/3, hallucinated 1, people 3 in image / 3 drawn"}
+{"time": "18:05:15", "step": "verify", "detail": "H1: person, missing person_1 -> regenerate"}
+{"time": "18:05:19", "step": "verify", "detail": "H1 seed 46: objects found 1/3, hallucinated 3, people 3 in image / 3 drawn"}
+{"time": "18:05:59", "step": "verify", "detail": "H1 seed 45 attribute check: objects found 2/3, hallucinated 1, people 3 in image / 3 drawn, attribute accuracy 60%"}
+{"time": "18:05:59", "step": "verify", "detail": "H1: keeping seed 45 (5 attempts)"}
+{"time": "18:06:00", "step": "generate", "detail": "H2: 12 facts drawn, 0 withheld, 3 not drawn (prompt)"}
+{"time": "18:06:00", "step": "not drawn", "detail": "H2: person_1.action = 'took some money from the counter' (witness_A): one short action per person"}
+{"time": "18:06:00", "step": "not drawn", "detail": "H2: person_1.action = 'left' (witness_C): movement/direction"}
+{"time": "18:06:00", "step": "not drawn", "detail": "H2: person_2.action = 'standing with hands raised' (cctv_frame_06): one short action per person"}
+{"time": "18:06:00", "step": "prompt", "detail": "H2: CCTV photo, wide angle, realistic, exactly 3 people. a store; a person wearing red vest and black hat, threatening the man behind the counter; a person wearing grey coat, was just nearby; a person wearing grey jacket and light-colored cap, being robbed, behind the counter [60 tokens]"}
+{"time": "18:06:04", "step": "verify", "detail": "H2 seed 142: objects found 2/3, hallucinated 2, people 4 in image / 3 drawn"}
+{"time": "18:06:04", "step": "verify", "detail": "H2: person, person, missing person_2 -> regenerate"}
+{"time": "18:06:08", "step": "verify", "detail": "H2 seed 143: objects found 1/3, hallucinated 2, people 3 in image / 3 drawn"}
+{"time": "18:06:08", "step": "verify", "detail": "H2: person, person, missing person_1, missing person_2 -> regenerate"}
+{"time": "18:06:13", "step": "verify", "detail": "H2 seed 144: objects found 2/3, hallucinated 1, people 3 in image / 3 drawn"}
+{"time": "18:06:13", "step": "verify", "detail": "H2: person, missing person_1 -> regenerate"}
+{"time": "18:06:17", "step": "verify", "detail": "H2 seed 145: objects found 1/3, hallucinated 3, people 4 in image / 3 drawn"}
+{"time": "18:06:17", "step": "verify", "detail": "H2: person, person, person, missing person_1, missing person_2 -> regenerate"}
+{"time": "18:06:21", "step": "verify", "detail": "H2 seed 146: objects found 3/3, hallucinated 1, people 4 in image / 3 drawn"}
+{"time": "18:07:00", "step": "verify", "detail": "H2 seed 146 attribute check: objects found 3/3, hallucinated 1, people 4 in image / 3 drawn, attribute accuracy 80%"}
+{"time": "18:07:00", "step": "verify", "detail": "H2: keeping seed 146 (5 attempts)"}

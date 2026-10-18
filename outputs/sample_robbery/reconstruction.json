@@ -14,25 +14,25 @@
       "f001",
       "f002",
       "f003",
+      "f007",
       "f004",
       "f005",
       "f006",
-      "f014",
-      "f018",
+      "f016",
       "f019",
-      "f007",
+      "f020",
       "f008",
       "f009",
       "f010",
       "f011",
-      "f013",
-      "f015",
-      "f016",
-      "f017"
+      "f012",
+      "f014",
+      "f017",
+      "f018"
     ],
     "withheld": [
       {
-        "fact_id": "f020",
+        "fact_id": "f021",
         "entity": "weapon_1",
         "attribute": "weapon_type",
         "value": "knife",
@@ -40,7 +40,7 @@
         "confidence": 0.575
       },
       {
-        "fact_id": "f021",
+        "fact_id": "f022",
         "entity": "weapon_1",
         "attribute": "held_by",
         "value": "slim guy",
@@ -68,25 +68,25 @@
         "reason": "one short action per person"
       },
       {
-        "fact_id": "f014",
+        "fact_id": "f007",
         "entity": "person_1",
         "attribute": "action",
-        "value": "ran out the door",
-        "source": "witness_B",
-        "confidence": 0.7,
+        "value": "ran out",
+        "source": "witness_A",
+        "confidence": 0.9,
         "reason": "movement/direction"
       },
       {
-        "fact_id": "f015",
+        "fact_id": "f016",
         "entity": "person_1",
-        "attribute": "position",
+        "attribute": "action",
         "value": "towards the parking lot",
         "source": "witness_B",
         "confidence": 0.7,
         "reason": "movement/direction"
       },
       {
-        "fact_id": "f018",
+        "fact_id": "f019",
         "entity": "person_1",
         "attribute": "action",
         "value": "came running out of the store",
@@ -95,7 +95,7 @@
         "reason": "movement/direction"
       },
       {
-        "fact_id": "f019",
+        "fact_id": "f020",
         "entity": "person_1",
         "attribute": "action",
         "value": "ran past my car",
@@ -360,27 +360,27 @@
     "seed": 142,
     "included": [
       "f001",
-      "f012",
+      "f013",
       "f003",
+      "f007",
       "f004",
       "f005",
       "f006",
-      "f014",
-      "f018",
+      "f016",
       "f019",
-      "f007",
+      "f020",
       "f008",
       "f009",
       "f010",
       "f011",
-      "f013",
-      "f015",
-      "f016",
-      "f017"
+      "f012",
+      "f014",
+      "f017",
+      "f018"
     ],
     "withheld": [
       {
-        "fact_id": "f020",
+        "fact_id": "f021",
         "entity": "weapon_1",
         "attribute": "weapon_type",
         "value": "knife",
@@ -388,7 +388,7 @@
         "confidence": 0.575
       },
       {
-        "fact_id": "f021",
+        "fact_id": "f022",
         "entity": "weapon_1",
         "attribute": "held_by",
         "value": "slim guy",
@@ -416,25 +416,25 @@
         "reason": "one short action per person"
       },
       {
-        "fact_id": "f014",
+        "fact_id": "f007",
         "entity": "person_1",
         "attribute": "action",
-        "value": "ran out the door",
-        "source": "witness_B",
-        "confidence": 0.7,
+        "value": "ran out",
+        "source": "witness_A",
+        "confidence": 0.9,
         "reason": "movement/direction"
       },
       {
-        "fact_id": "f015",
+        "fact_id": "f016",
         "entity": "person_1",
-        "attribute": "position",
+        "attribute": "action",
         "value": "towards the parking lot",
         "source": "witness_B",
         "confidence": 0.7,
         "reason": "movement/direction"
       },
       {
-        "fact_id": "f018",
+        "fact_id": "f019",
         "entity": "person_1",
         "attribute": "action",
         "value": "came running out of the store",
@@ -443,7 +443,7 @@
         "reason": "movement/direction"
       },
       {
-        "fact_id": "f019",
+        "fact_id": "f020",
         "entity": "person_1",
         "attribute": "action",
         "value": "ran past my car",
@@ -453,7 +453,7 @@
       }
     ],
     "contested": [
-      "f012"
+      "f013"
     ],
     "levels": {
       "person_1": "contested",

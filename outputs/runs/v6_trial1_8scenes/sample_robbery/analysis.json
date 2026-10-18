@@ -1,0 +1,343 @@
+{
+  "conflicts": [
+    {
+      "id": "c1",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "upper_clothing",
+      "options": [
+        {
+          "value": "red hoodie",
+          "fact_ids": [
+            "f002"
+          ],
+          "sources": [
+            "witness_A"
+          ],
+          "confidence": 0.7
+        },
+        {
+          "value": "blue jacket",
+          "fact_ids": [
+            "f013"
+          ],
+          "sources": [
+            "witness_B"
+          ],
+          "confidence": 0.45
+        }
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "id": "H1",
+      "name": "Most supported version",
+      "choices": {
+        "c1": 0
+      },
+      "description": "person_1.upper_clothing = 'red hoodie' (witness_A)"
+    },
+    {
+      "id": "H2",
+      "name": "Alternative version 1",
+      "choices": {
+        "c1": 1
+      },
+      "description": "person_1.upper_clothing = 'blue jacket' (witness_B)"
+    }
+  ],
+  "gaps": [
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "position"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "lower_clothing"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "height"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "build"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "position"
+    },
+    {
+      "entity": "scene",
+      "entity_type": "location",
+      "role": "none",
+      "attribute": "time_of_day"
+    }
+  ],
+  "questions": [
+    {
+      "witness": "witness_A",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "position",
+      "text": "Where exactly was the person you described (\"a tall man\") when you saw them?",
+      "kind": "gap",
+      "viewpoint": "inside the store, near the snacks aisle, about 5 metres away",
+      "id": "q001",
+      "reasons": [],
+      "passed": true
+    },
+    {
+      "witness": "witness_B",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "position",
+      "text": "Where exactly was the person you described (\"he had a black backpack on his shoulder\") when you saw them?",
+      "kind": "gap",
+      "viewpoint": "outside on the pavement, looking in through the front window",
+      "id": "q002",
+      "reasons": [],
+      "passed": true
+    },
+    {
+      "witness": "witness_C",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "position",
+      "text": "Where exactly was the person you described (\"a slim guy\") when you saw them?",
+      "kind": "gap",
+      "viewpoint": "in the parking lot, sitting in a car",
+      "id": "q003",
+      "reasons": [],
+      "passed": true
+    },
+    {
+      "witness": "witness_A",
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "lower_clothing",
+      "text": "What was the person you described (\"a young woman in a green uniform shirt\") wearing on their legs?",
+      "kind": "gap",
+      "viewpoint": "inside the store, near the snacks aisle, about 5 metres away",
+      "id": "q004",
+      "reasons": [],
+      "passed": true
+    },
+    {
+      "witness": "witness_A",
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "height",
+      "text": "How would you describe the height of the person you described (\"a young woman in a green uniform shirt\")?",
+      "kind": "gap",
+      "viewpoint": "inside the store, near the snacks aisle, about 5 metres away",
+      "id": "q005",
+      "reasons": [],
+      "passed": true
+    },
+    {
+      "witness": "witness_A",
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "build",
+      "text": "How would you describe the body build of the person you described (\"a young woman in a green uniform shirt\")?",
+      "kind": "gap",
+      "viewpoint": "inside the store, near the snacks aisle, about 5 metres away",
+      "id": "q006",
+      "reasons": [],
+      "passed": true
+    },
+    {
+      "witness": "witness_A",
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "position",
+      "text": "Where exactly was the person you described (\"a young woman in a green uniform shirt\") when you saw them?",
+      "kind": "gap",
+      "viewpoint": "inside the store, near the snacks aisle, about 5 metres away",
+      "id": "q007",
+      "reasons": [],
+      "passed": true
+    },
+    {
+      "witness": "witness_A",
+      "entity": "scene",
+      "entity_type": "location",
+      "role": "none",
+      "attribute": "time_of_day",
+      "text": "What time of day was it?",
+      "kind": "gap",
+      "viewpoint": "inside the store, near the snacks aisle, about 5 metres away",
+      "id": "q008",
+      "reasons": [],
+      "passed": true
+    },
+    {
+      "witness": "witness_B",
+      "entity": "scene",
+      "entity_type": "location",
+      "role": "none",
+      "attribute": "time_of_day",
+      "text": "What time of day was it?",
+      "kind": "gap",
+      "viewpoint": "outside on the pavement, looking in through the front window",
+      "id": "q009",
+      "reasons": [],
+      "passed": true
+    },
+    {
+      "witness": "witness_C",
+      "entity": "scene",
+      "entity_type": "location",
+      "role": "none",
+      "attribute": "time_of_day",
+      "text": "What time of day was it?",
+      "kind": "gap",
+      "viewpoint": "in the parking lot, sitting in a car",
+      "id": "q010",
+      "reasons": [],
+      "passed": true
+    },
+    {
+      "witness": "witness_A",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "upper_clothing",
+      "text": "In your own words, please describe the upper-body clothing of the person you described (\"a tall man\") again.",
+      "kind": "conflict_recheck",
+      "viewpoint": "inside the store, near the snacks aisle, about 5 metres away",
+      "id": "q011",
+      "reasons": [],
+      "passed": true
+    },
+    {
+      "witness": "witness_A",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "upper_clothing",
+      "text": "Are you sure it wasn't blue jacket?",
+      "kind": "baseline",
+      "viewpoint": "inside the store, near the snacks aisle, about 5 metres away",
+      "id": "q012",
+      "reasons": [
+        "introduces detail(s) the witness never mentioned: blue, jacket",
+        "closed / suggestive phrasing pushes a particular answer"
+      ],
+      "passed": false
+    },
+    {
+      "witness": "witness_B",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "upper_clothing",
+      "text": "In your own words, please describe the upper-body clothing of the person you described (\"he had a black backpack on his shoulder\") again.",
+      "kind": "conflict_recheck",
+      "viewpoint": "outside on the pavement, looking in through the front window",
+      "id": "q013",
+      "reasons": [],
+      "passed": true
+    },
+    {
+      "witness": "witness_B",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "upper_clothing",
+      "text": "Are you sure it wasn't red hoodie?",
+      "kind": "baseline",
+      "viewpoint": "outside on the pavement, looking in through the front window",
+      "id": "q014",
+      "reasons": [
+        "introduces detail(s) the witness never mentioned: hoodie, red",
+        "closed / suggestive phrasing pushes a particular answer"
+      ],
+      "passed": false
+    },
+    {
+      "witness": "witness_A",
+      "entity": "weapon_1",
+      "entity_type": "weapon",
+      "role": "none",
+      "attribute": "weapon_type",
+      "text": "Did you also see the knife?",
+      "kind": "baseline",
+      "viewpoint": "inside the store, near the snacks aisle, about 5 metres away",
+      "id": "q015",
+      "reasons": [
+        "introduces detail(s) the witness never mentioned: knife",
+        "closed / suggestive phrasing pushes a particular answer"
+      ],
+      "passed": false
+    },
+    {
+      "witness": "witness_B",
+      "entity": "weapon_1",
+      "entity_type": "weapon",
+      "role": "none",
+      "attribute": "weapon_type",
+      "text": "Did you also see the knife?",
+      "kind": "baseline",
+      "viewpoint": "outside on the pavement, looking in through the front window",
+      "id": "q016",
+      "reasons": [
+        "introduces detail(s) the witness never mentioned: knife",
+        "closed / suggestive phrasing pushes a particular answer"
+      ],
+      "passed": false
+    },
+    {
+      "witness": "witness_A",
+      "entity": "weapon_1",
+      "entity_type": "weapon",
+      "role": "none",
+      "attribute": "held_by",
+      "text": "Did you also see the slim guy?",
+      "kind": "baseline",
+      "viewpoint": "inside the store, near the snacks aisle, about 5 metres away",
+      "id": "q017",
+      "reasons": [
+        "introduces detail(s) the witness never mentioned: guy, slim",
+        "closed / suggestive phrasing pushes a particular answer"
+      ],
+      "passed": false
+    },
+    {
+      "witness": "witness_B",
+      "entity": "weapon_1",
+      "entity_type": "weapon",
+      "role": "none",
+      "attribute": "held_by",
+      "text": "Did you also see the slim guy?",
+      "kind": "baseline",
+      "viewpoint": "outside on the pavement, looking in through the front window",
+      "id": "q018",
+      "reasons": [
+        "introduces detail(s) the witness never mentioned: guy, slim",
+        "closed / suggestive phrasing pushes a particular answer"
+      ],
+      "passed": false
+    }
+  ]
+}

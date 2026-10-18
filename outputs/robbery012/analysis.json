@@ -41,6 +41,12 @@
       "entity": "person_1",
       "entity_type": "person",
       "role": "suspect",
+      "attribute": "upper_clothing"
+    },
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
       "attribute": "lower_clothing"
     },
     {
@@ -54,6 +60,30 @@
       "entity_type": "person",
       "role": "suspect",
       "attribute": "build"
+    },
+    {
+      "entity": "person_3",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "lower_clothing"
+    },
+    {
+      "entity": "person_3",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "height"
+    },
+    {
+      "entity": "person_3",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "build"
+    },
+    {
+      "entity": "person_3",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "position"
     },
     {
       "entity": "person_6",
@@ -84,12 +114,6 @@
       "entity_type": "person",
       "role": "suspect",
       "attribute": "position"
-    },
-    {
-      "entity": "person_2",
-      "entity_type": "person",
-      "role": "victim",
-      "attribute": "upper_clothing"
     },
     {
       "entity": "person_2",
@@ -192,6 +216,42 @@
       "entity_type": "person",
       "role": "bystander",
       "attribute": "position"
+    },
+    {
+      "entity": "person_7",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "lower_clothing"
+    },
+    {
+      "entity": "person_7",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "height"
+    },
+    {
+      "entity": "person_7",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "build"
+    },
+    {
+      "entity": "person_7",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "action"
+    },
+    {
+      "entity": "person_7",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "position"
+    },
+    {
+      "entity": "weapon_2",
+      "entity_type": "weapon",
+      "role": "none",
+      "attribute": "held_by"
     }
   ],
   "questions": [
@@ -200,8 +260,8 @@
       "entity": "person_1",
       "entity_type": "person",
       "role": "suspect",
-      "attribute": "lower_clothing",
-      "text": "What was the person you described (\"He looked up into the distance\") wearing on their legs?",
+      "attribute": "upper_clothing",
+      "text": "What was the person you described (\"He looked up into the distance\") wearing on the upper part of their body?",
       "kind": "gap",
       "viewpoint": "close by, inside, a few metres away",
       "id": "q001",
@@ -213,11 +273,50 @@
       "entity": "person_1",
       "entity_type": "person",
       "role": "suspect",
-      "attribute": "lower_clothing",
-      "text": "What was the person you described (\"a man in a blue shirt\") wearing on their legs?",
+      "attribute": "upper_clothing",
+      "text": "What was the person you described (\"Another man robbed the place\") wearing on the upper part of their body?",
       "kind": "gap",
       "viewpoint": "far away, looking in from outside",
       "id": "q002",
+      "reasons": [],
+      "passed": true
+    },
+    {
+      "witness": "witness_C",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "upper_clothing",
+      "text": "What was the person you described (\"sitting next to the cash register\") wearing on the upper part of their body?",
+      "kind": "gap",
+      "viewpoint": "brief glimpse while passing by",
+      "id": "q003",
+      "reasons": [],
+      "passed": true
+    },
+    {
+      "witness": "witness_A",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "lower_clothing",
+      "text": "What was the person you described (\"He looked up into the distance\") wearing on their legs?",
+      "kind": "gap",
+      "viewpoint": "close by, inside, a few metres away",
+      "id": "q004",
+      "reasons": [],
+      "passed": true
+    },
+    {
+      "witness": "witness_B",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "lower_clothing",
+      "text": "What was the person you described (\"Another man robbed the place\") wearing on their legs?",
+      "kind": "gap",
+      "viewpoint": "far away, looking in from outside",
+      "id": "q005",
       "reasons": [],
       "passed": true
     },
@@ -230,7 +329,7 @@
       "text": "What was the person you described (\"sitting next to the cash register\") wearing on their legs?",
       "kind": "gap",
       "viewpoint": "brief glimpse while passing by",
-      "id": "q003",
+      "id": "q006",
       "reasons": [],
       "passed": true
     },
@@ -243,7 +342,7 @@
       "text": "How would you describe the height of the person you described (\"He looked up into the distance\")?",
       "kind": "gap",
       "viewpoint": "close by, inside, a few metres away",
-      "id": "q004",
+      "id": "q007",
       "reasons": [],
       "passed": true
     },
@@ -253,10 +352,10 @@
       "entity_type": "person",
       "role": "suspect",
       "attribute": "height",
-      "text": "How would you describe the height of the person you described (\"a man in a blue shirt\")?",
+      "text": "How would you describe the height of the person you described (\"Another man robbed the place\")?",
       "kind": "gap",
       "viewpoint": "far away, looking in from outside",
-      "id": "q005",
+      "id": "q008",
       "reasons": [],
       "passed": true
     },
@@ -269,7 +368,7 @@
       "text": "How would you describe the height of the person you described (\"sitting next to the cash register\")?",
       "kind": "gap",
       "viewpoint": "brief glimpse while passing by",
-      "id": "q006",
+      "id": "q009",
       "reasons": [],
       "passed": true
     },
@@ -282,7 +381,7 @@
       "text": "How would you describe the body build of the person you described (\"He looked up into the distance\")?",
       "kind": "gap",
       "viewpoint": "close by, inside, a few metres away",
-      "id": "q007",
+      "id": "q010",
       "reasons": [],
       "passed": true
     },
@@ -292,10 +391,10 @@
       "entity_type": "person",
       "role": "suspect",
       "attribute": "build",
-      "text": "How would you describe the body build of the person you described (\"a man in a blue shirt\")?",
+      "text": "How would you describe the body build of the person you described (\"Another man robbed the place\")?",
       "kind": "gap",
       "viewpoint": "far away, looking in from outside",
-      "id": "q008",
+      "id": "q011",
       "reasons": [],
       "passed": true
     },
@@ -308,20 +407,72 @@
       "text": "How would you describe the body build of the person you described (\"sitting next to the cash register\")?",
       "kind": "gap",
       "viewpoint": "brief glimpse while passing by",
-      "id": "q009",
+      "id": "q012",
       "reasons": [],
       "passed": true
     },
     {
-      "witness": "witness_C",
+      "witness": "witness_B",
+      "entity": "person_3",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "lower_clothing",
+      "text": "What was the person you described (\"a man in a blue shirt\") wearing on their legs?",
+      "kind": "gap",
+      "viewpoint": "far away, looking in from outside",
+      "id": "q013",
+      "reasons": [],
+      "passed": true
+    },
+    {
+      "witness": "witness_B",
+      "entity": "person_3",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "height",
+      "text": "How would you describe the height of the person you described (\"a man in a blue shirt\")?",
+      "kind": "gap",
+      "viewpoint": "far away, looking in from outside",
+      "id": "q014",
+      "reasons": [],
+      "passed": true
+    },
+    {
+      "witness": "witness_B",
+      "entity": "person_3",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "build",
+      "text": "How would you describe the body build of the person you described (\"a man in a blue shirt\")?",
+      "kind": "gap",
+      "viewpoint": "far away, looking in from outside",
+      "id": "q015",
+      "reasons": [],
+      "passed": true
+    },
+    {
+      "witness": "witness_B",
+      "entity": "person_3",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "position",
+      "text": "Where exactly was the person you described (\"a man in a blue shirt\") when you saw them?",
+      "kind": "gap",
+      "viewpoint": "far away, looking in from outside",
+      "id": "q016",
+      "reasons": [],
+      "passed": true
+    },
+    {
+      "witness": "witness_A",
       "entity": "person_2",
       "entity_type": "person",
       "role": "victim",
-      "attribute": "upper_clothing",
-      "text": "What was the person you described (\"walked out of the cashier\") wearing on the upper part of their body?",
+      "attribute": "lower_clothing",
+      "text": "What was the person you described (\"wearing a black coat\") wearing on their legs?",
       "kind": "gap",
-      "viewpoint": "brief glimpse while passing by",
-      "id": "q010",
+      "viewpoint": "close by, inside, a few metres away",
+      "id": "q017",
       "reasons": [],
       "passed": true
     },
@@ -334,7 +485,20 @@
       "text": "What was the person you described (\"walked out of the cashier\") wearing on their legs?",
       "kind": "gap",
       "viewpoint": "brief glimpse while passing by",
-      "id": "q011",
+      "id": "q018",
+      "reasons": [],
+      "passed": true
+    },
+    {
+      "witness": "witness_A",
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "height",
+      "text": "How would you describe the height of the person you described (\"wearing a black coat\")?",
+      "kind": "gap",
+      "viewpoint": "close by, inside, a few metres away",
+      "id": "q019",
       "reasons": [],
       "passed": true
     },
@@ -347,7 +511,20 @@
       "text": "How would you describe the height of the person you described (\"walked out of the cashier\")?",
       "kind": "gap",
       "viewpoint": "brief glimpse while passing by",
-      "id": "q012",
+      "id": "q020",
+      "reasons": [],
+      "passed": true
+    },
+    {
+      "witness": "witness_A",
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "build",
+      "text": "How would you describe the body build of the person you described (\"wearing a black coat\")?",
+      "kind": "gap",
+      "viewpoint": "close by, inside, a few metres away",
+      "id": "q021",
       "reasons": [],
       "passed": true
     },
@@ -360,7 +537,20 @@
       "text": "How would you describe the body build of the person you described (\"walked out of the cashier\")?",
       "kind": "gap",
       "viewpoint": "brief glimpse while passing by",
-      "id": "q013",
+      "id": "q022",
+      "reasons": [],
+      "passed": true
+    },
+    {
+      "witness": "witness_A",
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "action",
+      "text": "What did you see the person you described (\"wearing a black coat\") doing?",
+      "kind": "gap",
+      "viewpoint": "close by, inside, a few metres away",
+      "id": "q023",
       "reasons": [],
       "passed": true
     },
@@ -373,7 +563,7 @@
       "text": "What did you see the person you described (\"walked out of the cashier\") doing?",
       "kind": "gap",
       "viewpoint": "brief glimpse while passing by",
-      "id": "q014",
+      "id": "q024",
       "reasons": [],
       "passed": true
     },
@@ -386,7 +576,7 @@
       "text": "What kind of place did this happen in?",
       "kind": "gap",
       "viewpoint": "close by, inside, a few metres away",
-      "id": "q015",
+      "id": "q025",
       "reasons": [],
       "passed": true
     },
@@ -399,7 +589,7 @@
       "text": "What kind of place did this happen in?",
       "kind": "gap",
       "viewpoint": "far away, looking in from outside",
-      "id": "q016",
+      "id": "q026",
       "reasons": [],
       "passed": true
     },
@@ -412,7 +602,7 @@
       "text": "What kind of place did this happen in?",
       "kind": "gap",
       "viewpoint": "brief glimpse while passing by",
-      "id": "q017",
+      "id": "q027",
       "reasons": [],
       "passed": true
     },
@@ -425,7 +615,7 @@
       "text": "How was the lighting where this happened?",
       "kind": "gap",
       "viewpoint": "close by, inside, a few metres away",
-      "id": "q018",
+      "id": "q028",
       "reasons": [],
       "passed": true
     },
@@ -438,7 +628,7 @@
       "text": "How was the lighting where this happened?",
       "kind": "gap",
       "viewpoint": "far away, looking in from outside",
-      "id": "q019",
+      "id": "q029",
       "reasons": [],
       "passed": true
     },
@@ -451,7 +641,7 @@
       "text": "How was the lighting where this happened?",
       "kind": "gap",
       "viewpoint": "brief glimpse while passing by",
-      "id": "q020",
+      "id": "q030",
       "reasons": [],
       "passed": true
     },
@@ -464,7 +654,7 @@
       "text": "What time of day was it?",
       "kind": "gap",
       "viewpoint": "close by, inside, a few metres away",
-      "id": "q021",
+      "id": "q031",
       "reasons": [],
       "passed": true
     },
@@ -477,7 +667,7 @@
       "text": "What time of day was it?",
       "kind": "gap",
       "viewpoint": "far away, looking in from outside",
-      "id": "q022",
+      "id": "q032",
       "reasons": [],
       "passed": true
     },
@@ -490,7 +680,7 @@
       "text": "What time of day was it?",
       "kind": "gap",
       "viewpoint": "brief glimpse while passing by",
-      "id": "q023",
+      "id": "q033",
       "reasons": [],
       "passed": true
     },
@@ -503,7 +693,7 @@
       "text": "What was the person you described (\"had a grey coat on\") wearing on their legs?",
       "kind": "gap",
       "viewpoint": "brief glimpse while passing by",
-      "id": "q024",
+      "id": "q034",
       "reasons": [],
       "passed": true
     },
@@ -516,7 +706,7 @@
       "text": "How would you describe the height of the person you described (\"had a grey coat on\")?",
       "kind": "gap",
       "viewpoint": "brief glimpse while passing by",
-      "id": "q025",
+      "id": "q035",
       "reasons": [],
       "passed": true
     },
@@ -529,7 +719,7 @@
       "text": "How would you describe the body build of the person you described (\"had a grey coat on\")?",
       "kind": "gap",
       "viewpoint": "brief glimpse while passing by",
-      "id": "q026",
+      "id": "q036",
       "reasons": [],
       "passed": true
     },
@@ -542,7 +732,7 @@
       "text": "What did you see the person you described (\"had a grey coat on\") doing?",
       "kind": "gap",
       "viewpoint": "brief glimpse while passing by",
-      "id": "q027",
+      "id": "q037",
       "reasons": [],
       "passed": true
     },
@@ -555,35 +745,33 @@
       "text": "Where exactly was the person you described (\"had a grey coat on\") when you saw them?",
       "kind": "gap",
       "viewpoint": "brief glimpse while passing by",
-      "id": "q028",
+      "id": "q038",
       "reasons": [],
       "passed": true
     },
     {
-      "witness": "witness_B",
+      "witness": "witness_A",
       "entity": "weapon_2",
       "entity_type": "weapon",
       "role": "none",
-      "attribute": "weapon_type",
-      "text": "Did you also see the gun?",
-      "kind": "baseline",
-      "viewpoint": "far away, looking in from outside",
-      "id": "q029",
-      "reasons": [
-        "closed / suggestive phrasing pushes a particular answer"
-      ],
-      "passed": false
+      "attribute": "held_by",
+      "text": "Who, if anyone, was holding the item you described (\"a gun\")?",
+      "kind": "gap",
+      "viewpoint": "close by, inside, a few metres away",
+      "id": "q039",
+      "reasons": [],
+      "passed": true
     },
     {
       "witness": "witness_C",
-      "entity": "weapon_2",
+      "entity": "weapon_1",
       "entity_type": "weapon",
       "role": "none",
       "attribute": "weapon_type",
       "text": "Did you also see the gun?",
       "kind": "baseline",
       "viewpoint": "brief glimpse while passing by",
-      "id": "q030",
+      "id": "q040",
       "reasons": [
         "introduces detail(s) the witness never mentioned: gun",
         "closed / suggestive phrasing pushes a particular answer"
@@ -592,14 +780,14 @@
     },
     {
       "witness": "witness_B",
-      "entity": "weapon_2",
+      "entity": "weapon_1",
       "entity_type": "weapon",
       "role": "none",
       "attribute": "held_by",
       "text": "Did you also see the man who was being robbed?",
       "kind": "baseline",
       "viewpoint": "far away, looking in from outside",
-      "id": "q031",
+      "id": "q041",
       "reasons": [
         "introduces detail(s) the witness never mentioned: being",
         "closed / suggestive phrasing pushes a particular answer"
@@ -608,14 +796,14 @@
     },
     {
       "witness": "witness_C",
-      "entity": "weapon_2",
+      "entity": "weapon_1",
       "entity_type": "weapon",
       "role": "none",
       "attribute": "held_by",
       "text": "Did you also see the man who was being robbed?",
       "kind": "baseline",
       "viewpoint": "brief glimpse while passing by",
-      "id": "q032",
+      "id": "q042",
       "reasons": [
         "introduces detail(s) the witness never mentioned: being, robbed",
         "closed / suggestive phrasing pushes a particular answer"
@@ -623,48 +811,16 @@
       "passed": false
     },
     {
-      "witness": "witness_A",
-      "entity": "weapon_1",
+      "witness": "witness_B",
+      "entity": "weapon_2",
       "entity_type": "weapon",
       "role": "none",
       "attribute": "weapon_type",
       "text": "Did you also see the gun?",
       "kind": "baseline",
-      "viewpoint": "close by, inside, a few metres away",
-      "id": "q033",
+      "viewpoint": "far away, looking in from outside",
+      "id": "q043",
       "reasons": [
-        "closed / suggestive phrasing pushes a particular answer"
-      ],
-      "passed": false
-    },
-    {
-      "witness": "witness_A",
-      "entity": "weapon_1",
-      "entity_type": "weapon",
-      "role": "none",
-      "attribute": "held_by",
-      "text": "Did you also see the man in blue shirt?",
-      "kind": "baseline",
-      "viewpoint": "close by, inside, a few metres away",
-      "id": "q034",
-      "reasons": [
-        "introduces detail(s) the witness never mentioned: blue, shirt",
-        "closed / suggestive phrasing pushes a particular answer"
-      ],
-      "passed": false
-    },
-    {
-      "witness": "witness_C",
-      "entity": "weapon_1",
-      "entity_type": "weapon",
-      "role": "none",
-      "attribute": "held_by",
-      "text": "Did you also see the man in blue shirt?",
-      "kind": "baseline",
-      "viewpoint": "brief glimpse while passing by",
-      "id": "q035",
-      "reasons": [
-        "introduces detail(s) the witness never mentioned: blue, shirt",
         "closed / suggestive phrasing pushes a particular answer"
       ],
       "passed": false

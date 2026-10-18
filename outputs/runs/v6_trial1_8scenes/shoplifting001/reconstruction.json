@@ -1,0 +1,947 @@
+[
+  {
+    "hypothesis": {
+      "id": "H1",
+      "name": "Most supported version",
+      "choices": {
+        "c1": 0,
+        "c2": 0
+      },
+      "description": "person_1.upper_clothing = 'orange shirt' (cctv_frame_02, witness_A); person_2.upper_clothing = 'brown shirt' (witness_B)"
+    },
+    "prompt": "CCTV photo, wide angle, realistic, exactly 3 people. a scene, with shelf; a person wearing orange shirt and dark pants, looked around; a person wearing brown shirt, stopped in front of the shelf; a person wearing dark jacket; a white van, parked nearby",
+    "seed": 45,
+    "included": [
+      "f002",
+      "f003",
+      "f006",
+      "f001",
+      "f004",
+      "f005",
+      "f020",
+      "f021",
+      "f036",
+      "f012",
+      "f007",
+      "f008",
+      "f009",
+      "f010",
+      "f016",
+      "f017",
+      "f018",
+      "f035",
+      "f013",
+      "f041",
+      "f015",
+      "f037",
+      "f038",
+      "f039",
+      "f040",
+      "f043"
+    ],
+    "withheld": [
+      {
+        "fact_id": "f026",
+        "entity": "scene",
+        "attribute": "notable_features",
+        "value": "computer",
+        "source": "witness_B",
+        "confidence": 0.45
+      }
+    ],
+    "not_drawn": [
+      {
+        "fact_id": "f002",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "stopped in front of the shelf",
+        "source": "witness_A",
+        "confidence": 0.99,
+        "reason": "one short action per person"
+      },
+      {
+        "fact_id": "f003",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "talked at the end",
+        "source": "witness_A",
+        "confidence": 0.99,
+        "reason": "one short action per person"
+      },
+      {
+        "fact_id": "f004",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "walked to the middle of the shelf",
+        "source": "witness_A",
+        "confidence": 0.9,
+        "reason": "movement/direction"
+      },
+      {
+        "fact_id": "f005",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "hid something in his clothes",
+        "source": "witness_A",
+        "confidence": 0.9,
+        "reason": "one short action per person"
+      },
+      {
+        "fact_id": "f006",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "walked away",
+        "source": "witness_A",
+        "confidence": 0.99,
+        "reason": "movement/direction"
+      },
+      {
+        "fact_id": "f008",
+        "entity": "person_2",
+        "attribute": "action",
+        "value": "touched the laptop",
+        "source": "witness_A",
+        "confidence": 0.7,
+        "reason": "one short action per person"
+      },
+      {
+        "fact_id": "f009",
+        "entity": "person_2",
+        "attribute": "action",
+        "value": "picked it up",
+        "source": "witness_A",
+        "confidence": 0.7,
+        "reason": "one short action per person"
+      },
+      {
+        "fact_id": "f010",
+        "entity": "person_2",
+        "attribute": "action",
+        "value": "put it under the laptop",
+        "source": "witness_A",
+        "confidence": 0.7,
+        "reason": "one short action per person"
+      },
+      {
+        "fact_id": "f012",
+        "entity": "person_2",
+        "attribute": "action",
+        "value": "talked at the end",
+        "source": "witness_A",
+        "confidence": 0.9,
+        "reason": "one short action per person"
+      },
+      {
+        "fact_id": "f016",
+        "entity": "person_2",
+        "attribute": "action",
+        "value": "walked to the middle of the shelf",
+        "source": "witness_B",
+        "confidence": 0.7,
+        "reason": "movement/direction"
+      },
+      {
+        "fact_id": "f017",
+        "entity": "person_2",
+        "attribute": "action",
+        "value": "looked around",
+        "source": "witness_B",
+        "confidence": 0.7,
+        "reason": "one short action per person"
+      },
+      {
+        "fact_id": "f018",
+        "entity": "person_2",
+        "attribute": "action",
+        "value": "walked away",
+        "source": "witness_B",
+        "confidence": 0.7,
+        "reason": "movement/direction"
+      },
+      {
+        "fact_id": "f020",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "took out something from a notebook",
+        "source": "witness_B",
+        "confidence": 0.7,
+        "reason": "one short action per person"
+      },
+      {
+        "fact_id": "f021",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "closed it",
+        "source": "witness_B",
+        "confidence": 0.7,
+        "reason": "one short action per person"
+      },
+      {
+        "fact_id": "f035",
+        "entity": "person_2",
+        "attribute": "action",
+        "value": "closed a notebook",
+        "source": "witness_C",
+        "confidence": 0.7,
+        "reason": "one short action per person"
+      },
+      {
+        "fact_id": "f036",
+        "entity": "person_2",
+        "attribute": "action",
+        "value": "closed another computer",
+        "source": "witness_C",
+        "confidence": 0.99,
+        "reason": "one short action per person"
+      }
+    ],
+    "contested": [
+      "f015",
+      "f041"
+    ],
+    "levels": {
+      "person_1": "contested",
+      "person_2": "contested",
+      "scene": "confirmed",
+      "vehicle_1": "single",
+      "person_3": "confirmed"
+    },
+    "report": {
+      "expected": [
+        {
+          "entity": "person_1",
+          "label": "person wearing orange shirt"
+        },
+        {
+          "entity": "person_2",
+          "label": "person wearing brown shirt"
+        },
+        {
+          "entity": "person_3",
+          "label": "person wearing dark jacket"
+        },
+        {
+          "entity": "vehicle_1",
+          "label": "van"
+        }
+      ],
+      "matched": {
+        "person_2": {
+          "label": "person",
+          "score": 0.399,
+          "box": [
+            385.18044662475586,
+            381.4683609008789,
+            498.41992568969727,
+            729.8607940673828
+          ],
+          "scores": {
+            "bag": 0.064,
+            "car": 0.01,
+            "dog": 0.014,
+            "gun": 0.029,
+            "knife": 0.012,
+            "motorcycle": 0.008,
+            "person": 0.261,
+            "person wearing brown shirt": 0.399,
+            "person wearing dark jacket": 0.319,
+            "person wearing orange shirt": 0.349,
+            "van": 0.009
+          },
+          "query": "person wearing brown shirt",
+          "entity_score": 0.399
+        },
+        "person_3": {
+          "label": "person",
+          "score": 0.406,
+          "box": [
+            524.8397941589355,
+            359.55802154541016,
+            612.905200958252,
+            714.5914306640625
+          ],
+          "scores": {
+            "bag": 0.022,
+            "car": 0.008,
+            "dog": 0.014,
+            "gun": 0.023,
+            "knife": 0.011,
+            "motorcycle": 0.006,
+            "person": 0.324,
+            "person wearing brown shirt": 0.369,
+            "person wearing dark jacket": 0.406,
+            "person wearing orange shirt": 0.199,
+            "van": 0.008
+          },
+          "query": "person wearing dark jacket",
+          "entity_score": 0.406
+        }
+      },
+      "missing": [
+        "person_1",
+        "vehicle_1"
+      ],
+      "hallucinated": [],
+      "carried": [],
+      "person_count": {
+        "drawn": 3,
+        "in_image": 2
+      },
+      "object_faithfulness": 0.5,
+      "vqa": [
+        {
+          "entity": "person_1",
+          "attribute": "upper_clothing",
+          "question": "Is there a person wearing orange shirt?",
+          "answer": true
+        },
+        {
+          "entity": "person_1",
+          "attribute": "lower_clothing",
+          "question": "Is there a person wearing dark pants?",
+          "answer": true
+        },
+        {
+          "entity": "person_2",
+          "attribute": "upper_clothing",
+          "question": "Is there a person wearing brown shirt?",
+          "answer": true
+        },
+        {
+          "entity": "person_3",
+          "attribute": "upper_clothing",
+          "question": "Is there a person wearing dark jacket?",
+          "answer": true
+        },
+        {
+          "entity": "vehicle_1",
+          "attribute": "vehicle_type",
+          "question": "Is there a van?",
+          "answer": false
+        }
+      ],
+      "attribute_accuracy": 0.8
+    },
+    "first_attempt_hallucinations": 1,
+    "final_hallucinations": 0,
+    "attempts": 5,
+    "raw_path": "/home/marams/crime-recon/outputs/shoplifting001/H1_raw.png",
+    "overlay_path": "/home/marams/crime-recon/outputs/shoplifting001/H1_overlay.png",
+    "attempt_log": [
+      {
+        "seed": 42,
+        "kept": false,
+        "hallucinated": [
+          "extra person (3 in image, 3 drawn)"
+        ],
+        "missing": [
+          "person_3",
+          "vehicle_1"
+        ],
+        "person_count": {
+          "drawn": 3,
+          "in_image": 3
+        },
+        "attribute_accuracy": null,
+        "matched": {
+          "person_1": [
+            806,
+            557,
+            851,
+            782
+          ],
+          "person_2": [
+            553,
+            252,
+            764,
+            865
+          ]
+        }
+      },
+      {
+        "seed": 43,
+        "kept": false,
+        "hallucinated": [],
+        "missing": [
+          "person_3",
+          "vehicle_1"
+        ],
+        "person_count": {
+          "drawn": 3,
+          "in_image": 2
+        },
+        "attribute_accuracy": 0.6,
+        "matched": {
+          "person_1": [
+            460,
+            206,
+            665,
+            655
+          ],
+          "person_2": [
+            368,
+            244,
+            504,
+            734
+          ]
+        }
+      },
+      {
+        "seed": 44,
+        "kept": false,
+        "hallucinated": [],
+        "missing": [
+          "person_1",
+          "vehicle_1"
+        ],
+        "person_count": {
+          "drawn": 3,
+          "in_image": 2
+        },
+        "attribute_accuracy": 0.4,
+        "matched": {
+          "person_2": [
+            242,
+            358,
+            390,
+            844
+          ],
+          "person_3": [
+            494,
+            337,
+            565,
+            531
+          ]
+        }
+      },
+      {
+        "seed": 45,
+        "kept": true,
+        "hallucinated": [],
+        "missing": [
+          "person_1",
+          "vehicle_1"
+        ],
+        "person_count": {
+          "drawn": 3,
+          "in_image": 2
+        },
+        "attribute_accuracy": 0.8,
+        "matched": {
+          "person_2": [
+            385,
+            381,
+            498,
+            730
+          ],
+          "person_3": [
+            525,
+            360,
+            613,
+            715
+          ]
+        }
+      },
+      {
+        "seed": 46,
+        "kept": false,
+        "hallucinated": [],
+        "missing": [
+          "person_1",
+          "vehicle_1"
+        ],
+        "person_count": {
+          "drawn": 3,
+          "in_image": 2
+        },
+        "attribute_accuracy": 0.8,
+        "matched": {
+          "person_2": [
+            383,
+            347,
+            511,
+            754
+          ],
+          "person_3": [
+            533,
+            284,
+            757,
+            1009
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "hypothesis": {
+      "id": "H2",
+      "name": "Alternative version 1",
+      "choices": {
+        "c1": 1,
+        "c2": 1
+      },
+      "description": "person_1.upper_clothing = 'orange jacket' (cctv_frame_03); person_2.upper_clothing = 'white shirt' (witness_C)"
+    },
+    "prompt": "CCTV photo, wide angle, realistic, exactly 3 people. a scene, with shelf; a person wearing orange jacket and dark pants, looked around; a person wearing white shirt, stopped in front of the shelf; a person wearing dark jacket; a white van, parked nearby",
+    "seed": 143,
+    "included": [
+      "f002",
+      "f003",
+      "f006",
+      "f001",
+      "f004",
+      "f005",
+      "f020",
+      "f021",
+      "f036",
+      "f012",
+      "f007",
+      "f008",
+      "f009",
+      "f010",
+      "f016",
+      "f017",
+      "f018",
+      "f035",
+      "f013",
+      "f042",
+      "f034",
+      "f037",
+      "f038",
+      "f039",
+      "f040",
+      "f043"
+    ],
+    "withheld": [
+      {
+        "fact_id": "f026",
+        "entity": "scene",
+        "attribute": "notable_features",
+        "value": "computer",
+        "source": "witness_B",
+        "confidence": 0.45
+      }
+    ],
+    "not_drawn": [
+      {
+        "fact_id": "f002",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "stopped in front of the shelf",
+        "source": "witness_A",
+        "confidence": 0.99,
+        "reason": "one short action per person"
+      },
+      {
+        "fact_id": "f003",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "talked at the end",
+        "source": "witness_A",
+        "confidence": 0.99,
+        "reason": "one short action per person"
+      },
+      {
+        "fact_id": "f004",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "walked to the middle of the shelf",
+        "source": "witness_A",
+        "confidence": 0.9,
+        "reason": "movement/direction"
+      },
+      {
+        "fact_id": "f005",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "hid something in his clothes",
+        "source": "witness_A",
+        "confidence": 0.9,
+        "reason": "one short action per person"
+      },
+      {
+        "fact_id": "f006",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "walked away",
+        "source": "witness_A",
+        "confidence": 0.99,
+        "reason": "movement/direction"
+      },
+      {
+        "fact_id": "f008",
+        "entity": "person_2",
+        "attribute": "action",
+        "value": "touched the laptop",
+        "source": "witness_A",
+        "confidence": 0.7,
+        "reason": "one short action per person"
+      },
+      {
+        "fact_id": "f009",
+        "entity": "person_2",
+        "attribute": "action",
+        "value": "picked it up",
+        "source": "witness_A",
+        "confidence": 0.7,
+        "reason": "one short action per person"
+      },
+      {
+        "fact_id": "f010",
+        "entity": "person_2",
+        "attribute": "action",
+        "value": "put it under the laptop",
+        "source": "witness_A",
+        "confidence": 0.7,
+        "reason": "one short action per person"
+      },
+      {
+        "fact_id": "f012",
+        "entity": "person_2",
+        "attribute": "action",
+        "value": "talked at the end",
+        "source": "witness_A",
+        "confidence": 0.9,
+        "reason": "one short action per person"
+      },
+      {
+        "fact_id": "f016",
+        "entity": "person_2",
+        "attribute": "action",
+        "value": "walked to the middle of the shelf",
+        "source": "witness_B",
+        "confidence": 0.7,
+        "reason": "movement/direction"
+      },
+      {
+        "fact_id": "f017",
+        "entity": "person_2",
+        "attribute": "action",
+        "value": "looked around",
+        "source": "witness_B",
+        "confidence": 0.7,
+        "reason": "one short action per person"
+      },
+      {
+        "fact_id": "f018",
+        "entity": "person_2",
+        "attribute": "action",
+        "value": "walked away",
+        "source": "witness_B",
+        "confidence": 0.7,
+        "reason": "movement/direction"
+      },
+      {
+        "fact_id": "f020",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "took out something from a notebook",
+        "source": "witness_B",
+        "confidence": 0.7,
+        "reason": "one short action per person"
+      },
+      {
+        "fact_id": "f021",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "closed it",
+        "source": "witness_B",
+        "confidence": 0.7,
+        "reason": "one short action per person"
+      },
+      {
+        "fact_id": "f035",
+        "entity": "person_2",
+        "attribute": "action",
+        "value": "closed a notebook",
+        "source": "witness_C",
+        "confidence": 0.7,
+        "reason": "one short action per person"
+      },
+      {
+        "fact_id": "f036",
+        "entity": "person_2",
+        "attribute": "action",
+        "value": "closed another computer",
+        "source": "witness_C",
+        "confidence": 0.99,
+        "reason": "one short action per person"
+      }
+    ],
+    "contested": [
+      "f034",
+      "f042"
+    ],
+    "levels": {
+      "person_1": "contested",
+      "person_2": "contested",
+      "scene": "confirmed",
+      "vehicle_1": "single",
+      "person_3": "confirmed"
+    },
+    "report": {
+      "expected": [
+        {
+          "entity": "person_1",
+          "label": "person wearing orange jacket"
+        },
+        {
+          "entity": "person_2",
+          "label": "person wearing white shirt"
+        },
+        {
+          "entity": "person_3",
+          "label": "person wearing dark jacket"
+        },
+        {
+          "entity": "vehicle_1",
+          "label": "van"
+        }
+      ],
+      "matched": {
+        "person_1": {
+          "label": "person",
+          "score": 0.489,
+          "box": [
+            530.5079002380371,
+            362.5562286376953,
+            653.4476623535156,
+            903.1557159423828
+          ],
+          "scores": {
+            "bag": 0.083,
+            "car": 0.013,
+            "dog": 0.019,
+            "gun": 0.021,
+            "knife": 0.013,
+            "motorcycle": 0.017,
+            "person": 0.257,
+            "person wearing dark jacket": 0.374,
+            "person wearing orange jacket": 0.489,
+            "person wearing white shirt": 0.15,
+            "van": 0.013
+          },
+          "query": "person wearing orange jacket",
+          "entity_score": 0.489
+        },
+        "person_3": {
+          "label": "person",
+          "score": 0.344,
+          "box": [
+            318.89968490600586,
+            437.028564453125,
+            409.81247329711914,
+            607.701904296875
+          ],
+          "scores": {
+            "bag": 0.037,
+            "car": 0.007,
+            "dog": 0.011,
+            "gun": 0.007,
+            "knife": 0.01,
+            "motorcycle": 0.003,
+            "person": 0.205,
+            "person wearing dark jacket": 0.344,
+            "person wearing orange jacket": 0.117,
+            "person wearing white shirt": 0.255,
+            "van": 0.011
+          },
+          "query": "person wearing dark jacket",
+          "entity_score": 0.344
+        }
+      },
+      "missing": [
+        "person_2",
+        "vehicle_1"
+      ],
+      "hallucinated": [],
+      "carried": [],
+      "person_count": {
+        "drawn": 3,
+        "in_image": 2
+      },
+      "object_faithfulness": 0.5,
+      "vqa": [
+        {
+          "entity": "person_1",
+          "attribute": "upper_clothing",
+          "question": "Is there a person wearing orange jacket?",
+          "answer": true
+        },
+        {
+          "entity": "person_1",
+          "attribute": "lower_clothing",
+          "question": "Is there a person wearing dark pants?",
+          "answer": true
+        },
+        {
+          "entity": "person_2",
+          "attribute": "upper_clothing",
+          "question": "Is there a person wearing white shirt?",
+          "answer": true
+        },
+        {
+          "entity": "person_3",
+          "attribute": "upper_clothing",
+          "question": "Is there a person wearing dark jacket?",
+          "answer": true
+        },
+        {
+          "entity": "vehicle_1",
+          "attribute": "vehicle_type",
+          "question": "Is there a van?",
+          "answer": false
+        }
+      ],
+      "attribute_accuracy": 0.8
+    },
+    "first_attempt_hallucinations": 6,
+    "final_hallucinations": 0,
+    "attempts": 5,
+    "raw_path": "/home/marams/crime-recon/outputs/shoplifting001/H2_raw.png",
+    "overlay_path": "/home/marams/crime-recon/outputs/shoplifting001/H2_overlay.png",
+    "attempt_log": [
+      {
+        "seed": 142,
+        "kept": false,
+        "hallucinated": [
+          "extra person (3 in image, 3 drawn)",
+          "extra person (3 in image, 3 drawn)",
+          "dog",
+          "bag",
+          "bag",
+          "bag"
+        ],
+        "missing": [
+          "person_1",
+          "person_2",
+          "vehicle_1"
+        ],
+        "person_count": {
+          "drawn": 3,
+          "in_image": 3
+        },
+        "attribute_accuracy": null,
+        "matched": {
+          "person_3": [
+            379,
+            446,
+            518,
+            862
+          ]
+        }
+      },
+      {
+        "seed": 143,
+        "kept": true,
+        "hallucinated": [],
+        "missing": [
+          "person_2",
+          "vehicle_1"
+        ],
+        "person_count": {
+          "drawn": 3,
+          "in_image": 2
+        },
+        "attribute_accuracy": 0.8,
+        "matched": {
+          "person_1": [
+            531,
+            363,
+            653,
+            903
+          ],
+          "person_3": [
+            319,
+            437,
+            410,
+            608
+          ]
+        }
+      },
+      {
+        "seed": 144,
+        "kept": false,
+        "hallucinated": [
+          "extra person (2 in image, 3 drawn)",
+          "bag"
+        ],
+        "missing": [
+          "person_1",
+          "person_2",
+          "vehicle_1"
+        ],
+        "person_count": {
+          "drawn": 3,
+          "in_image": 2
+        },
+        "attribute_accuracy": null,
+        "matched": {
+          "person_3": [
+            566,
+            385,
+            672,
+            735
+          ]
+        }
+      },
+      {
+        "seed": 145,
+        "kept": false,
+        "hallucinated": [
+          "extra person (3 in image, 3 drawn)",
+          "extra person (3 in image, 3 drawn)"
+        ],
+        "missing": [
+          "person_2",
+          "person_3",
+          "vehicle_1"
+        ],
+        "person_count": {
+          "drawn": 3,
+          "in_image": 3
+        },
+        "attribute_accuracy": null,
+        "matched": {
+          "person_1": [
+            639,
+            384,
+            731,
+            705
+          ]
+        }
+      },
+      {
+        "seed": 146,
+        "kept": false,
+        "hallucinated": [
+          "extra person (3 in image, 3 drawn)",
+          "bag"
+        ],
+        "missing": [
+          "person_2",
+          "vehicle_1"
+        ],
+        "person_count": {
+          "drawn": 3,
+          "in_image": 3
+        },
+        "attribute_accuracy": null,
+        "matched": {
+          "person_1": [
+            683,
+            244,
+            897,
+            838
+          ],
+          "person_3": [
+            124,
+            239,
+            335,
+            689
+          ]
+        }
+      }
+    ]
+  }
+]

@@ -14,9 +14,10 @@
       "quote": "put a watch down on the table",
       "hedged": false,
       "base_confidence": 0.7,
-      "confidence": 0.7,
+      "confidence": 0.9,
       "support": [
-        "witness_A"
+        "witness_A",
+        "witness_B"
       ]
     },
     {
@@ -98,6 +99,61 @@
     },
     {
       "fact_id": "f006",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "position",
+      "value": "close by",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "close by, inside, a few metres away",
+      "quote": "a man close by",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f007",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "upper_clothing",
+      "value": "blue shirt",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "close by, inside, a few metres away",
+      "quote": "I think he was wearing a blue shirt",
+      "hedged": true,
+      "base_confidence": 0.45,
+      "confidence": 0.65,
+      "support": [
+        "cctv",
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f008",
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "position",
+      "value": "behind the counter",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "close by, inside, a few metres away",
+      "quote": "A woman behind the counter",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f009",
       "entity": "person_2",
       "entity_type": "person",
       "role": "victim",
@@ -115,45 +171,43 @@
       ]
     },
     {
-      "fact_id": "f007",
+      "fact_id": "f010",
       "entity": "object_1",
       "entity_type": "object",
       "role": "none",
       "attribute": "object_type",
-      "value": "watch",
+      "value": "table",
       "source": "witness_A",
       "source_type": "witness",
       "viewpoint": "close by, inside, a few metres away",
-      "quote": "a watch",
+      "quote": "the table",
       "hedged": false,
       "base_confidence": 0.7,
-      "confidence": 0.9,
+      "confidence": 0.7,
       "support": [
-        "witness_A",
-        "witness_C"
+        "witness_A"
       ]
     },
     {
-      "fact_id": "f008",
+      "fact_id": "f011",
       "entity": "object_1",
       "entity_type": "object",
       "role": "none",
-      "attribute": "position",
-      "value": "on the table",
+      "attribute": "state",
+      "value": "watch on the table",
       "source": "witness_A",
       "source_type": "witness",
       "viewpoint": "close by, inside, a few metres away",
-      "quote": "on the table",
+      "quote": "The watch was on the table",
       "hedged": false,
       "base_confidence": 0.7,
-      "confidence": 0.9,
+      "confidence": 0.7,
       "support": [
-        "witness_A",
-        "witness_C"
+        "witness_A"
       ]
     },
     {
-      "fact_id": "f009",
+      "fact_id": "f012",
       "entity": "person_1",
       "entity_type": "person",
       "role": "suspect",
@@ -172,7 +226,7 @@
       ]
     },
     {
-      "fact_id": "f010",
+      "fact_id": "f013",
       "entity": "person_1",
       "entity_type": "person",
       "role": "suspect",
@@ -192,7 +246,7 @@
       ]
     },
     {
-      "fact_id": "f011",
+      "fact_id": "f014",
       "entity": "person_1",
       "entity_type": "person",
       "role": "suspect",
@@ -212,7 +266,7 @@
       ]
     },
     {
-      "fact_id": "f012",
+      "fact_id": "f015",
       "entity": "person_1",
       "entity_type": "person",
       "role": "suspect",
@@ -230,7 +284,7 @@
       ]
     },
     {
-      "fact_id": "f013",
+      "fact_id": "f016",
       "entity": "person_1",
       "entity_type": "person",
       "role": "suspect",
@@ -248,16 +302,34 @@
       ]
     },
     {
-      "fact_id": "f014",
-      "entity": "scene",
-      "entity_type": "location",
-      "role": "none",
-      "attribute": "place_type",
-      "value": "store",
+      "fact_id": "f017",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "position",
+      "value": "by the table",
       "source": "witness_B",
       "source_type": "witness",
       "viewpoint": "far away, looking in from outside",
-      "quote": "the store",
+      "quote": "the side of the table",
+      "hedged": false,
+      "base_confidence": 0.7,
+      "confidence": 0.7,
+      "support": [
+        "witness_B"
+      ]
+    },
+    {
+      "fact_id": "f018",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "position",
+      "value": "out of the store",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "far away, looking in from outside",
+      "quote": "turned and walked out of the store",
       "hedged": true,
       "base_confidence": 0.575,
       "confidence": 0.575,
@@ -266,7 +338,62 @@
       ]
     },
     {
-      "fact_id": "f015",
+      "fact_id": "f019",
+      "entity": "scene",
+      "entity_type": "location",
+      "role": "none",
+      "attribute": "place_type",
+      "value": "store",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "far away, looking in from outside",
+      "quote": "out of the store",
+      "hedged": true,
+      "base_confidence": 0.575,
+      "confidence": 0.575,
+      "support": [
+        "witness_B"
+      ]
+    },
+    {
+      "fact_id": "f020",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "put the watch down on the table",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "far away, looking in from outside",
+      "quote": "I think he put the watch down on the table.",
+      "hedged": true,
+      "base_confidence": 0.45,
+      "confidence": 0.65,
+      "support": [
+        "witness_A",
+        "witness_B"
+      ]
+    },
+    {
+      "fact_id": "f021",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "upper_clothing",
+      "value": "pants pocket",
+      "source": "witness_B",
+      "source_type": "witness",
+      "viewpoint": "far away, looking in from outside",
+      "quote": "pants pocket",
+      "hedged": true,
+      "base_confidence": 0.45,
+      "confidence": 0.45,
+      "support": [
+        "witness_B"
+      ]
+    },
+    {
+      "fact_id": "f022",
       "entity": "person_1",
       "entity_type": "person",
       "role": "suspect",
@@ -285,7 +412,7 @@
       ]
     },
     {
-      "fact_id": "f016",
+      "fact_id": "f023",
       "entity": "person_1",
       "entity_type": "person",
       "role": "suspect",
@@ -305,7 +432,7 @@
       ]
     },
     {
-      "fact_id": "f017",
+      "fact_id": "f024",
       "entity": "person_1",
       "entity_type": "person",
       "role": "suspect",
@@ -325,195 +452,68 @@
       ]
     },
     {
-      "fact_id": "f018",
-      "entity": "object_1",
-      "entity_type": "object",
-      "role": "none",
-      "attribute": "object_type",
-      "value": "watch",
-      "source": "witness_C",
-      "source_type": "witness",
-      "viewpoint": "brief glimpse while passing by",
-      "quote": "the watch",
-      "hedged": false,
-      "base_confidence": 0.7,
-      "confidence": 0.9,
-      "support": [
-        "witness_A",
-        "witness_C"
-      ]
-    },
-    {
-      "fact_id": "f019",
-      "entity": "object_1",
-      "entity_type": "object",
-      "role": "none",
-      "attribute": "position",
-      "value": "on the table",
-      "source": "witness_C",
-      "source_type": "witness",
-      "viewpoint": "brief glimpse while passing by",
-      "quote": "on the table",
-      "hedged": false,
-      "base_confidence": 0.7,
-      "confidence": 0.9,
-      "support": [
-        "witness_A",
-        "witness_C"
-      ]
-    },
-    {
-      "fact_id": "f020",
-      "entity": "person_3",
-      "entity_type": "person",
-      "role": "bystander",
-      "attribute": "upper_clothing",
-      "value": "blue shirt",
-      "source": "cctv_frame_01",
-      "source_type": "cctv",
-      "viewpoint": "CCTV camera",
-      "quote": "",
-      "hedged": false,
-      "base_confidence": 0.85,
-      "confidence": 0.85,
-      "support": [
-        "cctv"
-      ]
-    },
-    {
-      "fact_id": "f021",
-      "entity": "person_3",
-      "entity_type": "person",
-      "role": "bystander",
-      "attribute": "lower_clothing",
-      "value": "khaki shorts",
-      "source": "cctv_frame_01",
-      "source_type": "cctv",
-      "viewpoint": "CCTV camera",
-      "quote": "",
-      "hedged": false,
-      "base_confidence": 0.85,
-      "confidence": 0.85,
-      "support": [
-        "cctv"
-      ]
-    },
-    {
-      "fact_id": "f022",
-      "entity": "person_4",
-      "entity_type": "person",
-      "role": "bystander",
-      "attribute": "upper_clothing",
-      "value": "black top",
-      "source": "cctv_frame_01",
-      "source_type": "cctv",
-      "viewpoint": "CCTV camera",
-      "quote": "",
-      "hedged": false,
-      "base_confidence": 0.85,
-      "confidence": 0.85,
-      "support": [
-        "cctv"
-      ]
-    },
-    {
-      "fact_id": "f023",
-      "entity": "person_4",
-      "entity_type": "person",
-      "role": "bystander",
-      "attribute": "headwear",
-      "value": "white beanie",
-      "source": "cctv_frame_01",
-      "source_type": "cctv",
-      "viewpoint": "CCTV camera",
-      "quote": "",
-      "hedged": false,
-      "base_confidence": 0.85,
-      "confidence": 0.85,
-      "support": [
-        "cctv"
-      ]
-    },
-    {
-      "fact_id": "f024",
-      "entity": "person_3",
-      "entity_type": "person",
-      "role": "bystander",
-      "attribute": "upper_clothing",
-      "value": "blue shirt",
-      "source": "cctv_frame_02",
-      "source_type": "cctv",
-      "viewpoint": "CCTV camera",
-      "quote": "",
-      "hedged": false,
-      "base_confidence": 0.85,
-      "confidence": 0.85,
-      "support": [
-        "cctv"
-      ]
-    },
-    {
       "fact_id": "f025",
-      "entity": "person_3",
-      "entity_type": "person",
-      "role": "bystander",
-      "attribute": "upper_clothing",
-      "value": "blue shirt",
-      "source": "cctv_frame_03",
-      "source_type": "cctv",
-      "viewpoint": "CCTV camera",
-      "quote": "",
-      "hedged": false,
-      "base_confidence": 0.85,
-      "confidence": 0.85,
+      "entity": "vehicle_1",
+      "entity_type": "vehicle",
+      "role": "none",
+      "attribute": "color",
+      "value": "white",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "a white van",
+      "hedged": true,
+      "base_confidence": 0.45,
+      "confidence": 0.45,
       "support": [
-        "cctv"
+        "witness_C"
       ]
     },
     {
       "fact_id": "f026",
-      "entity": "person_3",
-      "entity_type": "person",
-      "role": "bystander",
-      "attribute": "lower_clothing",
-      "value": "khaki shorts",
-      "source": "cctv_frame_03",
-      "source_type": "cctv",
-      "viewpoint": "CCTV camera",
-      "quote": "",
-      "hedged": false,
-      "base_confidence": 0.85,
-      "confidence": 0.85,
+      "entity": "vehicle_1",
+      "entity_type": "vehicle",
+      "role": "none",
+      "attribute": "position",
+      "value": "nearby",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "nearby",
+      "hedged": true,
+      "base_confidence": 0.45,
+      "confidence": 0.45,
       "support": [
-        "cctv"
+        "witness_C"
       ]
     },
     {
       "fact_id": "f027",
-      "entity": "person_3",
+      "entity": "person_1",
       "entity_type": "person",
-      "role": "bystander",
+      "role": "suspect",
       "attribute": "upper_clothing",
       "value": "blue shirt",
-      "source": "cctv_frame_04",
+      "source": "cctv_frame_01",
       "source_type": "cctv",
       "viewpoint": "CCTV camera",
       "quote": "",
       "hedged": false,
       "base_confidence": 0.85,
-      "confidence": 0.85,
+      "confidence": 0.99,
       "support": [
-        "cctv"
+        "cctv",
+        "witness_A"
       ]
     },
     {
       "fact_id": "f028",
-      "entity": "person_3",
+      "entity": "person_1",
       "entity_type": "person",
-      "role": "bystander",
+      "role": "suspect",
       "attribute": "lower_clothing",
-      "value": "khaki pants",
-      "source": "cctv_frame_04",
+      "value": "khaki shorts",
+      "source": "cctv_frame_01",
       "source_type": "cctv",
       "viewpoint": "CCTV camera",
       "quote": "",
@@ -530,8 +530,8 @@
       "entity_type": "person",
       "role": "bystander",
       "attribute": "upper_clothing",
-      "value": "blue shirt",
-      "source": "cctv_frame_05",
+      "value": "black top",
+      "source": "cctv_frame_01",
       "source_type": "cctv",
       "viewpoint": "CCTV camera",
       "quote": "",
@@ -547,9 +547,9 @@
       "entity": "person_3",
       "entity_type": "person",
       "role": "bystander",
-      "attribute": "upper_clothing",
-      "value": "blue shirt",
-      "source": "cctv_frame_06",
+      "attribute": "headwear",
+      "value": "white beanie",
+      "source": "cctv_frame_01",
       "source_type": "cctv",
       "viewpoint": "CCTV camera",
       "quote": "",
@@ -562,9 +562,140 @@
     },
     {
       "fact_id": "f031",
-      "entity": "person_3",
+      "entity": "person_1",
       "entity_type": "person",
-      "role": "bystander",
+      "role": "suspect",
+      "attribute": "upper_clothing",
+      "value": "blue shirt",
+      "source": "cctv_frame_02",
+      "source_type": "cctv",
+      "viewpoint": "CCTV camera",
+      "quote": "",
+      "hedged": false,
+      "base_confidence": 0.85,
+      "confidence": 0.99,
+      "support": [
+        "cctv",
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f032",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "upper_clothing",
+      "value": "blue shirt",
+      "source": "cctv_frame_03",
+      "source_type": "cctv",
+      "viewpoint": "CCTV camera",
+      "quote": "",
+      "hedged": false,
+      "base_confidence": 0.85,
+      "confidence": 0.99,
+      "support": [
+        "cctv",
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f033",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "lower_clothing",
+      "value": "khaki shorts",
+      "source": "cctv_frame_03",
+      "source_type": "cctv",
+      "viewpoint": "CCTV camera",
+      "quote": "",
+      "hedged": false,
+      "base_confidence": 0.85,
+      "confidence": 0.85,
+      "support": [
+        "cctv"
+      ]
+    },
+    {
+      "fact_id": "f034",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "upper_clothing",
+      "value": "blue shirt",
+      "source": "cctv_frame_04",
+      "source_type": "cctv",
+      "viewpoint": "CCTV camera",
+      "quote": "",
+      "hedged": false,
+      "base_confidence": 0.85,
+      "confidence": 0.99,
+      "support": [
+        "cctv",
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f035",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "lower_clothing",
+      "value": "khaki pants",
+      "source": "cctv_frame_04",
+      "source_type": "cctv",
+      "viewpoint": "CCTV camera",
+      "quote": "",
+      "hedged": false,
+      "base_confidence": 0.85,
+      "confidence": 0.85,
+      "support": [
+        "cctv"
+      ]
+    },
+    {
+      "fact_id": "f036",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "upper_clothing",
+      "value": "blue shirt",
+      "source": "cctv_frame_05",
+      "source_type": "cctv",
+      "viewpoint": "CCTV camera",
+      "quote": "",
+      "hedged": false,
+      "base_confidence": 0.85,
+      "confidence": 0.99,
+      "support": [
+        "cctv",
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f037",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "upper_clothing",
+      "value": "blue shirt",
+      "source": "cctv_frame_06",
+      "source_type": "cctv",
+      "viewpoint": "CCTV camera",
+      "quote": "",
+      "hedged": false,
+      "base_confidence": 0.85,
+      "confidence": 0.99,
+      "support": [
+        "cctv",
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f038",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
       "attribute": "lower_clothing",
       "value": "khaki shorts",
       "source": "cctv_frame_06",

@@ -9,8 +9,8 @@
       },
       "description": "person_1.upper_clothing = 'black vest' (witness_A, witness_C); person_2.headwear = 'white cap' (cctv_frame_01, cctv_frame_02, cctv_frame_05, cctv_frame_06)"
     },
-    "prompt": "CCTV photo, wide angle, realistic, exactly 3 people. a store; a person wearing black vest and black hat, threatening the man behind the counter; a person wearing grey coat, just nearby; a person wearing grey jacket and white cap, being robbed, behind the counter",
-    "seed": 42,
+    "prompt": "CCTV photo, wide angle, realistic, exactly 3 people. a store; a person wearing black vest and black hat, threatening the man behind the counter; a person wearing grey coat, was just nearby; a person wearing grey jacket and white cap, being robbed, behind the counter",
+    "seed": 45,
     "included": [
       "f001",
       "f002",
@@ -84,79 +84,79 @@
         }
       ],
       "matched": {
-        "person_1": {
+        "person_3": {
           "label": "person",
-          "score": 0.363,
+          "score": 0.368,
           "box": [
-            758.7724761962891,
-            291.98187255859375,
-            1024,
-            1024
+            342.2795181274414,
+            346.2219009399414,
+            520.5583114624023,
+            570.9316596984863
           ],
           "scores": {
-            "bag": 0.112,
-            "car": 0.026,
-            "dog": 0.016,
-            "gun": 0.04,
-            "knife": 0.03,
-            "motorcycle": 0.014,
-            "person": 0.304,
-            "person wearing black vest": 0.363,
-            "person wearing grey coat": 0.305,
-            "person wearing grey jacket": 0.352
+            "bag": 0.023,
+            "car": 0.005,
+            "dog": 0.017,
+            "gun": 0.027,
+            "knife": 0.031,
+            "motorcycle": 0.005,
+            "person": 0.346,
+            "person wearing black vest": 0.216,
+            "person wearing grey coat": 0.368,
+            "person wearing grey jacket": 0.329
           },
-          "query": "person wearing black vest",
-          "entity_score": 0.363
+          "query": "person wearing grey coat",
+          "entity_score": 0.368
         },
         "person_2": {
           "label": "person",
-          "score": 0.279,
+          "score": 0.472,
           "box": [
-            303.7505874633789,
-            271.01873779296875,
-            614.0190963745117,
-            892.0106811523438
+            48.224525451660156,
+            450.7807312011719,
+            300.7074203491211,
+            1000.5574035644531
           ],
           "scores": {
-            "bag": 0.032,
+            "bag": 0.06,
             "car": 0.007,
-            "dog": 0.008,
-            "gun": 0.009,
-            "knife": 0.016,
-            "motorcycle": 0.006,
-            "person": 0.274,
-            "person wearing black vest": 0.174,
-            "person wearing grey coat": 0.264,
-            "person wearing grey jacket": 0.279
+            "dog": 0.022,
+            "gun": 0.013,
+            "knife": 0.009,
+            "motorcycle": 0.007,
+            "person": 0.317,
+            "person wearing black vest": 0.247,
+            "person wearing grey coat": 0.424,
+            "person wearing grey jacket": 0.472
           },
           "query": "person wearing grey jacket",
-          "entity_score": 0.279
+          "entity_score": 0.472
         }
       },
       "missing": [
-        "person_3"
+        "person_1"
       ],
       "hallucinated": [
         {
           "label": "person",
-          "score": 0.29,
+          "score": 0.344,
           "box": [
-            545.8705596923828,
-            349.44256591796875,
-            764.5195770263672,
-            973.7294311523438
+            718.5655212402344,
+            316.68121337890625,
+            926.1189270019531,
+            851.5551147460938
           ],
           "scores": {
-            "bag": 0.035,
-            "car": 0.009,
-            "dog": 0.011,
-            "gun": 0.014,
-            "knife": 0.016,
-            "motorcycle": 0.006,
-            "person": 0.29,
-            "person wearing black vest": 0.257,
-            "person wearing grey coat": 0.243,
-            "person wearing grey jacket": 0.26
+            "bag": 0.032,
+            "car": 0.007,
+            "dog": 0.018,
+            "gun": 0.015,
+            "knife": 0.014,
+            "motorcycle": 0.007,
+            "person": 0.344,
+            "person wearing black vest": 0.161,
+            "person wearing grey coat": 0.281,
+            "person wearing grey jacket": 0.291
           },
           "reason": "extra person (3 in image, 3 drawn)"
         }
@@ -178,7 +178,7 @@
           "entity": "person_1",
           "attribute": "upper_clothing",
           "question": "Is there a person wearing black vest?",
-          "answer": true
+          "answer": false
         },
         {
           "entity": "person_3",
@@ -199,9 +199,9 @@
           "answer": false
         }
       ],
-      "attribute_accuracy": 0.8
+      "attribute_accuracy": 0.6
     },
-    "first_attempt_hallucinations": 1,
+    "first_attempt_hallucinations": 2,
     "final_hallucinations": 1,
     "attempts": 5,
     "raw_path": "/home/marams/crime-recon/outputs/robbery044/H1_raw.png",
@@ -209,40 +209,10 @@
     "attempt_log": [
       {
         "seed": 42,
-        "kept": true,
-        "hallucinated": [
-          "extra person (3 in image, 3 drawn)"
-        ],
-        "missing": [
-          "person_3"
-        ],
-        "person_count": {
-          "drawn": 3,
-          "in_image": 3
-        },
-        "attribute_accuracy": 0.8,
-        "matched": {
-          "person_1": [
-            759,
-            292,
-            1024,
-            1024
-          ],
-          "person_2": [
-            304,
-            271,
-            614,
-            892
-          ]
-        }
-      },
-      {
-        "seed": 43,
         "kept": false,
         "hallucinated": [
-          "extra person (4 in image, 3 drawn)",
-          "extra person (4 in image, 3 drawn)",
-          "extra person (4 in image, 3 drawn)"
+          "extra person (3 in image, 3 drawn)",
+          "extra person (3 in image, 3 drawn)"
         ],
         "missing": [
           "person_1",
@@ -250,15 +220,39 @@
         ],
         "person_count": {
           "drawn": 3,
-          "in_image": 4
+          "in_image": 3
         },
         "attribute_accuracy": null,
         "matched": {
           "person_2": [
-            257,
-            266,
-            432,
-            703
+            724,
+            359,
+            1024,
+            1024
+          ]
+        }
+      },
+      {
+        "seed": 43,
+        "kept": false,
+        "hallucinated": [
+          "extra person (2 in image, 3 drawn)"
+        ],
+        "missing": [
+          "person_1",
+          "person_3"
+        ],
+        "person_count": {
+          "drawn": 3,
+          "in_image": 2
+        },
+        "attribute_accuracy": null,
+        "matched": {
+          "person_2": [
+            271,
+            270,
+            447,
+            692
           ]
         }
       },
@@ -279,40 +273,39 @@
         "attribute_accuracy": null,
         "matched": {
           "person_2": [
-            418,
-            238,
+            436,
+            227,
             1023,
-            1023
+            1024
           ]
         }
       },
       {
         "seed": 45,
-        "kept": false,
+        "kept": true,
         "hallucinated": [
-          "extra person (4 in image, 3 drawn)",
-          "extra person (4 in image, 3 drawn)"
+          "extra person (3 in image, 3 drawn)"
         ],
         "missing": [
           "person_1"
         ],
         "person_count": {
           "drawn": 3,
-          "in_image": 4
+          "in_image": 3
         },
-        "attribute_accuracy": null,
+        "attribute_accuracy": 0.6,
         "matched": {
           "person_3": [
-            343,
-            345,
+            342,
+            346,
             521,
-            582
+            571
           ],
           "person_2": [
-            81,
-            471,
-            293,
-            1007
+            48,
+            451,
+            301,
+            1001
           ]
         }
       },
@@ -320,30 +313,25 @@
         "seed": 46,
         "kept": false,
         "hallucinated": [
-          "extra person (4 in image, 3 drawn)",
-          "extra person (4 in image, 3 drawn)",
+          "extra person (3 in image, 3 drawn)",
+          "extra person (3 in image, 3 drawn)",
           "gun"
         ],
         "missing": [
-          "person_1"
+          "person_1",
+          "person_3"
         ],
         "person_count": {
           "drawn": 3,
-          "in_image": 4
+          "in_image": 3
         },
         "attribute_accuracy": null,
         "matched": {
-          "person_3": [
-            534,
-            272,
-            749,
-            593
-          ],
           "person_2": [
-            88,
+            538,
             272,
-            289,
-            564
+            758,
+            593
           ]
         }
       }
@@ -359,7 +347,7 @@
       },
       "description": "person_1.upper_clothing = 'red vest' (witness_B); person_2.headwear = 'light-colored cap' (cctv_frame_04)"
     },
-    "prompt": "CCTV photo, wide angle, realistic, exactly 3 people. a store; a person wearing red vest and black hat, threatening the man behind the counter; a person wearing grey coat, just nearby; a person wearing grey jacket and light-colored cap, being robbed, behind the counter",
+    "prompt": "CCTV photo, wide angle, realistic, exactly 3 people. a store; a person wearing red vest and black hat, threatening the man behind the counter; a person wearing grey coat, was just nearby; a person wearing grey jacket and light-colored cap, being robbed, behind the counter",
     "seed": 146,
     "included": [
       "f001",
@@ -436,99 +424,99 @@
       "matched": {
         "person_1": {
           "label": "person",
-          "score": 0.401,
+          "score": 0.329,
           "box": [
-            681.8410720825195,
-            284.45660400390625,
-            896.2974548339844,
-            966.7291870117188
+            670.0086364746094,
+            305.71435546875,
+            899.4217987060547,
+            983.6347351074219
           ],
           "scores": {
-            "bag": 0.021,
-            "car": 0.009,
-            "dog": 0.007,
-            "gun": 0.023,
-            "knife": 0.019,
-            "motorcycle": 0.009,
-            "person": 0.297,
-            "person wearing grey coat": 0.203,
-            "person wearing grey jacket": 0.183,
-            "person wearing red vest": 0.401
+            "bag": 0.123,
+            "car": 0.012,
+            "dog": 0.033,
+            "gun": 0.078,
+            "knife": 0.03,
+            "motorcycle": 0.02,
+            "person": 0.302,
+            "person wearing grey coat": 0.262,
+            "person wearing grey jacket": 0.259,
+            "person wearing red vest": 0.329
           },
           "query": "person wearing red vest",
-          "entity_score": 0.401
+          "entity_score": 0.329
         },
         "person_3": {
           "label": "person",
-          "score": 0.437,
+          "score": 0.373,
           "box": [
-            490.735897064209,
-            325.2617950439453,
-            575.9341773986816,
-            428.34080505371094
+            105.9726791381836,
+            245.7318115234375,
+            352.8999710083008,
+            771.9620361328125
           ],
           "scores": {
-            "bag": 0.062,
-            "car": 0.012,
-            "dog": 0.023,
-            "gun": 0.023,
-            "knife": 0.012,
-            "motorcycle": 0.008,
-            "person": 0.317,
-            "person wearing grey coat": 0.437,
-            "person wearing grey jacket": 0.435,
-            "person wearing red vest": 0.151
+            "bag": 0.045,
+            "car": 0.006,
+            "dog": 0.007,
+            "gun": 0.006,
+            "knife": 0.015,
+            "motorcycle": 0.003,
+            "person": 0.373,
+            "person wearing grey coat": 0.278,
+            "person wearing grey jacket": 0.268,
+            "person wearing red vest": 0.104
           },
           "query": "person wearing grey coat",
-          "entity_score": 0.437
+          "entity_score": 0.278
         },
         "person_2": {
           "label": "person",
-          "score": 0.334,
+          "score": 0.419,
           "box": [
-            107.4617919921875,
-            224.71755981445312,
-            335.36700439453125,
-            762.4137268066406
+            479.91450119018555,
+            305.1636199951172,
+            575.4238033294678,
+            424.95613861083984
           ],
           "scores": {
-            "bag": 0.018,
-            "car": 0.008,
-            "dog": 0.01,
-            "gun": 0.009,
-            "knife": 0.014,
-            "motorcycle": 0.006,
-            "person": 0.334,
-            "person wearing grey coat": 0.287,
-            "person wearing grey jacket": 0.312,
-            "person wearing red vest": 0.095
+            "bag": 0.084,
+            "car": 0.022,
+            "dog": 0.033,
+            "gun": 0.046,
+            "knife": 0.022,
+            "motorcycle": 0.022,
+            "person": 0.274,
+            "person wearing grey coat": 0.415,
+            "person wearing grey jacket": 0.419,
+            "person wearing red vest": 0.149
           },
           "query": "person wearing grey jacket",
-          "entity_score": 0.312
+          "entity_score": 0.419
         }
       },
       "missing": [],
       "hallucinated": [
         {
           "label": "person",
-          "score": 0.316,
+          "score": 0.322,
           "box": [
-            543.5571517944336,
-            293.8869171142578,
-            675.5257339477539,
-            671.9889984130859
+            438.2479553222656,
+            304.026065826416,
+            508.7757873535156,
+            418.908504486084
           ],
           "scores": {
-            "bag": 0.02,
-            "car": 0.01,
-            "dog": 0.007,
+            "bag": 0.018,
+            "car": 0.007,
+            "dog": 0.016,
             "gun": 0.01,
-            "knife": 0.007,
-            "motorcycle": 0.004,
+            "knife": 0.017,
+            "motorcycle": 0.006,
             "person": 0.304,
-            "person wearing grey coat": 0.316,
-            "person wearing grey jacket": 0.288,
-            "person wearing red vest": 0.144
+            "person wearing grey coat": 0.312,
+            "person wearing grey jacket": 0.322,
+            "person wearing red vest": 0.08
           },
           "reason": "extra person (4 in image, 3 drawn)"
         }
@@ -568,10 +556,10 @@
           "entity": "person_2",
           "attribute": "headwear",
           "question": "Is there a person wearing light-colored cap?",
-          "answer": false
+          "answer": true
         }
       ],
-      "attribute_accuracy": 0.6
+      "attribute_accuracy": 0.8
     },
     "first_attempt_hallucinations": 2,
     "final_hallucinations": 1,
@@ -596,16 +584,16 @@
         "attribute_accuracy": null,
         "matched": {
           "person_1": [
-            525,
-            362,
-            628,
-            602
+            504,
+            361,
+            622,
+            628
           ],
           "person_3": [
-            208,
-            363,
-            533,
-            1024
+            701,
+            386,
+            856,
+            654
           ]
         }
       },
@@ -614,10 +602,11 @@
         "kept": false,
         "hallucinated": [
           "extra person (3 in image, 3 drawn)",
-          "gun"
+          "extra person (3 in image, 3 drawn)"
         ],
         "missing": [
-          "person_1"
+          "person_1",
+          "person_2"
         ],
         "person_count": {
           "drawn": 3,
@@ -626,16 +615,10 @@
         "attribute_accuracy": null,
         "matched": {
           "person_3": [
-            0,
-            319,
-            127,
-            533
-          ],
-          "person_2": [
-            468,
-            522,
-            677,
-            1019
+            501,
+            542,
+            687,
+            1002
           ]
         }
       },
@@ -655,16 +638,16 @@
         "attribute_accuracy": null,
         "matched": {
           "person_3": [
-            542,
-            279,
-            719,
-            825
+            752,
+            251,
+            996,
+            835
           ],
           "person_2": [
-            215,
-            328,
-            509,
-            812
+            210,
+            287,
+            507,
+            758
           ]
         }
       },
@@ -687,10 +670,10 @@
         "attribute_accuracy": null,
         "matched": {
           "person_3": [
-            40,
-            388,
-            218,
-            951
+            39,
+            402,
+            169,
+            949
           ]
         }
       },
@@ -705,25 +688,25 @@
           "drawn": 3,
           "in_image": 4
         },
-        "attribute_accuracy": 0.6,
+        "attribute_accuracy": 0.8,
         "matched": {
           "person_1": [
-            682,
-            284,
-            896,
-            967
+            670,
+            306,
+            899,
+            984
           ],
           "person_3": [
-            491,
-            325,
-            576,
-            428
+            106,
+            246,
+            353,
+            772
           ],
           "person_2": [
-            107,
-            225,
-            335,
-            762
+            480,
+            305,
+            575,
+            425
           ]
         }
       }

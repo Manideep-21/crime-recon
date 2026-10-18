@@ -1062,3 +1062,21 @@ def test_hedge_pass_adds_new_entities_and_only_runs_on_hedged_sentences():
     assert len(weapons) == 1 and weapons[0] != "e1", out["entities"]
     assert [(f["attribute"], f["value"], f["hedged"]) for f in out["facts"] if f["entity"] == weapons[0]] == [
         ("weapon_type", "knife", True)], out["facts"]   # "he" has no content word: dropped by grounding
+
+
+def test_hedge_pass_never_gives_an_extracted_detail_to_a_second_entity():
+    from extraction import extract_statement
+    statement = "The robber, wearing dark clothes, left. I think another man, maybe near me, had a grey coat on."
+    first = {"entities": [{"id": "e1", "entity_type": "person", "role": "suspect", "description": "the robber"},
+                          {"id": "e2", "entity_type": "person", "role": "bystander", "description": "another man"}],
+             "facts": [{"entity": "e1", "attribute": "upper_clothing", "value": "dark clothes", "quote": "wearing dark clothes", "hedged": False},
+                       {"entity": "e2", "attribute": "upper_clothing", "value": "grey coat", "quote": "had a grey coat on", "hedged": True}]}
+    again = {"entities": [{"id": "n1", "entity_type": "person", "role": "bystander", "description": "another man"}],
+             "facts": [{"entity": "n1", "attribute": "upper_clothing", "value": "grey coat", "quote": "had a grey coat on", "hedged": True}]}
+    restore = _fake_llm([first, again])
+    try:
+        out = extract_statement(statement, "witness_C")
+    finally:
+        restore()
+    assert [f["value"] for f in out["facts"]].count("grey coat") == 1, out["facts"]
+    assert len(out["entities"]) == 2, out["entities"]

@@ -20,7 +20,7 @@
         {
           "value": "blue jacket",
           "fact_ids": [
-            "f012"
+            "f013"
           ],
           "sources": [
             "witness_B"
@@ -49,6 +49,12 @@
     }
   ],
   "gaps": [
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "position"
+    },
     {
       "entity": "person_2",
       "entity_type": "person",
@@ -83,6 +89,45 @@
   "questions": [
     {
       "witness": "witness_A",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "position",
+      "text": "Where exactly was the person you described (\"a tall man\") when you saw them?",
+      "kind": "gap",
+      "viewpoint": "inside the store, near the snacks aisle, about 5 metres away",
+      "id": "q001",
+      "reasons": [],
+      "passed": true
+    },
+    {
+      "witness": "witness_B",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "position",
+      "text": "Where exactly was the person you described (\"he had a black backpack on his shoulder\") when you saw them?",
+      "kind": "gap",
+      "viewpoint": "outside on the pavement, looking in through the front window",
+      "id": "q002",
+      "reasons": [],
+      "passed": true
+    },
+    {
+      "witness": "witness_C",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "position",
+      "text": "Where exactly was the person you described (\"a slim guy\") when you saw them?",
+      "kind": "gap",
+      "viewpoint": "in the parking lot, sitting in a car",
+      "id": "q003",
+      "reasons": [],
+      "passed": true
+    },
+    {
+      "witness": "witness_A",
       "entity": "person_2",
       "entity_type": "person",
       "role": "victim",
@@ -90,7 +135,7 @@
       "text": "What was the person you described (\"a young woman in a green uniform shirt\") wearing on their legs?",
       "kind": "gap",
       "viewpoint": "inside the store, near the snacks aisle, about 5 metres away",
-      "id": "q001",
+      "id": "q004",
       "reasons": [],
       "passed": true
     },
@@ -103,7 +148,7 @@
       "text": "How would you describe the height of the person you described (\"a young woman in a green uniform shirt\")?",
       "kind": "gap",
       "viewpoint": "inside the store, near the snacks aisle, about 5 metres away",
-      "id": "q002",
+      "id": "q005",
       "reasons": [],
       "passed": true
     },
@@ -116,7 +161,7 @@
       "text": "How would you describe the body build of the person you described (\"a young woman in a green uniform shirt\")?",
       "kind": "gap",
       "viewpoint": "inside the store, near the snacks aisle, about 5 metres away",
-      "id": "q003",
+      "id": "q006",
       "reasons": [],
       "passed": true
     },
@@ -129,7 +174,7 @@
       "text": "Where exactly was the person you described (\"a young woman in a green uniform shirt\") when you saw them?",
       "kind": "gap",
       "viewpoint": "inside the store, near the snacks aisle, about 5 metres away",
-      "id": "q004",
+      "id": "q007",
       "reasons": [],
       "passed": true
     },
@@ -142,7 +187,7 @@
       "text": "What time of day was it?",
       "kind": "gap",
       "viewpoint": "inside the store, near the snacks aisle, about 5 metres away",
-      "id": "q005",
+      "id": "q008",
       "reasons": [],
       "passed": true
     },
@@ -155,7 +200,7 @@
       "text": "What time of day was it?",
       "kind": "gap",
       "viewpoint": "outside on the pavement, looking in through the front window",
-      "id": "q006",
+      "id": "q009",
       "reasons": [],
       "passed": true
     },
@@ -168,7 +213,7 @@
       "text": "What time of day was it?",
       "kind": "gap",
       "viewpoint": "in the parking lot, sitting in a car",
-      "id": "q007",
+      "id": "q010",
       "reasons": [],
       "passed": true
     },
@@ -181,7 +226,7 @@
       "text": "In your own words, please describe the upper-body clothing of the person you described (\"a tall man\") again.",
       "kind": "conflict_recheck",
       "viewpoint": "inside the store, near the snacks aisle, about 5 metres away",
-      "id": "q008",
+      "id": "q011",
       "reasons": [],
       "passed": true
     },
@@ -194,7 +239,7 @@
       "text": "Are you sure it wasn't blue jacket?",
       "kind": "baseline",
       "viewpoint": "inside the store, near the snacks aisle, about 5 metres away",
-      "id": "q009",
+      "id": "q012",
       "reasons": [
         "introduces detail(s) the witness never mentioned: blue, jacket",
         "closed / suggestive phrasing pushes a particular answer"
@@ -210,7 +255,7 @@
       "text": "In your own words, please describe the upper-body clothing of the person you described (\"he had a black backpack on his shoulder\") again.",
       "kind": "conflict_recheck",
       "viewpoint": "outside on the pavement, looking in through the front window",
-      "id": "q010",
+      "id": "q013",
       "reasons": [],
       "passed": true
     },
@@ -223,7 +268,7 @@
       "text": "Are you sure it wasn't red hoodie?",
       "kind": "baseline",
       "viewpoint": "outside on the pavement, looking in through the front window",
-      "id": "q011",
+      "id": "q014",
       "reasons": [
         "introduces detail(s) the witness never mentioned: hoodie, red",
         "closed / suggestive phrasing pushes a particular answer"
@@ -239,7 +284,7 @@
       "text": "Did you also see the knife?",
       "kind": "baseline",
       "viewpoint": "inside the store, near the snacks aisle, about 5 metres away",
-      "id": "q012",
+      "id": "q015",
       "reasons": [
         "introduces detail(s) the witness never mentioned: knife",
         "closed / suggestive phrasing pushes a particular answer"
@@ -255,7 +300,7 @@
       "text": "Did you also see the knife?",
       "kind": "baseline",
       "viewpoint": "outside on the pavement, looking in through the front window",
-      "id": "q013",
+      "id": "q016",
       "reasons": [
         "introduces detail(s) the witness never mentioned: knife",
         "closed / suggestive phrasing pushes a particular answer"
@@ -271,7 +316,7 @@
       "text": "Did you also see the slim guy?",
       "kind": "baseline",
       "viewpoint": "inside the store, near the snacks aisle, about 5 metres away",
-      "id": "q014",
+      "id": "q017",
       "reasons": [
         "introduces detail(s) the witness never mentioned: guy, slim",
         "closed / suggestive phrasing pushes a particular answer"
@@ -287,7 +332,7 @@
       "text": "Did you also see the slim guy?",
       "kind": "baseline",
       "viewpoint": "outside on the pavement, looking in through the front window",
-      "id": "q015",
+      "id": "q018",
       "reasons": [
         "introduces detail(s) the witness never mentioned: guy, slim",
         "closed / suggestive phrasing pushes a particular answer"

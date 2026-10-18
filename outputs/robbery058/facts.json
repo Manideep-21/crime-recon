@@ -11,7 +11,7 @@
       "source": "witness_A",
       "source_type": "witness",
       "viewpoint": "close by, inside, a few metres away",
-      "quote": "behind the counter",
+      "quote": "A woman behind the counter",
       "hedged": false,
       "base_confidence": 0.7,
       "confidence": 0.99,
@@ -34,9 +34,10 @@
       "quote": "put money in a bag",
       "hedged": false,
       "base_confidence": 0.7,
-      "confidence": 0.7,
+      "confidence": 0.9,
       "support": [
-        "witness_A"
+        "witness_A",
+        "witness_C"
       ]
     },
     {
@@ -136,17 +137,18 @@
       "entity": "person_2",
       "entity_type": "person",
       "role": "suspect",
-      "attribute": "action",
-      "value": "put the bag on the table",
+      "attribute": "carrying",
+      "value": "bag",
       "source": "witness_A",
       "source_type": "witness",
       "viewpoint": "close by, inside, a few metres away",
       "quote": "put the bag on the table",
       "hedged": true,
       "base_confidence": 0.45,
-      "confidence": 0.45,
+      "confidence": 0.65,
       "support": [
-        "witness_A"
+        "witness_A",
+        "witness_C"
       ]
     },
     {
@@ -187,6 +189,42 @@
     },
     {
       "fact_id": "f011",
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "headwear",
+      "value": "mask",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "close by, inside, a few metres away",
+      "quote": "maybe wearing a mask",
+      "hedged": true,
+      "base_confidence": 0.45,
+      "confidence": 0.45,
+      "support": [
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f012",
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "held a weapon",
+      "source": "witness_A",
+      "source_type": "witness",
+      "viewpoint": "close by, inside, a few metres away",
+      "quote": "The robber held a weapon",
+      "hedged": true,
+      "base_confidence": 0.45,
+      "confidence": 0.45,
+      "support": [
+        "witness_A"
+      ]
+    },
+    {
+      "fact_id": "f013",
       "entity": "person_1",
       "entity_type": "person",
       "role": "victim",
@@ -206,7 +244,7 @@
       ]
     },
     {
-      "fact_id": "f012",
+      "fact_id": "f014",
       "entity": "person_1",
       "entity_type": "person",
       "role": "victim",
@@ -224,7 +262,7 @@
       ]
     },
     {
-      "fact_id": "f013",
+      "fact_id": "f015",
       "entity": "person_1",
       "entity_type": "person",
       "role": "victim",
@@ -243,7 +281,7 @@
       ]
     },
     {
-      "fact_id": "f014",
+      "fact_id": "f016",
       "entity": "person_1",
       "entity_type": "person",
       "role": "victim",
@@ -261,7 +299,7 @@
       ]
     },
     {
-      "fact_id": "f015",
+      "fact_id": "f017",
       "entity": "person_2",
       "entity_type": "person",
       "role": "suspect",
@@ -279,7 +317,7 @@
       ]
     },
     {
-      "fact_id": "f016",
+      "fact_id": "f018",
       "entity": "person_2",
       "entity_type": "person",
       "role": "suspect",
@@ -297,7 +335,7 @@
       ]
     },
     {
-      "fact_id": "f017",
+      "fact_id": "f019",
       "entity": "person_2",
       "entity_type": "person",
       "role": "suspect",
@@ -315,7 +353,7 @@
       ]
     },
     {
-      "fact_id": "f018",
+      "fact_id": "f020",
       "entity": "scene",
       "entity_type": "location",
       "role": "none",
@@ -334,7 +372,7 @@
       ]
     },
     {
-      "fact_id": "f019",
+      "fact_id": "f021",
       "entity": "person_1",
       "entity_type": "person",
       "role": "victim",
@@ -352,7 +390,7 @@
       ]
     },
     {
-      "fact_id": "f020",
+      "fact_id": "f022",
       "entity": "person_1",
       "entity_type": "person",
       "role": "victim",
@@ -372,8 +410,8 @@
       ]
     },
     {
-      "fact_id": "f021",
-      "entity": "person_3",
+      "fact_id": "f023",
+      "entity": "person_2",
       "entity_type": "person",
       "role": "suspect",
       "attribute": "action",
@@ -390,8 +428,8 @@
       ]
     },
     {
-      "fact_id": "f022",
-      "entity": "person_3",
+      "fact_id": "f024",
+      "entity": "person_2",
       "entity_type": "person",
       "role": "suspect",
       "attribute": "carrying",
@@ -402,14 +440,15 @@
       "quote": "I'm pretty sure he put a bag on the table",
       "hedged": true,
       "base_confidence": 0.575,
-      "confidence": 0.575,
+      "confidence": 0.775,
       "support": [
+        "witness_A",
         "witness_C"
       ]
     },
     {
-      "fact_id": "f023",
-      "entity": "person_3",
+      "fact_id": "f025",
+      "entity": "person_2",
       "entity_type": "person",
       "role": "suspect",
       "attribute": "action",
@@ -426,7 +465,43 @@
       ]
     },
     {
-      "fact_id": "f024",
+      "fact_id": "f026",
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "upper_clothing",
+      "value": "black",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "A man in black",
+      "hedged": true,
+      "base_confidence": 0.575,
+      "confidence": 0.575,
+      "support": [
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f027",
+      "entity": "person_3",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "upper_clothing",
+      "value": "grey coat",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "Another man in a grey coat",
+      "hedged": true,
+      "base_confidence": 0.45,
+      "confidence": 0.45,
+      "support": [
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f028",
       "entity": "scene",
       "entity_type": "location",
       "role": "none",
@@ -445,12 +520,85 @@
       ]
     },
     {
-      "fact_id": "f025",
-      "entity": "person_4",
+      "fact_id": "f029",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "action",
+      "value": "put a bag on the table",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "I'm pretty sure he put a bag on the table",
+      "hedged": true,
+      "base_confidence": 0.575,
+      "confidence": 0.775,
+      "support": [
+        "witness_A",
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f030",
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "action",
+      "value": "threatened her with a gun",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "I'm pretty sure he put a bag on the table and threatened her with a gun",
+      "hedged": true,
+      "base_confidence": 0.575,
+      "confidence": 0.575,
+      "support": [
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f031",
+      "entity": "weapon_2",
+      "entity_type": "weapon",
+      "role": "none",
+      "attribute": "weapon_type",
+      "value": "gun",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "threatened her with a gun",
+      "hedged": true,
+      "base_confidence": 0.575,
+      "confidence": 0.575,
+      "support": [
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f032",
+      "entity": "weapon_3",
+      "entity_type": "weapon",
+      "role": "none",
+      "attribute": "weapon_type",
+      "value": "gun",
+      "source": "witness_C",
+      "source_type": "witness",
+      "viewpoint": "brief glimpse while passing by",
+      "quote": "I'm not sure if it was a gun",
+      "hedged": true,
+      "base_confidence": 0.45,
+      "confidence": 0.45,
+      "support": [
+        "witness_C"
+      ]
+    },
+    {
+      "fact_id": "f033",
+      "entity": "person_3",
       "entity_type": "person",
       "role": "bystander",
-      "attribute": "position",
-      "value": "nearby",
+      "attribute": "action",
+      "value": "just nearby",
       "source": "witness_C",
       "source_type": "witness",
       "viewpoint": "brief glimpse while passing by",
@@ -463,7 +611,7 @@
       ]
     },
     {
-      "fact_id": "f026",
+      "fact_id": "f034",
       "entity": "person_1",
       "entity_type": "person",
       "role": "victim",
@@ -482,7 +630,7 @@
       ]
     },
     {
-      "fact_id": "f027",
+      "fact_id": "f035",
       "entity": "person_1",
       "entity_type": "person",
       "role": "victim",
@@ -501,7 +649,7 @@
       ]
     },
     {
-      "fact_id": "f028",
+      "fact_id": "f036",
       "entity": "person_1",
       "entity_type": "person",
       "role": "victim",
@@ -520,7 +668,7 @@
       ]
     },
     {
-      "fact_id": "f029",
+      "fact_id": "f037",
       "entity": "person_1",
       "entity_type": "person",
       "role": "victim",
@@ -538,7 +686,7 @@
       ]
     },
     {
-      "fact_id": "f030",
+      "fact_id": "f038",
       "entity": "person_1",
       "entity_type": "person",
       "role": "victim",
@@ -556,7 +704,7 @@
       ]
     },
     {
-      "fact_id": "f031",
+      "fact_id": "f039",
       "entity": "person_1",
       "entity_type": "person",
       "role": "victim",
@@ -575,7 +723,7 @@
       ]
     },
     {
-      "fact_id": "f032",
+      "fact_id": "f040",
       "entity": "person_1",
       "entity_type": "person",
       "role": "victim",
