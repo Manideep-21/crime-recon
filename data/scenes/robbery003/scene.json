@@ -1,0 +1,61 @@
+{
+  "title": "Robbery003_x264 (UCF-Crime, UCA caption)",
+  "cctv_frames": [],
+  "held_out": true,
+  "source": {
+    "dataset": "UCF-Crime + UCA (train split)",
+    "video": "Robbery003_x264.mp4",
+    "window": [
+      0.5,
+      32.7
+    ],
+    "uca_sentences": [
+      "A man wearing a hat and a black and white plaid shirt was leaning over the counter and groping for something.",
+      "The man took out a black pistol and pointed it at the man in black at the opposite counter.",
+      "The man at the counter turned around",
+      "The man with the gun took the gun back.",
+      "The man in plaid shirt took away a bottle of Coke on the counter",
+      "The man in plaid shirt took what the man at the counter handed him and turned around to leave."
+    ],
+    "uca_timestamps": [
+      [
+        0.5,
+        10.3
+      ],
+      [
+        10.3,
+        14.2
+      ],
+      [
+        15.5,
+        18.2
+      ],
+      [
+        18.2,
+        19.9
+      ],
+      [
+        23.9,
+        27.6
+      ],
+      [
+        27.6,
+        32.7
+      ]
+    ]
+  },
+  "witnesses": {
+    "witness_A": {
+      "viewpoint": "close by, inside, a few metres away",
+      "statement": "I saw a man leaning over the counter, took a bottle of Coke, and turned around to leave. I'm pretty sure he was wearing a black and white plaid shirt and a hat. He took out a black pistol and pointed it at the man in black. The man behind the counter turned around, and another man nearby also turned around."
+    },
+    "witness_B": {
+      "viewpoint": "far away, looking in from outside",
+      "statement": "I saw a man who robbed the place. He was wearing a red and white plaid shirt and was leaning over the counter. He groped for something and took away a bottle of Coke. He took what the man at the counter handed him and then turned around to leave. I'm not sure if he took out a black pistol or pointed it at the man in black. The man who was being robbed turned around. Another man who was just nearby turned around, but I'm not sure about what he did."
+    },
+    "witness_C": {
+      "viewpoint": "brief glimpse while passing by",
+      "statement": "I saw a man who robbed the place. He was wearing a black and white plaid shirt and a hat. He took away a bottle of Coke and what the man at the counter handed him. I think he leaned over the counter and maybe took out a black pistol. The man at the counter turned around, and another man nearby also turned around. I'm not sure if there was a weapon, but I think it was a knife."
+    }
+  }
+}

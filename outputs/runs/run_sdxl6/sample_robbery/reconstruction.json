@@ -1,0 +1,626 @@
+[
+  {
+    "hypothesis": {
+      "id": "H1",
+      "name": "Most supported version",
+      "choices": {
+        "c1": 0
+      },
+      "description": "person_1.upper_clothing = 'red hoodie' (witness_A)"
+    },
+    "prompt": "CCTV photo, wide angle, realistic, exactly 2 people. a store, brightly lit, with snacks aisle; a slim tall person wearing red hoodie and black jeans and black cap, carrying black backpack, leaned over; a person wearing green uniform shirt, put her hands up",
+    "seed": 42,
+    "included": [
+      "f001",
+      "f002",
+      "f003",
+      "f007",
+      "f004",
+      "f005",
+      "f006",
+      "f016",
+      "f019",
+      "f020",
+      "f008",
+      "f009",
+      "f010",
+      "f011",
+      "f012",
+      "f014",
+      "f017",
+      "f018"
+    ],
+    "withheld": [
+      {
+        "fact_id": "f021",
+        "entity": "weapon_1",
+        "attribute": "weapon_type",
+        "value": "knife",
+        "source": "witness_C",
+        "confidence": 0.575
+      },
+      {
+        "fact_id": "f022",
+        "entity": "weapon_1",
+        "attribute": "held_by",
+        "value": "slim guy",
+        "source": "witness_C",
+        "confidence": 0.575
+      }
+    ],
+    "not_drawn": [
+      {
+        "fact_id": "f004",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "walked straight to the counter",
+        "source": "witness_A",
+        "confidence": 0.7,
+        "reason": "movement/direction"
+      },
+      {
+        "fact_id": "f006",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "grabbed cash from the register",
+        "source": "witness_A",
+        "confidence": 0.7,
+        "reason": "one short action per person"
+      },
+      {
+        "fact_id": "f007",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "ran out",
+        "source": "witness_A",
+        "confidence": 0.9,
+        "reason": "movement/direction"
+      },
+      {
+        "fact_id": "f016",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "towards the parking lot",
+        "source": "witness_B",
+        "confidence": 0.7,
+        "reason": "movement/direction"
+      },
+      {
+        "fact_id": "f019",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "came running out of the store",
+        "source": "witness_C",
+        "confidence": 0.7,
+        "reason": "movement/direction"
+      },
+      {
+        "fact_id": "f020",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "ran past my car",
+        "source": "witness_C",
+        "confidence": 0.7,
+        "reason": "movement/direction"
+      }
+    ],
+    "contested": [
+      "f002"
+    ],
+    "levels": {
+      "person_1": "contested",
+      "person_2": "single",
+      "scene": "single"
+    },
+    "report": {
+      "expected": [
+        {
+          "entity": "person_1",
+          "label": "person wearing red hoodie"
+        },
+        {
+          "entity": "person_2",
+          "label": "person wearing green uniform shirt"
+        }
+      ],
+      "matched": {
+        "person_1": {
+          "label": "person",
+          "score": 0.596,
+          "box": [
+            436.24645233154297,
+            176.74063110351562,
+            684.6849517822266,
+            950.4758605957031
+          ],
+          "scores": {
+            "bag": 0.24,
+            "car": 0.018,
+            "dog": 0.051,
+            "gun": 0.066,
+            "knife": 0.021,
+            "motorcycle": 0.046,
+            "person": 0.355,
+            "person wearing green uniform shirt": 0.223,
+            "person wearing red hoodie": 0.596
+          },
+          "query": "person wearing red hoodie",
+          "entity_score": 0.596
+        }
+      },
+      "missing": [
+        "person_2"
+      ],
+      "hallucinated": [
+        {
+          "label": "person",
+          "score": 0.393,
+          "box": [
+            635.7247467041016,
+            219.6689910888672,
+            769.2103118896484,
+            529.6861724853516
+          ],
+          "scores": {
+            "bag": 0.044,
+            "car": 0.007,
+            "dog": 0.014,
+            "gun": 0.014,
+            "knife": 0.007,
+            "motorcycle": 0.013,
+            "person": 0.393,
+            "person wearing green uniform shirt": 0.099,
+            "person wearing red hoodie": 0.154
+          },
+          "reason": "extra person (2 in image, 2 drawn)"
+        }
+      ],
+      "carried": [],
+      "person_count": {
+        "drawn": 2,
+        "in_image": 2
+      },
+      "object_faithfulness": 0.5,
+      "vqa": [
+        {
+          "entity": "person_1",
+          "attribute": "upper_clothing",
+          "question": "Is there a person wearing red hoodie?",
+          "answer": true
+        },
+        {
+          "entity": "person_1",
+          "attribute": "headwear",
+          "question": "Is there a person wearing black cap?",
+          "answer": true
+        },
+        {
+          "entity": "person_1",
+          "attribute": "carrying",
+          "question": "Is there a person carrying black backpack?",
+          "answer": true
+        },
+        {
+          "entity": "person_1",
+          "attribute": "build",
+          "question": "Is there a slim person?",
+          "answer": true
+        },
+        {
+          "entity": "person_1",
+          "attribute": "lower_clothing",
+          "question": "Is there a person wearing black jeans?",
+          "answer": true
+        },
+        {
+          "entity": "person_2",
+          "attribute": "upper_clothing",
+          "question": "Is there a person wearing green uniform shirt?",
+          "answer": false
+        }
+      ],
+      "attribute_accuracy": 0.833
+    },
+    "first_attempt_hallucinations": 1,
+    "final_hallucinations": 1,
+    "attempts": 5,
+    "raw_path": "/home/marams/crime-recon/outputs/sample_robbery/H1_raw.png",
+    "overlay_path": "/home/marams/crime-recon/outputs/sample_robbery/H1_overlay.png",
+    "attempt_log": [
+      {
+        "seed": 42,
+        "kept": true,
+        "hallucinated": [
+          "extra person (2 in image, 2 drawn)"
+        ],
+        "missing": [
+          "person_2"
+        ],
+        "person_count": {
+          "drawn": 2,
+          "in_image": 2
+        },
+        "attribute_accuracy": 0.833,
+        "matched": {
+          "person_1": [
+            436,
+            177,
+            685,
+            950
+          ]
+        }
+      },
+      {
+        "seed": 43,
+        "kept": false,
+        "hallucinated": [
+          "extra person (2 in image, 2 drawn)"
+        ],
+        "missing": [
+          "person_2"
+        ],
+        "person_count": {
+          "drawn": 2,
+          "in_image": 2
+        },
+        "attribute_accuracy": 0.5,
+        "matched": {
+          "person_1": [
+            465,
+            271,
+            740,
+            960
+          ]
+        }
+      },
+      {
+        "seed": 44,
+        "kept": false,
+        "hallucinated": [
+          "extra person (3 in image, 2 drawn)",
+          "extra person (3 in image, 2 drawn)",
+          "bag"
+        ],
+        "missing": [
+          "person_2"
+        ],
+        "person_count": {
+          "drawn": 2,
+          "in_image": 3
+        },
+        "attribute_accuracy": null,
+        "matched": {
+          "person_1": [
+            367,
+            327,
+            540,
+            858
+          ]
+        }
+      },
+      {
+        "seed": 45,
+        "kept": false,
+        "hallucinated": [
+          "extra person (2 in image, 2 drawn)",
+          "bag"
+        ],
+        "missing": [
+          "person_2"
+        ],
+        "person_count": {
+          "drawn": 2,
+          "in_image": 2
+        },
+        "attribute_accuracy": null,
+        "matched": {
+          "person_1": [
+            347,
+            389,
+            494,
+            991
+          ]
+        }
+      },
+      {
+        "seed": 46,
+        "kept": false,
+        "hallucinated": [
+          "extra person (2 in image, 2 drawn)"
+        ],
+        "missing": [
+          "person_2"
+        ],
+        "person_count": {
+          "drawn": 2,
+          "in_image": 2
+        },
+        "attribute_accuracy": 0.667,
+        "matched": {
+          "person_1": [
+            452,
+            165,
+            735,
+            1024
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "hypothesis": {
+      "id": "H2",
+      "name": "Alternative version 1",
+      "choices": {
+        "c1": 1
+      },
+      "description": "person_1.upper_clothing = 'blue jacket' (witness_B)"
+    },
+    "prompt": "CCTV photo, wide angle, realistic, exactly 2 people. a store, brightly lit, with snacks aisle; a slim tall person wearing blue jacket and black jeans and black cap, carrying black backpack, leaned over; a person wearing green uniform shirt, put her hands up",
+    "seed": 142,
+    "included": [
+      "f001",
+      "f013",
+      "f003",
+      "f007",
+      "f004",
+      "f005",
+      "f006",
+      "f016",
+      "f019",
+      "f020",
+      "f008",
+      "f009",
+      "f010",
+      "f011",
+      "f012",
+      "f014",
+      "f017",
+      "f018"
+    ],
+    "withheld": [
+      {
+        "fact_id": "f021",
+        "entity": "weapon_1",
+        "attribute": "weapon_type",
+        "value": "knife",
+        "source": "witness_C",
+        "confidence": 0.575
+      },
+      {
+        "fact_id": "f022",
+        "entity": "weapon_1",
+        "attribute": "held_by",
+        "value": "slim guy",
+        "source": "witness_C",
+        "confidence": 0.575
+      }
+    ],
+    "not_drawn": [
+      {
+        "fact_id": "f004",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "walked straight to the counter",
+        "source": "witness_A",
+        "confidence": 0.7,
+        "reason": "movement/direction"
+      },
+      {
+        "fact_id": "f006",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "grabbed cash from the register",
+        "source": "witness_A",
+        "confidence": 0.7,
+        "reason": "one short action per person"
+      },
+      {
+        "fact_id": "f007",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "ran out",
+        "source": "witness_A",
+        "confidence": 0.9,
+        "reason": "movement/direction"
+      },
+      {
+        "fact_id": "f016",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "towards the parking lot",
+        "source": "witness_B",
+        "confidence": 0.7,
+        "reason": "movement/direction"
+      },
+      {
+        "fact_id": "f019",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "came running out of the store",
+        "source": "witness_C",
+        "confidence": 0.7,
+        "reason": "movement/direction"
+      },
+      {
+        "fact_id": "f020",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "ran past my car",
+        "source": "witness_C",
+        "confidence": 0.7,
+        "reason": "movement/direction"
+      }
+    ],
+    "contested": [
+      "f013"
+    ],
+    "levels": {
+      "person_1": "contested",
+      "person_2": "single",
+      "scene": "single"
+    },
+    "report": {
+      "expected": [
+        {
+          "entity": "person_1",
+          "label": "person wearing blue jacket"
+        },
+        {
+          "entity": "person_2",
+          "label": "person wearing green uniform shirt"
+        }
+      ],
+      "matched": {
+        "person_1": {
+          "label": "person",
+          "score": 0.417,
+          "box": [
+            260.28089141845703,
+            143.881103515625,
+            440.3870162963867,
+            771.3696899414062
+          ],
+          "scores": {
+            "bag": 0.033,
+            "car": 0.008,
+            "dog": 0.019,
+            "gun": 0.024,
+            "knife": 0.044,
+            "motorcycle": 0.007,
+            "person": 0.417,
+            "person wearing blue jacket": 0.325,
+            "person wearing green uniform shirt": 0.229
+          },
+          "query": "person wearing blue jacket",
+          "entity_score": 0.325
+        },
+        "person_2": {
+          "label": "person",
+          "score": 0.324,
+          "box": [
+            554.6355514526367,
+            471.37786865234375,
+            753.9954223632812,
+            959.9451293945312
+          ],
+          "scores": {
+            "bag": 0.096,
+            "car": 0.016,
+            "dog": 0.014,
+            "gun": 0.035,
+            "knife": 0.02,
+            "motorcycle": 0.009,
+            "person": 0.324,
+            "person wearing blue jacket": 0.296,
+            "person wearing green uniform shirt": 0.314
+          },
+          "query": "person wearing green uniform shirt",
+          "entity_score": 0.314
+        }
+      },
+      "missing": [],
+      "hallucinated": [],
+      "carried": [
+        {
+          "label": "bag",
+          "score": 0.496,
+          "box": [
+            373.55040740966797,
+            623.8610382080078,
+            504.0564651489258,
+            766.4723358154297
+          ],
+          "scores": {
+            "bag": 0.496,
+            "car": 0.006,
+            "dog": 0.008,
+            "gun": 0.011,
+            "knife": 0.002,
+            "motorcycle": 0.003,
+            "person": 0.009,
+            "person wearing blue jacket": 0.037,
+            "person wearing green uniform shirt": 0.022
+          },
+          "carried_by": "person_1"
+        }
+      ],
+      "person_count": {
+        "drawn": 2,
+        "in_image": 2
+      },
+      "object_faithfulness": 1.0,
+      "vqa": [
+        {
+          "entity": "person_1",
+          "attribute": "headwear",
+          "question": "Is there a person wearing black cap?",
+          "answer": true
+        },
+        {
+          "entity": "person_1",
+          "attribute": "upper_clothing",
+          "question": "Is there a person wearing blue jacket?",
+          "answer": true
+        },
+        {
+          "entity": "person_1",
+          "attribute": "carrying",
+          "question": "Is there a person carrying black backpack?",
+          "answer": true
+        },
+        {
+          "entity": "person_1",
+          "attribute": "build",
+          "question": "Is there a slim person?",
+          "answer": true
+        },
+        {
+          "entity": "person_1",
+          "attribute": "lower_clothing",
+          "question": "Is there a person wearing black jeans?",
+          "answer": true
+        },
+        {
+          "entity": "person_2",
+          "attribute": "upper_clothing",
+          "question": "Is there a person wearing green uniform shirt?",
+          "answer": false
+        }
+      ],
+      "attribute_accuracy": 0.833
+    },
+    "first_attempt_hallucinations": 0,
+    "final_hallucinations": 0,
+    "attempts": 1,
+    "raw_path": "/home/marams/crime-recon/outputs/sample_robbery/H2_raw.png",
+    "overlay_path": "/home/marams/crime-recon/outputs/sample_robbery/H2_overlay.png",
+    "attempt_log": [
+      {
+        "seed": 142,
+        "kept": true,
+        "hallucinated": [],
+        "missing": [],
+        "person_count": {
+          "drawn": 2,
+          "in_image": 2
+        },
+        "attribute_accuracy": 0.833,
+        "matched": {
+          "person_1": [
+            260,
+            144,
+            440,
+            771
+          ],
+          "person_2": [
+            555,
+            471,
+            754,
+            960
+          ]
+        }
+      }
+    ]
+  }
+]

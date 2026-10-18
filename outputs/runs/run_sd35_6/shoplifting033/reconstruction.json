@@ -1,0 +1,376 @@
+[
+  {
+    "hypothesis": {
+      "id": "H1",
+      "name": "Main reconstruction",
+      "choices": {},
+      "description": "No conflicting evidence."
+    },
+    "prompt": "CCTV photo, wide angle, realistic, exactly 2 people. a person wearing blue shirt and khaki shorts, touched the watch, behind the counter; a person; a watch, on the table",
+    "seed": 42,
+    "included": [
+      "f022",
+      "f004",
+      "f005",
+      "f003",
+      "f010",
+      "f024",
+      "f002",
+      "f006",
+      "f007",
+      "f008",
+      "f009",
+      "f014",
+      "f023"
+    ],
+    "withheld": [
+      {
+        "fact_id": "f013",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "turned and walked out of the store",
+        "source": "witness_B",
+        "confidence": 0.575
+      },
+      {
+        "fact_id": "f015",
+        "entity": "scene",
+        "attribute": "place_type",
+        "value": "store",
+        "source": "witness_B",
+        "confidence": 0.575
+      },
+      {
+        "fact_id": "f019",
+        "entity": "vehicle_1",
+        "attribute": "color",
+        "value": "white",
+        "source": "witness_C",
+        "confidence": 0.45
+      },
+      {
+        "fact_id": "f020",
+        "entity": "vehicle_1",
+        "attribute": "position",
+        "value": "nearby",
+        "source": "witness_C",
+        "confidence": 0.45
+      }
+    ],
+    "not_drawn": [
+      {
+        "fact_id": "f002",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "put a watch down on the table",
+        "source": "witness_A",
+        "confidence": 0.7,
+        "reason": "one short action per person"
+      },
+      {
+        "fact_id": "f004",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "turned around",
+        "source": "witness_A",
+        "confidence": 0.99,
+        "reason": "movement/direction"
+      },
+      {
+        "fact_id": "f005",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "walking to the side of the table",
+        "source": "witness_A",
+        "confidence": 0.99,
+        "reason": "movement/direction"
+      },
+      {
+        "fact_id": "f006",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "put the watch in his pants pocket",
+        "source": "witness_A",
+        "confidence": 0.7,
+        "reason": "one short action per person"
+      },
+      {
+        "fact_id": "f007",
+        "entity": "person_2",
+        "attribute": "action",
+        "value": "took two steps towards the man",
+        "source": "witness_A",
+        "confidence": 0.7,
+        "reason": "movement/direction"
+      },
+      {
+        "fact_id": "f010",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "walked around the table",
+        "source": "witness_B",
+        "confidence": 0.9,
+        "reason": "movement/direction"
+      },
+      {
+        "fact_id": "f024",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "standing at counter",
+        "source": "cctv_frame_01",
+        "confidence": 0.85,
+        "reason": "one short action per person"
+      }
+    ],
+    "contested": [],
+    "levels": {
+      "person_1": "single",
+      "person_2": "single",
+      "object_1": "single"
+    },
+    "report": {
+      "expected": [
+        {
+          "entity": "person_1",
+          "label": "person wearing blue shirt"
+        },
+        {
+          "entity": "person_2",
+          "label": "person"
+        },
+        {
+          "entity": "object_1",
+          "label": "watch"
+        }
+      ],
+      "matched": {
+        "person_1": {
+          "label": "person",
+          "score": 0.487,
+          "box": [
+            243.21932983398438,
+            0.0,
+            1024,
+            1000.1033020019531
+          ],
+          "scores": {
+            "bag": 0.009,
+            "car": 0.014,
+            "dog": 0.015,
+            "gun": 0.007,
+            "knife": 0.009,
+            "motorcycle": 0.007,
+            "person": 0.452,
+            "person wearing blue shirt": 0.487,
+            "watch": 0.018
+          },
+          "query": "person wearing blue shirt",
+          "entity_score": 0.487
+        },
+        "object_1": {
+          "label": "watch",
+          "score": 0.658,
+          "box": [
+            465.7975425720215,
+            565.5840034484863,
+            538.3211708068848,
+            692.2408256530762
+          ],
+          "scores": {
+            "bag": 0.001,
+            "car": 0.001,
+            "dog": 0.001,
+            "gun": 0.001,
+            "knife": 0.002,
+            "motorcycle": 0.0,
+            "person": 0.003,
+            "person wearing blue shirt": 0.007,
+            "watch": 0.658
+          }
+        }
+      },
+      "missing": [
+        "person_2"
+      ],
+      "hallucinated": [],
+      "carried": [],
+      "person_count": {
+        "drawn": 2,
+        "in_image": 1
+      },
+      "object_faithfulness": 0.667,
+      "vqa": [
+        {
+          "entity": "person_1",
+          "attribute": "upper_clothing",
+          "question": "Is there a person wearing blue shirt?",
+          "answer": true
+        },
+        {
+          "entity": "person_1",
+          "attribute": "lower_clothing",
+          "question": "Is there a person wearing khaki shorts?",
+          "answer": false
+        },
+        {
+          "entity": "object_1",
+          "attribute": "object_type",
+          "question": "Is there a watch?",
+          "answer": true
+        }
+      ],
+      "attribute_accuracy": 0.667
+    },
+    "first_attempt_hallucinations": 0,
+    "final_hallucinations": 0,
+    "attempts": 5,
+    "raw_path": "/home/marams/crime-recon/outputs/shoplifting033/H1_raw.png",
+    "overlay_path": "/home/marams/crime-recon/outputs/shoplifting033/H1_overlay.png",
+    "attempt_log": [
+      {
+        "seed": 42,
+        "kept": true,
+        "hallucinated": [],
+        "missing": [
+          "person_2"
+        ],
+        "person_count": {
+          "drawn": 2,
+          "in_image": 1
+        },
+        "attribute_accuracy": 0.667,
+        "matched": {
+          "person_1": [
+            243,
+            0,
+            1024,
+            1000
+          ],
+          "object_1": [
+            466,
+            566,
+            538,
+            692
+          ]
+        }
+      },
+      {
+        "seed": 43,
+        "kept": false,
+        "hallucinated": [
+          "watch"
+        ],
+        "missing": [
+          "person_2"
+        ],
+        "person_count": {
+          "drawn": 2,
+          "in_image": 1
+        },
+        "attribute_accuracy": null,
+        "matched": {
+          "person_1": [
+            2,
+            0,
+            942,
+            1024
+          ],
+          "object_1": [
+            352,
+            502,
+            478,
+            599
+          ]
+        }
+      },
+      {
+        "seed": 44,
+        "kept": false,
+        "hallucinated": [
+          "watch"
+        ],
+        "missing": [
+          "person_2"
+        ],
+        "person_count": {
+          "drawn": 2,
+          "in_image": 1
+        },
+        "attribute_accuracy": null,
+        "matched": {
+          "person_1": [
+            1,
+            1,
+            889,
+            1021
+          ],
+          "object_1": [
+            628,
+            478,
+            729,
+            549
+          ]
+        }
+      },
+      {
+        "seed": 45,
+        "kept": false,
+        "hallucinated": [
+          "watch"
+        ],
+        "missing": [
+          "person_2"
+        ],
+        "person_count": {
+          "drawn": 2,
+          "in_image": 1
+        },
+        "attribute_accuracy": null,
+        "matched": {
+          "person_1": [
+            265,
+            2,
+            958,
+            646
+          ],
+          "object_1": [
+            753,
+            398,
+            881,
+            470
+          ]
+        }
+      },
+      {
+        "seed": 46,
+        "kept": false,
+        "hallucinated": [
+          "watch",
+          "watch"
+        ],
+        "missing": [
+          "person_2"
+        ],
+        "person_count": {
+          "drawn": 2,
+          "in_image": 1
+        },
+        "attribute_accuracy": null,
+        "matched": {
+          "person_1": [
+            0,
+            0,
+            580,
+            1024
+          ],
+          "object_1": [
+            249,
+            794,
+            373,
+            968
+          ]
+        }
+      }
+    ]
+  }
+]

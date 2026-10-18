@@ -1,0 +1,19 @@
+# Core
+pyyaml>=6.0
+openai>=1.40          # client for the local Ollama / vLLM server
+neo4j>=5.20
+pandas>=2.0
+pillow>=10.0
+networkx>=3.1
+matplotlib>=3.7
+gradio>=5.0,<6           # needs Python 3.10+
+
+# GPU models (install torch first to match your CUDA version: https://pytorch.org)
+torch>=2.2
+diffusers>=0.30       # Stable Diffusion XL
+transformers>=4.44    # OWLv2 detector
+scipy                 # OWLv2 image processor needs it
+accelerate>=0.33      # needed for SDXL cpu offload
+safetensors
+
+pytest

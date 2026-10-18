@@ -1,0 +1,21 @@
+{"time": "04:28:51", "step": "extract", "detail": "loaded 32 cached facts (/home/marams/crime-recon/outputs/shoplifting024/facts.json)"}
+{"time": "04:28:51", "step": "analyze", "detail": "0 conflicts, 1 hypotheses, 27 gaps, 29 candidate questions (0 blocked as leading)"}
+{"time": "04:28:52", "step": "generate", "detail": "H1: 14 facts drawn, 9 withheld, 5 not drawn (prompt)"}
+{"time": "04:28:52", "step": "not drawn", "detail": "H1: person_2.action = 'picked up the white paper on the table' (witness_A): one short action per person"}
+{"time": "04:28:52", "step": "not drawn", "detail": "H1: person_3.action = 'picked up the white paper on the table' (witness_B): one short action per person"}
+{"time": "04:28:52", "step": "not drawn", "detail": "H1: person_3.action = 'opened the book and looked at it' (witness_B): one short action per person"}
+{"time": "04:28:52", "step": "not drawn", "detail": "H1: person_1.action = 'came back' (witness_C): movement/direction"}
+{"time": "04:28:52", "step": "not drawn", "detail": "H1: person_4.action = 'picked up the white paper on the table' (witness_C): one short action per person"}
+{"time": "04:28:52", "step": "prompt", "detail": "H1: CCTV photo, wide angle, realistic, exactly 6 people. a person with dark hair wearing checkered shirt and jeans, carrying black backpack, writing, behind the counter; a person, fan herself; a person wearing dark jacket, holding a red object, sitting; a person, fan herself; a person, fan herself, behind the counter; a person wearing patterned jacket [76 tokens]"}
+{"time": "04:29:23", "step": "verify", "detail": "H1 seed 42: objects found 4/6, hallucinated 8, people 4 in image / 6 drawn"}
+{"time": "04:29:23", "step": "verify", "detail": "H1: bag, bag, bag, bag, bag, bag, bag, bag, missing person_5, missing person_4 -> regenerate"}
+{"time": "04:29:32", "step": "verify", "detail": "H1 seed 43: objects found 3/6, hallucinated 4, people 4 in image / 6 drawn"}
+{"time": "04:29:32", "step": "verify", "detail": "H1: person, bag, bag, bag, missing person_5, missing person_3, missing person_4 -> regenerate"}
+{"time": "04:29:40", "step": "verify", "detail": "H1 seed 44: objects found 3/6, hallucinated 2, people 3 in image / 6 drawn"}
+{"time": "04:29:40", "step": "verify", "detail": "H1: bag, bag, missing person_2, missing person_4, missing person_6 -> regenerate"}
+{"time": "04:29:48", "step": "verify", "detail": "H1 seed 45: objects found 3/6, hallucinated 2, people 3 in image / 6 drawn"}
+{"time": "04:29:48", "step": "verify", "detail": "H1: bag, bag, missing person_3, missing person_4, missing person_6 -> regenerate"}
+{"time": "04:29:55", "step": "verify", "detail": "H1 seed 46: objects found 2/6, hallucinated 2, people 4 in image / 6 drawn"}
+{"time": "04:29:58", "step": "verify", "detail": "H1 seed 44 attribute check: objects found 3/6, hallucinated 2, people 3 in image / 6 drawn, attribute accuracy 100%"}
+{"time": "04:30:01", "step": "verify", "detail": "H1 seed 45 attribute check: objects found 3/6, hallucinated 2, people 3 in image / 6 drawn, attribute accuracy 83%"}
+{"time": "04:30:01", "step": "verify", "detail": "H1: keeping seed 44 (5 attempts)"}

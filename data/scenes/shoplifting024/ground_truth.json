@@ -1,0 +1,80 @@
+{
+  "scene_id": "shoplifting024",
+  "caption": "A woman sat outside the table and a man sat at the table. The two were talking. Then the man turned around and put things into the cabinet behind him. The woman picked up the white paper on the table and fanned herself. The man stood up and walked out, the woman opened the book and looked at. The woman stood up and looked back in the direction where the man left, then took something from the table and put it into her clothes, and then put the book down. The man came back.",
+  "nouns": {
+    "person_1": "man",
+    "person_2": "woman"
+  },
+  "facts": [
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "action",
+      "value": "turned around and put things into the cabinet"
+    },
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "action",
+      "value": "stood up and walked out"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "picked up the white paper on the table and fanned herself"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "opened the book and looked at"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "stood up and looked back in the direction where the man left"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "took something from the table and put it into her clothes"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "put the book down"
+    },
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "action",
+      "value": "came back"
+    }
+  ],
+  "planted_conflicts": [],
+  "planted_false_facts": [
+    {
+      "entity_type": "vehicle",
+      "role": "none",
+      "attribute": "vehicle_type",
+      "value": "white van",
+      "witness": "witness_C"
+    }
+  ],
+  "hand_edits": [
+    "roles: person_2 (woman) = suspect, person_1 (man) = victim",
+    "no clothing added from the frames; conflicts for this scene are n/a (no colour or size details)"
+  ]
+}

@@ -1,0 +1,466 @@
+[
+  {
+    "hypothesis": {
+      "id": "H1",
+      "name": "Main reconstruction",
+      "choices": {},
+      "description": "No conflicting evidence."
+    },
+    "prompt": "CCTV photo, wide angle, realistic, exactly 6 people. a person with dark hair wearing checkered shirt and jeans, carrying black backpack, writing, behind the counter; a person, fan herself; a person wearing dark jacket, holding a red object, sitting; a person, fan herself; a person, fan herself, behind the counter; a person wearing patterned jacket",
+    "seed": 43,
+    "included": [
+      "f030",
+      "f015",
+      "f003",
+      "f004",
+      "f007",
+      "f008",
+      "f009",
+      "f031",
+      "f017",
+      "f018",
+      "f019",
+      "f020",
+      "f022",
+      "f023",
+      "f026",
+      "f027",
+      "f028",
+      "f029",
+      "f032"
+    ],
+    "withheld": [
+      {
+        "fact_id": "f001",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "turned around and put things into the cabinet",
+        "source": "witness_A",
+        "confidence": 0.45
+      },
+      {
+        "fact_id": "f002",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "stood up and walked out",
+        "source": "witness_A",
+        "confidence": 0.45
+      },
+      {
+        "fact_id": "f014",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "left",
+        "source": "witness_B",
+        "confidence": 0.45
+      },
+      {
+        "fact_id": "f005",
+        "entity": "person_2",
+        "attribute": "action",
+        "value": "stood up and looked back in the direction where the man left",
+        "source": "witness_A",
+        "confidence": 0.45
+      },
+      {
+        "fact_id": "f006",
+        "entity": "person_2",
+        "attribute": "action",
+        "value": "maybe she took something from the table and put it into her clothes",
+        "source": "witness_A",
+        "confidence": 0.45
+      },
+      {
+        "fact_id": "f010",
+        "entity": "person_3",
+        "attribute": "action",
+        "value": "took something from the table",
+        "source": "witness_B",
+        "confidence": 0.575
+      },
+      {
+        "fact_id": "f011",
+        "entity": "person_3",
+        "attribute": "action",
+        "value": "put it into her clothes",
+        "source": "witness_B",
+        "confidence": 0.575
+      },
+      {
+        "fact_id": "f012",
+        "entity": "person_3",
+        "attribute": "action",
+        "value": "stood up",
+        "source": "witness_B",
+        "confidence": 0.45
+      },
+      {
+        "fact_id": "f013",
+        "entity": "person_3",
+        "attribute": "action",
+        "value": "looked back in the direction where the man left",
+        "source": "witness_B",
+        "confidence": 0.45
+      }
+    ],
+    "not_drawn": [
+      {
+        "fact_id": "f003",
+        "entity": "person_2",
+        "attribute": "action",
+        "value": "picked up the white paper on the table",
+        "source": "witness_A",
+        "confidence": 0.7,
+        "reason": "one short action per person"
+      },
+      {
+        "fact_id": "f007",
+        "entity": "person_3",
+        "attribute": "action",
+        "value": "picked up the white paper on the table",
+        "source": "witness_B",
+        "confidence": 0.7,
+        "reason": "one short action per person"
+      },
+      {
+        "fact_id": "f009",
+        "entity": "person_3",
+        "attribute": "action",
+        "value": "opened the book and looked at it",
+        "source": "witness_B",
+        "confidence": 0.7,
+        "reason": "one short action per person"
+      },
+      {
+        "fact_id": "f015",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "came back",
+        "source": "witness_C",
+        "confidence": 0.7,
+        "reason": "movement/direction"
+      },
+      {
+        "fact_id": "f017",
+        "entity": "person_4",
+        "attribute": "action",
+        "value": "picked up the white paper on the table",
+        "source": "witness_C",
+        "confidence": 0.7,
+        "reason": "one short action per person"
+      }
+    ],
+    "contested": [],
+    "levels": {
+      "person_1": "single",
+      "person_2": "single",
+      "person_3": "single",
+      "person_4": "single",
+      "person_5": "confirmed",
+      "person_6": "confirmed"
+    },
+    "report": {
+      "expected": [
+        {
+          "entity": "person_1",
+          "label": "person wearing checkered shirt"
+        },
+        {
+          "entity": "person_2",
+          "label": "person"
+        },
+        {
+          "entity": "person_5",
+          "label": "person wearing dark jacket"
+        },
+        {
+          "entity": "person_3",
+          "label": "person"
+        },
+        {
+          "entity": "person_4",
+          "label": "person"
+        },
+        {
+          "entity": "person_6",
+          "label": "person wearing patterned jacket"
+        }
+      ],
+      "matched": {
+        "person_1": {
+          "label": "person",
+          "score": 0.347,
+          "box": [
+            326.6679382324219,
+            196.51828002929688,
+            680.0028076171875,
+            1024
+          ],
+          "scores": {
+            "bag": 0.01,
+            "car": 0.004,
+            "dog": 0.005,
+            "gun": 0.002,
+            "knife": 0.001,
+            "motorcycle": 0.001,
+            "person": 0.309,
+            "person wearing checkered shirt": 0.347,
+            "person wearing dark jacket": 0.175,
+            "person wearing patterned jacket": 0.118
+          },
+          "query": "person wearing checkered shirt",
+          "entity_score": 0.347
+        },
+        "person_2": {
+          "label": "person",
+          "score": 0.306,
+          "box": [
+            0.0,
+            245.70584106445312,
+            285.72547912597656,
+            673.1466369628906
+          ],
+          "scores": {
+            "bag": 0.047,
+            "car": 0.006,
+            "dog": 0.005,
+            "gun": 0.002,
+            "knife": 0.002,
+            "motorcycle": 0.002,
+            "person": 0.306,
+            "person wearing checkered shirt": 0.245,
+            "person wearing dark jacket": 0.183,
+            "person wearing patterned jacket": 0.27
+          },
+          "query": "person",
+          "entity_score": 0.306
+        }
+      },
+      "missing": [
+        "person_5",
+        "person_3",
+        "person_4",
+        "person_6"
+      ],
+      "hallucinated": [],
+      "carried": [],
+      "person_count": {
+        "drawn": 6,
+        "in_image": 2
+      },
+      "object_faithfulness": 0.333,
+      "vqa": [
+        {
+          "entity": "person_1",
+          "attribute": "upper_clothing",
+          "question": "Is there a person wearing checkered shirt?",
+          "answer": true
+        },
+        {
+          "entity": "person_1",
+          "attribute": "lower_clothing",
+          "question": "Is there a person wearing jeans?",
+          "answer": true
+        },
+        {
+          "entity": "person_1",
+          "attribute": "hair",
+          "question": "Is there a person with dark hair?",
+          "answer": true
+        },
+        {
+          "entity": "person_1",
+          "attribute": "carrying",
+          "question": "Is there a person carrying black backpack?",
+          "answer": true
+        },
+        {
+          "entity": "person_5",
+          "attribute": "upper_clothing",
+          "question": "Is there a person wearing dark jacket?",
+          "answer": true
+        },
+        {
+          "entity": "person_6",
+          "attribute": "upper_clothing",
+          "question": "Is there a person wearing patterned jacket?",
+          "answer": true
+        }
+      ],
+      "attribute_accuracy": 1.0
+    },
+    "first_attempt_hallucinations": 3,
+    "final_hallucinations": 0,
+    "attempts": 5,
+    "raw_path": "/home/marams/crime-recon/outputs/shoplifting024/H1_raw.png",
+    "overlay_path": "/home/marams/crime-recon/outputs/shoplifting024/H1_overlay.png",
+    "attempt_log": [
+      {
+        "seed": 42,
+        "kept": false,
+        "hallucinated": [
+          "bag",
+          "bag",
+          "bag"
+        ],
+        "missing": [
+          "person_5",
+          "person_3",
+          "person_4",
+          "person_6"
+        ],
+        "person_count": {
+          "drawn": 6,
+          "in_image": 2
+        },
+        "attribute_accuracy": null,
+        "matched": {
+          "person_1": [
+            611,
+            132,
+            1024,
+            1024
+          ],
+          "person_2": [
+            211,
+            267,
+            636,
+            1024
+          ]
+        }
+      },
+      {
+        "seed": 43,
+        "kept": true,
+        "hallucinated": [],
+        "missing": [
+          "person_5",
+          "person_3",
+          "person_4",
+          "person_6"
+        ],
+        "person_count": {
+          "drawn": 6,
+          "in_image": 2
+        },
+        "attribute_accuracy": 1.0,
+        "matched": {
+          "person_1": [
+            327,
+            197,
+            680,
+            1024
+          ],
+          "person_2": [
+            0,
+            246,
+            286,
+            673
+          ]
+        }
+      },
+      {
+        "seed": 44,
+        "kept": false,
+        "hallucinated": [
+          "bag",
+          "bag"
+        ],
+        "missing": [
+          "person_1",
+          "person_5",
+          "person_6"
+        ],
+        "person_count": {
+          "drawn": 6,
+          "in_image": 3
+        },
+        "attribute_accuracy": null,
+        "matched": {
+          "person_2": [
+            8,
+            368,
+            505,
+            1016
+          ],
+          "person_3": [
+            368,
+            18,
+            653,
+            819
+          ],
+          "person_4": [
+            568,
+            65,
+            827,
+            532
+          ]
+        }
+      },
+      {
+        "seed": 45,
+        "kept": false,
+        "hallucinated": [
+          "bag"
+        ],
+        "missing": [
+          "person_2",
+          "person_5",
+          "person_3",
+          "person_4",
+          "person_6"
+        ],
+        "person_count": {
+          "drawn": 6,
+          "in_image": 1
+        },
+        "attribute_accuracy": null,
+        "matched": {
+          "person_1": [
+            444,
+            317,
+            925,
+            913
+          ]
+        }
+      },
+      {
+        "seed": 46,
+        "kept": false,
+        "hallucinated": [
+          "bag"
+        ],
+        "missing": [
+          "person_5",
+          "person_3",
+          "person_4"
+        ],
+        "person_count": {
+          "drawn": 6,
+          "in_image": 3
+        },
+        "attribute_accuracy": 1.0,
+        "matched": {
+          "person_1": [
+            185,
+            438,
+            508,
+            1024
+          ],
+          "person_2": [
+            2,
+            545,
+            206,
+            906
+          ],
+          "person_6": [
+            653,
+            563,
+            828,
+            879
+          ]
+        }
+      }
+    ]
+  }
+]

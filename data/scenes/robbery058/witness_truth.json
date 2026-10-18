@@ -1,0 +1,405 @@
+{
+  "witness_A": {
+    "facts_given": [
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "upper_clothing",
+        "value": "red clothes",
+        "hedged": true
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "playing with her mobile phone",
+        "hedged": true
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "position",
+        "value": "behind the counter",
+        "hedged": false
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "headwear",
+        "value": "mask",
+        "hedged": true
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "put the bag on the table",
+        "hedged": true
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "left",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "put money in the bag",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "squatted with her hands above her head",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "left the scene",
+        "hedged": false
+      },
+      {
+        "entity": "weapon_1",
+        "entity_type": "weapon",
+        "role": "none",
+        "attribute": "held_by",
+        "value": "man in black",
+        "hedged": false
+      }
+    ],
+    "degradations": [
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "upper_clothing",
+        "value": "black clothes"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "threatened the woman with a gun"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "opened the checkout counter"
+      },
+      {
+        "type": "omission",
+        "entity": "weapon_1",
+        "entity_type": "weapon",
+        "role": "none",
+        "attribute": "weapon_type",
+        "value": "gun"
+      },
+      {
+        "type": "omission",
+        "entity": "scene",
+        "entity_type": "location",
+        "role": "none",
+        "attribute": "notable_features",
+        "value": "checkout counter"
+      }
+    ]
+  },
+  "witness_B": {
+    "facts_given": [
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "playing with her mobile phone",
+        "hedged": true
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "position",
+        "value": "behind the counter",
+        "hedged": false
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "upper_clothing",
+        "value": "white clothes",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "opened the checkout counter",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "squatted with her hands above her head",
+        "hedged": false
+      },
+      {
+        "entity": "weapon_1",
+        "entity_type": "weapon",
+        "role": "none",
+        "attribute": "weapon_type",
+        "value": "gun",
+        "hedged": false
+      },
+      {
+        "entity": "scene",
+        "entity_type": "location",
+        "role": "none",
+        "attribute": "notable_features",
+        "value": "checkout counter",
+        "hedged": false
+      }
+    ],
+    "degradations": [
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "upper_clothing",
+        "value": "red clothes"
+      },
+      {
+        "type": "vantage_loss",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "headwear",
+        "value": "mask"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "put the bag on the table"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "threatened the woman with a gun"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "left"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "put money in the bag"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "left the scene"
+      },
+      {
+        "type": "omission",
+        "entity": "weapon_1",
+        "entity_type": "weapon",
+        "role": "none",
+        "attribute": "held_by",
+        "value": "man in black"
+      },
+      {
+        "type": "corruption",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "upper_clothing",
+        "true_value": "black clothes",
+        "witness_value": "white clothes"
+      }
+    ]
+  },
+  "witness_C": {
+    "facts_given": [
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "playing with her mobile phone",
+        "hedged": true
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "upper_clothing",
+        "value": "black clothes",
+        "hedged": false
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "headwear",
+        "value": "mask",
+        "hedged": true
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "put the bag on the table",
+        "hedged": false
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "threatened the woman with a gun",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "put money in the bag",
+        "hedged": true
+      },
+      {
+        "entity": "weapon_1",
+        "entity_type": "weapon",
+        "role": "none",
+        "attribute": "weapon_type",
+        "value": "gun",
+        "hedged": true
+      },
+      {
+        "entity": "weapon_1",
+        "entity_type": "weapon",
+        "role": "none",
+        "attribute": "held_by",
+        "value": "man in black",
+        "hedged": false
+      },
+      {
+        "entity": "scene",
+        "entity_type": "location",
+        "role": "none",
+        "attribute": "notable_features",
+        "value": "checkout counter",
+        "hedged": false
+      },
+      {
+        "entity": "person_9",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "upper_clothing",
+        "value": "grey coat",
+        "hedged": true
+      }
+    ],
+    "degradations": [
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "upper_clothing",
+        "value": "red clothes"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "position",
+        "value": "behind the counter"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "left"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "opened the checkout counter"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "squatted with her hands above her head"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "left the scene"
+      },
+      {
+        "type": "confabulation",
+        "entity": "person_9",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "upper_clothing",
+        "value": "grey coat"
+      }
+    ]
+  }
+}

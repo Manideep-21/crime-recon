@@ -1,0 +1,46 @@
+{"time": "04:26:20", "step": "extract", "detail": "loaded 30 cached facts (/home/marams/crime-recon/outputs/robbery012/facts.json)"}
+{"time": "04:26:20", "step": "analyze", "detail": "1 conflicts, 2 hypotheses, 26 gaps, 37 candidate questions (7 blocked as leading)"}
+{"time": "04:26:21", "step": "generate", "detail": "H1: 8 facts drawn, 2 withheld, 7 not drawn (prompt)"}
+{"time": "04:26:21", "step": "not drawn", "detail": "H1: person_1.action = 'walked to the cash register' (witness_A): movement/direction"}
+{"time": "04:26:21", "step": "not drawn", "detail": "H1: person_1.action = 'put the money in the cash register' (witness_A): one short action per person"}
+{"time": "04:26:21", "step": "not drawn", "detail": "H1: person_1.action = 'handed it to the man in black' (witness_A): one short action per person"}
+{"time": "04:26:21", "step": "not drawn", "detail": "H1: person_1.action = 'closed the cashier drawer' (witness_A): one short action per person"}
+{"time": "04:26:21", "step": "not drawn", "detail": "H1: person_1.action = 'tried to run into the house' (witness_A): movement/direction"}
+{"time": "04:26:21", "step": "not drawn", "detail": "H1: person_1.action = 'walked out of the cashier' (witness_B): movement/direction"}
+{"time": "04:26:21", "step": "not drawn", "detail": "H1: person_3.position = 'walked out of the cashier' (witness_C): movement/direction"}
+{"time": "04:26:21", "step": "prompt", "detail": "H1: CCTV photo, wide angle, realistic, exactly 4 people. a person wearing blue shirt, looked up into the distance, sitting next to the cash register; a person wearing dark jacket and helmet; a person; a person wearing red t-shirt; a gun, held by man who was being robbed [62 tokens]"}
+{"time": "04:26:46", "step": "verify", "detail": "H1 seed 42: objects found 2/5, hallucinated 0, people 2 in image / 4 drawn"}
+{"time": "04:26:46", "step": "verify", "detail": "H1: missing person_1, missing person_3 -> regenerate"}
+{"time": "04:26:55", "step": "verify", "detail": "H1 seed 43: objects found 2/5, hallucinated 1, people 2 in image / 4 drawn"}
+{"time": "04:26:55", "step": "verify", "detail": "H1: motorcycle, missing person_5, missing person_3 -> regenerate"}
+{"time": "04:27:16", "step": "verify", "detail": "H1 seed 44: objects found 3/5, hallucinated 1, people 3 in image / 4 drawn"}
+{"time": "04:27:16", "step": "verify", "detail": "H1: person, missing person_5, missing person_3 -> regenerate"}
+{"time": "04:27:23", "step": "verify", "detail": "H1 seed 45: objects found 3/5, hallucinated 1, people 3 in image / 4 drawn"}
+{"time": "04:27:23", "step": "verify", "detail": "H1: person, missing person_5, missing person_6 -> regenerate"}
+{"time": "04:27:30", "step": "verify", "detail": "H1 seed 46: objects found 3/5, hallucinated 1, people 4 in image / 4 drawn"}
+{"time": "04:27:32", "step": "verify", "detail": "H1 seed 42 attribute check: objects found 2/5, hallucinated 0, people 2 in image / 4 drawn, attribute accuracy 80%"}
+{"time": "04:27:35", "step": "verify", "detail": "H1 seed 44 attribute check: objects found 3/5, hallucinated 1, people 3 in image / 4 drawn, attribute accuracy 20%"}
+{"time": "04:27:38", "step": "verify", "detail": "H1 seed 45 attribute check: objects found 3/5, hallucinated 1, people 3 in image / 4 drawn, attribute accuracy 60%"}
+{"time": "04:27:41", "step": "verify", "detail": "H1 seed 46 attribute check: objects found 3/5, hallucinated 1, people 4 in image / 4 drawn, attribute accuracy 80%"}
+{"time": "04:27:41", "step": "verify", "detail": "H1: keeping seed 42 (5 attempts)"}
+{"time": "04:27:42", "step": "generate", "detail": "H2: 8 facts drawn, 2 withheld, 7 not drawn (prompt)"}
+{"time": "04:27:42", "step": "not drawn", "detail": "H2: person_1.action = 'walked to the cash register' (witness_A): movement/direction"}
+{"time": "04:27:42", "step": "not drawn", "detail": "H2: person_1.action = 'put the money in the cash register' (witness_A): one short action per person"}
+{"time": "04:27:42", "step": "not drawn", "detail": "H2: person_1.action = 'handed it to the man in black' (witness_A): one short action per person"}
+{"time": "04:27:42", "step": "not drawn", "detail": "H2: person_1.action = 'closed the cashier drawer' (witness_A): one short action per person"}
+{"time": "04:27:42", "step": "not drawn", "detail": "H2: person_1.action = 'tried to run into the house' (witness_A): movement/direction"}
+{"time": "04:27:42", "step": "not drawn", "detail": "H2: person_1.action = 'walked out of the cashier' (witness_B): movement/direction"}
+{"time": "04:27:42", "step": "not drawn", "detail": "H2: person_3.position = 'walked out of the cashier' (witness_C): movement/direction"}
+{"time": "04:27:42", "step": "prompt", "detail": "H2: CCTV photo, wide angle, realistic, exactly 4 people. a person wearing blue shirt, looked up into the distance, sitting next to the cash register; a person wearing dark jacket and helmet; a person; a person wearing red t-shirt; a gun, held by man in blue shirt [61 tokens]"}
+{"time": "04:27:54", "step": "verify", "detail": "H2 seed 142: objects found 2/5, hallucinated 1, people 3 in image / 4 drawn"}
+{"time": "04:27:54", "step": "verify", "detail": "H2: person, missing person_5, missing person_3 -> regenerate"}
+{"time": "04:28:16", "step": "verify", "detail": "H2 seed 143: objects found 3/5, hallucinated 3, people 2 in image / 4 drawn"}
+{"time": "04:28:16", "step": "verify", "detail": "H2: gun, gun, gun, missing person_5, missing person_3 -> regenerate"}
+{"time": "04:28:24", "step": "verify", "detail": "H2 seed 144: objects found 2/5, hallucinated 0, people 2 in image / 4 drawn"}
+{"time": "04:28:24", "step": "verify", "detail": "H2: missing person_5, missing person_3 -> regenerate"}
+{"time": "04:28:35", "step": "verify", "detail": "H2 seed 145: objects found 3/5, hallucinated 1, people 4 in image / 4 drawn"}
+{"time": "04:28:35", "step": "verify", "detail": "H2: person, missing person_5 -> regenerate"}
+{"time": "04:28:41", "step": "verify", "detail": "H2 seed 146: objects found 3/5, hallucinated 2, people 2 in image / 4 drawn"}
+{"time": "04:28:45", "step": "verify", "detail": "H2 seed 144 attribute check: objects found 2/5, hallucinated 0, people 2 in image / 4 drawn, attribute accuracy 40%"}
+{"time": "04:28:49", "step": "verify", "detail": "H2 seed 145 attribute check: objects found 3/5, hallucinated 1, people 4 in image / 4 drawn, attribute accuracy 60%"}
+{"time": "04:28:49", "step": "verify", "detail": "H2: keeping seed 145 (5 attempts)"}

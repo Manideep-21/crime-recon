@@ -1,0 +1,61 @@
+# All tunable settings in one place.
+
+llm:
+  # Any OpenAI-compatible server. Default is Ollama (easiest, quantised, low memory).
+  # For vLLM use: base_url http://localhost:8000/v1, model Qwen/Qwen2.5-VL-7B-Instruct-AWQ
+  base_url: http://localhost:11434/v1
+  model: qwen2.5vl:7b
+  api_key: ollama
+  temperature: 0.1
+  timeout_sec: 180
+
+neo4j:
+  enabled: false         # set false to run without Neo4j (in-memory only)
+  uri: bolt://localhost:7687
+  user: neo4j
+  password: crimerecon123
+
+extraction:
+  max_cctv_frames: 6     # frames per scene sent to the vision model
+  llm_entity_merge: true # false = simple rule-based merge (type + role)
+
+confidence:
+  cctv: 0.85             # base confidence of a fact seen on CCTV
+  witness: 0.70          # base confidence of a plain witness statement
+  followup: 0.65         # answer to one of our follow-up questions
+  hedge_penalty: 0.25    # subtracted for "I think", half for "pretty sure"
+  corroboration_bonus: 0.20  # added per extra independent source that agrees
+  render_threshold: 0.60     # facts below this are NOT drawn
+  hypothesis_threshold: 0.40 # a contested option needs at least this to be drawn
+
+questions:
+  llm_rephrase: false    # true = LLM rewords templates (still filtered)
+  include_baseline_candidates: true  # also generate naive questions to show the filter blocking them
+
+generation:
+  backend: sdxl          # sdxl | sd35 | mock (mock = placeholder image, no GPU)
+  model: stabilityai/stable-diffusion-xl-base-1.0
+  sd35_model: stabilityai/stable-diffusion-3.5-medium   # gated: accept the licence + HF token
+  sd35_steps: 40
+  sd35_guidance: 4.5
+  steps: 30
+  guidance_scale: 7.0
+  width: 1024
+  height: 1024
+  cpu_offload: false  # true = model offload (~8 GB); sequential = layer offload (<4 GB, slower); false = all on GPU
+  max_retries: 4         # regenerations when a hallucination is found
+  base_seed: 42
+
+verification:
+  backend: owlv2         # owlv2 | none
+  model: google/owlv2-base-patch16-ensemble
+  score_threshold: 0.20
+  hallucination_score: 0.30  # an unexpected object needs at least this score to count
+  # Things SDXL likes to add on its own; we look for them to catch hallucinations.
+  distractors: [person, knife, gun, car, motorcycle, bag, dog]
+  vqa_check: true        # ask the VLM yes/no questions about attributes (TIFA-style)
+  blur_faces: true
+
+paths:
+  scenes_dir: data/scenes
+  outputs_dir: outputs

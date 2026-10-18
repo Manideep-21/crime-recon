@@ -1,0 +1,23 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Model caches and weights (Hugging Face, torch, Ollama live outside the repo; just in case)
+.cache/
+hf_cache/
+huggingface/
+models/
+*.safetensors
+*.ckpt
+*.pt
+*.gguf
+
+# Secrets
+.env
+*.token
+
+# Large images under outputs/runs/: .gitignore can't filter by size, so the pre-commit hook
+# (.githooks/pre-commit) refuses PNGs > 5 MB there and prints the lines to add below.
+# --- outputs/runs PNGs larger than 5 MB ---

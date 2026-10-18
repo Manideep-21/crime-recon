@@ -1,0 +1,60 @@
+{
+  "title": "Robbery058_x264 (UCF-Crime, UCA caption)",
+  "cctv_frames": [],
+  "source": {
+    "dataset": "UCF-Crime + UCA (train split)",
+    "video": "Robbery058_x264.mp4",
+    "window": [
+      0.6,
+      58.5
+    ],
+    "uca_sentences": [
+      "A woman in red was playing with her mobile phone behind the counter, when a man in black with a mask came over.",
+      "The man in black put the bag on the table and threatened the woman with a gun.",
+      "The woman opened the checkout counter and put money in her bag under threat",
+      "The woman turned around to pack her things and put them in her bag",
+      "The man in black tidied up and left, while the woman squatted with her hands above her head.",
+      "The woman straightened up and quickly left the scene after checking"
+    ],
+    "uca_timestamps": [
+      [
+        0.6,
+        6.7
+      ],
+      [
+        7.2,
+        14.9
+      ],
+      [
+        14.9,
+        20.0
+      ],
+      [
+        20.0,
+        38.1
+      ],
+      [
+        44.0,
+        52.1
+      ],
+      [
+        52.1,
+        58.5
+      ]
+    ]
+  },
+  "witnesses": {
+    "witness_A": {
+      "viewpoint": "close by, inside, a few metres away",
+      "statement": "A woman behind the counter was being robbed. She put money in a bag, squatted with her hands above her head, and left the scene. I think she was wearing red clothes. The robber left, maybe wearing a mask, and put the bag on the table. The robber held a weapon, but I'm not sure what it was."
+    },
+    "witness_B": {
+      "viewpoint": "far away, looking in from outside",
+      "statement": "I saw a woman behind the counter, who opened the checkout counter and squatted with her hands above her head. I think she was playing with her mobile phone. The robber, wearing white clothes, approached and held a gun. The place had a checkout counter."
+    },
+    "witness_C": {
+      "viewpoint": "brief glimpse while passing by",
+      "statement": "I saw a woman behind the counter who was being robbed. I think she was playing with her mobile phone. A man in black robbed her; I'm pretty sure he put a bag on the table and threatened her with a gun. The weapon was held by the robber, but I'm not sure if it was a gun. The place had a checkout counter. Another man in a grey coat was just nearby, but I'm not sure what he was doing."
+    }
+  }
+}

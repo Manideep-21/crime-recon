@@ -1,0 +1,22 @@
+{"time": "05:34:51", "step": "extract", "detail": "loaded 31 cached facts (/home/marams/crime-recon/outputs/shoplifting033/facts.json)"}
+{"time": "05:34:51", "step": "analyze", "detail": "0 conflicts, 1 hypotheses, 10 gaps, 25 candidate questions (7 blocked as leading)"}
+{"time": "05:34:52", "step": "generate", "detail": "H1: 6 facts drawn, 4 withheld, 7 not drawn (prompt)"}
+{"time": "05:34:52", "step": "not drawn", "detail": "H1: person_1.action = 'put a watch down on the table' (witness_A): one short action per person"}
+{"time": "05:34:52", "step": "not drawn", "detail": "H1: person_1.action = 'turned around' (witness_A): movement/direction"}
+{"time": "05:34:52", "step": "not drawn", "detail": "H1: person_1.action = 'walking to the side of the table' (witness_A): movement/direction"}
+{"time": "05:34:52", "step": "not drawn", "detail": "H1: person_1.action = 'put the watch in his pants pocket' (witness_A): one short action per person"}
+{"time": "05:34:52", "step": "not drawn", "detail": "H1: person_2.action = 'took two steps towards the man' (witness_A): movement/direction"}
+{"time": "05:34:52", "step": "not drawn", "detail": "H1: person_1.action = 'walked around the table' (witness_B): movement/direction"}
+{"time": "05:34:52", "step": "not drawn", "detail": "H1: person_1.action = 'standing at counter' (cctv_frame_01): one short action per person"}
+{"time": "05:34:52", "step": "prompt", "detail": "H1: CCTV photo, wide angle, realistic, exactly 2 people. a person wearing blue shirt and khaki shorts, touched the watch, behind the counter; a person; a watch, on the table [40 tokens]"}
+{"time": "05:37:50", "step": "verify", "detail": "H1 seed 42: objects found 2/3, hallucinated 0, people 1 in image / 2 drawn"}
+{"time": "05:37:50", "step": "verify", "detail": "H1: missing person_2 -> regenerate"}
+{"time": "05:38:19", "step": "verify", "detail": "H1 seed 43: objects found 2/3, hallucinated 1, people 1 in image / 2 drawn"}
+{"time": "05:38:19", "step": "verify", "detail": "H1: watch, missing person_2 -> regenerate"}
+{"time": "05:38:53", "step": "verify", "detail": "H1 seed 44: objects found 2/3, hallucinated 1, people 1 in image / 2 drawn"}
+{"time": "05:38:53", "step": "verify", "detail": "H1: watch, missing person_2 -> regenerate"}
+{"time": "05:39:20", "step": "verify", "detail": "H1 seed 45: objects found 2/3, hallucinated 1, people 1 in image / 2 drawn"}
+{"time": "05:39:20", "step": "verify", "detail": "H1: watch, missing person_2 -> regenerate"}
+{"time": "05:39:46", "step": "verify", "detail": "H1 seed 46: objects found 2/3, hallucinated 2, people 1 in image / 2 drawn"}
+{"time": "05:41:51", "step": "verify", "detail": "H1 seed 42 attribute check: objects found 2/3, hallucinated 0, people 1 in image / 2 drawn, attribute accuracy 67%"}
+{"time": "05:41:51", "step": "verify", "detail": "H1: keeping seed 42 (5 attempts)"}

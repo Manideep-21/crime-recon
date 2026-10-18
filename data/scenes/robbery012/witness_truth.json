@@ -1,0 +1,477 @@
+{
+  "witness_A": {
+    "facts_given": [
+      {
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "hair",
+        "value": "black",
+        "hedged": true
+      },
+      {
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "sat next to the cash register",
+        "hedged": true
+      },
+      {
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "looked up into the distance",
+        "hedged": false
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "upper_clothing",
+        "value": "black coat",
+        "hedged": true
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "walked into the checkout counter",
+        "hedged": true
+      },
+      {
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "walked to the cash register",
+        "hedged": false
+      },
+      {
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "put the money in the cash register",
+        "hedged": false
+      },
+      {
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "handed it to the man in black",
+        "hedged": false
+      },
+      {
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "closed the cashier drawer",
+        "hedged": false
+      },
+      {
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "tried to run into the house",
+        "hedged": false
+      },
+      {
+        "entity": "weapon_1",
+        "entity_type": "weapon",
+        "role": "none",
+        "attribute": "weapon_type",
+        "value": "gun",
+        "hedged": false
+      }
+    ],
+    "degradations": [
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "headwear",
+        "value": "white bandana"
+      },
+      {
+        "type": "omission",
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "upper_clothing",
+        "value": "red shirt"
+      },
+      {
+        "type": "omission",
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "opened the cash register"
+      },
+      {
+        "type": "omission",
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "walked out of the cashier"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "tried to intercept"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "turned around and left in the opposite direction"
+      },
+      {
+        "type": "omission",
+        "entity": "weapon_1",
+        "entity_type": "weapon",
+        "role": "none",
+        "attribute": "held_by",
+        "value": "man in black"
+      }
+    ]
+  },
+  "witness_B": {
+    "facts_given": [
+      {
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "sat next to the cash register",
+        "hedged": false
+      },
+      {
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "looked up into the distance",
+        "hedged": true
+      },
+      {
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "upper_clothing",
+        "value": "blue shirt",
+        "hedged": false
+      },
+      {
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "opened the cash register",
+        "hedged": false
+      },
+      {
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "handed it to the man in black",
+        "hedged": false
+      },
+      {
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "walked out of the cashier",
+        "hedged": false
+      },
+      {
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "tried to run into the house",
+        "hedged": false
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "turned around and left in the opposite direction",
+        "hedged": true
+      },
+      {
+        "entity": "weapon_1",
+        "entity_type": "weapon",
+        "role": "none",
+        "attribute": "weapon_type",
+        "value": "gun",
+        "hedged": false
+      }
+    ],
+    "degradations": [
+      {
+        "type": "vantage_loss",
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "hair",
+        "value": "black"
+      },
+      {
+        "type": "vantage_loss",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "headwear",
+        "value": "white bandana"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "upper_clothing",
+        "value": "black coat"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "walked into the checkout counter"
+      },
+      {
+        "type": "omission",
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "walked to the cash register"
+      },
+      {
+        "type": "omission",
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "put the money in the cash register"
+      },
+      {
+        "type": "omission",
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "closed the cashier drawer"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "tried to intercept"
+      },
+      {
+        "type": "omission",
+        "entity": "weapon_1",
+        "entity_type": "weapon",
+        "role": "none",
+        "attribute": "held_by",
+        "value": "man in black"
+      },
+      {
+        "type": "corruption",
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "upper_clothing",
+        "true_value": "red shirt",
+        "witness_value": "blue shirt"
+      }
+    ]
+  },
+  "witness_C": {
+    "facts_given": [
+      {
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "sat next to the cash register",
+        "hedged": false
+      },
+      {
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "looked up into the distance",
+        "hedged": false
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "walked into the checkout counter",
+        "hedged": true
+      },
+      {
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "opened the cash register",
+        "hedged": true
+      },
+      {
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "put the money in the cash register",
+        "hedged": false
+      },
+      {
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "handed it to the man in black",
+        "hedged": false
+      },
+      {
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "walked out of the cashier",
+        "hedged": false
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "tried to intercept",
+        "hedged": false
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "turned around and left in the opposite direction",
+        "hedged": false
+      },
+      {
+        "entity": "person_9",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "upper_clothing",
+        "value": "grey coat",
+        "hedged": true
+      }
+    ],
+    "degradations": [
+      {
+        "type": "omission",
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "hair",
+        "value": "black"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "headwear",
+        "value": "white bandana"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "upper_clothing",
+        "value": "black coat"
+      },
+      {
+        "type": "omission",
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "upper_clothing",
+        "value": "red shirt"
+      },
+      {
+        "type": "omission",
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "walked to the cash register"
+      },
+      {
+        "type": "omission",
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "closed the cashier drawer"
+      },
+      {
+        "type": "omission",
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "tried to run into the house"
+      },
+      {
+        "type": "omission",
+        "entity": "weapon_1",
+        "entity_type": "weapon",
+        "role": "none",
+        "attribute": "weapon_type",
+        "value": "gun"
+      },
+      {
+        "type": "omission",
+        "entity": "weapon_1",
+        "entity_type": "weapon",
+        "role": "none",
+        "attribute": "held_by",
+        "value": "man in black"
+      },
+      {
+        "type": "confabulation",
+        "entity": "person_9",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "upper_clothing",
+        "value": "grey coat"
+      }
+    ]
+  }
+}

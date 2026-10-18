@@ -1,0 +1,140 @@
+{
+  "scene_id": "robbery058",
+  "caption": "A woman in red was playing with her mobile phone behind the counter, when a man in black with a mask came over. The man in black put the bag on the table and threatened the woman with a gun. The woman opened the checkout counter and put money in her bag under threat. The woman turned around to pack her things and put them in her bag. The man in black tidied up and left, while the woman squatted with her hands above her head. The woman straightened up and quickly left the scene after checking.",
+  "nouns": {
+    "person_1": "woman",
+    "person_2": "man"
+  },
+  "facts": [
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "upper_clothing",
+      "value": "red clothes"
+    },
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "action",
+      "value": "playing with her mobile phone"
+    },
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "position",
+      "value": "behind the counter"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "upper_clothing",
+      "value": "black clothes"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "headwear",
+      "value": "mask"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "put the bag on the table"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "threatened the woman with a gun"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "left"
+    },
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "action",
+      "value": "opened the checkout counter"
+    },
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "action",
+      "value": "put money in the bag"
+    },
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "action",
+      "value": "squatted with her hands above her head"
+    },
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "action",
+      "value": "left the scene"
+    },
+    {
+      "entity": "weapon_1",
+      "entity_type": "weapon",
+      "role": "none",
+      "attribute": "weapon_type",
+      "value": "gun"
+    },
+    {
+      "entity": "weapon_1",
+      "entity_type": "weapon",
+      "role": "none",
+      "attribute": "held_by",
+      "value": "man in black"
+    },
+    {
+      "entity": "scene",
+      "entity_type": "location",
+      "role": "none",
+      "attribute": "notable_features",
+      "value": "checkout counter"
+    }
+  ],
+  "planted_conflicts": [
+    {
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "upper_clothing"
+    }
+  ],
+  "planted_false_facts": [
+    {
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "upper_clothing",
+      "value": "grey coat",
+      "witness": "witness_C"
+    }
+  ],
+  "hand_edits": [
+    "victim upper_clothing 'red' -> 'red clothes'; suspect upper_clothing 'black' -> 'black clothes'",
+    "suspect action 'tidied up and left' -> 'left'",
+    "added victim actions: 'opened the checkout counter', 'put money in the bag', 'squatted with her hands above her head', 'left the scene'",
+    "added weapon_1: weapon_type 'gun', held_by 'man in black' (witness-words format, as in the extraction guide)",
+    "scene row 'notable_features = behind the counter' -> 'notable_features = checkout counter'",
+    "kept 'mask' as suspect headwear",
+    "added nouns from the caption: {'person_1': 'woman', 'person_2': 'man'}"
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "scene_id": "shoplifting001",
+  "caption": "The man in the orange shirt walked to the middle of the shelf, and a man in the white shirt was behind him. They both stopped in front of the shelf. The man in the white shirt took out something and touched the laptop. Suddenly something fell. He picked it up and put it under the laptop. The man in white clothes closed the notebook, and then the man in orange clothes looked around. The man in orange clothes closed the computer and hid it in his clothes and walked away. The man in white clothes closed the other computer, hid it in his clothes and walked away. The man in white clothes and the man in orange shirt talked at the end, and then went out.",
+  "nouns": {
+    "person_1": "man",
+    "person_2": "man"
+  },
+  "facts": [
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "upper_clothing",
+      "value": "orange shirt"
+    },
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "walked to the middle of the shelf"
+    },
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "looked around"
+    },
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "closed the computer"
+    },
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "hid it in his clothes"
+    },
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "walked away"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "upper_clothing",
+      "value": "white shirt"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "stopped in front of the shelf"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "took out something"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "touched the laptop"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "picked it up"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "put it under the laptop"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "closed the notebook"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "closed the other computer"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "hid it in his clothes"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "walked away"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "talked at the end"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "went out"
+    }
+  ],
+  "planted_conflicts": [
+    {
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "upper_clothing"
+    }
+  ],
+  "planted_false_facts": [
+    {
+      "entity_type": "vehicle",
+      "role": "none",
+      "attribute": "vehicle_type",
+      "value": "white van",
+      "witness": "witness_C"
+    }
+  ]
+}

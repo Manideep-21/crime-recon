@@ -1,0 +1,51 @@
+{
+  "title": "Shoplifting024_x264 (UCF-Crime, UCA caption)",
+  "cctv_frames": [],
+  "held_out": true,
+  "source": {
+    "dataset": "UCF-Crime + UCA (train split)",
+    "video": "Shoplifting024_x264.mp4",
+    "window": [
+      2.2,
+      40.2
+    ],
+    "uca_sentences": [
+      "A woman sat outside the table and a man sat at the table. The two were talking. Then the man turned around and put things into the cabinet behind him. The woman picked up the white paper on the table and fanned herself.",
+      "The man stood up and walked out, the woman opened the book and looked at",
+      "The woman stood up and looked back in the direction where the man left, then took something from the table and put it into her clothes, and then put the book down.",
+      "The man came back"
+    ],
+    "uca_timestamps": [
+      [
+        2.2,
+        13.4
+      ],
+      [
+        14.1,
+        25.2
+      ],
+      [
+        26.4,
+        37.6
+      ],
+      [
+        38.2,
+        40.2
+      ]
+    ]
+  },
+  "witnesses": {
+    "witness_A": {
+      "viewpoint": "close by, inside, a few metres away",
+      "statement": "I saw a man who works in the shop come back. I'm not sure if he turned around and put things into the cabinet or if he stood up and walked out. I also saw a woman who stole something pick up the white paper on the table and fan herself. I think she stood up and looked back in the direction where the man left, and maybe she took something from the table and put it into her clothes."
+    },
+    "witness_B": {
+      "viewpoint": "far away, looking in from outside",
+      "statement": "I saw a woman behind the counter pick up the white paper on the table and fan herself. She then opened the book and looked at it. I'm pretty sure she took something from the table and put it into her clothes. I think she stood up and looked back in the direction where the man left."
+    },
+    "witness_C": {
+      "viewpoint": "brief glimpse while passing by",
+      "statement": "I saw a man who works in the shop come back. I'm not sure if he stood up and walked out. I also saw a woman behind the counter pick up the white paper on the table and fan herself. I'm not sure if she stood up and looked back in the direction where the man left. I think there was a white van, but I'm not sure about the type."
+    }
+  }
+}

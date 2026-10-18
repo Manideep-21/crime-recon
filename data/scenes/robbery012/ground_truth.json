@@ -1,0 +1,158 @@
+{
+  "scene_id": "robbery012",
+  "caption": "A black-haired man wearing a red shirt sat next to the cash register with his head bowed. The black-haired man in the red shirt looked up into the distance. A man wearing a white bandana and a black coat walked into the checkout counter with a gun. Upon seeing this, the man in red immediately walked to the cash register and opened the cash register. The man in red put the money in the cash register in his left hand, and then handed it to the man in black who was holding a gun. The man in red closed the cashier drawer and walked out of the cashier. The man in red tried to run into the house. The man in black tried to intercept. But then turned around and left in the opposite direction.",
+  "nouns": {
+    "person_2": "man",
+    "person_3": "man"
+  },
+  "facts": [
+    {
+      "entity": "person_3",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "hair",
+      "value": "black"
+    },
+    {
+      "entity": "person_3",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "action",
+      "value": "sat next to the cash register"
+    },
+    {
+      "entity": "person_3",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "action",
+      "value": "looked up into the distance"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "headwear",
+      "value": "white bandana"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "upper_clothing",
+      "value": "black coat"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "walked into the checkout counter"
+    },
+    {
+      "entity": "person_3",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "upper_clothing",
+      "value": "red shirt"
+    },
+    {
+      "entity": "person_3",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "action",
+      "value": "walked to the cash register"
+    },
+    {
+      "entity": "person_3",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "action",
+      "value": "opened the cash register"
+    },
+    {
+      "entity": "person_3",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "action",
+      "value": "put the money in the cash register"
+    },
+    {
+      "entity": "person_3",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "action",
+      "value": "handed it to the man in black"
+    },
+    {
+      "entity": "person_3",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "action",
+      "value": "closed the cashier drawer"
+    },
+    {
+      "entity": "person_3",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "action",
+      "value": "walked out of the cashier"
+    },
+    {
+      "entity": "person_3",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "action",
+      "value": "tried to run into the house"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "tried to intercept"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "turned around and left in the opposite direction"
+    },
+    {
+      "entity": "weapon_1",
+      "entity_type": "weapon",
+      "role": "none",
+      "attribute": "weapon_type",
+      "value": "gun"
+    },
+    {
+      "entity": "weapon_1",
+      "entity_type": "weapon",
+      "role": "none",
+      "attribute": "held_by",
+      "value": "man in black"
+    }
+  ],
+  "planted_conflicts": [
+    {
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "upper_clothing"
+    }
+  ],
+  "planted_false_facts": [
+    {
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "upper_clothing",
+      "value": "grey coat",
+      "witness": "witness_C"
+    }
+  ],
+  "hand_edits": [
+    "merged person_1 into person_3 as victim (both are the man in the red shirt): kept his black hair and the actions 'sat next to the cash register', 'looked up into the distance'; dropped person_1's duplicate 'red shirt'",
+    "person_2 upper_clothing 'white bandana and black coat' -> headwear 'white bandana' + upper_clothing 'black coat'",
+    "person_2 carrying 'gun' -> weapon_1: weapon_type 'gun', held_by 'man in black'",
+    "nouns: removed person_1"
+  ]
+}

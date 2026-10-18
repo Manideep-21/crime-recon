@@ -1,0 +1,71 @@
+{
+  "title": "Robbery012_x264 (UCF-Crime, UCA caption)",
+  "cctv_frames": [],
+  "held_out": true,
+  "source": {
+    "dataset": "UCF-Crime + UCA (train split)",
+    "video": "Robbery012_x264.mp4",
+    "window": [
+      1.0,
+      24.2
+    ],
+    "uca_sentences": [
+      "A black-haired man wearing a red shirt sat next to the cash register with his head bowed.",
+      "The black-haired man in the red shirt looked up into the distance",
+      "A man wearing a white bandana and a black coat walked into the checkout counter with a gun.",
+      " Upon seeing this, the man in red immediately walked to the cash register and opened the cash register.",
+      "The man in red put the money in the cash register in his left hand, and then handed it to the man in black who was holding a gun.",
+      "The man in red closed the cashier drawer and walked out of the cashier.",
+      "The man in red tried to run into the house.",
+      "The man in black tried to intercept. But then turned around and left in the opposite direction"
+    ],
+    "uca_timestamps": [
+      [
+        1.0,
+        8.4
+      ],
+      [
+        8.4,
+        10.1
+      ],
+      [
+        10.0,
+        15.2
+      ],
+      [
+        11.0,
+        15.2
+      ],
+      [
+        17.0,
+        20.1
+      ],
+      [
+        20.1,
+        21.3
+      ],
+      [
+        21.3,
+        24.2
+      ],
+      [
+        21.3,
+        24.2
+      ]
+    ]
+  },
+  "witnesses": {
+    "witness_A": {
+      "viewpoint": "close by, inside, a few metres away",
+      "statement": "I saw a man who was being robbed. He looked up into the distance, then walked to the cash register. He put the money in the cash register, handed it to the man in black, closed the cashier drawer, and tried to run into the house. I'm pretty sure the man had black hair. Another man, wearing a black coat, walked into the checkout counter. I think there was a gun involved."
+    },
+    "witness_B": {
+      "viewpoint": "far away, looking in from outside",
+      "statement": "I saw a man in a blue shirt sitting next to the cash register. He opened the cash register and handed it to another man in black. The man in blue then walked out of the cashier and tried to run into the house. I'm pretty sure he looked up into the distance. Another man robbed the place, but I'm not sure if he turned around and left in the opposite direction. I think there was a gun involved."
+    },
+    "witness_C": {
+      "viewpoint": "brief glimpse while passing by",
+      "statement": "I saw a man sitting next to the cash register at the place of work. He looked up into the distance and put the money in the cash register before handing it to another man in black, who walked out of the cashier. I'm not sure if he opened the cash register first. The robber, wearing dark clothes, tried to intercept but turned around and left in the opposite direction. I think another man, maybe near me, had a grey coat on."
+    }
+  }
+}

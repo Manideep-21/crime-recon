@@ -1,0 +1,228 @@
+{
+  "witness_A": {
+    "facts_given": [
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "turned around and put things into the cabinet",
+        "hedged": true
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "stood up and walked out",
+        "hedged": true
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "picked up the white paper on the table and fanned herself",
+        "hedged": false
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "stood up and looked back in the direction where the man left",
+        "hedged": true
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "took something from the table and put it into her clothes",
+        "hedged": true
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "came back",
+        "hedged": false
+      }
+    ],
+    "degradations": [
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "opened the book and looked at"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "put the book down"
+      }
+    ]
+  },
+  "witness_B": {
+    "facts_given": [
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "picked up the white paper on the table and fanned herself",
+        "hedged": false
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "opened the book and looked at",
+        "hedged": false
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "stood up and looked back in the direction where the man left",
+        "hedged": true
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "took something from the table and put it into her clothes",
+        "hedged": false
+      }
+    ],
+    "degradations": [
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "turned around and put things into the cabinet"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "stood up and walked out"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "put the book down"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "came back"
+      }
+    ]
+  },
+  "witness_C": {
+    "facts_given": [
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "stood up and walked out",
+        "hedged": true
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "picked up the white paper on the table and fanned herself",
+        "hedged": false
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "stood up and looked back in the direction where the man left",
+        "hedged": true
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "came back",
+        "hedged": false
+      },
+      {
+        "entity": "vehicle_9",
+        "entity_type": "vehicle",
+        "role": "none",
+        "attribute": "vehicle_type",
+        "value": "white van",
+        "hedged": true
+      }
+    ],
+    "degradations": [
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "turned around and put things into the cabinet"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "opened the book and looked at"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "took something from the table and put it into her clothes"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "put the book down"
+      },
+      {
+        "type": "confabulation",
+        "entity": "vehicle_9",
+        "entity_type": "vehicle",
+        "role": "none",
+        "attribute": "vehicle_type",
+        "value": "white van"
+      }
+    ]
+  }
+}

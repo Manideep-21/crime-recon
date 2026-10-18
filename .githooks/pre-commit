@@ -1,0 +1,10 @@
+#!/bin/sh
+# Refuse staged PNGs over 5 MB under outputs/runs/ (gitignore can't match on size).
+big=$(git diff --cached --name-only --diff-filter=AM -- 'outputs/runs/*.png' 'outputs/runs/**/*.png' |
+      while read -r f; do [ -f "$f" ] && [ "$(wc -c < "$f")" -gt 5242880 ] && echo "$f"; done)
+if [ -n "$big" ]; then
+    echo "pre-commit: these PNGs are over 5 MB; add them to .gitignore and unstage them:"
+    echo "$big" | sed 's/^/  /'
+    echo "  e.g.  git rm --cached <file> && echo <file> >> .gitignore"
+    exit 1
+fi

@@ -1,0 +1,18 @@
+{
+  "title": "Convenience store robbery (hand-written sample, no CCTV frames yet)",
+  "witnesses": {
+    "witness_A": {
+      "viewpoint": "inside the store, near the snacks aisle, about 5 metres away",
+      "statement": "I was in the snacks aisle when a tall man in a red hoodie walked straight to the counter. He had a black cap on. He leaned over and grabbed cash from the register. The cashier, a young woman in a green uniform shirt, put her hands up. Then he ran out."
+    },
+    "witness_B": {
+      "viewpoint": "outside on the pavement, looking in through the front window",
+      "statement": "It was night and the store was brightly lit so I could see in. I think he wore a blue jacket. He had a black backpack on his shoulder and he ran out the door towards the parking lot."
+    },
+    "witness_C": {
+      "viewpoint": "in the parking lot, sitting in a car",
+      "statement": "A slim guy in black jeans came running out of the store. I'm pretty sure he had a knife in his hand. He ran past my car."
+    }
+  },
+  "cctv_frames": []
+}

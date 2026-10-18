@@ -1,0 +1,300 @@
+{
+  "witness_A": {
+    "facts_given": [
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "upper_clothing",
+        "value": "blue shirt",
+        "hedged": true
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "touched the watch on the table",
+        "hedged": true
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "put the watch down",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "turned around and walked to the side of the table",
+        "hedged": true
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "put the watch on the table into his pants pocket",
+        "hedged": true
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "took two steps towards the man",
+        "hedged": false
+      },
+      {
+        "entity": "object_1",
+        "entity_type": "object",
+        "role": "none",
+        "attribute": "object_type",
+        "value": "watch",
+        "hedged": false
+      },
+      {
+        "entity": "object_1",
+        "entity_type": "object",
+        "role": "none",
+        "attribute": "position",
+        "value": "on the table",
+        "hedged": false
+      }
+    ],
+    "degradations": [
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "walked around the table to the woman's side"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "turned and walked out of the store"
+      },
+      {
+        "type": "omission",
+        "entity": "scene",
+        "entity_type": "location",
+        "role": "none",
+        "attribute": "place_type",
+        "value": "store"
+      }
+    ]
+  },
+  "witness_B": {
+    "facts_given": [
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "put the watch down",
+        "hedged": true
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "walked around the table to the woman's side",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "turned around and walked to the side of the table",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "put the watch on the table into his pants pocket",
+        "hedged": true
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "turned and walked out of the store",
+        "hedged": true
+      },
+      {
+        "entity": "scene",
+        "entity_type": "location",
+        "role": "none",
+        "attribute": "place_type",
+        "value": "store",
+        "hedged": false
+      },
+      {
+        "entity": "object_1",
+        "entity_type": "object",
+        "role": "none",
+        "attribute": "object_type",
+        "value": "watch",
+        "hedged": false
+      },
+      {
+        "entity": "object_1",
+        "entity_type": "object",
+        "role": "none",
+        "attribute": "position",
+        "value": "on the table",
+        "hedged": false
+      }
+    ],
+    "degradations": [
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "upper_clothing",
+        "value": "blue shirt"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "touched the watch on the table"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "took two steps towards the man"
+      }
+    ]
+  },
+  "witness_C": {
+    "facts_given": [
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "touched the watch on the table",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "turned around and walked to the side of the table",
+        "hedged": true
+      },
+      {
+        "entity": "object_1",
+        "entity_type": "object",
+        "role": "none",
+        "attribute": "object_type",
+        "value": "watch",
+        "hedged": true
+      },
+      {
+        "entity": "object_1",
+        "entity_type": "object",
+        "role": "none",
+        "attribute": "position",
+        "value": "on the table",
+        "hedged": true
+      },
+      {
+        "entity": "vehicle_9",
+        "entity_type": "vehicle",
+        "role": "none",
+        "attribute": "vehicle_type",
+        "value": "white van",
+        "hedged": true
+      }
+    ],
+    "degradations": [
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "upper_clothing",
+        "value": "blue shirt"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "put the watch down"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "walked around the table to the woman's side"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "put the watch on the table into his pants pocket"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "turned and walked out of the store"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "took two steps towards the man"
+      },
+      {
+        "type": "omission",
+        "entity": "scene",
+        "entity_type": "location",
+        "role": "none",
+        "attribute": "place_type",
+        "value": "store"
+      },
+      {
+        "type": "confabulation",
+        "entity": "vehicle_9",
+        "entity_type": "vehicle",
+        "role": "none",
+        "attribute": "vehicle_type",
+        "value": "white van"
+      }
+    ]
+  }
+}

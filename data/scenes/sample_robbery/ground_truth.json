@@ -1,0 +1,26 @@
+{
+  "scene_id": "sample_robbery",
+  "note": "Answer key for evaluation. Witness C's knife is a planted false memory; witness B's blue jacket is a planted corruption of the red hoodie.",
+  "facts": [
+    {"entity_type": "location", "role": "none", "attribute": "place_type", "value": "convenience store"},
+    {"entity_type": "location", "role": "none", "attribute": "time_of_day", "value": "night"},
+    {"entity_type": "location", "role": "none", "attribute": "lighting", "value": "brightly lit"},
+    {"entity_type": "person", "role": "suspect", "attribute": "upper_clothing", "value": "red hoodie"},
+    {"entity_type": "person", "role": "suspect", "attribute": "lower_clothing", "value": "black jeans"},
+    {"entity_type": "person", "role": "suspect", "attribute": "headwear", "value": "black cap"},
+    {"entity_type": "person", "role": "suspect", "attribute": "height", "value": "tall"},
+    {"entity_type": "person", "role": "suspect", "attribute": "build", "value": "slim"},
+    {"entity_type": "person", "role": "suspect", "attribute": "carrying", "value": "black backpack"},
+    {"entity_type": "person", "role": "suspect", "attribute": "action", "value": "grabbed cash from the register"},
+    {"entity_type": "person", "role": "suspect", "attribute": "action", "value": "ran out the door"},
+    {"entity_type": "person", "role": "victim", "attribute": "upper_clothing", "value": "green uniform shirt"},
+    {"entity_type": "person", "role": "victim", "attribute": "action", "value": "put her hands up"},
+    {"entity_type": "person", "role": "victim", "attribute": "position", "value": "behind the counter"}
+  ],
+  "planted_conflicts": [
+    {"entity_type": "person", "role": "suspect", "attribute": "upper_clothing"}
+  ],
+  "planted_false_facts": [
+    {"entity_type": "weapon", "role": "none", "attribute": "weapon_type", "value": "knife", "witness": "witness_C"}
+  ]
+}

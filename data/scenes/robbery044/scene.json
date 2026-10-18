@@ -1,0 +1,40 @@
+{
+  "title": "Robbery044_x264 (UCF-Crime, UCA caption)",
+  "cctv_frames": [],
+  "source": {
+    "dataset": "UCF-Crime + UCA (train split)",
+    "video": "Robbery044_x264.mp4",
+    "window": [
+      0.9,
+      15.0
+    ],
+    "uca_sentences": [
+      "A man wearing a black hat and a black vest threatens the man wearing a white hat behind the counter to withdraw money from the counter",
+      "The man in the black hat took the money and left, the man at the counter raised his hands"
+    ],
+    "uca_timestamps": [
+      [
+        0.9,
+        10.4
+      ],
+      [
+        10.4,
+        15.0
+      ]
+    ]
+  },
+  "witnesses": {
+    "witness_A": {
+      "viewpoint": "close by, inside, a few metres away",
+      "statement": "I was inside the store when I saw a man wearing a black hat and a black vest. He was threatening the man behind the counter, who was wearing a white hat and raised his hands. The robber took some money from the counter."
+    },
+    "witness_B": {
+      "viewpoint": "far away, looking in from outside",
+      "statement": "I saw a man who robbed the place. He was wearing a red vest and took the money. I think he threatened the man behind the counter, but I'm not sure. The man behind the counter was being robbed."
+    },
+    "witness_C": {
+      "viewpoint": "brief glimpse while passing by",
+      "statement": "I saw a man who robbed the place. He was wearing a black hat and a black vest. He threatened the man behind the counter and then left. I think he was wearing a black vest. Another man, wearing a grey coat, was just nearby."
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "scene_id": "robbery044",
+  "caption": "A man wearing a black hat and a black vest threatens the man wearing a white hat behind the counter to withdraw money from the counter. The man in the black hat took the money and left, the man at the counter raised his hands.",
+  "nouns": {
+    "person_1": "man",
+    "person_2": "man"
+  },
+  "facts": [
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "headwear",
+      "value": "black hat"
+    },
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "upper_clothing",
+      "value": "black vest"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "headwear",
+      "value": "white hat"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "position",
+      "value": "behind the counter"
+    },
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "threatens the man behind the counter"
+    },
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "took the money"
+    },
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "left"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "action",
+      "value": "raised his hands"
+    }
+  ],
+  "planted_conflicts": [
+    {
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "upper_clothing"
+    }
+  ],
+  "planted_false_facts": [
+    {
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "upper_clothing",
+      "value": "grey coat",
+      "witness": "witness_C"
+    }
+  ],
+  "hand_edits": [
+    "deleted person_3 bystander 'at the counter' (that man is the victim, person_2)",
+    "added nouns from the caption: {'person_1': 'man', 'person_2': 'man'}"
+  ]
+}

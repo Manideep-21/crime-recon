@@ -1,0 +1,45 @@
+{
+  "title": "Shoplifting033_x264 (UCF-Crime, UCA caption)",
+  "cctv_frames": [],
+  "source": {
+    "dataset": "UCF-Crime + UCA (train split)",
+    "video": "Shoplifting033_x264.mp4",
+    "window": [
+      0.9,
+      30.0
+    ],
+    "uca_sentences": [
+      "The man in a blue shirt touched the watch on the table and put it down, walked around the table to the woman's side, and then kicked it back",
+      "The woman took two steps towards the man. The man turned around and walked to the side of the table, then put the watch on the table into his pants pocket.",
+      "The man turned and walked out of the store"
+    ],
+    "uca_timestamps": [
+      [
+        0.9,
+        10.1
+      ],
+      [
+        11.4,
+        26.9
+      ],
+      [
+        27.4,
+        30.0
+      ]
+    ]
+  },
+  "witnesses": {
+    "witness_A": {
+      "viewpoint": "close by, inside, a few metres away",
+      "statement": "I saw a man close by who put a watch down on the table. I think he was wearing a blue shirt. He touched the watch and then turned around, walking to the side of the table. He put the watch in his pants pocket. A woman behind the counter took two steps towards the man. The watch was on the table."
+    },
+    "witness_B": {
+      "viewpoint": "far away, looking in from outside",
+      "statement": "I saw a man who walked around the table to the woman behind the counter's side. He then turned around and walked to the side of the table. I think he put the watch down on the table. Maybe he put the watch in his pants pocket. I'm pretty sure he turned and walked out of the store."
+    },
+    "witness_C": {
+      "viewpoint": "brief glimpse while passing by",
+      "statement": "I saw a man who touched the watch on the table while I was passing by. I think he then turned around and walked to the side of the table. I'm pretty sure there was a white van nearby, but I'm not sure about the object type or its position."
+    }
+  }
+}

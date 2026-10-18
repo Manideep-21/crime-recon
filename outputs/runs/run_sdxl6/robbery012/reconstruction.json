@@ -1,0 +1,884 @@
+[
+  {
+    "hypothesis": {
+      "id": "H1",
+      "name": "Most supported version",
+      "choices": {
+        "c1": 0
+      },
+      "description": "weapon_1.held_by = 'man who was being robbed' (witness_A)"
+    },
+    "prompt": "CCTV photo, wide angle, realistic, exactly 4 people. a person wearing blue shirt, looked up into the distance, sitting next to the cash register; a person wearing dark jacket and helmet; a person; a person wearing red t-shirt; a gun, held by man who was being robbed",
+    "seed": 42,
+    "included": [
+      "f001",
+      "f004",
+      "f002",
+      "f003",
+      "f006",
+      "f005",
+      "f013",
+      "f008",
+      "f009",
+      "f010",
+      "f018",
+      "f022",
+      "f024",
+      "f028",
+      "f029"
+    ],
+    "withheld": [
+      {
+        "fact_id": "f007",
+        "entity": "person_1",
+        "attribute": "hair",
+        "value": "black hair",
+        "source": "witness_A",
+        "confidence": 0.575
+      },
+      {
+        "fact_id": "f023",
+        "entity": "person_4",
+        "attribute": "upper_clothing",
+        "value": "grey coat",
+        "source": "witness_C",
+        "confidence": 0.45
+      }
+    ],
+    "not_drawn": [
+      {
+        "fact_id": "f002",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "walked to the cash register",
+        "source": "witness_A",
+        "confidence": 0.9,
+        "reason": "movement/direction"
+      },
+      {
+        "fact_id": "f003",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "put the money in the cash register",
+        "source": "witness_A",
+        "confidence": 0.9,
+        "reason": "one short action per person"
+      },
+      {
+        "fact_id": "f004",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "handed it to the man in black",
+        "source": "witness_A",
+        "confidence": 0.99,
+        "reason": "one short action per person"
+      },
+      {
+        "fact_id": "f005",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "closed the cashier drawer",
+        "source": "witness_A",
+        "confidence": 0.7,
+        "reason": "one short action per person"
+      },
+      {
+        "fact_id": "f006",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "tried to run into the house",
+        "source": "witness_A",
+        "confidence": 0.9,
+        "reason": "movement/direction"
+      },
+      {
+        "fact_id": "f013",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "walked out of the cashier",
+        "source": "witness_B",
+        "confidence": 0.7,
+        "reason": "movement/direction"
+      },
+      {
+        "fact_id": "f022",
+        "entity": "person_3",
+        "attribute": "position",
+        "value": "walked out of the cashier",
+        "source": "witness_C",
+        "confidence": 0.7,
+        "reason": "movement/direction"
+      }
+    ],
+    "contested": [
+      "f009"
+    ],
+    "levels": {
+      "person_1": "single",
+      "weapon_1": "contested",
+      "person_3": "single",
+      "person_6": "confirmed",
+      "person_5": "confirmed"
+    },
+    "report": {
+      "expected": [
+        {
+          "entity": "person_1",
+          "label": "person wearing blue shirt"
+        },
+        {
+          "entity": "person_5",
+          "label": "person wearing dark jacket"
+        },
+        {
+          "entity": "person_3",
+          "label": "person"
+        },
+        {
+          "entity": "person_6",
+          "label": "person wearing red t-shirt"
+        },
+        {
+          "entity": "weapon_1",
+          "label": "gun"
+        }
+      ],
+      "matched": {
+        "person_5": {
+          "label": "person",
+          "score": 0.426,
+          "box": [
+            787.7221755981445,
+            154.76992797851562,
+            1024,
+            1024
+          ],
+          "scores": {
+            "bag": 0.035,
+            "car": 0.022,
+            "dog": 0.037,
+            "gun": 0.038,
+            "knife": 0.019,
+            "motorcycle": 0.02,
+            "person": 0.3,
+            "person wearing blue shirt": 0.328,
+            "person wearing dark jacket": 0.426,
+            "person wearing red t-shirt": 0.081
+          },
+          "query": "person wearing dark jacket",
+          "entity_score": 0.426
+        },
+        "person_6": {
+          "label": "person",
+          "score": 0.363,
+          "box": [
+            235.90949249267578,
+            218.3695068359375,
+            780.3721771240234,
+            929.7044372558594
+          ],
+          "scores": {
+            "bag": 0.068,
+            "car": 0.009,
+            "dog": 0.02,
+            "gun": 0.036,
+            "knife": 0.025,
+            "motorcycle": 0.029,
+            "person": 0.36,
+            "person wearing blue shirt": 0.358,
+            "person wearing dark jacket": 0.338,
+            "person wearing red t-shirt": 0.363
+          },
+          "query": "person wearing red t-shirt",
+          "entity_score": 0.363
+        }
+      },
+      "missing": [
+        "person_1",
+        "person_3",
+        "weapon_1"
+      ],
+      "hallucinated": [],
+      "carried": [],
+      "person_count": {
+        "drawn": 4,
+        "in_image": 2
+      },
+      "object_faithfulness": 0.4,
+      "vqa": [
+        {
+          "entity": "person_1",
+          "attribute": "upper_clothing",
+          "question": "Is there a person wearing blue shirt?",
+          "answer": true
+        },
+        {
+          "entity": "person_5",
+          "attribute": "upper_clothing",
+          "question": "Is there a person wearing dark jacket?",
+          "answer": false
+        },
+        {
+          "entity": "person_5",
+          "attribute": "headwear",
+          "question": "Is there a person wearing helmet?",
+          "answer": true
+        },
+        {
+          "entity": "person_6",
+          "attribute": "upper_clothing",
+          "question": "Is there a person wearing red t-shirt?",
+          "answer": true
+        },
+        {
+          "entity": "weapon_1",
+          "attribute": "weapon_type",
+          "question": "Is there a gun?",
+          "answer": true
+        }
+      ],
+      "attribute_accuracy": 0.8
+    },
+    "first_attempt_hallucinations": 0,
+    "final_hallucinations": 0,
+    "attempts": 5,
+    "raw_path": "/home/marams/crime-recon/outputs/robbery012/H1_raw.png",
+    "overlay_path": "/home/marams/crime-recon/outputs/robbery012/H1_overlay.png",
+    "attempt_log": [
+      {
+        "seed": 42,
+        "kept": true,
+        "hallucinated": [],
+        "missing": [
+          "person_1",
+          "person_3",
+          "weapon_1"
+        ],
+        "person_count": {
+          "drawn": 4,
+          "in_image": 2
+        },
+        "attribute_accuracy": 0.8,
+        "matched": {
+          "person_5": [
+            788,
+            155,
+            1024,
+            1024
+          ],
+          "person_6": [
+            236,
+            218,
+            780,
+            930
+          ]
+        }
+      },
+      {
+        "seed": 43,
+        "kept": false,
+        "hallucinated": [
+          "motorcycle"
+        ],
+        "missing": [
+          "person_5",
+          "person_3",
+          "weapon_1"
+        ],
+        "person_count": {
+          "drawn": 4,
+          "in_image": 2
+        },
+        "attribute_accuracy": null,
+        "matched": {
+          "person_1": [
+            343,
+            202,
+            596,
+            845
+          ],
+          "person_6": [
+            508,
+            330,
+            866,
+            909
+          ]
+        }
+      },
+      {
+        "seed": 44,
+        "kept": false,
+        "hallucinated": [
+          "extra person (3 in image, 4 drawn)"
+        ],
+        "missing": [
+          "person_5",
+          "person_3"
+        ],
+        "person_count": {
+          "drawn": 4,
+          "in_image": 3
+        },
+        "attribute_accuracy": 0.2,
+        "matched": {
+          "person_1": [
+            0,
+            297,
+            443,
+            1024
+          ],
+          "person_6": [
+            406,
+            224,
+            633,
+            575
+          ],
+          "weapon_1": [
+            387,
+            604,
+            443,
+            660
+          ]
+        }
+      },
+      {
+        "seed": 45,
+        "kept": false,
+        "hallucinated": [
+          "extra person (3 in image, 4 drawn)"
+        ],
+        "missing": [
+          "person_5",
+          "person_6"
+        ],
+        "person_count": {
+          "drawn": 4,
+          "in_image": 3
+        },
+        "attribute_accuracy": 0.6,
+        "matched": {
+          "person_1": [
+            309,
+            226,
+            745,
+            602
+          ],
+          "person_3": [
+            33,
+            412,
+            418,
+            1024
+          ],
+          "weapon_1": [
+            700,
+            480,
+            782,
+            578
+          ]
+        }
+      },
+      {
+        "seed": 46,
+        "kept": false,
+        "hallucinated": [
+          "extra person (4 in image, 4 drawn)"
+        ],
+        "missing": [
+          "person_3",
+          "weapon_1"
+        ],
+        "person_count": {
+          "drawn": 4,
+          "in_image": 4
+        },
+        "attribute_accuracy": 0.8,
+        "matched": {
+          "person_1": [
+            685,
+            139,
+            982,
+            837
+          ],
+          "person_5": [
+            569,
+            229,
+            760,
+            637
+          ],
+          "person_6": [
+            308,
+            248,
+            533,
+            489
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "hypothesis": {
+      "id": "H2",
+      "name": "Alternative version 1",
+      "choices": {
+        "c1": 1
+      },
+      "description": "weapon_1.held_by = 'man in blue shirt' (witness_B)"
+    },
+    "prompt": "CCTV photo, wide angle, realistic, exactly 4 people. a person wearing blue shirt, looked up into the distance, sitting next to the cash register; a person wearing dark jacket and helmet; a person; a person wearing red t-shirt; a gun, held by man in blue shirt",
+    "seed": 145,
+    "included": [
+      "f001",
+      "f004",
+      "f002",
+      "f003",
+      "f006",
+      "f005",
+      "f013",
+      "f008",
+      "f017",
+      "f010",
+      "f018",
+      "f022",
+      "f024",
+      "f028",
+      "f029"
+    ],
+    "withheld": [
+      {
+        "fact_id": "f007",
+        "entity": "person_1",
+        "attribute": "hair",
+        "value": "black hair",
+        "source": "witness_A",
+        "confidence": 0.575
+      },
+      {
+        "fact_id": "f023",
+        "entity": "person_4",
+        "attribute": "upper_clothing",
+        "value": "grey coat",
+        "source": "witness_C",
+        "confidence": 0.45
+      }
+    ],
+    "not_drawn": [
+      {
+        "fact_id": "f002",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "walked to the cash register",
+        "source": "witness_A",
+        "confidence": 0.9,
+        "reason": "movement/direction"
+      },
+      {
+        "fact_id": "f003",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "put the money in the cash register",
+        "source": "witness_A",
+        "confidence": 0.9,
+        "reason": "one short action per person"
+      },
+      {
+        "fact_id": "f004",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "handed it to the man in black",
+        "source": "witness_A",
+        "confidence": 0.99,
+        "reason": "one short action per person"
+      },
+      {
+        "fact_id": "f005",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "closed the cashier drawer",
+        "source": "witness_A",
+        "confidence": 0.7,
+        "reason": "one short action per person"
+      },
+      {
+        "fact_id": "f006",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "tried to run into the house",
+        "source": "witness_A",
+        "confidence": 0.9,
+        "reason": "movement/direction"
+      },
+      {
+        "fact_id": "f013",
+        "entity": "person_1",
+        "attribute": "action",
+        "value": "walked out of the cashier",
+        "source": "witness_B",
+        "confidence": 0.7,
+        "reason": "movement/direction"
+      },
+      {
+        "fact_id": "f022",
+        "entity": "person_3",
+        "attribute": "position",
+        "value": "walked out of the cashier",
+        "source": "witness_C",
+        "confidence": 0.7,
+        "reason": "movement/direction"
+      }
+    ],
+    "contested": [
+      "f017"
+    ],
+    "levels": {
+      "person_1": "single",
+      "weapon_1": "contested",
+      "person_3": "single",
+      "person_6": "confirmed",
+      "person_5": "confirmed"
+    },
+    "report": {
+      "expected": [
+        {
+          "entity": "person_1",
+          "label": "person wearing blue shirt"
+        },
+        {
+          "entity": "person_5",
+          "label": "person wearing dark jacket"
+        },
+        {
+          "entity": "person_3",
+          "label": "person"
+        },
+        {
+          "entity": "person_6",
+          "label": "person wearing red t-shirt"
+        },
+        {
+          "entity": "weapon_1",
+          "label": "gun"
+        }
+      ],
+      "matched": {
+        "person_1": {
+          "label": "person",
+          "score": 0.393,
+          "box": [
+            498.6843719482422,
+            392.06256103515625,
+            683.7937850952148,
+            913.2065582275391
+          ],
+          "scores": {
+            "bag": 0.038,
+            "car": 0.014,
+            "dog": 0.014,
+            "gun": 0.028,
+            "knife": 0.017,
+            "motorcycle": 0.02,
+            "person": 0.304,
+            "person wearing blue shirt": 0.393,
+            "person wearing dark jacket": 0.308,
+            "person wearing red t-shirt": 0.14
+          },
+          "query": "person wearing blue shirt",
+          "entity_score": 0.393
+        },
+        "person_3": {
+          "label": "person",
+          "score": 0.322,
+          "box": [
+            53.40153503417969,
+            402.4798583984375,
+            198.2974853515625,
+            895.5789794921875
+          ],
+          "scores": {
+            "bag": 0.034,
+            "car": 0.01,
+            "dog": 0.015,
+            "gun": 0.019,
+            "knife": 0.008,
+            "motorcycle": 0.014,
+            "person": 0.322,
+            "person wearing blue shirt": 0.286,
+            "person wearing dark jacket": 0.227,
+            "person wearing red t-shirt": 0.063
+          },
+          "query": "person",
+          "entity_score": 0.322
+        },
+        "person_6": {
+          "label": "person",
+          "score": 0.38,
+          "box": [
+            694.6234130859375,
+            476.2463798522949,
+            928.882568359375,
+            976.6139068603516
+          ],
+          "scores": {
+            "bag": 0.044,
+            "car": 0.011,
+            "dog": 0.028,
+            "gun": 0.024,
+            "knife": 0.016,
+            "motorcycle": 0.017,
+            "person": 0.319,
+            "person wearing blue shirt": 0.189,
+            "person wearing dark jacket": 0.32,
+            "person wearing red t-shirt": 0.38
+          },
+          "query": "person wearing red t-shirt",
+          "entity_score": 0.38
+        }
+      },
+      "missing": [
+        "person_5",
+        "weapon_1"
+      ],
+      "hallucinated": [
+        {
+          "label": "person",
+          "score": 0.373,
+          "box": [
+            323.34517669677734,
+            481.387451171875,
+            503.1910171508789,
+            986.05810546875
+          ],
+          "scores": {
+            "bag": 0.019,
+            "car": 0.015,
+            "dog": 0.014,
+            "gun": 0.026,
+            "knife": 0.016,
+            "motorcycle": 0.016,
+            "person": 0.345,
+            "person wearing blue shirt": 0.237,
+            "person wearing dark jacket": 0.221,
+            "person wearing red t-shirt": 0.373
+          },
+          "reason": "extra person (4 in image, 4 drawn)"
+        }
+      ],
+      "carried": [],
+      "person_count": {
+        "drawn": 4,
+        "in_image": 4
+      },
+      "object_faithfulness": 0.6,
+      "vqa": [
+        {
+          "entity": "person_1",
+          "attribute": "upper_clothing",
+          "question": "Is there a person wearing blue shirt?",
+          "answer": true
+        },
+        {
+          "entity": "person_5",
+          "attribute": "upper_clothing",
+          "question": "Is there a person wearing dark jacket?",
+          "answer": false
+        },
+        {
+          "entity": "person_5",
+          "attribute": "headwear",
+          "question": "Is there a person wearing helmet?",
+          "answer": true
+        },
+        {
+          "entity": "person_6",
+          "attribute": "upper_clothing",
+          "question": "Is there a person wearing red t-shirt?",
+          "answer": true
+        },
+        {
+          "entity": "weapon_1",
+          "attribute": "weapon_type",
+          "question": "Is there a gun?",
+          "answer": false
+        }
+      ],
+      "attribute_accuracy": 0.6
+    },
+    "first_attempt_hallucinations": 1,
+    "final_hallucinations": 1,
+    "attempts": 5,
+    "raw_path": "/home/marams/crime-recon/outputs/robbery012/H2_raw.png",
+    "overlay_path": "/home/marams/crime-recon/outputs/robbery012/H2_overlay.png",
+    "attempt_log": [
+      {
+        "seed": 142,
+        "kept": false,
+        "hallucinated": [
+          "extra person (3 in image, 4 drawn)"
+        ],
+        "missing": [
+          "person_5",
+          "person_3",
+          "weapon_1"
+        ],
+        "person_count": {
+          "drawn": 4,
+          "in_image": 3
+        },
+        "attribute_accuracy": null,
+        "matched": {
+          "person_1": [
+            273,
+            385,
+            664,
+            844
+          ],
+          "person_6": [
+            124,
+            306,
+            372,
+            655
+          ]
+        }
+      },
+      {
+        "seed": 143,
+        "kept": false,
+        "hallucinated": [
+          "gun",
+          "gun",
+          "gun"
+        ],
+        "missing": [
+          "person_5",
+          "person_3"
+        ],
+        "person_count": {
+          "drawn": 4,
+          "in_image": 2
+        },
+        "attribute_accuracy": null,
+        "matched": {
+          "person_1": [
+            94,
+            401,
+            420,
+            946
+          ],
+          "person_6": [
+            460,
+            392,
+            645,
+            981
+          ],
+          "weapon_1": [
+            324,
+            541,
+            381,
+            582
+          ]
+        }
+      },
+      {
+        "seed": 144,
+        "kept": false,
+        "hallucinated": [],
+        "missing": [
+          "person_5",
+          "person_3",
+          "weapon_1"
+        ],
+        "person_count": {
+          "drawn": 4,
+          "in_image": 2
+        },
+        "attribute_accuracy": 0.4,
+        "matched": {
+          "person_1": [
+            123,
+            390,
+            403,
+            879
+          ],
+          "person_6": [
+            451,
+            308,
+            981,
+            1024
+          ]
+        }
+      },
+      {
+        "seed": 145,
+        "kept": true,
+        "hallucinated": [
+          "extra person (4 in image, 4 drawn)"
+        ],
+        "missing": [
+          "person_5",
+          "weapon_1"
+        ],
+        "person_count": {
+          "drawn": 4,
+          "in_image": 4
+        },
+        "attribute_accuracy": 0.6,
+        "matched": {
+          "person_1": [
+            499,
+            392,
+            684,
+            913
+          ],
+          "person_3": [
+            53,
+            402,
+            198,
+            896
+          ],
+          "person_6": [
+            695,
+            476,
+            929,
+            977
+          ]
+        }
+      },
+      {
+        "seed": 146,
+        "kept": false,
+        "hallucinated": [
+          "gun",
+          "gun"
+        ],
+        "missing": [
+          "person_5",
+          "person_3"
+        ],
+        "person_count": {
+          "drawn": 4,
+          "in_image": 2
+        },
+        "attribute_accuracy": null,
+        "matched": {
+          "person_1": [
+            35,
+            284,
+            516,
+            774
+          ],
+          "person_6": [
+            378,
+            302,
+            965,
+            716
+          ],
+          "weapon_1": [
+            865,
+            768,
+            989,
+            865
+          ]
+        }
+      }
+    ]
+  }
+]

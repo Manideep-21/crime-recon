@@ -1,0 +1,28 @@
+{"time": "04:22:42", "step": "extract", "detail": "loaded 32 cached facts (/home/marams/crime-recon/outputs/robbery058/facts.json)"}
+{"time": "04:22:42", "step": "analyze", "detail": "1 conflicts, 2 hypotheses, 14 gaps, 39 candidate questions (6 blocked as leading)"}
+{"time": "04:22:43", "step": "generate", "detail": "H1: 7 facts drawn, 10 withheld, 5 not drawn (prompt)"}
+{"time": "04:22:43", "step": "not drawn", "detail": "H1: person_1.action = 'squatted with her hands above her head' (witness_A): one short action per person"}
+{"time": "04:22:43", "step": "not drawn", "detail": "H1: person_1.action = 'left the scene' (witness_A): movement/direction"}
+{"time": "04:22:43", "step": "not drawn", "detail": "H1: person_1.action = 'opened the checkout counter' (witness_B): one short action per person"}
+{"time": "04:22:43", "step": "not drawn", "detail": "H1: person_2.action = 'approached' (witness_B): movement/direction"}
+{"time": "04:22:43", "step": "not drawn", "detail": "H1: person_1.action = 'being robbed' (witness_C): one short action per person"}
+{"time": "04:22:43", "step": "prompt", "detail": "H1: CCTV photo, wide angle, realistic, exactly 2 people. a scene, with checkout counter; a person wearing white clothes, held a gun; a person wearing red hoodie and dark pants, put money in a bag, behind the counter [49 tokens]"}
+{"time": "04:23:06", "step": "verify", "detail": "H1 seed 42: objects found 2/2, hallucinated 2, people 2 in image / 2 drawn"}
+{"time": "04:23:06", "step": "verify", "detail": "H1: gun, gun -> regenerate"}
+{"time": "04:23:16", "step": "verify", "detail": "H1 seed 43: objects found 1/2, hallucinated 1, people 2 in image / 2 drawn"}
+{"time": "04:23:16", "step": "verify", "detail": "H1: person, missing person_2 -> regenerate"}
+{"time": "04:23:24", "step": "verify", "detail": "H1 seed 44: objects found 2/2, hallucinated 0, people 2 in image / 2 drawn"}
+{"time": "04:23:26", "step": "verify", "detail": "H1 seed 44 attribute check: objects found 2/2, hallucinated 0, people 2 in image / 2 drawn, attribute accuracy 67%"}
+{"time": "04:23:26", "step": "verify", "detail": "H1: keeping seed 44 (3 attempts)"}
+{"time": "04:23:28", "step": "generate", "detail": "H2: 7 facts drawn, 10 withheld, 5 not drawn (prompt)"}
+{"time": "04:23:28", "step": "not drawn", "detail": "H2: person_1.action = 'squatted with her hands above her head' (witness_A): one short action per person"}
+{"time": "04:23:28", "step": "not drawn", "detail": "H2: person_1.action = 'left the scene' (witness_A): movement/direction"}
+{"time": "04:23:28", "step": "not drawn", "detail": "H2: person_1.action = 'opened the checkout counter' (witness_B): one short action per person"}
+{"time": "04:23:28", "step": "not drawn", "detail": "H2: person_2.action = 'approached' (witness_B): movement/direction"}
+{"time": "04:23:28", "step": "not drawn", "detail": "H2: person_1.action = 'being robbed' (witness_C): one short action per person"}
+{"time": "04:23:28", "step": "prompt", "detail": "H2: CCTV photo, wide angle, realistic, exactly 2 people. a scene, with checkout counter; a person wearing white clothes, held a gun; a person wearing red shirt and dark pants, put money in a bag, behind the counter [49 tokens]"}
+{"time": "04:23:35", "step": "verify", "detail": "H2 seed 142: objects found 2/2, hallucinated 3, people 4 in image / 2 drawn"}
+{"time": "04:23:35", "step": "verify", "detail": "H2: person, person, bag -> regenerate"}
+{"time": "04:23:43", "step": "verify", "detail": "H2 seed 143: objects found 2/2, hallucinated 0, people 2 in image / 2 drawn"}
+{"time": "04:23:45", "step": "verify", "detail": "H2 seed 143 attribute check: objects found 2/2, hallucinated 0, people 2 in image / 2 drawn, attribute accuracy 67%"}
+{"time": "04:23:45", "step": "verify", "detail": "H2: keeping seed 143 (2 attempts)"}

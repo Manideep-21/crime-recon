@@ -1,0 +1,12 @@
+# Runs the UI and logic with NO GPU, NO LLM, NO Neo4j, using cached sample facts.
+# Use:  CRIME_RECON_CONFIG=config.offline.yaml python app.py
+# (Copy data/scenes/sample_robbery/sample_facts.json to outputs/sample_robbery/facts.json first.)
+# Witness answers still need the LLM.
+llm: {base_url: "http://localhost:11434/v1", model: "qwen2.5vl:7b", api_key: ollama, temperature: 0.1, timeout_sec: 60}
+neo4j: {enabled: false, uri: "bolt://localhost:7687", user: neo4j, password: crimerecon123}
+extraction: {max_cctv_frames: 6, llm_entity_merge: false}
+confidence: {cctv: 0.85, witness: 0.70, followup: 0.65, hedge_penalty: 0.25, corroboration_bonus: 0.20, render_threshold: 0.60, hypothesis_threshold: 0.40}
+questions: {llm_rephrase: false, include_baseline_candidates: true}
+generation: {backend: mock, model: "", steps: 1, guidance_scale: 7.0, width: 768, height: 768, cpu_offload: false, max_retries: 0, base_seed: 42}
+verification: {backend: none, model: "", score_threshold: 0.2, hallucination_score: 0.3, distractors: [], vqa_check: false, blur_faces: false}
+paths: {scenes_dir: data/scenes, outputs_dir: outputs}
