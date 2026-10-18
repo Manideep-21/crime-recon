@@ -42,7 +42,7 @@ generation:
   guidance_scale: 7.0
   width: 1024
   height: 1024
-  cpu_offload: false  # true = model offload (~8 GB); sequential = layer offload (<4 GB, slower); false = all on GPU
+  cpu_offload: true  # true = model offload (~8 GB); sequential = layer offload (<4 GB, slower); false = all on GPU
   max_retries: 4         # regenerations when a hallucination is found
   base_seed: 42
 
