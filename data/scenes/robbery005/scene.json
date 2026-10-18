@@ -1,0 +1,38 @@
+{
+  "title": "Robbery005_x264 (UCF-Crime, UCA caption)",
+  "cctv_frames": [],
+  "held_out": true,
+  "source": {
+    "dataset": "UCF-Crime + UCA (train split)",
+    "video": "Robbery005_x264.mp4",
+    "window": [
+      7.7,
+      29.1
+    ],
+    "uca_sentences": [
+      "A man in a blue hoodie suddenly ran into the counter and pointed a gun at the man in red. The man in red walked to the cashier and operated",
+      "The man in blue raised a gun from time to time to threaten the man in red.",
+      "The man in red kept handing money to the man in blue.",
+      "The man in blue collected the money and ran away."
+    ],
+    "uca_timestamps": [
+      [
+        7.7,
+        14.5
+      ],
+      [
+        15.9,
+        20.6
+      ],
+      [
+        20.7,
+        27.7
+      ],
+      [
+        27.7,
+        29.1
+      ]
+    ],
+    "note": "first 4 of 8 UCA sentences"
+  }
+}

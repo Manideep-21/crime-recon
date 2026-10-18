@@ -1,0 +1,47 @@
+{
+  "title": "Shoplifting016_x264 (UCF-Crime, UCA caption)",
+  "cctv_frames": [],
+  "held_out": true,
+  "source": {
+    "dataset": "UCF-Crime + UCA (train split)",
+    "video": "Shoplifting016_x264.mp4",
+    "window": [
+      0.0,
+      49.4
+    ],
+    "uca_sentences": [
+      "A woman with long black hair wearing a red floral skirt looked at a wall full of rectangular boxes in a store, then pointed at the rectangular box and asked the boss how much it cost.",
+      "The woman with long black hair wearing a red floral skirt grabbed a rectangular box with her hand, looked around and looked at the boss",
+      "The woman with long black hair wearing a red floral skirt opened the skirt with her hands, then stuffed the rectangular box into the skirt and sandwiched it with her legs. The woman looked at it again Looking around, I looked at the boss",
+      "The woman with long black hair wearing a red floral skirt fixed the skirt and arranged the rectangular box so that the boss could not see that one was missing. Then she looked around, The woman fiddled with her skirt as she walked and walked in front of the black object",
+      "The woman with long black hair wearing a red floral skirt looked around, then walked out of the door while fixing her skirt",
+      "The back of the woman with long black hair in a red floral skirt gradually disappeared, and the boss didn\u2019t even notice that he stole a rectangular box."
+    ],
+    "uca_timestamps": [
+      [
+        0.0,
+        7.3
+      ],
+      [
+        8.2,
+        14.9
+      ],
+      [
+        15.3,
+        22.8
+      ],
+      [
+        23.5,
+        30.9
+      ],
+      [
+        30.4,
+        38.8
+      ],
+      [
+        39.6,
+        49.4
+      ]
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "title": "Robbery101_x264 (UCF-Crime, UCA caption)",
+  "cctv_frames": [],
+  "held_out": true,
+  "source": {
+    "dataset": "UCF-Crime + UCA (test split)",
+    "video": "Robbery101_x264.mp4",
+    "window": [
+      8.5,
+      76.8
+    ],
+    "uca_sentences": [
+      "A man wearing a black hat and blue clothes stood in front of the counter, and a clerk wearing a white apron and black hat stood behind the counter at the cashier.",
+      "The clerk wearing a white apron and a black hat clicks on the checkout display to talk to a man wearing a black hat and blue clothes.",
+      "The man wearing a black hat and blue clothes took out a pistol and communicated with the store clerk.",
+      "The man pointed a gun at the clerk, and the clerk opened the cashier drawer to withdraw money.",
+      "The clerk handed the money to the man and the drawer to the man. The man didn't want it, and the clerk put the drawer back."
+    ],
+    "uca_timestamps": [
+      [
+        8.5,
+        16.6
+      ],
+      [
+        16.6,
+        39.5
+      ],
+      [
+        39.5,
+        50.6
+      ],
+      [
+        52.8,
+        63.2
+      ],
+      [
+        66.0,
+        76.8
+      ]
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Shoplifting031_x264 (UCF-Crime, UCA caption)",
+  "cctv_frames": [],
+  "held_out": true,
+  "source": {
+    "dataset": "UCF-Crime + UCA (train split)",
+    "video": "Shoplifting031_x264.mp4",
+    "window": [
+      1.9,
+      14.2
+    ],
+    "uca_sentences": [
+      "A bald man wearing sunglasses hid something in his white short sleeves, then turned around and walked inside. The boss at the counter stood up and looked.",
+      "The boss at the counter stood and looked in the direction where the man in white short sleeves left."
+    ],
+    "uca_timestamps": [
+      [
+        1.9,
+        13.3
+      ],
+      [
+        13.7,
+        14.2
+      ]
+    ]
+  }
+}
