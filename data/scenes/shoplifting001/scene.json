@@ -48,15 +48,15 @@
   "witnesses": {
     "witness_A": {
       "viewpoint": "close by, inside, a few metres away",
-      "statement": "I was standing close by when I saw a man who looked around, not sure if he was wearing an orange shirt. He walked to the middle of the shelf, hid something in his clothes, and then walked away. Another man stopped in front of the shelf, touched a laptop, picked it up, put it under the laptop, closed the other computer, and then talked at the end."
+      "statement": "I saw a man who looked around, stopped in front of the shelf, and talked at the end. I think he was wearing an orange shirt. He walked to the middle of the shelf, hid something in his clothes, and walked away. Another man stopped in front of the shelf, touched the laptop, picked it up, put it under the laptop, closed the other computer, and talked at the end."
     },
     "witness_B": {
       "viewpoint": "far away, looking in from outside",
-      "statement": "I saw a man wearing an orange shirt who hid something in his clothes. Another man, possibly wearing a green shirt, took out something, picked it up, put it under the laptop, and hid it in his clothes. He then went out. I'm not sure if he was wearing a green shirt or if he closed another computer and talked at the end."
+      "statement": "I saw a man wearing a brown shirt who walked to the middle of the shelf, looked around, and then walked away. I'm not sure if he went out. Another man stopped in front of the shelf, took out something from a notebook, closed it, hid it in his clothes, and walked away. He talked at the end, and I'm not sure if he picked up another computer or closed it. I think a laptop was involved."
     },
     "witness_C": {
       "viewpoint": "brief glimpse while passing by",
-      "statement": "I saw a man who hid something in his clothes and walked away. I think he was wearing an orange shirt. Another man stopped in front of the shelf, touched the laptop, picked it up, closed the other computer, and hid it in his clothes. A white van was also there."
+      "statement": "I saw a man who walked to the middle of the shelf, looked around, and then walked away. I'm pretty sure he stopped in front of the shelf and talked at the end. Another man, wearing a white shirt, closed a notebook and then closed another computer. I saw a white van parked nearby."
     }
   }
 }

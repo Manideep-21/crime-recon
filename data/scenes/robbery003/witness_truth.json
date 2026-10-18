@@ -66,11 +66,19 @@
         "hedged": false
       },
       {
-        "entity": "person_3",
+        "entity": "person_2",
         "entity_type": "person",
-        "role": "bystander",
-        "attribute": "action",
-        "value": "turned around",
+        "role": "victim",
+        "attribute": "upper_clothing",
+        "value": "black clothes",
+        "hedged": false
+      },
+      {
+        "entity": "weapon_1",
+        "entity_type": "weapon",
+        "role": "none",
+        "attribute": "color",
+        "value": "black",
         "hedged": false
       }
     ],
@@ -98,6 +106,30 @@
         "role": "suspect",
         "attribute": "action",
         "value": "took what the man at the counter handed him"
+      },
+      {
+        "type": "omission",
+        "entity": "weapon_1",
+        "entity_type": "weapon",
+        "role": "none",
+        "attribute": "weapon_type",
+        "value": "pistol"
+      },
+      {
+        "type": "omission",
+        "entity": "weapon_1",
+        "entity_type": "weapon",
+        "role": "none",
+        "attribute": "held_by",
+        "value": "man in plaid shirt"
+      },
+      {
+        "type": "omission",
+        "entity": "object_1",
+        "entity_type": "object",
+        "role": "none",
+        "attribute": "object_type",
+        "value": "bottle of Coke"
       }
     ]
   },
@@ -108,7 +140,7 @@
         "entity_type": "person",
         "role": "suspect",
         "attribute": "upper_clothing",
-        "value": "red and white plaid shirt",
+        "value": "blue and white plaid shirt",
         "hedged": false
       },
       {
@@ -117,15 +149,7 @@
         "role": "suspect",
         "attribute": "action",
         "value": "leaning over the counter",
-        "hedged": false
-      },
-      {
-        "entity": "person_1",
-        "entity_type": "person",
-        "role": "suspect",
-        "attribute": "action",
-        "value": "groping for something",
-        "hedged": false
+        "hedged": true
       },
       {
         "entity": "person_1",
@@ -133,7 +157,7 @@
         "role": "suspect",
         "attribute": "action",
         "value": "took out a black pistol",
-        "hedged": true
+        "hedged": false
       },
       {
         "entity": "person_1",
@@ -141,7 +165,15 @@
         "role": "suspect",
         "attribute": "action",
         "value": "pointed it at the man in black",
-        "hedged": true
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "took the gun back",
+        "hedged": false
       },
       {
         "entity": "person_1",
@@ -157,15 +189,7 @@
         "role": "suspect",
         "attribute": "action",
         "value": "took what the man at the counter handed him",
-        "hedged": false
-      },
-      {
-        "entity": "person_1",
-        "entity_type": "person",
-        "role": "suspect",
-        "attribute": "action",
-        "value": "turned around to leave",
-        "hedged": false
+        "hedged": true
       },
       {
         "entity": "person_2",
@@ -173,15 +197,23 @@
         "role": "victim",
         "attribute": "action",
         "value": "turned around",
+        "hedged": true
+      },
+      {
+        "entity": "weapon_1",
+        "entity_type": "weapon",
+        "role": "none",
+        "attribute": "weapon_type",
+        "value": "pistol",
         "hedged": false
       },
       {
-        "entity": "person_3",
-        "entity_type": "person",
-        "role": "bystander",
-        "attribute": "action",
-        "value": "turned around",
-        "hedged": true
+        "entity": "weapon_1",
+        "entity_type": "weapon",
+        "role": "none",
+        "attribute": "held_by",
+        "value": "man in plaid shirt",
+        "hedged": false
       }
     ],
     "degradations": [
@@ -199,7 +231,39 @@
         "entity_type": "person",
         "role": "suspect",
         "attribute": "action",
-        "value": "took the gun back"
+        "value": "groping for something"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "turned around to leave"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "upper_clothing",
+        "value": "black clothes"
+      },
+      {
+        "type": "vantage_loss",
+        "entity": "weapon_1",
+        "entity_type": "weapon",
+        "role": "none",
+        "attribute": "color",
+        "value": "black"
+      },
+      {
+        "type": "omission",
+        "entity": "object_1",
+        "entity_type": "object",
+        "role": "none",
+        "attribute": "object_type",
+        "value": "bottle of Coke"
       },
       {
         "type": "corruption",
@@ -208,7 +272,7 @@
         "role": "suspect",
         "attribute": "upper_clothing",
         "true_value": "black and white plaid shirt",
-        "witness_value": "red and white plaid shirt"
+        "witness_value": "blue and white plaid shirt"
       }
     ]
   },
@@ -218,25 +282,9 @@
         "entity": "person_1",
         "entity_type": "person",
         "role": "suspect",
-        "attribute": "upper_clothing",
-        "value": "black and white plaid shirt",
-        "hedged": false
-      },
-      {
-        "entity": "person_1",
-        "entity_type": "person",
-        "role": "suspect",
-        "attribute": "headwear",
-        "value": "hat",
-        "hedged": false
-      },
-      {
-        "entity": "person_1",
-        "entity_type": "person",
-        "role": "suspect",
         "attribute": "action",
-        "value": "leaning over the counter",
-        "hedged": true
+        "value": "groping for something",
+        "hedged": false
       },
       {
         "entity": "person_1",
@@ -244,7 +292,15 @@
         "role": "suspect",
         "attribute": "action",
         "value": "took out a black pistol",
-        "hedged": true
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "took the gun back",
+        "hedged": false
       },
       {
         "entity": "person_1",
@@ -268,23 +324,39 @@
         "role": "victim",
         "attribute": "action",
         "value": "turned around",
-        "hedged": false
+        "hedged": true
       },
       {
-        "entity": "person_3",
+        "entity": "person_2",
         "entity_type": "person",
-        "role": "bystander",
-        "attribute": "action",
-        "value": "turned around",
+        "role": "victim",
+        "attribute": "upper_clothing",
+        "value": "black clothes",
         "hedged": false
       },
       {
-        "entity": "weapon_9",
+        "entity": "weapon_1",
         "entity_type": "weapon",
         "role": "none",
         "attribute": "weapon_type",
-        "value": "knife",
+        "value": "pistol",
         "hedged": false
+      },
+      {
+        "entity": "object_1",
+        "entity_type": "object",
+        "role": "none",
+        "attribute": "object_type",
+        "value": "bottle of Coke",
+        "hedged": true
+      },
+      {
+        "entity": "vehicle_9",
+        "entity_type": "vehicle",
+        "role": "none",
+        "attribute": "vehicle_type",
+        "value": "white van",
+        "hedged": true
       }
     ],
     "degradations": [
@@ -293,8 +365,24 @@
         "entity": "person_1",
         "entity_type": "person",
         "role": "suspect",
+        "attribute": "upper_clothing",
+        "value": "black and white plaid shirt"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "headwear",
+        "value": "hat"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
         "attribute": "action",
-        "value": "groping for something"
+        "value": "leaning over the counter"
       },
       {
         "type": "omission",
@@ -310,23 +398,31 @@
         "entity_type": "person",
         "role": "suspect",
         "attribute": "action",
-        "value": "took the gun back"
-      },
-      {
-        "type": "omission",
-        "entity": "person_1",
-        "entity_type": "person",
-        "role": "suspect",
-        "attribute": "action",
         "value": "turned around to leave"
       },
       {
-        "type": "confabulation",
-        "entity": "weapon_9",
+        "type": "omission",
+        "entity": "weapon_1",
         "entity_type": "weapon",
         "role": "none",
-        "attribute": "weapon_type",
-        "value": "knife"
+        "attribute": "color",
+        "value": "black"
+      },
+      {
+        "type": "omission",
+        "entity": "weapon_1",
+        "entity_type": "weapon",
+        "role": "none",
+        "attribute": "held_by",
+        "value": "man in plaid shirt"
+      },
+      {
+        "type": "confabulation",
+        "entity": "vehicle_9",
+        "entity_type": "vehicle",
+        "role": "none",
+        "attribute": "vehicle_type",
+        "value": "white van"
       }
     ]
   }

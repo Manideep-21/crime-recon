@@ -88,6 +88,22 @@
         "attribute": "action",
         "value": "talked at the end",
         "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "stopped in front of the shelf",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "talked at the end",
+        "hedged": false
       }
     ],
     "degradations": [
@@ -146,6 +162,22 @@
         "role": "suspect",
         "attribute": "action",
         "value": "went out"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "went out"
+      },
+      {
+        "type": "omission",
+        "entity": "object_1",
+        "entity_type": "object",
+        "role": "none",
+        "attribute": "object_type",
+        "value": "laptop"
       }
     ]
   },
@@ -156,7 +188,7 @@
         "entity_type": "person",
         "role": "suspect",
         "attribute": "upper_clothing",
-        "value": "orange shirt",
+        "value": "brown shirt",
         "hedged": false
       },
       {
@@ -164,16 +196,32 @@
         "entity_type": "person",
         "role": "suspect",
         "attribute": "action",
-        "value": "hid it in his clothes",
+        "value": "walked to the middle of the shelf",
         "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "looked around",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "walked away",
+        "hedged": true
       },
       {
         "entity": "person_2",
         "entity_type": "person",
         "role": "suspect",
-        "attribute": "upper_clothing",
-        "value": "green shirt",
-        "hedged": true
+        "attribute": "action",
+        "value": "stopped in front of the shelf",
+        "hedged": false
       },
       {
         "entity": "person_2",
@@ -189,14 +237,14 @@
         "role": "suspect",
         "attribute": "action",
         "value": "picked it up",
-        "hedged": false
+        "hedged": true
       },
       {
         "entity": "person_2",
         "entity_type": "person",
         "role": "suspect",
         "attribute": "action",
-        "value": "put it under the laptop",
+        "value": "closed the notebook",
         "hedged": false
       },
       {
@@ -220,8 +268,16 @@
         "entity_type": "person",
         "role": "suspect",
         "attribute": "action",
+        "value": "walked away",
+        "hedged": false
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
         "value": "talked at the end",
-        "hedged": true
+        "hedged": false
       },
       {
         "entity": "person_2",
@@ -229,26 +285,26 @@
         "role": "suspect",
         "attribute": "action",
         "value": "went out",
+        "hedged": true
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "went out",
+        "hedged": true
+      },
+      {
+        "entity": "object_1",
+        "entity_type": "object",
+        "role": "none",
+        "attribute": "object_type",
+        "value": "laptop",
         "hedged": false
       }
     ],
     "degradations": [
-      {
-        "type": "omission",
-        "entity": "person_1",
-        "entity_type": "person",
-        "role": "suspect",
-        "attribute": "action",
-        "value": "walked to the middle of the shelf"
-      },
-      {
-        "type": "omission",
-        "entity": "person_1",
-        "entity_type": "person",
-        "role": "suspect",
-        "attribute": "action",
-        "value": "looked around"
-      },
       {
         "type": "omission",
         "entity": "person_1",
@@ -263,15 +319,15 @@
         "entity_type": "person",
         "role": "suspect",
         "attribute": "action",
-        "value": "walked away"
+        "value": "hid it in his clothes"
       },
       {
         "type": "omission",
         "entity": "person_2",
         "entity_type": "person",
         "role": "suspect",
-        "attribute": "action",
-        "value": "stopped in front of the shelf"
+        "attribute": "upper_clothing",
+        "value": "white shirt"
       },
       {
         "type": "omission",
@@ -287,24 +343,32 @@
         "entity_type": "person",
         "role": "suspect",
         "attribute": "action",
-        "value": "closed the notebook"
+        "value": "put it under the laptop"
       },
       {
         "type": "omission",
-        "entity": "person_2",
+        "entity": "person_1",
         "entity_type": "person",
         "role": "suspect",
         "attribute": "action",
-        "value": "walked away"
+        "value": "stopped in front of the shelf"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "talked at the end"
       },
       {
         "type": "corruption",
-        "entity": "person_2",
+        "entity": "person_1",
         "entity_type": "person",
         "role": "suspect",
         "attribute": "upper_clothing",
-        "true_value": "white shirt",
-        "witness_value": "green shirt"
+        "true_value": "orange shirt",
+        "witness_value": "brown shirt"
       }
     ]
   },
@@ -314,24 +378,16 @@
         "entity": "person_1",
         "entity_type": "person",
         "role": "suspect",
-        "attribute": "upper_clothing",
-        "value": "orange shirt",
-        "hedged": true
+        "attribute": "action",
+        "value": "walked to the middle of the shelf",
+        "hedged": false
       },
       {
         "entity": "person_1",
         "entity_type": "person",
         "role": "suspect",
         "attribute": "action",
-        "value": "closed the computer",
-        "hedged": true
-      },
-      {
-        "entity": "person_1",
-        "entity_type": "person",
-        "role": "suspect",
-        "attribute": "action",
-        "value": "hid it in his clothes",
+        "value": "looked around",
         "hedged": false
       },
       {
@@ -346,8 +402,8 @@
         "entity": "person_2",
         "entity_type": "person",
         "role": "suspect",
-        "attribute": "action",
-        "value": "stopped in front of the shelf",
+        "attribute": "upper_clothing",
+        "value": "white shirt",
         "hedged": false
       },
       {
@@ -355,15 +411,7 @@
         "entity_type": "person",
         "role": "suspect",
         "attribute": "action",
-        "value": "touched the laptop",
-        "hedged": false
-      },
-      {
-        "entity": "person_2",
-        "entity_type": "person",
-        "role": "suspect",
-        "attribute": "action",
-        "value": "picked it up",
+        "value": "closed the notebook",
         "hedged": false
       },
       {
@@ -375,12 +423,20 @@
         "hedged": false
       },
       {
-        "entity": "person_2",
+        "entity": "person_1",
         "entity_type": "person",
         "role": "suspect",
         "attribute": "action",
-        "value": "hid it in his clothes",
-        "hedged": false
+        "value": "stopped in front of the shelf",
+        "hedged": true
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "talked at the end",
+        "hedged": true
       },
       {
         "entity": "vehicle_9",
@@ -397,8 +453,8 @@
         "entity": "person_1",
         "entity_type": "person",
         "role": "suspect",
-        "attribute": "action",
-        "value": "walked to the middle of the shelf"
+        "attribute": "upper_clothing",
+        "value": "orange shirt"
       },
       {
         "type": "omission",
@@ -406,15 +462,23 @@
         "entity_type": "person",
         "role": "suspect",
         "attribute": "action",
-        "value": "looked around"
+        "value": "closed the computer"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "hid it in his clothes"
       },
       {
         "type": "omission",
         "entity": "person_2",
         "entity_type": "person",
         "role": "suspect",
-        "attribute": "upper_clothing",
-        "value": "white shirt"
+        "attribute": "action",
+        "value": "stopped in front of the shelf"
       },
       {
         "type": "omission",
@@ -430,6 +494,22 @@
         "entity_type": "person",
         "role": "suspect",
         "attribute": "action",
+        "value": "touched the laptop"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "picked it up"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
         "value": "put it under the laptop"
       },
       {
@@ -438,7 +518,7 @@
         "entity_type": "person",
         "role": "suspect",
         "attribute": "action",
-        "value": "closed the notebook"
+        "value": "hid it in his clothes"
       },
       {
         "type": "omission",
@@ -463,6 +543,22 @@
         "role": "suspect",
         "attribute": "action",
         "value": "went out"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "went out"
+      },
+      {
+        "type": "omission",
+        "entity": "object_1",
+        "entity_type": "object",
+        "role": "none",
+        "attribute": "object_type",
+        "value": "laptop"
       },
       {
         "type": "confabulation",
