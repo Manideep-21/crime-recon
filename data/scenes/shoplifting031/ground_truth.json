@@ -1,0 +1,82 @@
+{
+  "scene_id": "shoplifting031",
+  "caption": "A bald man wearing sunglasses hid something in his white short sleeves, then turned around and walked inside. The boss at the counter stood up and looked. The boss at the counter stood and looked in the direction where the man in white short sleeves left.",
+  "nouns": {
+    "person_1": "man",
+    "person_2": "person"
+  },
+  "facts": [
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "upper_clothing",
+      "value": "white short sleeves"
+    },
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "hid something"
+    },
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "turned around"
+    },
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "walked inside"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "action",
+      "value": "stood up"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "action",
+      "value": "looked"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "action",
+      "value": "stood and looked"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "position",
+      "value": "at the counter"
+    }
+  ],
+  "planted_conflicts": [
+    {
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "upper_clothing"
+    }
+  ],
+  "planted_false_facts": [
+    {
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "upper_clothing",
+      "value": "grey coat",
+      "witness": "witness_C"
+    }
+  ]
+}

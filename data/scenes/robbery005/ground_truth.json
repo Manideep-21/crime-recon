@@ -1,0 +1,118 @@
+{
+  "scene_id": "robbery005",
+  "caption": "A man in a blue hoodie suddenly ran into the counter and pointed a gun at the man in red. The man in red walked to the cashier and operated. The man in blue raised a gun from time to time to threaten the man in red. The man in red kept handing money to the man in blue. The man in blue collected the money and ran away.",
+  "nouns": {
+    "person_1": "man",
+    "person_2": "man",
+    "person_3": "person"
+  },
+  "facts": [
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "upper_clothing",
+      "value": "blue hoodie"
+    },
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "ran into the counter"
+    },
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "pointed a gun at the man in red"
+    },
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "raised a gun from time to time to threaten the man in red"
+    },
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "collected the money"
+    },
+    {
+      "entity": "person_1",
+      "entity_type": "person",
+      "role": "suspect",
+      "attribute": "action",
+      "value": "ran away"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "upper_clothing",
+      "value": "red"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "action",
+      "value": "walked to the cashier"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "action",
+      "value": "operated"
+    },
+    {
+      "entity": "person_2",
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "action",
+      "value": "kept handing money to the man in blue"
+    },
+    {
+      "entity": "person_3",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "action",
+      "value": "operated"
+    },
+    {
+      "entity": "person_3",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "action",
+      "value": "collected the money"
+    },
+    {
+      "entity": "person_3",
+      "entity_type": "person",
+      "role": "bystander",
+      "attribute": "action",
+      "value": "ran away"
+    }
+  ],
+  "planted_conflicts": [
+    {
+      "entity_type": "person",
+      "role": "victim",
+      "attribute": "upper_clothing"
+    }
+  ],
+  "planted_false_facts": [
+    {
+      "entity_type": "weapon",
+      "role": "none",
+      "attribute": "weapon_type",
+      "value": "knife",
+      "witness": "witness_C"
+    }
+  ]
+}

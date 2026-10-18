@@ -1,0 +1,237 @@
+{
+  "witness_A": {
+    "facts_given": [
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "upper_clothing",
+        "value": "white short sleeves",
+        "hedged": true
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "hid something",
+        "hedged": true
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "turned around",
+        "hedged": false
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "stood up",
+        "hedged": true
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "looked",
+        "hedged": true
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "position",
+        "value": "at the counter",
+        "hedged": false
+      }
+    ],
+    "degradations": [
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "walked inside"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "stood and looked"
+      }
+    ]
+  },
+  "witness_B": {
+    "facts_given": [
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "upper_clothing",
+        "value": "black short sleeves",
+        "hedged": true
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "hid something",
+        "hedged": true
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "turned around",
+        "hedged": true
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "stood up",
+        "hedged": true
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "looked",
+        "hedged": false
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "stood and looked",
+        "hedged": false
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "position",
+        "value": "at the counter",
+        "hedged": true
+      }
+    ],
+    "degradations": [
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "walked inside"
+      },
+      {
+        "type": "corruption",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "upper_clothing",
+        "true_value": "white short sleeves",
+        "witness_value": "black short sleeves"
+      }
+    ]
+  },
+  "witness_C": {
+    "facts_given": [
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "upper_clothing",
+        "value": "white short sleeves",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "hid something",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "turned around",
+        "hedged": false
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "stood up",
+        "hedged": false
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "position",
+        "value": "at the counter",
+        "hedged": true
+      },
+      {
+        "entity": "person_9",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "upper_clothing",
+        "value": "grey coat",
+        "hedged": true
+      }
+    ],
+    "degradations": [
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "walked inside"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "looked"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "stood and looked"
+      },
+      {
+        "type": "confabulation",
+        "entity": "person_9",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "upper_clothing",
+        "value": "grey coat"
+      }
+    ]
+  }
+}

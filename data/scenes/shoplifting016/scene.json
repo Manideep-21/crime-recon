@@ -43,5 +43,19 @@
         49.4
       ]
     ]
+  },
+  "witnesses": {
+    "witness_A": {
+      "viewpoint": "close by, inside, a few metres away",
+      "statement": "I saw a woman behind the counter who looked at a wall full of rectangular boxes. She then looked at the boss, stuffed the rectangular box into her red floral skirt, sandwiched it with her legs, and looked at it again. She fixed her skirt, fiddled with it as she walked, looked around, and walked out of the door. The boss didn\u2019t even notice that she had stolen a rectangular box. I think the woman had long black hair and maybe a red floral skirt. She asked the boss how much the box cost and grabbed a rectangular box with her hand."
+    },
+    "witness_B": {
+      "viewpoint": "far away, looking in from outside",
+      "statement": "I saw a woman behind the counter grab a rectangular box with her hand. She looked around, then sandwiched it with her legs. She looked around again, fixed her skirt, and arranged the box so the boss couldn't see it was missing. She walked out of the door, fixed her skirt, and the back of the woman with long black hair in a red floral skirt gradually disappeared. The boss didn't notice she had stolen the box. I think the lower clothing was a grey floral skirt. The woman pointed at the box, opened her skirt with her hands, looked at it again, and looked around."
+    },
+    "witness_C": {
+      "viewpoint": "brief glimpse while passing by",
+      "statement": "I saw a woman behind the counter grab a rectangular box with her hand. She looked around, sandwiched it with her legs, and fiddled with her skirt as she walked. She fixed her skirt and the back of the woman with long black hair in a red floral skirt gradually disappeared. I'm pretty sure the boss didn't notice she stole the rectangular box. I think the man nearby was wearing a grey coat."
+    }
   }
 }

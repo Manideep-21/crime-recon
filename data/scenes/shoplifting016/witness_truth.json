@@ -1,0 +1,621 @@
+{
+  "witness_A": {
+    "facts_given": [
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "hair",
+        "value": "long black hair",
+        "hedged": true
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "lower_clothing",
+        "value": "red floral skirt",
+        "hedged": true
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "looked at a wall full of rectangular boxes",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "asked the boss how much it cost",
+        "hedged": true
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "grabbed a rectangular box with her hand",
+        "hedged": true
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "looked at the boss",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "stuffed the rectangular box into the skirt",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "sandwiched it with her legs",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "looked at it again",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "fixed the skirt",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "fiddled with her skirt as she walked",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "looked around",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "walked out of the door",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "boss didn\u2019t even notice that he stole a rectangular box",
+        "hedged": false
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "didn\u2019t notice that he stole a rectangular box",
+        "hedged": false
+      }
+    ],
+    "degradations": [
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "pointed at the rectangular box"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "looked around"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "opened the skirt with her hands"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "Looking around"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "arranged the rectangular box so that the boss could not see that one was missing"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "looked around"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "walked in front of the black object"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "fixed her skirt"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "back of the woman with long black hair in a red floral skirt gradually disappeared"
+      }
+    ]
+  },
+  "witness_B": {
+    "facts_given": [
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "lower_clothing",
+        "value": "grey floral skirt",
+        "hedged": true
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "pointed at the rectangular box",
+        "hedged": true
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "grabbed a rectangular box with her hand",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "looked around",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "opened the skirt with her hands",
+        "hedged": true
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "sandwiched it with her legs",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "looked at it again",
+        "hedged": true
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "Looking around",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "fixed the skirt",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "arranged the rectangular box so that the boss could not see that one was missing",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "looked around",
+        "hedged": true
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "looked around",
+        "hedged": true
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "walked out of the door",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "fixed her skirt",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "back of the woman with long black hair in a red floral skirt gradually disappeared",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "boss didn\u2019t even notice that he stole a rectangular box",
+        "hedged": false
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "didn\u2019t notice that he stole a rectangular box",
+        "hedged": false
+      }
+    ],
+    "degradations": [
+      {
+        "type": "vantage_loss",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "hair",
+        "value": "long black hair"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "looked at a wall full of rectangular boxes"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "asked the boss how much it cost"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "looked at the boss"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "stuffed the rectangular box into the skirt"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "fiddled with her skirt as she walked"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "walked in front of the black object"
+      },
+      {
+        "type": "corruption",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "lower_clothing",
+        "true_value": "red floral skirt",
+        "witness_value": "grey floral skirt"
+      }
+    ]
+  },
+  "witness_C": {
+    "facts_given": [
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "hair",
+        "value": "long black hair",
+        "hedged": true
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "pointed at the rectangular box",
+        "hedged": true
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "grabbed a rectangular box with her hand",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "looked around",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "sandwiched it with her legs",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "fiddled with her skirt as she walked",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "fixed her skirt",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "back of the woman with long black hair in a red floral skirt gradually disappeared",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "boss didn\u2019t even notice that he stole a rectangular box",
+        "hedged": false
+      },
+      {
+        "entity": "person_9",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "upper_clothing",
+        "value": "grey coat",
+        "hedged": false
+      }
+    ],
+    "degradations": [
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "lower_clothing",
+        "value": "red floral skirt"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "looked at a wall full of rectangular boxes"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "asked the boss how much it cost"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "looked at the boss"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "opened the skirt with her hands"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "stuffed the rectangular box into the skirt"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "looked at it again"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "Looking around"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "fixed the skirt"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "arranged the rectangular box so that the boss could not see that one was missing"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "looked around"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "walked in front of the black object"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "looked around"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "walked out of the door"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "didn\u2019t notice that he stole a rectangular box"
+      },
+      {
+        "type": "confabulation",
+        "entity": "person_9",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "upper_clothing",
+        "value": "grey coat"
+      }
+    ]
+  }
+}

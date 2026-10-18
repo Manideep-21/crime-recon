@@ -1,0 +1,357 @@
+{
+  "witness_A": {
+    "facts_given": [
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "upper_clothing",
+        "value": "blue hoodie",
+        "hedged": true
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "ran into the counter",
+        "hedged": true
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "pointed a gun at the man in red",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "collected the money",
+        "hedged": true
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "ran away",
+        "hedged": true
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "walked to the cashier",
+        "hedged": false
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "kept handing money to the man in blue",
+        "hedged": false
+      },
+      {
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "action",
+        "value": "operated",
+        "hedged": false
+      },
+      {
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "action",
+        "value": "collected the money",
+        "hedged": false
+      }
+    ],
+    "degradations": [
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "raised a gun from time to time to threaten the man in red"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "upper_clothing",
+        "value": "red"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "operated"
+      },
+      {
+        "type": "omission",
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "action",
+        "value": "ran away"
+      }
+    ]
+  },
+  "witness_B": {
+    "facts_given": [
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "ran into the counter",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "pointed a gun at the man in red",
+        "hedged": false
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "raised a gun from time to time to threaten the man in red",
+        "hedged": true
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "collected the money",
+        "hedged": true
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "upper_clothing",
+        "value": "white",
+        "hedged": false
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "walked to the cashier",
+        "hedged": false
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "operated",
+        "hedged": false
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "kept handing money to the man in blue",
+        "hedged": false
+      },
+      {
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "action",
+        "value": "operated",
+        "hedged": true
+      },
+      {
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "action",
+        "value": "ran away",
+        "hedged": true
+      }
+    ],
+    "degradations": [
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "upper_clothing",
+        "value": "blue hoodie"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "ran away"
+      },
+      {
+        "type": "omission",
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "action",
+        "value": "collected the money"
+      },
+      {
+        "type": "corruption",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "upper_clothing",
+        "true_value": "red",
+        "witness_value": "white"
+      }
+    ]
+  },
+  "witness_C": {
+    "facts_given": [
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "ran into the counter",
+        "hedged": true
+      },
+      {
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "raised a gun from time to time to threaten the man in red",
+        "hedged": true
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "upper_clothing",
+        "value": "red",
+        "hedged": false
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "walked to the cashier",
+        "hedged": false
+      },
+      {
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "kept handing money to the man in blue",
+        "hedged": false
+      },
+      {
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "action",
+        "value": "operated",
+        "hedged": false
+      },
+      {
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "action",
+        "value": "collected the money",
+        "hedged": false
+      },
+      {
+        "entity": "weapon_9",
+        "entity_type": "weapon",
+        "role": "none",
+        "attribute": "weapon_type",
+        "value": "knife",
+        "hedged": true
+      }
+    ],
+    "degradations": [
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "upper_clothing",
+        "value": "blue hoodie"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "pointed a gun at the man in red"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "collected the money"
+      },
+      {
+        "type": "omission",
+        "entity": "person_1",
+        "entity_type": "person",
+        "role": "suspect",
+        "attribute": "action",
+        "value": "ran away"
+      },
+      {
+        "type": "omission",
+        "entity": "person_2",
+        "entity_type": "person",
+        "role": "victim",
+        "attribute": "action",
+        "value": "operated"
+      },
+      {
+        "type": "omission",
+        "entity": "person_3",
+        "entity_type": "person",
+        "role": "bystander",
+        "attribute": "action",
+        "value": "ran away"
+      },
+      {
+        "type": "confabulation",
+        "entity": "weapon_9",
+        "entity_type": "weapon",
+        "role": "none",
+        "attribute": "weapon_type",
+        "value": "knife"
+      }
+    ]
+  }
+}
