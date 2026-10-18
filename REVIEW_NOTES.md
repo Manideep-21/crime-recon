@@ -664,3 +664,38 @@ What it shows:
 - Fewer person entities on average (3.9 → 3.4). Hedged clothing gives the merge more details to match on.
 - Attribute accuracy fell (0.815 → 0.696). This is the image check: more and harder clothing is now drawn
   (plaid shirts, hedged colours), and SDXL misses it more often. One run per scene, so treat ±0.1 as noise.
+
+## Final prototype: v6 (tag `prototype-v6`)
+
+Development stopped at v6. The v7 fixes below are **not** made, and the 4 final held-out clips
+(robbery101, robbery005, shoplifting031, shoplifting041) are **not evaluated**. Their answer keys and
+witness statements are in `data/scenes/`. The shoplifting041 answer key is still the unedited generated
+one; see "v6" above.
+
+### Known limitations of the final prototype
+- **SDXL often draws the wrong number of people.** The prompt says "exactly N people", but SDXL draws
+  more or fewer. OWLv2 verification catches this and regenerates (up to `max_retries`), but it can't
+  force the right count. In the v6 dev run the kept image still had the wrong count in 2 of 8 scenes
+  (robbery012 4 drawn / 3 in image, shoplifting001 4 / 3), and first attempts were often wrong. Layout-guided
+  generation (GLIGEN / regional prompting) would be the fix.
+- **A confident false memory from a single witness can be drawn.** The confidence gate withholds hedged or
+  contradicted details, but a plain, unhedged detail from one witness starts at 0.70, above the 0.60 render
+  threshold. If nothing contradicts it, it is drawn. Example: shoplifting001, where witness C's planted
+  "I saw a white van parked nearby" is drawn in v6. Frames that simply don't show something are not
+  evidence against it.
+- **Colour-overlap matching bug.** `values_agree` treats values that share most words as agreeing, so
+  "black and white plaid shirt" vs "blue and white plaid shirt" is not a conflict. This is why
+  robbery003's planted conflict is missed even though both values are extracted. Value matching is
+  word-based in general ("red hoodie" vs "maroon sweatshirt" can be called different).
+- **Results come from 8 scenes only.** All 8 became development scenes at v5, so every number is a dev
+  number; the 4 final clips were never run. It is one run per scene, LLM output drifts between runs
+  (Ollama/Qwen), and the clips are 320×240. Treat differences of about ±0.1 as noise.
+- **Other known issues:**
+  - Extra people remain: some CCTV people don't link to a witness-side person, and generated witnesses
+    add people. The v6 average is 3.4 person entities for 2 real people.
+  - Roles from statements are still unreliable. They are voted, and disagreements are recorded as role
+    conflicts.
+  - The merge-split case (robbery012: two witnesses' coats ended up on different people, so they are
+    never compared).
+  - SDXL reads only 77 prompt tokens.
+  - The witnesses are synthetic (LLM-generated from UCA captions, with the answer keys hand-checked).

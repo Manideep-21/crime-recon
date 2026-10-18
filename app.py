@@ -9,6 +9,8 @@ Witness tab:      questions only. It never shows an image or another
 """
 from __future__ import annotations
 
+import argparse
+
 import gradio as gr
 import pandas as pd
 
@@ -175,4 +177,8 @@ def build_ui() -> gr.Blocks:
 
 
 if __name__ == "__main__":
-    build_ui().launch(server_name="0.0.0.0", server_port=7860)
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--share", action="store_true", help="also serve a public *.gradio.live link (72 h)")
+    ap.add_argument("--port", type=int, default=7860)
+    args = ap.parse_args()
+    build_ui().launch(server_name="0.0.0.0", server_port=args.port, share=args.share)

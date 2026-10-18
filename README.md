@@ -1,10 +1,13 @@
-# Multi-Agent Crime Scene Reconstruction — Phase 2 prototype
+# Multi-Agent Crime Scene Reconstruction — final prototype (v6)
 
 Witness statements + CCTV frames → provenance-tagged evidence graph (Neo4j) →
 conflict & gap detection → non-leading follow-up questions → confidence-gated
 SDXL reconstruction → automatic verification + provenance overlay.
 
 B.Tech project, IIIT Kottayam. Everything runs locally on the lab GPU.
+
+This is the final prototype, git tag `prototype-v6`. Development history, every evaluation and the known
+limitations are in `REVIEW_NOTES.md`; the runs behind it are in `outputs/runs/`.
 
 ## How it works
 
@@ -25,7 +28,7 @@ CCTV keyframes ─────┘   (Qwen2.5-VL)      (Neo4j)      │  hypothes
 | `schema.py` | The shared fact format and the fixed attribute list per entity type |
 | `matching.py` | Compares values ("red hoodie" vs "blue jacket"), detects hedges ("I think") |
 | `llm.py` | Client for the local Qwen2.5-VL server (Ollama or vLLM) |
-| `extraction.py` | Statements and frames → facts; merges entities across sources; base confidence |
+| `extraction.py` | Statements and frames → facts (with a second pass over hedged sentences); merges entities across sources; base confidence |
 | `graph.py` | In-memory scene graph + corroboration; Neo4j sync; graph picture for the UI |
 | `conflicts.py` | Conflicts → hypotheses (H1/H2); gaps; picks which facts get drawn |
 | `questions.py` | Gap/conflict questions + the non-leading filter |
@@ -36,7 +39,7 @@ CCTV keyframes ─────┘   (Qwen2.5-VL)      (Neo4j)      │  hypothes
 | `evaluate.py` | Metrics over all scenes with an answer key |
 | `data/extract_frames.py` | Video → keyframes |
 | `data/make_witnesses.py` | Caption → answer key → 3 degraded witness statements |
-| `tests/test_logic.py` | Tests for all model-free logic (no GPU needed) |
+| `tests/test_logic.py` | Tests for all model-free logic (no GPU needed; run with pytest) |
 | `setup_hpc.sh` | No-sudo setup for a shared GPU container (see Setup) |
 
 **Verification:** each drawn person is looked for with an attribute-specific OWLv2 query built from
@@ -49,7 +52,7 @@ distractor is not a hallucination when a drawn person carries it and the box sit
 Of all attempts, the one with the fewest hallucinations + missing entities is kept, ties going to the
 best VLM attribute score. Every attempt is listed in `attempt_log` in `reconstruction.json`.
 
-## Setup (shared GPU container: no sudo, no Docker, no conda)
+## Setup (shared A100 MIG container: no sudo, no Docker, no conda)
 
 ```bash
 bash setup_hpc.sh
@@ -62,31 +65,45 @@ The script installs everything under `$HOME`:
 3. Ollama as a user install in `~/.local/ollama` (its `.tar.zst` is unpacked with Python, no `zstd`
    needed). Started with `OLLAMA_KEEP_ALIVE=0`, then `qwen2.5vl:7b` is pulled.
 4. Neo4j switched off (`neo4j.enabled: false`), since there's no Docker. Everything else runs in memory.
-5. `tests/test_logic.py`.
+5. The logic tests.
+
+Not done by the script, but used on this machine:
+- **ffmpeg** (for `data/extract_frames.py`): a static build in `~/.local/bin/ffmpeg`.
+- **git** (no system git): installed from conda-forge with the static micromamba binary into
+  `~/.local/git-env`. `~/.bashrc` adds `~/.local/git-env/bin` to `PATH`.
 
 In a new shell, activate the environment and make sure Ollama is running:
 ```bash
+cd ~/crime-recon
 source .venv/bin/activate
-export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/.local/git-env/bin:$PATH
 curl -s localhost:11434/api/tags >/dev/null || \
   OLLAMA_KEEP_ALIVE=0 nohup ollama serve > ~/.ollama-serve.log 2>&1 &
 ```
+Keep `OLLAMA_KEEP_ALIVE=0`: Ollama then frees the GPU after every request, so it never holds memory
+while SDXL runs. The cost is a model reload per call.
 
-SDXL (~7 GB) and OWLv2 download automatically from Hugging Face on first use.
+**Models.** `generation.backend: sdxl` (the setting v6 was evaluated with). SDXL (~7 GB) and OWLv2
+download from Hugging Face on first use. `sd35` (SD3.5 Medium) is optional; it is gated, so it needs the
+licence accepted and `hf auth login`. It was compared with SDXL and not adopted (see `REVIEW_NOTES.md`).
+`mock` draws a placeholder image with no GPU.
 
-**GPU memory:** check what's free before running models (`nvidia-smi` can't report it under MIG):
+**GPU memory.** The GPU is shared and other users take memory, so check what's free before every long
+run. `nvidia-smi` can't report it under MIG:
 ```bash
 python -c "import torch; print(f'{torch.cuda.mem_get_info()[0]/2**30:.1f} GiB free')"
 ```
-Set `generation.cpu_offload` in `config.yaml` to match:
-- **`false`** (all on GPU) when a lot is free.
-- **`true`** (model offload, ~8 GB).
-- **`sequential`** (layer-by-layer offload plus VAE tiling, < 4 GB) when under ~12 GB is free. This is the
-  current setting: on the shared A100 only ~4–5 GB is free. Each 1024² image takes about 40–55 s.
+Set `generation.cpu_offload` in `config.yaml` from that:
 
-Ollama's quantised Qwen2.5-VL needs 6–8 GB. When less is free, Ollama runs part of it on the CPU, which is
-slower but works. `OLLAMA_KEEP_ALIVE=0` makes Ollama free the GPU after every request so it never holds
-memory while SDXL runs. The cost is a model reload per call, so each attribute check takes about 1.5 min.
+| Free | `cpu_offload` | What it does |
+|---|---|---|
+| ≥ 20 GiB | `false` (current setting, v6 runs) | everything on the GPU |
+| 10–20 GiB | `true` | model offload, ~8 GB |
+| < 10 GiB | `sequential` | layer-by-layer offload + VAE tiling, < 4 GB; much slower |
+
+An out-of-memory error under MIG shows up as `NVML_SUCCESS == r INTERNAL ASSERT FAILED`.
+Ollama's quantised Qwen2.5-VL needs 6–8 GB; with less free it runs partly on the CPU (slower, still works).
+
 With Docker available, `docker compose up -d` starts Neo4j (http://localhost:7474, neo4j / crimerecon123);
 then set `neo4j.enabled: true`.
 
@@ -98,15 +115,34 @@ then set `llm.base_url: http://localhost:8000/v1` and `llm.model: Qwen/Qwen2.5-V
 With `.venv` activated and Ollama running (see Setup):
 
 ```bash
+python -m pytest -q tests/                         # 52 logic tests, no GPU needed
 python pipeline.py --scene sample_robbery          # CLI: prints conflicts, questions, image paths
 python pipeline.py --scene sample_robbery --force-extract   # ignore cached facts, extract again
 python app.py                                      # web demo at http://localhost:7860
-python evaluate.py                                 # metrics table (add --generate for image metrics)
+python app.py --share                              # same, plus a public https://*.gradio.live link (72 h)
 ```
 
-A full run of `sample_robbery` (extraction + 2 hypotheses × up to 3 attempts + attribute checks) takes
-about 8–10 minutes on the shared GPU. With facts cached it takes about 8 minutes, since generation and
-verification dominate.
+To keep the demo running after you log out:
+```bash
+OLLAMA_KEEP_ALIVE=0 nohup python app.py --share > ~/crime-recon-app.log 2>&1 &
+grep -o 'https://[a-z0-9.-]*gradio.live' ~/crime-recon-app.log     # the public link
+```
+
+**Evaluation.** Name the scenes. Without `--scenes`, `evaluate.py` runs *every* scene that has a
+`ground_truth.json`, which includes the 4 final held-out clips that were never evaluated:
+```bash
+python evaluate.py --generate --force-extract --scenes \
+  robbery044 robbery058 sample_robbery shoplifting033 robbery012 shoplifting024 robbery003 shoplifting001
+```
+That is the v6 dev evaluation. It takes about 47 minutes for the 8 scenes with `cpu_offload: false`:
+extraction, hedged-sentence pass, 2 hypotheses × up to `max_retries` SDXL attempts, and OWLv2 + VLM checks.
+Without `--generate` it only extracts and scores the graph, which is much faster. The table goes to
+`outputs/eval_results.md` and `.csv`; the v6 results are kept in `outputs/runs/v6_8scenes/`.
+
+| Scenes | Status |
+|---|---|
+| robbery044, robbery058, sample_robbery, shoplifting033, robbery012, shoplifting024, robbery003, shoplifting001 | development (all v6 numbers) |
+| robbery101, robbery005, shoplifting031, shoplifting041 | final held-out, `held_out: true`, **not evaluated** |
 
 Results go to `outputs/<scene>/`: `facts.json` (cached extraction), `analysis.json`,
 `H1_raw.png`, `H1_overlay.png`, `reconstruction.json` (with `attempt_log`), `audit_log.jsonl`.
@@ -131,7 +167,7 @@ CRIME_RECON_CONFIG=config.offline.yaml python app.py
 5. **Generate reconstruction**: H1 and H2 side by side, colour-coded boxes, faces blurred,
    "Uncertain — not drawn: knife (witness_C, 0.575)", and the verification result.
 6. **Audit log**: every step traceable.
-7. Show `python evaluate.py` table.
+7. Show the v6 table (`outputs/runs/v6_8scenes/eval_results.md`).
 
 ## Adding real scenes (UCF-Crime + UCA)
 
@@ -141,6 +177,7 @@ python data/make_witnesses.py --scene robbery048 --caption "<UCA caption text fo
 # open data/scenes/robbery048/ground_truth.json, fix any wrong facts by hand, then:
 python data/make_witnesses.py --scene robbery048 --reuse-gt
 ```
+Record every hand edit in the `hand_edits` list of `ground_truth.json`; `--reuse-gt` keeps it.
 
 The UCA caption is the "truth"; the script makes 3 witnesses from it with planted omissions,
 a wrong colour/size, and one false memory, and records exactly what was planted.
@@ -155,13 +192,22 @@ a wrong colour/size, and one false memory, and records exactly what was planted.
 
 ## Known limitations (be upfront in the review)
 
-- Value matching is word-based: "red hoodie" vs "maroon sweatshirt" may be seen as different values.
-  An embedding/LLM similarity check is planned for phase 3.
-- SDXL reads only ~77 prompt tokens; very detailed scenes get truncated (suspects/victims go first).
+Full list with evidence: `REVIEW_NOTES.md`, section "Final prototype: v6".
+
+- **SDXL person count:** it often draws more or fewer people than the prompt asks for. Verification
+  regenerates, but can't force the count. Layout-guided generation (GLIGEN / regional prompting) is the fix.
+- **Confident false memories can be drawn:** an unhedged detail from a single witness (0.70) passes the
+  0.60 render threshold if nothing contradicts it. Example: shoplifting001, witness C's "white van".
+- **Colour-overlap matching bug:** values sharing most words count as agreeing, so "black and white plaid
+  shirt" vs "blue and white plaid shirt" is not flagged as a conflict (robbery003). Matching is word-based.
+- **Results from 8 scenes only:** all are development scenes, one run each, 320×240 clips. The 4 final
+  held-out clips were not evaluated.
+- Extra people remain, from unlinked CCTV people and invented ones in generated statements; roles from
+  statements are unreliable (voted, with disagreements recorded).
+- SDXL reads only ~77 prompt tokens; very detailed scenes are cut down by priority.
 - The overlay boxes come from detecting objects in the generated image, not from layout-controlled generation.
-  Layout-guided generation (GLIGEN / regional prompting) is planned for the final phase.
-- At most 2 hypotheses; Visual Genome graph-accuracy evaluation and full DSG scoring are planned for later.
-- Synthetic witnesses are generated by an LLM; the answer key is human-checked to limit circularity.
+- At most 2 hypotheses. Synthetic witnesses are LLM-generated, and the answer keys are hand-checked to
+  limit circularity.
 
 ## Ethics
 
