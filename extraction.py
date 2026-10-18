@@ -397,7 +397,41 @@ def _rule_based_groups(per_source: Dict[str, dict]) -> List[List[str]]:
     return groups + list(buckets.values())
 
 
-def _llm_groups(per_source: Dict[str, dict]) -> Optional[List[List[str]]]:
+def _repair_groups(groups: List[List[str]], types: Dict[str, str]) -> Tuple[List[List[str]], Counter]:
+    """Turn the LLM's grouping into a clean partition instead of rejecting it.
+
+    - invented keys (not a mention) are dropped,
+    - a key in several groups stays in the first one,
+    - a group that mixes entity types (a person with an object) is split by type,
+    - mentions the answer left out become groups of their own.
+    Returns (groups, how often each repair was needed)."""
+    repairs: Counter = Counter()
+    seen: set = set()
+    out: List[List[str]] = []
+    for g in groups:
+        kept = []
+        for k in g:
+            if k not in types:
+                repairs["invented key dropped"] += 1
+            elif k in seen:
+                repairs["duplicate key dropped"] += 1
+            else:
+                kept.append(k)
+                seen.add(k)
+        by_type: Dict[str, List[str]] = {}
+        for k in kept:
+            by_type.setdefault(types[k], []).append(k)
+        if len(by_type) > 1:
+            repairs["mixed-type group split"] += 1
+        out.extend(by_type.values())
+    for k in types:
+        if k not in seen:
+            repairs["missing mention added alone"] += 1
+            out.append([k])
+    return out, repairs
+
+
+def _llm_groups(per_source: Dict[str, dict], log=lambda step, detail: None) -> Optional[List[List[str]]]:
     mentions = []
     types = {}
     for source, raw in per_source.items():
@@ -414,11 +448,16 @@ def _llm_groups(per_source: Dict[str, dict]) -> Optional[List[List[str]]]:
                             temperature=0.0)
     except Exception:
         return None
-    groups = [list(map(str, g)) for g in out.get("groups", []) if g]
-    flat = [k for g in groups for k in g]
-    # Reject the answer unless it is a clean partition with one type per group.
-    if sorted(flat) != sorted(types) or any(len({types[k] for k in g}) != 1 for g in groups):
+    raw_groups = out.get("groups") if isinstance(out, dict) else None
+    if not isinstance(raw_groups, list):
         return None
+    groups = [list(map(str, g)) for g in raw_groups if isinstance(g, list) and g]
+    # Repair a partial answer (rather than throwing all of it away) and say what was repaired.
+    groups, repairs = _repair_groups(groups, types)
+    if repairs:
+        log("merge", "LLM grouping repaired: " + ", ".join(f"{n} {r}" for r, n in sorted(repairs.items())))
+    else:
+        log("merge", "LLM grouping used as given (no repair needed)")
     # All locations are the same place.
     loc = [k for g in groups for k in g if types[k] == "location"]
     groups = [g for g in groups if types[g[0]] != "location"]
@@ -501,7 +540,59 @@ def _merge_lone_genders(groups: List[List[str]], lookup: Dict[str, dict], log) -
     return out
 
 
-def _link_score(agree: int, clash: int) -> int:
+def _with_descriptions(per_source: Dict[str, dict], lookup: Dict[str, dict]) -> Dict[str, List[dict]]:
+    """Facts per mention, plus the identifying part of its description as one more detail."""
+    facts_of = _facts_of(per_source)
+    for k, e in lookup.items():
+        core = _description_core(e.get("description", ""))
+        if core and e["entity_type"] == "person":
+            facts_of[k] = facts_of.get(k, []) + [{"attribute": "description", "value": core}]
+    return facts_of
+
+
+def _detach_cctv_people(groups: List[List[str]], lookup: Dict[str, dict]) -> List[List[str]]:
+    """CCTV people are matched by _link_cctv_people only; out of the witness-side groups here."""
+    is_cam = lambda k: k.startswith("cctv") and lookup[k]["entity_type"] == "person"  # noqa: E731
+    rest = [g for g in ([k for k in g if not is_cam(k)] for g in groups) if g]
+    return rest + [[k] for g in groups for k in g if is_cam(k)]
+
+
+def _check_llm_joins(groups: List[List[str]], per_source: Dict[str, dict], lookup: Dict[str, dict],
+                     log) -> List[List[str]]:
+    """The LLM's person groups are suggestions: a witness mention whose details clearly agree more
+    with another group (link score >= 1 and higher than with its own group) moves there."""
+    facts_of = _with_descriptions(per_source, lookup)
+    score = lambda a, b: _link_score(*_agreement(_facts_by_attr(a, facts_of), _facts_by_attr(b, facts_of)))  # noqa: E731
+    moved = 0
+    for _ in range(len(groups)):
+        change = None
+        for gi, g in enumerate(groups):
+            if lookup[g[0]]["entity_type"] != "person" or len(g) < 2:
+                continue
+            for k in g:
+                own = score([k], [x for x in g if x != k])
+                best = max(((score([k], h), hi) for hi, h in enumerate(groups) if hi != gi
+                            and lookup[h[0]]["entity_type"] == "person" and _can_join(h, [k], lookup)),
+                           default=(0, None))
+                if best[0] >= 1 and best[0] > own:
+                    change = (gi, k, best[1], own, best[0])
+                    break
+            if change:
+                break
+        if not change:
+            break
+        gi, k, hi, own, new = change
+        log("merge", f"LLM join overruled: {k} moved to {groups[hi]} (details agree {new:g} vs {own:g})")
+        groups[hi] = groups[hi] + [k]
+        groups[gi] = [x for x in groups[gi] if x != k]
+        groups = [g for g in groups if g]
+        moved += 1
+    if moved:
+        log("merge", f"LLM grouping repaired: {moved} LLM join overruled by details")
+    return groups
+
+
+def _link_score(agree: float, clash: int) -> float:
     """Agreeing attributes minus clashes, forgiving ONE clash: a single corrupted value
     (one witness's wrong colour) must not block a link the other attributes support.
     The clash itself is kept and found later as a conflict."""
@@ -522,11 +613,7 @@ def _merge_compatible_people(groups: List[List[str]], per_source: Dict[str, dict
     """Join witness-side person groups whose details agree: different sources, no man/woman
     clash, link score >= 1, and each is the other's unique best match. Repeats until stable.
     The witnesses' own descriptions count as one more detail ("the man behind the counter")."""
-    facts_of = _facts_of(per_source)
-    for k, e in lookup.items():
-        core = _description_core(e.get("description", ""))
-        if core and e["entity_type"] == "person":
-            facts_of[k] = facts_of.get(k, []) + [{"attribute": "description", "value": core}]
+    facts_of = _with_descriptions(per_source, lookup)
     while True:
         people = [i for i, g in enumerate(groups) if lookup[g[0]]["entity_type"] == "person"
                   and not any(k.startswith("cctv") for k in g)]
@@ -608,16 +695,46 @@ def _facts_by_attr(keys: List[str], facts_of: Dict[str, List[dict]]) -> Dict[str
     return out
 
 
-def _agreement(cctv: Dict[str, List[str]], witness: Dict[str, List[str]]) -> Tuple[int, int]:
-    """(attributes that agree, attributes that clash) between two people's facts. Counted per
-    attribute, so six frames of one shirt count once. Only a colour clash counts against
+# Actions/positions nearly everyone in a scene does: they say little about WHO it was.
+GENERIC_MOVE_WORDS = {"walked", "walk", "walks", "walking", "away", "turned", "turn", "turns", "turning", "around",
+                      "left", "leave", "leaves", "leaving", "came", "come", "back", "went", "go", "out", "in",
+                      "stood", "stand", "standing", "up", "down", "sat", "sit", "sitting", "talked", "talk", "talking",
+                      "looked", "look", "looking", "ran", "run", "running", "moved", "move", "there", "here",
+                      "nearby", "near", "close", "inside", "outside", "off", "then", "store", "shop", "scene"}
+GENERIC_WEIGHT = 0.25
+
+
+def _is_generic(value: str) -> bool:
+    words = content_tokens(value)
+    return not words or words <= GENERIC_MOVE_WORDS
+
+
+def _multi_agreement(mine: List[str], theirs: List[str]) -> float:
+    """Matching actions (or positions), one-to-one: 1 per specific match ("took out a black
+    pistol"), GENERIC_WEIGHT per generic one ("turned around", "walked away", "left")."""
+    left = list(dict.fromkeys(normalize(w) for w in theirs))
+    score = 0.0
+    for v in dict.fromkeys(normalize(v) for v in mine):
+        w = next((w for w in left if values_agree(v, w)), None)
+        if w is not None:
+            left.remove(w)
+            score += GENERIC_WEIGHT if _is_generic(v) or _is_generic(w) else 1.0
+    return score
+
+
+def _agreement(cctv: Dict[str, List[str]], witness: Dict[str, List[str]]) -> Tuple[float, int]:
+    """(agreement, attributes that clash) between two people's facts. Looks count once per
+    attribute, so six frames of one shirt count once; actions and positions count each matching
+    specific value, generic ones low (_multi_agreement). Only a colour clash counts against
     ("white cap" vs "white hat" is the same thing in other words); two patterned garments agree."""
-    agree = disagree = 0
+    agree, disagree = 0.0, 0
     for attr, values in cctv.items():
         if attr not in witness:
             continue
-        if any(values_agree(v, w) or (attr in LOOKS and _patterned(v) and _patterned(w))
-               for v in values for w in witness[attr]):
+        if attr in ("action", "position"):
+            agree += _multi_agreement(values, witness[attr])
+        elif any(values_agree(v, w) or (attr in LOOKS and _patterned(v) and _patterned(w))
+                 for v in values for w in witness[attr]):
             agree += 1
         elif attr not in MULTI_VALUED and all(_contradicts(v, w) for v in values for w in witness[attr]):
             disagree += 1
@@ -678,7 +795,7 @@ def _link_cctv_people(groups: List[List[str]], per_source: Dict[str, dict], look
             _, a, d, i = scored[0]
             g = targets[i]
             log("merge", f"CCTV person ({', '.join(sorted({v for vs in mine.values() for v in vs}))}) "
-                         f"-> witness-side person {g} ({a} attribute(s) agree, {d} clash)")
+                         f"-> witness-side person {g} (agreement {a:g}, {d} clash)")
             g.extend(c)
         else:
             rest.append(c)
@@ -718,10 +835,13 @@ def merge_entities(per_source: Dict[str, dict], use_llm: bool = True,
     person get a role, by majority vote; disagreements are kept in role_votes.
     """
     lookup = {f"{s}:{eid}": e for s, raw in per_source.items() for eid, e in raw["entities"].items()}
-    groups = _llm_groups(per_source) if use_llm else None
+    groups = _llm_groups(per_source, log) if use_llm else None
     if groups is None:
         groups = _rule_based_groups(per_source)
+    groups = _detach_cctv_people(groups, lookup)
     groups = _split_inconsistent(groups, lookup, log)
+    if use_llm:
+        groups = _check_llm_joins(groups, per_source, lookup, log)
     groups = _merge_lone_genders(groups, lookup, log)
     groups = _merge_compatible_people(groups, per_source, lookup, log)
     groups = _link_cctv_people(groups, per_source, lookup, log)

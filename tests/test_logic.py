@@ -923,3 +923,66 @@ def test_descriptions_count_as_a_detail_when_merging():
     per_source["witness_C"] = _desc_src(("e1", "person", "victim", "the man behind the counter", []))
     people = _people(merge_entities(per_source, use_llm=False))
     assert ["witness_A:e2", "witness_B:e2", "witness_C:e1"] in [ks for _, ks in people.values()], people
+
+
+def test_partial_llm_merge_answer_is_repaired_not_rejected():
+    from extraction import _repair_groups
+
+    types = {"witness_A:e1": "person", "witness_A:e2": "object", "witness_B:e1": "person", "witness_B:e2": "person"}
+    groups, repairs = _repair_groups([["witness_A:e1", "witness_B:e1", "witness_A:e9"],   # invented key
+                                      ["witness_A:e2", "witness_B:e1"],                   # duplicate
+                                      ["witness_C:e1"]], types)                           # all invented
+    assert groups == [["witness_A:e1", "witness_B:e1"], ["witness_A:e2"], ["witness_B:e2"]]
+    assert repairs == {"invented key dropped": 2, "duplicate key dropped": 1, "missing mention added alone": 1}
+    groups, repairs = _repair_groups([["witness_A:e1", "witness_A:e2"]], types)           # person + object
+    assert ["witness_A:e1"] in groups and ["witness_A:e2"] in groups and repairs["mixed-type group split"] == 1
+
+
+def test_specific_actions_outweigh_generic_ones():
+    from extraction import _agreement, _is_generic
+
+    assert _is_generic("walked away") and _is_generic("turned around") and _is_generic("left")
+    assert not _is_generic("took out a black pistol")
+    robber_a = {"action": ["took out a black pistol", "took away a bottle of Coke", "turned around to leave"]}
+    robber_b = {"action": ["took out a black pistol", "took away a bottle of Coke", "took the gun back"]}
+    clerk = {"action": ["turned around"]}
+    assert _agreement(robber_a, robber_b)[0] == 2.0
+    assert _agreement(robber_a, clerk)[0] == 0.25
+
+
+def test_two_men_per_witness_merge_by_what_they_did():
+    from extraction import merge_entities
+
+    # robbery003-like: every witness describes two men; the robbers share specific actions, the
+    # clerk shares only "turned around" with the robber's "turned around to leave".
+    per_source = {
+        "witness_A": _desc_src(("e1", "person", "suspect", "a man", [("action", "took out a black pistol"),
+                                                                    ("action", "took away a bottle of Coke"),
+                                                                    ("action", "turned around to leave")]),
+                               ("e2", "person", "victim", "the man in black clothes", [("action", "turned around")])),
+        "witness_B": _desc_src(("e1", "person", "suspect", "a man in a plaid shirt", [("action", "took out a black pistol"),
+                                                                                     ("action", "took the gun back")]),
+                               ("e2", "person", "victim", "the man in black", [])),
+        "witness_C": _desc_src(("e1", "person", "suspect", "a man who robbed the place", [("action", "took out a black pistol"),
+                                                                                         ("action", "took away a bottle of Coke")]),
+                               ("e2", "person", "victim", "another man", [("action", "being robbed"), ("action", "turned around")])),
+    }
+    people = sorted(ks for _, ks in _people(merge_entities(per_source, use_llm=False)).values())
+    assert ["witness_A:e1", "witness_B:e1", "witness_C:e1"] in people, people
+    # A single shared generic action is not enough to join two people.
+    assert not any("witness_A:e1" in ks and ("witness_A:e2" in ks or "witness_C:e2" in ks) for ks in people)
+
+
+def test_llm_join_is_overruled_when_details_point_elsewhere():
+    from extraction import _check_llm_joins
+
+    per_source = {
+        "witness_A": _desc_src(("e1", "person", "suspect", "a man", [("action", "took out a black pistol"),
+                                                                    ("action", "took away a bottle of Coke")])),
+        "witness_B": _desc_src(("e1", "person", "suspect", "a man in a plaid shirt", [("action", "took out a black pistol")]),
+                               ("e2", "person", "victim", "the man in black", [])),
+    }
+    lookup = {f"{s}:{e}": v for s, r in per_source.items() for e, v in r["entities"].items()}
+    # The LLM put A's robber with B's clerk (who has no details at all).
+    groups = _check_llm_joins([["witness_A:e1", "witness_B:e2"], ["witness_B:e1"]], per_source, lookup, lambda s, d: None)
+    assert sorted(map(sorted, groups)) == [["witness_A:e1", "witness_B:e1"], ["witness_B:e2"]]
