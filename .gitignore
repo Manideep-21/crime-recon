@@ -21,3 +21,6 @@ models/
 # Large images under outputs/runs/: .gitignore can't filter by size, so the pre-commit hook
 # (.githooks/pre-commit) refuses PNGs > 5 MB there and prints the lines to add below.
 # --- outputs/runs PNGs larger than 5 MB ---
+
+# Gradio runtime files (share tunnel)
+.gradio/
